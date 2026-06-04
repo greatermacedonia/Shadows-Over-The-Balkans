@@ -1,0 +1,528 @@
+###########################################################
+# MACEDONIAN IRREDENTISM EVENTS
+# mac_irredentism.1 - mac_irredentism.50
+###########################################################
+
+add_namespace = mac_irredentism
+
+###########################################################
+# THE BALKAN QUESTION (Initial Event)
+###########################################################
+
+# The Balkan Question
+country_event = {
+	id = mac_irredentism.1
+	title = mac_irredentism.1.t
+	desc = mac_irredentism.1.d
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.1.a  # "All Macedonians must be united"
+		
+		add_political_power = 50
+		add_war_support = 0.05
+		
+		custom_effect_tooltip = MAC_irredentism_begins_tt
+		set_country_flag = MAC_irredentist_path
+	}
+}
+
+###########################################################
+# AEGEAN MACEDONIA CAMPAIGN (Events 10-19)
+###########################################################
+
+# Claim Aegean Macedonia
+country_event = {
+	id = mac_irredentism.10
+	title = mac_irredentism.10.t
+	desc = mac_irredentism.10.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.10.a  # "Thessaloniki will be ours"
+		
+		add_political_power = 25
+		add_war_support = 0.05
+		
+		# Greece gets warned
+GRE = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_claims
+			}
+		}
+		
+		custom_effect_tooltip = MAC_aegean_claimed_tt
+	}
+}
+
+# Greece Reacts to MLF Support
+country_event = {
+	id = mac_irredentism.11
+	title = mac_irredentism.11.t
+	desc = mac_irredentism.11.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	# Condemn Macedonia
+	option = {
+		name = mac_irredentism.11.a  # "This is intolerable interference"
+		
+		add_opinion_modifier = {
+			target = MAC
+			modifier = MAC_supporting_insurgents
+		}
+		
+		add_war_support = 0.03
+		add_political_power = 25
+	}
+}
+
+# War for Aegean Macedonia
+country_event = {
+	id = mac_irredentism.12
+	title = mac_irredentism.12.t
+	desc = mac_irredentism.12.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.12.a  # "For Greater Macedonia!"
+		
+		add_war_support = 0.10
+		add_manpower = 10000
+		
+		custom_effect_tooltip = MAC_war_greece_tt
+	}
+}
+
+# Aegean Macedonia Liberated
+country_event = {
+	id = mac_irredentism.13
+	title = mac_irredentism.13.t
+	desc = mac_irredentism.13.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.13.a  # "The birthplace of Alexander returns"
+		
+		add_stability = 0.10
+		add_war_support = 0.10
+		add_political_power = 150
+		
+		# Rename Thessaloniki to Solun
+		731 = { set_state_name = "Solun" }
+		set_province_name = { id = 11818 name = "Solun" }
+		
+		# Aegean Macedonians celebrate
+		731 = {
+			add_resistance = -50
+			add_compliance = 25
+		}
+		1048 = {
+			add_resistance = -50
+			add_compliance = 25
+		}
+		
+		custom_effect_tooltip = MAC_aegean_celebrated_tt
+	}
+}
+
+# Reclaim Pella and Vergina - War Begins (fired by focus MAC_reclaim_pella_vergina)
+country_event = {
+	id = mac_irredentism.14
+	title = mac_irredentism.14.t
+	desc = mac_irredentism.14.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.14.a  # "For Pella! For Vergina! For Macedonia!"
+		
+		add_war_support = 0.15
+		army_experience = 10
+		add_manpower = 5000
+		
+		# Neighboring Balkan nations react
+		BUL = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_claims
+			}
+		}
+		YUG = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_claims
+			}
+		}
+		
+		custom_effect_tooltip = MAC_reclaim_aegean_tt
+	}
+}
+
+###########################################################
+# PIRIN MACEDONIA CAMPAIGN (Events 20-29)
+###########################################################
+
+# Claim Pirin Macedonia
+country_event = {
+	id = mac_irredentism.20
+	title = mac_irredentism.20.t
+	desc = mac_irredentism.20.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.20.a  # "Pirin must return to Macedonia"
+		
+		add_political_power = 25
+		add_war_support = 0.05
+		
+		# Bulgaria gets warned
+		BUL = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_claims
+			}
+		}
+		
+		custom_effect_tooltip = MAC_pirin_claimed_tt
+	}
+}
+
+# The Boris Dilemma - Bulgaria Reacts
+country_event = {
+	id = mac_irredentism.21
+	title = mac_irredentism.21.t
+	desc = mac_irredentism.21.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	# Compromise offer
+	option = {
+		name = mac_irredentism.21.a  # "Offer cultural autonomy for Pirin"
+		
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 2.0
+				strength_ratio = { tag = MAC ratio < 0.5 }
+			}
+		}
+		
+		MAC = {
+			add_opinion_modifier = {
+				target = BUL
+				modifier = MAC_boris_compromise
+			}
+		}
+		
+		1047 = {
+			add_compliance = 10
+		}
+		
+		add_political_power = 25
+	}
+	
+	# Refuse Macedonia's claims
+	option = {
+		name = mac_irredentism.21.b  # "Pirin is Bulgarian territory"
+		
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 2.0
+				is_in_faction = yes
+			}
+		}
+		
+		add_opinion_modifier = {
+			target = MAC
+			modifier = MAC_territorial_dispute
+		}
+		
+		add_war_support = 0.05
+		add_political_power = 25
+	}
+}
+
+# War for Pirin Macedonia
+country_event = {
+	id = mac_irredentism.22
+	title = mac_irredentism.22.t
+	desc = mac_irredentism.22.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.22.a  # "The mountain calls our brothers home"
+		
+		add_war_support = 0.10
+		add_manpower = 10000
+		
+		custom_effect_tooltip = MAC_war_bulgaria_tt
+	}
+}
+
+# Pirin Macedonia Liberated
+country_event = {
+	id = mac_irredentism.23
+	title = mac_irredentism.23.t
+	desc = mac_irredentism.23.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.23.a  # "Pirin returns to the motherland"
+		
+		add_stability = 0.10
+		add_war_support = 0.10
+		add_political_power = 150
+		
+		# Pirin Macedonians celebrate
+		1047 = {
+			add_compliance = 25
+		}
+		
+		custom_effect_tooltip = MAC_pirin_celebrated_tt
+	}
+}
+
+# Unite Pirin Macedonia - War Begins (fired by focus MAC_unite_pirin_macedonia)
+country_event = {
+	id = mac_irredentism.24
+	title = mac_irredentism.24.t
+	desc = mac_irredentism.24.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.24.a  # "Our mountain brothers will be free!"
+		
+		add_war_support = 0.15
+		army_experience = 10
+		add_manpower = 5000
+		
+		# Neighboring Balkan nations react
+		GRE = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_claims
+			}
+		}
+		YUG = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_claims
+			}
+		}
+		
+		custom_effect_tooltip = MAC_reclaim_pirin_tt
+	}
+}
+
+###########################################################
+# VARDAR MACEDONIA CAMPAIGN (Events 30-39)
+###########################################################
+
+# Vardar Brotherhood - Claim Yugoslav Macedonia
+country_event = {
+	id = mac_irredentism.30
+	title = mac_irredentism.30.t
+	desc = mac_irredentism.30.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.30.a  # "Free our Serbian-occupied brothers"
+		
+		add_political_power = 25
+		add_war_support = 0.05
+		
+		# Yugoslavia gets warned
+		YUG = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_claims
+			}
+		}
+		
+		custom_effect_tooltip = MAC_vardar_claimed_tt
+	}
+}
+
+# Yugoslavia Reacts to Subversion
+country_event = {
+	id = mac_irredentism.31
+	title = mac_irredentism.31.t
+	desc = mac_irredentism.31.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	# Crack down on Macedonian nationalism
+	option = {
+		name = mac_irredentism.31.a  # "Suppress the Macedonian separatists"
+		
+		add_opinion_modifier = {
+			target = MAC
+			modifier = MAC_supporting_insurgents
+		}
+		
+		add_war_support = 0.03
+		add_political_power = -50
+		
+		# Resistance increases
+		107 = {
+			add_resistance = 10
+		}
+	}
+}
+
+# War for Vardar Macedonia
+country_event = {
+	id = mac_irredentism.32
+	title = mac_irredentism.32.t
+	desc = mac_irredentism.32.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.32.a  # "Liberate our Vardar brothers!"
+		
+		add_war_support = 0.10
+		add_manpower = 10000
+		
+		custom_effect_tooltip = MAC_war_yugoslavia_tt
+	}
+}
+
+# Vardar Macedonia Liberated
+country_event = {
+	id = mac_irredentism.33
+	title = mac_irredentism.33.t
+	desc = mac_irredentism.33.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.33.a  # "The Serbian yoke is broken"
+		
+		add_stability = 0.10
+		add_war_support = 0.10
+		add_political_power = 150
+		
+		# Vardar Macedonians celebrate
+		107 = {
+			add_resistance = -50
+			add_compliance = 25
+		}
+		
+		custom_effect_tooltip = MAC_vardar_celebrated_tt
+	}
+}
+
+# Reclaim Northern Macedonia - War Begins (fired by focus MAC_reclaim_northern_macedonia)
+country_event = {
+	id = mac_irredentism.34
+	title = mac_irredentism.34.t
+	desc = mac_irredentism.34.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.34.a  # "The Vardar shall run free!"
+		
+		add_war_support = 0.15
+		army_experience = 10
+		add_manpower = 5000
+		
+		# Neighboring Balkan nations react
+		BUL = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_claims
+			}
+		}
+		GRE = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_claims
+			}
+		}
+		
+		custom_effect_tooltip = MAC_reclaim_vardar_tt
+	}
+}
+
+###########################################################
+# GREATER MACEDONIA REALIZED (Event 50)
+###########################################################
+
+# Greater Macedonia - The Dream Fulfilled
+country_event = {
+	id = mac_irredentism.50
+	title = mac_irredentism.50.t
+	desc = mac_irredentism.50.d
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_irredentism.50.a  # "The Macedonian Question is answered!"
+		
+		add_stability = 0.15
+		add_war_support = 0.10
+		add_political_power = 500
+		
+		# Massive celebration across all Macedonian lands
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 731
+					state = 184
+					state = 106
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		custom_effect_tooltip = MAC_greater_macedonia_realized_tt
+		
+		# If Delčev is alive, special event
+		if = {
+			limit = {
+				has_country_leader = { character = MAC_goce_delcev }
+			}
+			custom_effect_tooltip = MAC_delcev_dream_fulfilled_tt
+		}
+	}
+}

@@ -1,0 +1,56 @@
+# Color definitions for Macedonia
+
+MAC = {
+	color = rgb { 255 204 0 }
+	color_ui = rgb { 255 204 0 }
+}
+
+MAC_fascism = {
+	color = rgb { 180 50 50 }
+	color_ui = rgb { 200 70 70 }
+}
+
+MAC_communism = {
+	color = rgb { 200 50 50 }
+	color_ui = rgb { 220 70 70 }
+}
+
+MAC_democratic = {
+	color = rgb { 70 130 180 }
+	color_ui = rgb { 90 150 200 }
+}
+
+MAC_neutrality = {
+	color = rgb { 255 204 0 }
+	color_ui = rgb { 255 215 50 }
+}
+
+# Delčevist Macedonia
+MAC_DELCEV = {
+	color = rgb { 255 204 0 }
+	color_ui = rgb { 255 215 50 }
+}
+
+# Revolutionary Macedonia
+MAC_REVOLUTIONARY = {
+	color = rgb { 200 50 50 }
+	color_ui = rgb { 220 80 80 }
+}
+
+# Neo-Byzantine Empire
+MAC_EMPIRE = {
+	color = rgb { 128 0 128 }
+	color_ui = rgb { 150 30 150 }
+}
+
+# Alexandrian Empire
+MAC_ALEXANDER = {
+	color = rgb { 184 134 11 }
+	color_ui = rgb { 204 154 31 }
+}
+
+# Greater Macedonia (Fascist expansionist)
+MAC_GREATER = {
+	color = rgb { 255 100 0 }
+	color_ui = rgb { 255 120 20 }
+}

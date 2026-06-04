@@ -1,0 +1,35 @@
+# Elite division unlocked through focus
+
+division_template = {
+	name = "Makedonska Legija"  # Macedonian Legion
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+		anti_tank = { x = 0 y = 3 }
+		anti_air = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "Makedonska Legija"
+		location = 3882  # Skopje province
+		division_template = "Makedonska Legija"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+}

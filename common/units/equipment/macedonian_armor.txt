@@ -1,0 +1,63 @@
+# Macedonian Tank Variants
+# NOTE: Legacy tank archetypes (light_tank_equipment_2, medium_tank_equipment_2) were
+# removed in the No Step Back DLC. Tank design now uses the tank designer system.
+# These variants are disabled until rewritten for the new system.
+
+#equipments = {
+#	
+#	light_tank_equipment_2_mac = {
+#		archetype = light_tank_equipment_2
+#		priority = 10
+#		
+#		is_archetype = no
+#		is_buildable = yes
+#		
+#		#Defensive Abilities
+#		defense = 0.5
+#		breakthrough = 0.5
+#		armor_value = 0.5
+#		
+#		#Offensive Abilities
+#		soft_attack = 0.5
+#		hard_attack = 0.5
+#		ap_attack = 0.5
+#		air_attack = 0.5
+#		
+#		maximum_speed = 0.5
+#		reliability = 0.05
+#		
+#		build_cost_ic = 6
+#		resources = {
+#			steel = 2
+#			tungsten = 1
+#		}
+#	}
+#	
+#	medium_tank_equipment_2_mac = {
+#		archetype = medium_tank_equipment_2
+#		priority = 10
+#		
+#		is_archetype = no
+#		is_buildable = yes
+#		
+#		#Defensive Abilities
+#		defense = 0.5
+#		breakthrough = 0.5
+#		armor_value = 0.5
+#		
+#		#Offensive Abilities
+#		soft_attack = 0.5
+#		hard_attack = 0.5
+#		ap_attack = 0.5
+#		air_attack = 0.5
+#		
+#		maximum_speed = 0.5
+#		reliability = 0.05
+#		
+#		build_cost_ic = 10
+#		resources = {
+#			steel = 3
+#			tungsten = 1
+#		}
+#	}
+#}

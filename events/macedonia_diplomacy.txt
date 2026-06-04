@@ -1,0 +1,153 @@
+###########################################################
+# MACEDONIAN DIPLOMACY EVENTS
+# mac_diplomacy.1 - mac_diplomacy.50
+# NOTE: These are placeholder stubs - full content to be added
+###########################################################
+
+add_namespace = mac_diplomacy
+
+# Western Allies Approach
+country_event = {
+	id = mac_diplomacy.10
+	title = mac_diplomacy.10.t
+	desc = mac_diplomacy.10.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_diplomacy.10.a
+		add_political_power = 50
+		ENG = {
+			add_opinion_modifier = { target = MAC modifier = MAC_western_approach }
+		}
+		FRA = {
+			add_opinion_modifier = { target = MAC modifier = MAC_western_approach }
+		}
+	}
+}
+
+# Join the Allies
+country_event = {
+	id = mac_diplomacy.11
+	title = mac_diplomacy.11.t
+	desc = mac_diplomacy.11.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = mac_diplomacy.11.a
+		add_stability = 0.05
+		add_political_power = 100
+	}
+}
+
+# Balkan Democratic Federation
+country_event = {
+	id = mac_diplomacy.12
+	title = mac_diplomacy.12.t
+	desc = mac_diplomacy.12.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = mac_diplomacy.12.a
+		add_stability = 0.10
+		add_political_power = 150
+	}
+}
+
+# Appeal to Moscow
+country_event = {
+	id = mac_diplomacy.20
+	title = mac_diplomacy.20.t
+	desc = mac_diplomacy.20.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_diplomacy.20.a
+		add_political_power = 50
+		SOV = {
+			add_opinion_modifier = { target = MAC modifier = MAC_communist_solidarity }
+		}
+	}
+}
+
+# Join the Comintern
+country_event = {
+	id = mac_diplomacy.21
+	title = mac_diplomacy.21.t
+	desc = mac_diplomacy.21.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = mac_diplomacy.21.a
+		add_stability = 0.05
+		add_political_power = 100
+	}
+}
+
+# Balkan People's Republic
+country_event = {
+	id = mac_diplomacy.22
+	title = mac_diplomacy.22.t
+	desc = mac_diplomacy.22.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = mac_diplomacy.22.a
+		add_stability = 0.10
+		add_political_power = 150
+	}
+}
+
+# Align with Axis
+country_event = {
+	id = mac_diplomacy.30
+	title = mac_diplomacy.30.t
+	desc = mac_diplomacy.30.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_diplomacy.30.a
+		add_political_power = 50
+		GER = {
+			add_opinion_modifier = { target = MAC modifier = MAC_fascist_alignment }
+		}
+		ITA = {
+			add_opinion_modifier = { target = MAC modifier = MAC_fascist_alignment }
+		}
+	}
+}
+
+# Rome-Berlin-Skopje Pact
+country_event = {
+	id = mac_diplomacy.31
+	title = mac_diplomacy.31.t
+	desc = mac_diplomacy.31.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = mac_diplomacy.31.a
+		add_stability = 0.05
+		add_political_power = 100
+		add_war_support = 0.10
+	}
+}
+
+# Balkan Domination
+country_event = {
+	id = mac_diplomacy.40
+	title = mac_diplomacy.40.t
+	desc = mac_diplomacy.40.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = mac_diplomacy.40.a
+		add_stability = 0.10
+		add_war_support = 0.15
+		add_political_power = 200
+	}
+	option = {
+		name = mac_diplomacy.40.r  # "Power means nothing without legitimacy"
+		add_stability = 0.15
+		add_political_power = 100
+		add_war_support = 0.05
+	}
+}

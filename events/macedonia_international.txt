@@ -1,0 +1,540 @@
+###########################
+# International Events
+# Macedonia's interactions with great powers
+###########################
+
+add_namespace = macedonia_international
+
+### STALIN EVENTS ###
+
+# Stalin's Interest
+country_event = {
+	id = macedonia_international.1
+	title = macedonia_international.1.t
+	desc = macedonia_international.1.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = MAC
+		SOV = { exists = yes }
+		date > 1937.1.1
+		NOT = { has_country_flag = stalin_contacted }
+		OR = {
+			has_government = communism
+			has_country_flag = trotsky_in_macedonia
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = macedonia_international.1.a
+		add_political_power = 50
+		set_country_flag = stalin_contacted
+		custom_effect_tooltip = macedonia_international.1.a_tt
+	}
+}
+
+# Stalin's Invitation to Moscow
+country_event = {
+	id = macedonia_international.10
+	title = macedonia_international.10.t
+	desc = macedonia_international.10.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+	
+	trigger = {
+		tag = MAC
+		SOV = { exists = yes }
+		has_country_flag = delcev_in_power
+		NOT = { has_country_flag = stalin_met_delcev }
+		date > 1937.6.1
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = macedonia_international.10.a
+		add_political_power = 100
+		add_stability = 0.05
+		add_opinion_modifier = {
+			target = SOV
+			modifier = MAC_positive_50
+		}
+		custom_effect_tooltip = macedonia_international.10.a_tt
+		set_country_flag = stalin_met_delcev
+		set_country_flag = delcev_refused_submission
+	}
+	
+	option = {
+		name = macedonia_international.10.b
+		add_political_power = -50
+		add_stability = -0.10
+		custom_effect_tooltip = macedonia_international.10.b_tt
+	}
+}
+
+# Stalin Demands Trotsky's Extradition
+country_event = {
+	id = macedonia_international.11
+	title = macedonia_international.11.t
+	desc = macedonia_international.11.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+	
+	trigger = {
+		tag = MAC
+		has_country_flag = trotsky_in_macedonia
+		has_country_flag = delcev_in_power
+		NOT = { has_country_flag = stalin_trotsky_ultimatum }
+	}
+	
+	mean_time_to_happen = {
+		months = 8
+	}
+	
+	option = {
+		name = macedonia_international.11.a
+		add_stability = 0.10
+		add_war_support = 0.10
+		add_opinion_modifier = {
+			target = SOV
+			modifier = MAC_harboring_trotsky
+		}
+		custom_effect_tooltip = macedonia_international.11.a_tt
+		set_country_flag = stalin_trotsky_ultimatum
+	}
+	
+	option = {
+		name = macedonia_international.11.b
+		add_stability = -0.20
+		add_war_support = -0.15
+		remove_ideas = MAC_trotsky_theorist
+		clr_country_flag = trotsky_in_macedonia
+		set_country_flag = trotsky_extradited
+		add_opinion_modifier = {
+			target = SOV
+			modifier = MAC_positive_100
+		}
+		custom_effect_tooltip = macedonia_international.11.b_tt
+	}
+}
+
+### HITLER EVENTS ###
+
+# Hitler's Interest in the Balkans
+country_event = {
+	id = macedonia_international.20
+	title = macedonia_international.20.t
+	desc = macedonia_international.20.d
+	picture = GFX_report_event_german_parade
+	
+	trigger = {
+		tag = MAC
+		GER = { 
+			exists = yes
+			has_government = fascism
+		}
+		date > 1938.1.1
+		NOT = { has_country_flag = hitler_contacted }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = macedonia_international.20.a
+		add_political_power = 75
+		add_opinion_modifier = {
+			target = GER
+			modifier = MAC_positive_25
+		}
+		set_country_flag = hitler_contacted
+		custom_effect_tooltip = macedonia_international.20.a_tt
+	}
+	
+	option = {
+		name = macedonia_international.20.b
+		add_political_power = -25
+		custom_effect_tooltip = macedonia_international.20.b_tt
+		set_country_flag = hitler_contacted
+	}
+}
+
+# Invitation to Berlin
+country_event = {
+	id = macedonia_international.21
+	title = macedonia_international.21.t
+	desc = macedonia_international.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	trigger = {
+		tag = MAC
+		has_country_flag = delcev_in_power
+		GER = { 
+			exists = yes
+			has_completed_focus = GER_anschluss
+		}
+		NOT = { has_country_flag = delcev_berlin_visit }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = macedonia_international.21.a
+		add_political_power = 100
+		add_opinion_modifier = {
+			target = GER
+			modifier = MAC_positive_50
+		}
+		custom_effect_tooltip = macedonia_international.21.a_tt
+		set_country_flag = delcev_berlin_visit
+		set_country_flag = delcev_resisted_hitler
+	}
+	
+	option = {
+		name = macedonia_international.21.b
+		add_political_power = 50
+		custom_effect_tooltip = macedonia_international.21.b_tt
+		set_country_flag = delcev_berlin_visit
+	}
+}
+
+### CHURCHILL EVENTS ###
+
+# Churchill's Assessment
+country_event = {
+	id = macedonia_international.30
+	title = macedonia_international.30.t
+	desc = macedonia_international.30.d
+	picture = GFX_report_event_generic_parliament
+	
+	trigger = {
+		tag = MAC
+		ENG = { exists = yes }
+		has_country_flag = delcev_in_power
+		date > 1937.1.1
+		NOT = { has_country_flag = churchill_assessment }
+	}
+	
+	mean_time_to_happen = {
+		months = 18
+	}
+	
+	option = {
+		name = macedonia_international.30.a
+		add_political_power = 50
+		add_stability = 0.05
+		add_opinion_modifier = {
+			target = ENG
+			modifier = MAC_positive_25
+		}
+		custom_effect_tooltip = macedonia_international.30.a_tt
+		set_country_flag = churchill_assessment
+	}
+}
+
+### BORIS III EVENTS ###
+
+# Boris III's Secret Meeting
+country_event = {
+	id = macedonia_international.40
+	title = macedonia_international.40.t
+	desc = macedonia_international.40.d
+	picture = GFX_report_event_generic_conference
+	
+	trigger = {
+		tag = MAC
+		BUL = { exists = yes }
+		has_country_flag = delcev_in_power
+		date > 1937.1.1
+		NOT = { has_country_flag = boris_met_delcev }
+		NOT = { has_war_with = BUL }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = macedonia_international.40.a
+		add_political_power = 100
+		add_stability = 0.10
+		BUL = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_positive_100
+			}
+		}
+		add_opinion_modifier = {
+			target = BUL
+			modifier = MAC_positive_100
+		}
+		custom_effect_tooltip = macedonia_international.40.a_tt
+		set_country_flag = boris_met_delcev
+	}
+	
+	option = {
+		name = macedonia_international.40.b
+		add_political_power = 50
+		custom_effect_tooltip = macedonia_international.40.b_tt
+		set_country_flag = boris_met_delcev
+	}
+}
+
+# Peaceful Union Proposal
+country_event = {
+	id = macedonia_international.41
+	title = macedonia_international.41.t
+	desc = macedonia_international.41.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	trigger = {
+		tag = MAC
+		has_country_flag = boris_met_delcev
+		BUL = { 
+			exists = yes
+			is_subject = no
+		}
+		is_subject = no
+		NOT = { has_country_flag = union_proposal_made }
+		has_opinion = {
+			target = BUL
+			value > 75
+		}
+		date > 1939.1.1
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = macedonia_international.41.a
+		BUL = {
+			country_event = { id = macedonia_international.42 days = 7 }
+		}
+		custom_effect_tooltip = macedonia_international.41.a_tt
+		set_country_flag = union_proposal_made
+	}
+	
+	option = {
+		name = macedonia_international.41.b
+		add_political_power = 50
+		set_country_flag = union_proposal_made
+	}
+}
+
+# Bulgaria responds to union proposal
+country_event = {
+	id = macedonia_international.42
+	title = macedonia_international.42.t
+	desc = macedonia_international.42.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_international.42.a
+		MAC = {
+			country_event = { id = macedonia_international.43 }
+		}
+		custom_effect_tooltip = macedonia_international.42.a_tt
+	}
+	
+	option = {
+		name = macedonia_international.42.b
+		MAC = {
+			country_event = { id = macedonia_international.44 }
+		}
+		custom_effect_tooltip = macedonia_international.42.b_tt
+	}
+}
+
+# Union Accepted
+country_event = {
+	id = macedonia_international.43
+	title = macedonia_international.43.t
+	desc = macedonia_international.43.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_international.43.a
+		add_stability = 0.20
+		add_war_support = 0.15
+		add_political_power = 200
+		annex_country = { target = BUL transfer_troops = yes }
+		custom_effect_tooltip = macedonia_international.43.a_tt
+		set_cosmetic_tag = MAC_GREATER
+	}
+}
+
+# Union Rejected
+country_event = {
+	id = macedonia_international.44
+	title = macedonia_international.44.t
+	desc = macedonia_international.44.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_international.44.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+}
+
+### MUSSOLINI EVENTS ###
+
+# Il Duce's Warning
+country_event = {
+	id = macedonia_international.50
+	title = macedonia_international.50.t
+	desc = macedonia_international.50.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = MAC
+		ITA = { 
+			exists = yes
+			has_government = fascism
+		}
+		date > 1937.1.1
+		NOT = { has_country_flag = mussolini_warning }
+		OR = {
+			has_country_flag = MAC_ancient_claims_made
+			has_completed_focus = MAC_balkan_conference
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 8
+	}
+	
+	option = {
+		name = macedonia_international.50.a
+		add_political_power = 50
+		add_opinion_modifier = {
+			target = ITA
+			modifier = MAC_negative_25
+		}
+		custom_effect_tooltip = macedonia_international.50.a_tt
+		set_country_flag = mussolini_warning
+	}
+}
+
+### WORLD REACTION TO DELČEVISM ###
+
+# International Press on Delčev
+news_event = {
+	id = macedonia_international.100
+	title = macedonia_international.100.t
+	desc = macedonia_international.100.d
+	picture = GFX_news_event_generic_conference
+	
+	major = yes
+	
+	trigger = {
+		MAC = {
+			has_country_flag = delcev_in_power
+		}
+		NOT = { has_global_flag = delcev_international_news }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = macedonia_international.100.a
+		trigger = { tag = SOV }
+		set_global_flag = delcev_international_news
+	}
+	
+	option = {
+		name = macedonia_international.100.b
+		trigger = { tag = GER }
+		set_global_flag = delcev_international_news
+	}
+	
+	option = {
+		name = macedonia_international.100.c
+		trigger = { tag = ENG }
+		set_global_flag = delcev_international_news
+	}
+	
+	option = {
+		name = macedonia_international.100.d
+		trigger = { NOT = { OR = { tag = SOV tag = GER tag = ENG } } }
+		set_global_flag = delcev_international_news
+	}
+}
+
+# World Reacts to Revolutionary Independents
+news_event = {
+	id = macedonia_international.101
+	title = macedonia_international.101.t
+	desc = macedonia_international.101.d
+	picture = GFX_news_event_generic_sign_treaty
+	
+	major = yes
+	
+	trigger = {
+		MAC = {
+			has_idea = MAC_revolutionary_independents
+		}
+		NOT = { has_global_flag = revolutionary_independents_news }
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = macedonia_international.101.a
+		trigger = { tag = SOV }
+		set_global_flag = revolutionary_independents_news
+	}
+	
+	option = {
+		name = macedonia_international.101.b
+		trigger = { tag = GER }
+		set_global_flag = revolutionary_independents_news
+	}
+	
+	option = {
+		name = macedonia_international.101.c
+		trigger = { 
+			OR = {
+				tag = ENG
+				tag = FRA
+				tag = USA
+			}
+		}
+		set_global_flag = revolutionary_independents_news
+	}
+	
+	option = {
+		name = macedonia_international.101.d
+		trigger = { 
+			NOT = { 
+				OR = { 
+					tag = SOV 
+					tag = GER 
+					tag = ENG 
+					tag = FRA 
+					tag = USA 
+				} 
+			} 
+		}
+		set_global_flag = revolutionary_independents_news
+	}
+}

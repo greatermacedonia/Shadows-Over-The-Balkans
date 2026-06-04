@@ -1,0 +1,3933 @@
+focus_tree = {
+    id = macedonian_focus
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = MAC
+        }
+    }
+    default = no
+    continuous_focus_position = {
+        x = 50
+        y = 0
+    }
+    focus = {
+        id = MAC_succession_question
+        icon = GFX_goal_generic_political_pressure
+        x = 2
+        y = -7
+        cost = 1
+        completion_reward = {
+            add_political_power = 50
+            add_ideas = MAC_unstable_government
+            country_event = {
+                id = mac_crisis.1
+                days = 7
+            }
+            custom_effect_tooltip = MAC_political_crisis_begins_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+    }
+    focus = {
+        id = MAC_vmro_conspiracy
+        icon = "GFX_focus_VRMO Takeover"
+        x = 4
+        y = -5
+        cost = 3
+        mutually_exclusive = {
+            focus = MAC_workers_strike
+            focus = MAC_balkan_conference
+            focus = MAC_emergency_powers
+        }
+        available = {
+            has_idea = MAC_unstable_government
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.10
+            }
+            country_event = {
+                id = mac_crisis.10
+            }
+            custom_effect_tooltip = MAC_vmro_rising_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_succession_question
+        }
+    }
+    focus = {
+        id = MAC_workers_strike
+        icon = GFX_goal_generic_propaganda
+        x = 2
+        y = -5
+        cost = 3
+        mutually_exclusive = {
+            focus = MAC_vmro_conspiracy
+            focus = MAC_balkan_conference
+            focus = MAC_emergency_powers
+        }
+        available = {
+            has_idea = MAC_unstable_government
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.10
+            }
+            country_event = {
+                id = mac_crisis.20
+            }
+            custom_effect_tooltip = MAC_communist_rising_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_succession_question
+        }
+    }
+    focus = {
+        id = MAC_balkan_conference
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 5
+        y = -5
+        cost = 3
+        mutually_exclusive = {
+            focus = MAC_vmro_conspiracy
+            focus = MAC_workers_strike
+            focus = MAC_emergency_powers
+        }
+        available = {
+            has_idea = MAC_unstable_government
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.10
+            }
+            country_event = {
+                id = mac_crisis.30
+            }
+            custom_effect_tooltip = MAC_democratic_rising_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_succession_question
+        }
+    }
+    focus = {
+        id = MAC_emergency_powers
+        icon = GFX_goal_generic_neutrality_focus
+        x = 0
+        y = -5
+        cost = 3
+        mutually_exclusive = {
+            focus = MAC_vmro_conspiracy
+            focus = MAC_workers_strike
+            focus = MAC_balkan_conference
+        }
+        available = {
+            has_idea = MAC_unstable_government
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = neutrality
+                popularity = 0.10
+            }
+            country_event = {
+                id = mac_crisis.40
+            }
+            custom_effect_tooltip = MAC_centrist_rising_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_succession_question
+        }
+    }
+    focus = {
+        id = MAC_night_of_long_knives
+        icon = GFX_goal_generic_political_pressure
+        x = 4
+        y = -4
+        cost = 3
+        mutually_exclusive = {}
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.15
+            }
+            add_stability = -0.05
+            add_political_power = 50
+            country_event = {
+                id = mac_crisis.11
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_vmro_conspiracy
+        }
+    }
+    focus = {
+        id = MAC_vmro_takeover
+        icon = GFX_goal_generic_forceful_treaty
+        x = 4
+        y = -3
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+            }
+            add_ideas = MAC_vmro_government
+            remove_ideas = MAC_unstable_government
+            country_event = {
+                id = mac_crisis.12
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_night_of_long_knives
+        }
+    }
+    focus = {
+        id = MAC_consolidate_vmro
+        icon = GFX_goal_generic_major_alliance
+        x = 4
+        y = -2
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_stability = 0.10
+            add_war_support = 0.10
+            add_political_power = 100
+            custom_effect_tooltip = MAC_vmro_consolidated_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_vmro_takeover
+        }
+    }
+    focus = {
+        id = MAC_purge_reactionaries
+        icon = GFX_goal_generic_demand_territory
+        x = 2
+        y = -4
+        cost = 3
+        mutually_exclusive = {}
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.15
+            }
+            add_stability = -0.05
+            add_political_power = 50
+            country_event = {
+                id = mac_crisis.21
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_workers_strike
+        }
+    }
+    focus = {
+        id = MAC_peoples_republic
+        icon = GFX_goal_support_communism
+        x = 2
+        y = -3
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            set_politics = {
+                ruling_party = communism
+                elections_allowed = no
+            }
+            add_ideas = MAC_peoples_government
+            remove_ideas = MAC_unstable_government
+            country_event = {
+                id = mac_crisis.22
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_purge_reactionaries
+        }
+    }
+    focus = {
+        id = MAC_dictatorship_proletariat
+        icon = GFX_goal_generic_propaganda
+        x = 2
+        y = -2
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_stability = 0.10
+            add_war_support = 0.10
+            add_political_power = 100
+            custom_effect_tooltip = MAC_communist_consolidated_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_peoples_republic
+        }
+    }
+    focus = {
+        id = MAC_free_press
+        icon = GFX_goal_generic_propaganda
+        x = 5
+        y = -4
+        cost = 3
+        mutually_exclusive = {}
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.15
+            }
+            add_stability = 0.05
+            add_political_power = 50
+            country_event = {
+                id = mac_crisis.31
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_balkan_conference
+        }
+    }
+    focus = {
+        id = MAC_constitutional_convention
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 5
+        y = -3
+        cost = 3
+        mutually_exclusive = {}
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            set_politics = {
+                ruling_party = democratic
+                elections_allowed = yes
+            }
+            add_ideas = MAC_democratic_government
+            remove_ideas = MAC_unstable_government
+            country_event = {
+                id = mac_crisis.32
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_free_press
+        }
+    }
+    focus = {
+        id = MAC_balkan_democracy
+        icon = GFX_goal_generic_national_unity
+        x = 5
+        y = -2
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_stability = 0.10
+            add_war_support = 0.05
+            add_political_power = 100
+            custom_effect_tooltip = MAC_democratic_consolidated_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_constitutional_convention
+        }
+    }
+    focus = {
+        id = MAC_national_unity_coalition
+        icon = GFX_goal_generic_national_unity
+        x = 0
+        y = -4
+        cost = 3
+        mutually_exclusive = {}
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = neutrality
+                popularity = 0.15
+            }
+            add_stability = 0.05
+            add_political_power = 50
+            country_event = {
+                id = mac_crisis.41
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_emergency_powers
+        }
+    }
+    focus = {
+        id = MAC_emergency_rule
+        icon = GFX_goal_generic_demand_territory
+        x = 0
+        y = -3
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            set_politics = {
+                ruling_party = neutrality
+                elections_allowed = yes
+            }
+            add_ideas = MAC_centrist_government
+            remove_ideas = MAC_unstable_government
+            country_event = {
+                id = mac_crisis.42
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_national_unity_coalition
+        }
+    }
+    focus = {
+        id = MAC_managed_stability
+        icon = GFX_goal_generic_intelligence_exchange
+        x = 0
+        y = -2
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_stability = 0.10
+            add_war_support = 0.05
+            add_political_power = 100
+            custom_effect_tooltip = MAC_centrist_consolidated_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_emergency_rule
+        }
+    }
+    focus = {
+        id = MAC_archaeological_expeditions
+        icon = GFX_goal_generic_scientific_exchange
+        x = 8
+        y = -7
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.02
+            country_event = {
+                id = mac_ancient.1
+                days = 30
+            }
+            set_country_flag = MAC_archaeology_program
+            custom_effect_tooltip = MAC_begin_archaeology_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+    }
+    focus = {
+        id = MAC_vergina_sun_banner
+        icon = GFX_goal_generic_propaganda
+        x = 8
+        y = -6
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 100
+            set_cosmetic_tag = MAC_ancient
+            country_event = {
+                id = mac_ancient.2
+            }
+            custom_effect_tooltip = MAC_ancient_symbols_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_archaeological_expeditions
+        }
+    }
+    focus = {
+        id = MAC_discover_royal_tombs
+        icon = GFX_goal_generic_scientific_exchange
+        x = 6
+        y = -5
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 100
+            add_stability = 0.05
+            country_event = {
+                id = mac_ancient.10
+            }
+            set_country_flag = MAC_discovered_royal_tombs
+            custom_effect_tooltip = MAC_royal_tombs_unlocks_demands_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_vergina_sun_banner
+        }
+    }
+    focus = {
+        id = MAC_discover_amphipolis
+        icon = GFX_goal_generic_scientific_exchange
+        x = 8
+        y = -5
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+            add_political_power = 75
+            country_event = {
+                id = mac_ancient.11
+            }
+            set_country_flag = MAC_discovered_amphipolis
+            custom_effect_tooltip = MAC_amphipolis_gold_unlocks_demands_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_vergina_sun_banner
+        }
+    }
+    focus = {
+        id = MAC_aristotles_birthplace
+        icon = GFX_goal_generic_scientific_exchange
+        x = 10
+        y = -5
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_research_slot = 1
+            add_political_power = 50
+            country_event = {
+                id = mac_ancient.12
+            }
+            set_country_flag = MAC_aristotle_heritage
+            custom_effect_tooltip = MAC_aristotle_academy_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_vergina_sun_banner
+        }
+    }
+    focus = {
+        id = MAC_persian_gates
+        icon = GFX_goal_generic_major_war
+        x = 6
+        y = -4
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_war_support = 0.10
+            add_ideas = MAC_eastern_ambitions
+            country_event = {
+                id = mac_ancient.20
+            }
+            set_country_flag = MAC_persian_heritage_claimed
+            custom_effect_tooltip = MAC_faster_justification_east_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_discover_royal_tombs
+        }
+    }
+    focus = {
+        id = MAC_egyptian_crown
+        icon = GFX_goal_generic_propaganda
+        x = 8
+        y = -4
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_war_support = 0.10
+            add_ideas = MAC_alexandrian_legacy_egypt
+            country_event = {
+                id = mac_ancient.21
+            }
+            set_country_flag = MAC_alexandria_heritage
+            custom_effect_tooltip = MAC_faster_justification_egypt_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_discover_amphipolis
+        }
+    }
+    focus = {
+        id = MAC_indian_campaign
+        icon = GFX_goal_generic_attack_allies
+        x = 10
+        y = -4
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_war_support = 0.15
+            army_experience = 25
+            country_event = {
+                id = mac_ancient.22
+            }
+            set_country_flag = MAC_eastern_conquests
+            custom_effect_tooltip = MAC_alexanders_path_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_aristotles_birthplace
+        }
+    }
+    focus = {
+        id = MAC_treasure_of_philip
+        icon = GFX_focus_CONGO_gold_and_diamonds
+        x = 6
+        y = -3
+        cost = 3
+        available = {
+            OR = {
+                controls_state = 731
+                has_country_flag = MAC_archaeology_program
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 2000
+            add_offsite_building = {
+                type = industrial_complex
+                level = 5
+            }
+            add_stability = 0.10
+            country_event = {
+                id = mac_ancient.30
+            }
+            custom_effect_tooltip = MAC_philip_treasure_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_persian_gates
+        }
+    }
+    focus = {
+        id = MAC_library_of_aristotle
+        icon = GFX_goal_generic_scientific_exchange
+        x = 8
+        y = -3
+        cost = 3
+        available = {
+            OR = {
+                controls_state = 731
+                has_country_flag = MAC_archaeology_program
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_research_slot = 2
+            add_tech_bonus = {
+                name = MAC_aristotelian_scholars
+                bonus = 0.15
+                uses = 2
+                category = industry
+            }
+            country_event = {
+                id = mac_ancient.31
+            }
+            custom_effect_tooltip = MAC_aristotle_library_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_egyptian_crown
+        }
+    }
+    focus = {
+        id = MAC_alexanders_armor
+        icon = GFX_goal_generic_army_doctrines
+        x = 10
+        y = -3
+        cost = 3
+        available = {
+            has_completed_focus = MAC_persian_gates
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_war_support = 0.20
+            add_ideas = MAC_alexanders_heir
+            country_event = {
+                id = mac_ancient.32
+            }
+            custom_effect_tooltip = MAC_alexanders_armor_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_indian_campaign
+        }
+    }
+    focus = {
+        id = MAC_prophecy_basil
+        icon = GFX_goal_generic_propaganda
+        x = 6
+        y = -2
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_war_support = 0.25
+            add_stability = 0.10
+            add_ideas = MAC_manifest_destiny
+            country_event = {
+                id = mac_ancient.40
+            }
+            set_country_flag = MAC_prophecy_revealed
+            custom_effect_tooltip = MAC_balkan_destiny_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_treasure_of_philip
+        }
+    }
+    focus = {
+        id = MAC_oracle_delphi
+        icon = GFX_goal_generic_intelligence_exchange
+        x = 8
+        y = -2
+        cost = 3
+        available = {
+            OR = {
+                has_war_with = GRE
+                controls_state = 731
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            country_event = {
+                id = mac_ancient.41
+            }
+            custom_effect_tooltip = MAC_oracle_prophecy_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_library_of_aristotle
+        }
+    }
+    focus = {
+        id = MAC_secret_ohrid
+        icon = GFX_goal_generic_scientific_exchange
+        x = 10
+        y = -2
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            country_event = {
+                id = mac_ancient.42
+            }
+            custom_effect_tooltip = MAC_ohrid_mystery_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_alexanders_armor
+        }
+    }
+    focus = {
+        id = MAC_alexander_protocol
+        icon = GFX_goal_generic_major_alliance
+        x = 7
+        y = -1
+        cost = 4
+        mutually_exclusive = {
+            focus = MAC_neo_byzantine_empire
+        }
+        available = {
+            OR = {
+                controls_state = 350
+                controls_state = 731
+                controls_state = 447
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            create_faction = "Alexandrian League"
+            add_named_threat = {
+                threat = 50
+                name = "Empire Restoration"
+            }
+            add_ideas = MAC_alexandrian_legacy
+            unlock_decision_category_tooltip = MAC_alexandrian_empire
+            country_event = {
+                id = mac_ancient.50
+            }
+            custom_effect_tooltip = MAC_alexander_protocol_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_prophecy_basil
+        }
+        prerequisite = {
+            focus = MAC_oracle_delphi
+        }
+        prerequisite = {
+            focus = MAC_secret_ohrid
+        }
+    }
+    focus = {
+        id = MAC_neo_byzantine_empire
+        icon = GFX_goal_generic_major_alliance
+        x = 9
+        y = -1
+        cost = 4
+        mutually_exclusive = {
+            focus = MAC_alexander_protocol
+        }
+        available = {
+            OR = {
+                controls_state = 350
+                controls_state = 731
+                controls_state = 447
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            create_faction = "Byzantine Commonwealth"
+            add_named_threat = {
+                threat = 50
+                name = "Byzantine Restoration"
+            }
+            add_ideas = MAC_byzantine_legacy
+            unlock_decision_category_tooltip = MAC_byzantine_empire
+            country_event = {
+                id = mac_ancient.51
+            }
+            custom_effect_tooltip = MAC_byzantine_protocol_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_prophecy_basil
+        }
+        prerequisite = {
+            focus = MAC_oracle_delphi
+        }
+        prerequisite = {
+            focus = MAC_secret_ohrid
+        }
+    }
+    focus = {
+        id = MAC_conquer_constantinople
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        x = 8
+        y = 0
+        cost = 4
+        available = {
+            is_subject = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+            add_stability = 0.05
+            add_war_support = 0.05
+            add_political_power = 100
+            add_ideas = MAC_seat_of_empires
+            set_cosmetic_tag = MAC_empire
+            country_event = {
+                id = mac_ancient.60
+            }
+            custom_effect_tooltip = MAC_constantinople_victory_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_alexander_protocol
+        }
+        prerequisite = {
+            focus = MAC_neo_byzantine_empire
+        }
+    }
+    focus = {
+        id = MAC_foreign_policy_direction
+        icon = GFX_goal_generic_alliance
+        x = 3
+        y = 0
+        cost = 2
+        available = {
+            OR = {
+                has_completed_focus = MAC_consolidate_vmro
+                has_completed_focus = MAC_dictatorship_proletariat
+                has_completed_focus = MAC_balkan_democracy
+                has_completed_focus = MAC_managed_stability
+                has_completed_focus = MAC_recall_founder
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 100
+            unlock_decision_category_tooltip = MAC_foreign_policy_decisions
+            custom_effect_tooltip = MAC_foreign_policy_unlocked_tt
+            every_other_country = {
+                limit = {
+                    NOT = {
+                        has_war_with = ROOT
+                    }
+                }
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MAC_diplomatic_opening
+                }
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_consolidate_vmro
+        }
+        prerequisite = {
+            focus = MAC_dictatorship_proletariat
+        }
+        prerequisite = {
+            focus = MAC_balkan_democracy
+        }
+        prerequisite = {
+            focus = MAC_managed_stability
+        }
+        prerequisite = {
+            focus = MAC_recall_founder
+        }
+    }
+    focus = {
+        id = MAC_seek_western_allies
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 2
+        y = 0
+        cost = 7
+        mutually_exclusive = {
+            focus = MAC_appeal_moscow
+            focus = MAC_align_axis
+            focus = MAC_eternal_independence
+        }
+        available = {
+            has_government = democratic
+        }
+        completion_reward = {
+            add_opinion_modifier = {
+                target = ENG
+                modifier = MAC_western_approach
+            }
+            add_opinion_modifier = {
+                target = FRA
+                modifier = MAC_western_approach
+            }
+            country_event = {
+                id = mac_diplomacy.10
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_foreign_policy_direction
+        }
+    }
+    focus = {
+        id = MAC_join_allies
+        icon = GFX_goal_generic_major_alliance
+        x = 2
+        y = 2
+        cost = 7
+        available = {
+            is_in_faction = no
+            ENG = {
+                is_faction_leader = yes
+            }
+        }
+        completion_reward = {
+            ENG = {
+                country_event = {
+                    id = mac_diplomacy.11
+                }
+            }
+            custom_effect_tooltip = MAC_allies_invitation_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_seek_western_allies
+        }
+    }
+    focus = {
+        id = MAC_balkan_democratic_federation
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 2
+        y = 2
+        cost = 7
+        completion_reward = {
+            every_neighbor_country = {
+                limit = {
+                    has_government = democratic
+                }
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MAC_balkan_unity
+                }
+                country_event = {
+                    id = mac_diplomacy.12
+                }
+            }
+            custom_effect_tooltip = MAC_balkan_federation_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_seek_western_allies
+        }
+    }
+    focus = {
+        id = MAC_appeal_moscow
+        icon = GFX_goal_support_communism
+        x = 4
+        y = 0
+        cost = 7
+        mutually_exclusive = {
+            focus = MAC_seek_western_allies
+            focus = MAC_align_axis
+            focus = MAC_eternal_independence
+        }
+        available = {
+            has_government = communism
+        }
+        completion_reward = {
+            add_opinion_modifier = {
+                target = SOV
+                modifier = MAC_communist_solidarity
+            }
+            country_event = {
+                id = mac_diplomacy.20
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_foreign_policy_direction
+        }
+    }
+    focus = {
+        id = MAC_join_comintern
+        icon = GFX_goal_generic_major_alliance
+        x = 4
+        y = 2
+        cost = 7
+        available = {
+            is_in_faction = no
+            SOV = {
+                is_faction_leader = yes
+            }
+        }
+        completion_reward = {
+            SOV = {
+                country_event = {
+                    id = mac_diplomacy.21
+                }
+            }
+            custom_effect_tooltip = MAC_comintern_invitation_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_appeal_moscow
+        }
+    }
+    focus = {
+        id = MAC_balkan_peoples_republic
+        icon = GFX_goal_support_communism
+        x = 4
+        y = 2
+        cost = 7
+        completion_reward = {
+            every_neighbor_country = {
+                limit = {
+                    has_government = communism
+                }
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MAC_socialist_brotherhood
+                }
+                country_event = {
+                    id = mac_diplomacy.22
+                }
+            }
+            custom_effect_tooltip = MAC_balkan_soviet_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_appeal_moscow
+        }
+    }
+    focus = {
+        id = MAC_align_axis
+        icon = GFX_goal_generic_major_war
+        x = 5
+        y = 0
+        cost = 7
+        mutually_exclusive = {
+            focus = MAC_seek_western_allies
+            focus = MAC_appeal_moscow
+            focus = MAC_eternal_independence
+        }
+        available = {
+            has_government = fascism
+        }
+        completion_reward = {
+            add_opinion_modifier = {
+                target = GER
+                modifier = MAC_fascist_alignment
+            }
+            add_opinion_modifier = {
+                target = ITA
+                modifier = MAC_fascist_alignment
+            }
+            country_event = {
+                id = mac_diplomacy.30
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_foreign_policy_direction
+        }
+    }
+    focus = {
+        id = MAC_rome_berlin_skopje
+        icon = GFX_goal_generic_major_alliance
+        x = 4
+        y = 2
+        cost = 7
+        available = {
+            is_in_faction = no
+            GER = {
+                is_faction_leader = yes
+            }
+        }
+        completion_reward = {
+            GER = {
+                country_event = {
+                    id = mac_diplomacy.31
+                }
+            }
+            custom_effect_tooltip = MAC_axis_invitation_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_align_axis
+        }
+    }
+    focus = {
+        id = MAC_balkan_domination
+        icon = GFX_goal_generic_major_war
+        x = 5
+        y = 2
+        cost = 7
+        completion_reward = {
+            every_neighbor_country = {
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MAC_balkan_threat
+                }
+            }
+            add_war_support = 0.10
+            custom_effect_tooltip = MAC_balkan_conquest_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_align_axis
+        }
+    }
+    focus = {
+        id = MAC_eternal_independence
+        icon = GFX_goal_generic_national_unity
+        x = 1
+        y = 0
+        cost = 7
+        mutually_exclusive = {
+            focus = MAC_seek_western_allies
+            focus = MAC_appeal_moscow
+            focus = MAC_align_axis
+        }
+        available = {
+            OR = {
+                has_government = neutrality
+                has_idea = MAC_delcevist_government
+            }
+        }
+        completion_reward = {
+            add_ideas = MAC_armed_neutrality
+            add_war_support = 0.05
+            country_event = {
+                id = mac_diplomacy.40
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_foreign_policy_direction
+        }
+    }
+    focus = {
+        id = MAC_league_free_balkan_nations
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 1
+        y = 2
+        cost = 7
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            create_faction = "League of Free Balkan Nations"
+            add_named_threat = {
+                threat = 5
+                name = "Balkan Independence Movement"
+            }
+            custom_effect_tooltip = MAC_free_balkan_league_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_eternal_independence
+        }
+    }
+    focus = {
+        id = MAC_armed_neutrality_doctrine
+        icon = GFX_goal_generic_build_tank
+        x = 2
+        y = 2
+        cost = 7
+        completion_reward = {
+            add_ideas = MAC_fortress_macedonia
+            army_experience = 25
+            custom_effect_tooltip = MAC_defensive_doctrine_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_eternal_independence
+        }
+    }
+    focus = {
+        id = MAC_the_balkan_question
+        icon = GFX_goal_generic_territory_or_war
+        x = 12
+        y = -3
+        cost = 2
+        available = {
+            is_subject = no
+            NOT = {
+                is_in_faction_with = GRE
+                is_in_faction_with = BUL
+                is_in_faction_with = YUG
+                is_in_faction_with = ALB
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_named_threat = {
+                threat = 2
+                name = "Macedonian Irredentism"
+            }
+            add_political_power = 100
+            GRE = {
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MAC_irredentist_claims
+                }
+            }
+            BUL = {
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MAC_irredentist_claims
+                }
+            }
+            YUG = {
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MAC_irredentist_claims
+                }
+            }
+            ALB = {
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MAC_irredentist_claims
+                }
+            }
+            unlock_decision_category_tooltip = MAC_territorial_demands
+            country_event = {
+                id = mac_irredentism.1
+            }
+            custom_effect_tooltip = MAC_balkan_demands_unlocked_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+    }
+    focus = {
+        id = MAC_remember_aegean_macedonia
+        icon = GFX_goal_generic_propaganda
+        x = 11
+        y = -2
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_war_support = 0.05
+            add_political_power = 75
+            country_event = {
+                id = mac_irredentism.10
+            }
+            set_country_flag = MAC_aegean_campaign_active
+            custom_effect_tooltip = MAC_aegean_demands_unlocked_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_the_balkan_question
+        }
+    }
+    focus = {
+        id = MAC_support_mlf
+        icon = GFX_goal_generic_propaganda
+        x = 11
+        y = 0
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            GRE = {
+                add_stability = -0.10
+                country_event = {
+                    id = mac_irredentism.11
+                }
+            }
+            add_political_power = 50
+            custom_effect_tooltip = MAC_mlf_resistance_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_remember_aegean_macedonia
+        }
+    }
+    focus = {
+        id = MAC_diplomatic_pressure_greece
+        icon = GFX_goal_generic_forceful_treaty
+        x = 11
+        y = 0
+        cost = 3
+        will_lead_to_war_with = GRE
+        available = {
+            is_subject = no
+            has_war = no
+            NOT = {
+                is_in_faction_with = GRE
+            }
+        }
+        bypass = {
+            OR = {
+                GRE = {
+                    OR = {
+                        exists = no
+                        is_subject_of = MAC
+                    }
+                }
+                controls_state = 731
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 0
+                date = "1937.6.1"
+            }
+        }
+        completion_reward = {
+            add_named_threat = {
+                threat = 3
+                name = "Macedonian Demands on Greece"
+            }
+            add_political_power = 100
+            set_country_flag = MAC_can_demand_greece
+            add_state_claim = 731
+            add_state_claim = 1048
+            if = {
+                limit = {
+                    country_exists = GRE
+                    GRE = {
+                        is_subject = no
+                        controls_state = 731
+                    }
+                }
+                GRE = {
+                    country_event = {
+                        id = macedonia_demands.2
+                        days = 1
+                    }
+                }
+                effect_tooltip = {
+                    custom_effect_tooltip = if_they_accept_tt
+                    add_political_power = 75
+                    add_stability = 0.05
+                    add_war_support = 0.10
+                    731 = {
+                        add_core_of = MAC
+                    }
+                    1048 = {
+                        add_core_of = MAC
+                    }
+                    custom_effect_tooltip = if_they_refuse_tt
+                    create_wargoal = {
+                        type = take_state_focus
+                        target = GRE
+                        generator = { 731 1048 }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    country_exists = GRE
+                    GRE = {
+                        is_subject = yes
+                        NOT = {
+                            is_subject_of = MAC
+                        }
+                    }
+                }
+                GRE = {
+                    overlord = {
+                        country_event = {
+                            id = macedonia_demands.2
+                            days = 1
+                        }
+                    }
+                }
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_support_mlf
+        }
+    }
+    focus = {
+        id = MAC_reclaim_pella_vergina
+        icon = GFX_goal_generic_major_war
+        x = 11
+        y = 2
+        cost = 3
+        available = {
+            NOT = {
+                has_country_flag = MAC_greece_accepted_demands
+            }
+            is_subject = no
+        }
+        bypass = {
+            OR = {
+                controls_state = 731
+                has_country_flag = MAC_greece_accepted_demands
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+            modifier = {
+                factor = 0
+                has_country_flag = MAC_greece_accepted_demands
+            }
+        }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = GRE
+            }
+            add_war_support = 0.15
+            country_event = {
+                id = mac_irredentism.14
+            }
+            custom_effect_tooltip = MAC_reclaim_aegean_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_diplomatic_pressure_greece
+        }
+    }
+    focus = {
+        id = MAC_aegean_question_resolved
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        x = 11
+        y = 2
+        cost = 3
+        available = {
+            controls_state = 731
+            controls_state = 1048
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            731 = {
+                add_core_of = MAC
+            }
+            1048 = {
+                add_core_of = MAC
+            }
+            add_stability = 0.10
+            add_war_support = 0.10
+            country_event = {
+                id = mac_irredentism.13
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_reclaim_pella_vergina
+        }
+    }
+    focus = {
+        id = MAC_support_pirin_underground
+        icon = GFX_goal_generic_propaganda
+        x = 12
+        y = -2
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_war_support = 0.05
+            add_political_power = 75
+            country_event = {
+                id = mac_irredentism.20
+            }
+            set_country_flag = MAC_pirin_campaign_active
+            custom_effect_tooltip = MAC_pirin_demands_unlocked_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_the_balkan_question
+        }
+    }
+    focus = {
+        id = MAC_boris_dilemma
+        icon = GFX_goal_generic_forceful_treaty
+        x = 12
+        y = 0
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            BUL = {
+                country_event = {
+                    id = mac_irredentism.21
+                }
+            }
+            custom_effect_tooltip = MAC_boris_offer_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_support_pirin_underground
+        }
+    }
+    focus = {
+        id = MAC_diplomatic_pressure_bulgaria
+        icon = GFX_goal_generic_forceful_treaty
+        x = 12
+        y = 0
+        cost = 3
+        will_lead_to_war_with = BUL
+        available = {
+            is_subject = no
+            has_war = no
+            NOT = {
+                is_in_faction_with = BUL
+            }
+        }
+        bypass = {
+            OR = {
+                BUL = {
+                    OR = {
+                        exists = no
+                        is_subject_of = MAC
+                    }
+                }
+                controls_state = 1047
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 0
+                date = "1938.1.1"
+            }
+        }
+        completion_reward = {
+            add_named_threat = {
+                threat = 3
+                name = "Macedonian Demands on Bulgaria"
+            }
+            add_political_power = 100
+            set_country_flag = MAC_can_demand_bulgaria
+            add_state_claim = 1047
+            if = {
+                limit = {
+                    country_exists = BUL
+                    BUL = {
+                        is_subject = no
+                        controls_state = 1047
+                    }
+                }
+                BUL = {
+                    country_event = {
+                        id = macedonia_demands.5
+                        days = 1
+                    }
+                }
+                effect_tooltip = {
+                    custom_effect_tooltip = if_they_accept_tt
+                    add_political_power = 100
+                    add_stability = 0.10
+                    add_war_support = 0.15
+                    1047 = {
+                        add_core_of = MAC
+                    }
+                    custom_effect_tooltip = if_they_refuse_tt
+                    create_wargoal = {
+                        type = take_state_focus
+                        target = BUL
+                        generator = { 1047 }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    country_exists = BUL
+                    BUL = {
+                        is_subject = yes
+                        NOT = {
+                            is_subject_of = MAC
+                        }
+                    }
+                }
+                BUL = {
+                    overlord = {
+                        country_event = {
+                            id = macedonia_demands.5
+                            days = 1
+                        }
+                    }
+                }
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_boris_dilemma
+        }
+    }
+    focus = {
+        id = MAC_unite_pirin_macedonia
+        icon = GFX_goal_generic_major_war
+        x = 12
+        y = 2
+        cost = 3
+        available = {
+            NOT = {
+                has_country_flag = MAC_bulgaria_accepted_demands
+            }
+            is_subject = no
+        }
+        bypass = {
+            OR = {
+                controls_state = 1047
+                has_country_flag = MAC_bulgaria_accepted_demands
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+            modifier = {
+                factor = 0
+                has_country_flag = MAC_bulgaria_accepted_demands
+            }
+        }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = BUL
+            }
+            add_war_support = 0.15
+            country_event = {
+                id = mac_irredentism.24
+            }
+            custom_effect_tooltip = MAC_reclaim_pirin_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_diplomatic_pressure_bulgaria
+        }
+    }
+    focus = {
+        id = MAC_pirin_question_resolved
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        x = 12
+        y = 2
+        cost = 3
+        available = {
+            controls_state = 1047
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            1047 = {
+                add_core_of = MAC
+            }
+            add_stability = 0.10
+            add_war_support = 0.10
+            country_event = {
+                id = mac_irredentism.23
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_unite_pirin_macedonia
+        }
+    }
+    focus = {
+        id = MAC_vardar_brotherhood
+        icon = GFX_goal_generic_propaganda
+        x = 13
+        y = -2
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_war_support = 0.05
+            add_political_power = 75
+            country_event = {
+                id = mac_irredentism.30
+            }
+            set_country_flag = MAC_vardar_campaign_active
+            custom_effect_tooltip = MAC_vardar_demands_unlocked_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_the_balkan_question
+        }
+    }
+    focus = {
+        id = MAC_undermine_yugoslav_authority
+        icon = GFX_goal_generic_propaganda
+        x = 13
+        y = 0
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            YUG = {
+                add_stability = -0.15
+                country_event = {
+                    id = mac_irredentism.31
+                }
+            }
+            add_political_power = 50
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_vardar_brotherhood
+        }
+    }
+    focus = {
+        id = MAC_diplomatic_pressure_yugoslavia
+        icon = GFX_goal_generic_forceful_treaty
+        x = 13
+        y = 0
+        cost = 3
+        will_lead_to_war_with = YUG
+        available = {
+            is_subject = no
+            has_war = no
+            NOT = {
+                is_in_faction_with = YUG
+            }
+        }
+        bypass = {
+            OR = {
+                YUG = {
+                    OR = {
+                        exists = no
+                        is_subject_of = MAC
+                    }
+                }
+                AND = {
+                    controls_state = 970
+                    controls_state = 803
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 0
+                date = "1938.1.1"
+            }
+        }
+        completion_reward = {
+            add_named_threat = {
+                threat = 3
+                name = "Macedonian Demands on Yugoslavia"
+            }
+            add_political_power = 100
+            set_country_flag = MAC_can_demand_yugoslavia
+            add_state_claim = 970
+            add_state_claim = 803
+            if = {
+                limit = {
+                    country_exists = YUG
+                    YUG = {
+                        is_subject = no
+                        OR = {
+                            controls_state = 970
+                            controls_state = 803
+                        }
+                    }
+                }
+                YUG = {
+                    country_event = {
+                        id = macedonia_demands.3
+                        days = 1
+                    }
+                }
+                effect_tooltip = {
+                    custom_effect_tooltip = if_they_accept_tt
+                    add_political_power = 75
+                    add_stability = 0.05
+                    add_war_support = 0.10
+                    970 = {
+                        add_core_of = MAC
+                    }
+                    803 = {
+                        add_core_of = MAC
+                    }
+                    custom_effect_tooltip = if_they_refuse_tt
+                    create_wargoal = {
+                        type = take_state_focus
+                        target = YUG
+                        generator = { 970 803 }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    country_exists = YUG
+                    YUG = {
+                        is_subject = yes
+                        NOT = {
+                            is_subject_of = MAC
+                        }
+                    }
+                }
+                YUG = {
+                    overlord = {
+                        country_event = {
+                            id = macedonia_demands.3
+                            days = 1
+                        }
+                    }
+                }
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_undermine_yugoslav_authority
+        }
+    }
+    focus = {
+        id = MAC_reclaim_northern_macedonia
+        icon = GFX_goal_generic_major_war
+        x = 13
+        y = 2
+        cost = 3
+        available = {
+            NOT = {
+                has_country_flag = MAC_yugoslavia_accepted_demands
+            }
+            is_subject = no
+        }
+        bypass = {
+            OR = {
+                AND = {
+                    controls_state = 970
+                    controls_state = 803
+                }
+                has_country_flag = MAC_yugoslavia_accepted_demands
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+            modifier = {
+                factor = 0
+                has_country_flag = MAC_yugoslavia_accepted_demands
+            }
+        }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = YUG
+            }
+            add_war_support = 0.15
+            country_event = {
+                id = mac_irredentism.34
+            }
+            custom_effect_tooltip = MAC_reclaim_vardar_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_diplomatic_pressure_yugoslavia
+        }
+    }
+    focus = {
+        id = MAC_vardar_question_resolved
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        x = 13
+        y = 2
+        cost = 3
+        available = {
+            controls_state = 970
+            controls_state = 803
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            970 = {
+                add_core_of = MAC
+            }
+            803 = {
+                add_core_of = MAC
+            }
+            add_stability = 0.10
+            add_war_support = 0.10
+            country_event = {
+                id = mac_irredentism.33
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_reclaim_northern_macedonia
+        }
+    }
+    focus = {
+        id = MAC_albanian_macedonians
+        icon = GFX_goal_generic_propaganda
+        x = 14
+        y = -2
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_war_support = 0.05
+            add_political_power = 50
+            set_country_flag = MAC_korce_campaign_active
+            custom_effect_tooltip = MAC_korce_demands_unlocked_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_the_balkan_question
+        }
+    }
+    focus = {
+        id = MAC_pressure_tirana
+        icon = GFX_goal_generic_forceful_treaty
+        x = 14
+        y = 0
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            ALB = {
+                add_stability = -0.05
+            }
+            add_political_power = 50
+            custom_effect_tooltip = MAC_albanian_pressure_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_albanian_macedonians
+        }
+    }
+    focus = {
+        id = MAC_diplomatic_pressure_albania
+        icon = GFX_goal_generic_forceful_treaty
+        x = 14
+        y = 0
+        cost = 3
+        will_lead_to_war_with = ALB
+        available = {
+            is_subject = no
+            has_war = no
+            NOT = {
+                is_in_faction_with = ALB
+            }
+        }
+        bypass = {
+            OR = {
+                ALB = {
+                    OR = {
+                        exists = no
+                        is_subject_of = MAC
+                    }
+                }
+                controls_state = 1049
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 0
+                date = "1937.6.1"
+            }
+        }
+        completion_reward = {
+            add_named_threat = {
+                threat = 2
+                name = "Macedonian Demands on Albania"
+            }
+            add_political_power = 75
+            set_country_flag = MAC_can_demand_albania
+            add_state_claim = 1049
+            if = {
+                limit = {
+                    country_exists = ALB
+                    ALB = {
+                        is_subject = no
+                        controls_state = 1049
+                    }
+                }
+                ALB = {
+                    country_event = {
+                        id = macedonia_demands.6
+                        days = 1
+                    }
+                }
+                effect_tooltip = {
+                    custom_effect_tooltip = if_they_accept_tt
+                    add_political_power = 50
+                    add_stability = 0.05
+                    add_war_support = 0.05
+                    1049 = {
+                        add_core_of = MAC
+                    }
+                    custom_effect_tooltip = if_they_refuse_tt
+                    create_wargoal = {
+                        type = take_state_focus
+                        target = ALB
+                        generator = { 1049 }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    country_exists = ALB
+                    ALB = {
+                        is_subject = yes
+                        NOT = {
+                            is_subject_of = MAC
+                        }
+                    }
+                }
+                ALB = {
+                    overlord = {
+                        country_event = {
+                            id = macedonia_demands.6
+                            days = 1
+                        }
+                    }
+                }
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_pressure_tirana
+        }
+    }
+    focus = {
+        id = MAC_subjugate_albania
+        icon = GFX_goal_generic_major_war
+        x = 14
+        y = 2
+        cost = 3
+        available = {
+            NOT = {
+                has_country_flag = MAC_albania_accepted_demands
+            }
+            is_subject = no
+        }
+        bypass = {
+            OR = {
+                controls_state = 1049
+                has_country_flag = MAC_albania_accepted_demands
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+            modifier = {
+                factor = 0
+                has_country_flag = MAC_albania_accepted_demands
+            }
+        }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = ALB
+            }
+            add_war_support = 0.10
+            custom_effect_tooltip = MAC_subjugate_albania_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_diplomatic_pressure_albania
+        }
+    }
+    focus = {
+        id = MAC_korce_question_resolved
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        x = 14
+        y = 2
+        cost = 3
+        available = {
+            controls_state = 1049
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            1049 = {
+                add_core_of = MAC
+            }
+            add_stability = 0.05
+            add_war_support = 0.05
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_subjugate_albania
+        }
+    }
+    focus = {
+        id = MAC_greater_macedonia_realized
+        icon = GFX_goal_generic_major_alliance
+        x = 12
+        y = 4
+        cost = 5
+        available = {
+            has_completed_focus = MAC_aegean_question_resolved
+            has_completed_focus = MAC_pirin_question_resolved
+            has_completed_focus = MAC_vardar_question_resolved
+            has_completed_focus = MAC_korce_question_resolved
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            set_cosmetic_tag = MAC_greater
+            add_ideas = MAC_dream_fulfilled
+            add_stability = 0.15
+            add_war_support = 0.10
+            add_political_power = 500
+            country_event = {
+                id = mac_irredentism.50
+            }
+            custom_effect_tooltip = MAC_greater_macedonia_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_aegean_question_resolved
+        }
+        prerequisite = {
+            focus = MAC_pirin_question_resolved
+        }
+        prerequisite = {
+            focus = MAC_vardar_question_resolved
+        }
+        prerequisite = {
+            focus = MAC_korce_question_resolved
+        }
+    }
+    focus = {
+        id = MAC_whispers_from_tikves
+        icon = GFX_goal_generic_intelligence_exchange
+        x = -3
+        y = -6
+        cost = 1
+        available = {
+            OR = {
+                has_completed_focus = MAC_vmro_conspiracy
+                has_completed_focus = MAC_workers_strike
+                has_completed_focus = MAC_balkan_conference
+                has_completed_focus = MAC_emergency_powers
+            }
+        }
+        completion_reward = {
+            country_event = {
+                id = mac_delcev.1
+            }
+            custom_effect_tooltip = MAC_delcev_watches_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        allow_branch = {
+            OR = {
+                has_completed_focus = MAC_vmro_conspiracy
+                has_completed_focus = MAC_emergency_powers
+                has_completed_focus = MAC_workers_strike
+                has_completed_focus = MAC_balkan_conference
+            }
+        }
+    }
+    focus = {
+        id = MAC_pilgrimage_to_founder
+        icon = GFX_goal_generic_national_unity
+        x = -3
+        y = -4
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            country_event = {
+                id = mac_delcev.2
+            }
+            add_stability = 0.03
+            custom_effect_tooltip = MAC_delcev_blessing_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_whispers_from_tikves
+        }
+    }
+    focus = {
+        id = MAC_recall_founder
+        icon = GFX_goal_generic_national_unity
+        x = -1
+        y = -4
+        cost = 2
+        mutually_exclusive = {}
+        available = {
+            OR = {
+                has_stability = 0.7
+                has_idea = MAC_civil_war_imminent
+                has_idea = MAC_unstable_government
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            retire_country_leader = yes
+            create_country_leader = {
+                name = "Goce Delčev"
+                picture = GFX_MAC_goce_delcev_civilian
+                ideology = oligarchism
+                traits = { living_legend father_of_nation }
+            }
+            set_politics = {
+                ruling_party = neutrality
+                elections_allowed = yes
+            }
+            add_stability = 0.25
+            add_war_support = 0.15
+            add_political_power = 200
+            add_ideas = MAC_delcevist_government
+            country_event = {
+                id = mac_delcev.20
+            }
+            custom_effect_tooltip = MAC_delcev_returns_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_pilgrimage_to_founder
+        }
+    }
+    focus = {
+        id = MAC_purge_pretenders
+        icon = GFX_goal_generic_demand_territory
+        x = -1
+        y = -2
+        cost = 4
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_stability = 0.10
+            add_political_power = 100
+            country_event = {
+                id = mac_delcev.21
+            }
+            custom_effect_tooltip = MAC_factions_disbanded_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_recall_founder
+        }
+    }
+    focus = {
+        id = MAC_delcev_constitution
+        icon = GFX_goal_generic_allies_build_infantry
+        x = -1
+        y = -2
+        cost = 5
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_ideas = MAC_delcev_authority
+            add_stability = 0.10
+            add_political_power = 150
+            country_event = {
+                id = mac_delcev.22
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_purge_pretenders
+        }
+    }
+    focus = {
+        id = MAC_stand_against_legend
+        icon = GFX_goal_generic_forceful_treaty
+        x = -4
+        y = -4
+        cost = 10
+        mutually_exclusive = {
+            focus = MAC_recall_founder
+        }
+        completion_reward = {
+            add_stability = -0.20
+            country_event = {
+                id = mac_delcev.30
+            }
+            custom_effect_tooltip = MAC_resist_delcev_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_pilgrimage_to_founder
+        }
+    }
+    focus = {
+        id = MAC_discredit_old_hero
+        icon = GFX_goal_generic_propaganda
+        x = -4
+        y = -2
+        cost = 12
+        available = {
+            has_idea = MAC_propaganda_ministry
+        }
+        completion_reward = {
+            country_event = {
+                id = mac_delcev.31
+            }
+            custom_effect_tooltip = MAC_discredit_delcev_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_stand_against_legend
+        }
+    }
+    focus = {
+        id = MAC_civil_war_delcev
+        icon = GFX_goal_generic_major_war
+        x = -4
+        y = -1
+        cost = 15
+        available = {
+            has_country_flag = MAC_delcev_civil_war_imminent
+        }
+        completion_reward = {
+            start_civil_war = {
+                ideology = neutrality
+                size = 0.4
+            }
+            country_event = {
+                id = mac_delcev.32
+            }
+            custom_effect_tooltip = MAC_civil_war_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_discredit_old_hero
+        }
+    }
+    focus = {
+        id = MAC_tikves_compromise
+        icon = GFX_goal_generic_national_unity
+        x = -3
+        y = -2
+        cost = 8
+        available = {
+            has_stability = 0.3
+            NOT = {
+                has_completed_focus = MAC_recall_founder
+            }
+            NOT = {
+                has_completed_focus = MAC_stand_against_legend
+            }
+        }
+        completion_reward = {
+            add_stability = 0.10
+            add_ideas = MAC_founder_blessing
+            country_event = {
+                id = mac_delcev.40
+            }
+            custom_effect_tooltip = MAC_compromise_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_pilgrimage_to_founder
+        }
+    }
+    focus = {
+        id = MAC_co_governance
+        icon = GFX_goal_generic_allies_build_infantry
+        x = -3
+        y = -2
+        cost = 10
+        completion_reward = {
+            add_stability = 0.15
+            add_ideas = MAC_dual_leadership
+            army_experience = 25
+            country_event = {
+                id = mac_delcev.41
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_tikves_compromise
+        }
+    }
+    focus = {
+        id = MAC_macedonia_for_macedonians
+        icon = "GFX_focus_macedonia rise"
+        x = -1
+        y = 0
+        cost = 5
+        available = {
+            has_country_leader = {
+                name = "Goce Delčev"
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_ideas = MAC_isolationist_doctrine
+            add_war_support = 0.10
+            unlock_decision_category_tooltip = MAC_independence_decisions
+            country_event = {
+                id = mac_delcev.50
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_international_solidarity
+        }
+    }
+    focus = {
+        id = MAC_peoples_army
+        icon = GFX_goal_generic_army_doctrines
+        x = -1
+        y = 2
+        cost = 5
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_ideas = MAC_cheta_brigades
+            add_tech_bonus = {
+                name = MAC_guerrilla_warfare
+                bonus = 0.25
+                uses = 1
+                category = infantry_weapons
+            }
+            country_event = {
+                id = mac_delcev.51
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_macedonia_for_macedonians
+        }
+    }
+    focus = {
+        id = MAC_settle_succession
+        icon = GFX_goal_generic_intelligence_exchange
+        x = -2
+        y = -2
+        cost = 15
+        available = {
+            OR = {
+                has_country_leader = {
+                    name = "Goce Delčev"
+                }
+                has_idea = MAC_dual_leadership
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            country_event = {
+                id = mac_delcev.60
+            }
+            add_political_power = 200
+            custom_effect_tooltip = MAC_succession_plan_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_delcev_constitution
+        }
+        prerequisite = {
+            focus = MAC_co_governance
+        }
+    }
+    focus = {
+        id = MAC_economic_planning
+        icon = GFX_goal_generic_production
+        x = 18
+        y = -7
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 50
+            add_ideas = MAC_planned_economy
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+    }
+    focus = {
+        id = MAC_civilian_industry
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 20
+        y = -6
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROOT
+                }
+                add_extra_state_shared_building_slots = 40
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_economic_planning
+        }
+    }
+    focus = {
+        id = MAC_industrial_expansion
+        icon = GFX_goal_generic_construct_mil_factory
+        x = 16
+        y = -6
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            106 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_economic_planning
+        }
+    }
+    focus = {
+        id = MAC_infrastructure_development
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 18
+        y = -6
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROOT
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_economic_planning
+        }
+    }
+    focus = {
+        id = MAC_mining_operations
+        icon = GFX_goal_generic_construction2
+        x = 22
+        y = -6
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_resource = {
+                type = steel
+                amount = 12
+                state = 106
+            }
+            add_resource = {
+                type = chromium
+                amount = 9
+                state = 106
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_economic_planning
+        }
+    }
+    focus = {
+        id = MAC_agricultural_reforms
+        icon = GFX_goal_generic_consumer_goods
+        x = 17
+        y = -6
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_ideas = MAC_agricultural_boost
+            add_stability = 0.05
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_economic_planning
+        }
+    }
+    focus = {
+        id = MAC_balkan_trade_network
+        icon = GFX_goal_generic_improve_relations
+        x = 18
+        y = -5
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            every_neighbor_country = {
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MAC_trade_partner
+                }
+            }
+            add_ideas = MAC_balkan_commerce
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_infrastructure_development
+        }
+    }
+    focus = {
+        id = MAC_macedonian_dinar
+        icon = GFX_goal_generic_political_pressure
+        x = 18
+        y = -4
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 3
+            }
+            add_political_power = 150
+            add_stability = 0.05
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_balkan_trade_network
+        }
+    }
+    focus = {
+        id = MAC_military_modernization
+        icon = GFX_goal_generic_army_doctrines
+        x = 12
+        y = -7
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            army_experience = 15
+            add_tech_bonus = {
+                name = MAC_military_theory
+                bonus = 0.25
+                uses = 1
+                category = land_doctrine
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+    }
+    focus = {
+        id = MAC_expand_officer_corps
+        icon = GFX_goal_generic_army_motorized
+        x = 11
+        y = -6
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_ideas = MAC_professional_officers
+            army_experience = 75
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_military_modernization
+        }
+    }
+    focus = {
+        id = MAC_mountain_warfare_doctrine
+        icon = GFX_goal_generic_special_forces
+        x = 12
+        y = -6
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_ideas = MAC_mountain_fighters
+            add_tech_bonus = {
+                name = MAC_mountain_training
+                bonus = 0.35
+                uses = 1
+                technology = tech_mountaineers
+            }
+            add_tech_bonus = {
+                name = MAC_terrain_engineering
+                bonus = 0.25
+                uses = 1
+                technology = tech_engineers
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_military_modernization
+        }
+    }
+    focus = {
+        id = MAC_balkan_defense_strategy
+        icon = GFX_goal_generic_fortify_city
+        x = 14
+        y = -6
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            106 = {
+                random_list = {
+                    40 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 3
+                            province = 3882
+                            instant_build = yes
+                        }
+                    }
+                    60 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 2
+                            province = 3882
+                            instant_build = yes
+                        }
+                    }
+                }
+                random_list = {
+                    50 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 2
+                            province = 907
+                            instant_build = yes
+                        }
+                    }
+                    50 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 1
+                            province = 907
+                            instant_build = yes
+                        }
+                    }
+                }
+                random_list = {
+                    40 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 2
+                            province = 3833
+                            instant_build = yes
+                        }
+                    }
+                    60 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 1
+                            province = 3833
+                            instant_build = yes
+                        }
+                    }
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 1
+                    province = 3865
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 1
+                    province = 974
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 1
+                    province = 6886
+                    instant_build = yes
+                }
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_military_modernization
+        }
+    }
+    focus = {
+        id = MAC_armor_theory
+        icon = GFX_goal_generic_build_tank
+        x = 11
+        y = -5
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                name = MAC_anti_armor_development
+                bonus = 0.35
+                uses = 1
+                category = cat_anti_tank
+            }
+            army_experience = 10
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_expand_officer_corps
+        }
+    }
+    focus = {
+        id = MAC_air_doctrine
+        icon = GFX_goal_generic_build_airforce
+        x = 12
+        y = -5
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            air_experience = 25
+            add_tech_bonus = {
+                name = MAC_aviation_theory
+                bonus = 0.25
+                uses = 1
+                category = air_doctrine
+            }
+            106 = {
+                add_building_construction = {
+                    type = air_base
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_mountain_warfare_doctrine
+        }
+    }
+    focus = {
+        id = MAC_fortress_macedonia
+        icon = GFX_goal_generic_construct_military
+        x = 14
+        y = -5
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            106 = {
+                random_list = {
+                    40 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 4
+                            province = 3882
+                            instant_build = yes
+                        }
+                    }
+                    60 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 3
+                            province = 3882
+                            instant_build = yes
+                        }
+                    }
+                }
+                random_list = {
+                    50 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 3
+                            province = 907
+                            instant_build = yes
+                        }
+                    }
+                    50 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 2
+                            province = 907
+                            instant_build = yes
+                        }
+                    }
+                }
+                random_list = {
+                    40 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 2
+                            province = 3833
+                            instant_build = yes
+                        }
+                    }
+                    60 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 1
+                            province = 3833
+                            instant_build = yes
+                        }
+                    }
+                }
+                random_list = {
+                    50 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 2
+                            province = 3865
+                            instant_build = yes
+                        }
+                    }
+                    50 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 1
+                            province = 3865
+                            instant_build = yes
+                        }
+                    }
+                }
+                random_list = {
+                    50 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 2
+                            province = 974
+                            instant_build = yes
+                        }
+                    }
+                    50 = {
+                        add_building_construction = {
+                            type = bunker
+                            level = 1
+                            province = 974
+                            instant_build = yes
+                        }
+                    }
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 1
+                    province = 6886
+                    instant_build = yes
+                }
+            }
+            add_ideas = MAC_defensive_mindset
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_balkan_defense_strategy
+        }
+    }
+    focus = {
+        id = MAC_total_mobilization
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 12
+        y = -4
+        cost = 2
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_ideas = MAC_mass_mobilization
+            add_manpower = 1500000
+            army_experience = 300
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_armor_theory
+        }
+        prerequisite = {
+            focus = MAC_air_doctrine
+        }
+        prerequisite = {
+            focus = MAC_fortress_macedonia
+        }
+    }
+    focus = {
+        id = MAC_international_solidarity
+        icon = GFX_goal_generic_national_unity
+        x = -1
+        y = 0
+        cost = 5
+        available = {
+            has_country_leader = {
+                name = "Goce Delčev"
+            }
+        }
+        ai_will_do = {
+            factor = 5
+        }
+        completion_reward = {
+            add_ideas = MAC_anarchist_foreign_policy
+            add_political_power = 150
+            add_war_support = 0.10
+            unlock_decision_category_tooltip = MAC_anarchist_diplomacy_decisions
+            custom_effect_tooltip = MAC_anarchist_diplomacy_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_delcev_constitution
+        }
+    }
+    focus = {
+        id = MAC_invite_trotsky
+        icon = GFX_goal_support_communism
+        x = -5
+        y = -6
+        cost = 4
+        available = {
+            NOT = {
+                has_war_with = SOV
+            }
+            date = "1936.6.1"
+            NOT = {
+                has_completed_focus = MAC_stand_against_legend
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 3
+                has_government = communism
+            }
+            modifier = {
+                factor = 2
+                has_completed_focus = MAC_recall_founder
+            }
+        }
+        completion_reward = {
+            set_country_flag = trotsky_requests_asylum
+            set_country_flag = trotsky_in_macedonia
+            country_event = {
+                id = macedonia_trotsky.1
+            }
+            add_ideas = MAC_trotsky_theorist
+            add_stability = -0.05
+            custom_effect_tooltip = MAC_trotsky_arrives_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_whispers_from_tikves
+        }
+    }
+    focus = {
+        id = MAC_trotsky_delcev_alliance
+        icon = GFX_goal_generic_major_alliance
+        x = -5
+        y = -4
+        cost = 1
+        mutually_exclusive = {
+            focus = MAC_trotsky_takes_power
+        }
+        ai_will_do = {
+            factor = 5
+        }
+        completion_reward = {
+            remove_ideas = MAC_unstable_government
+            add_stability = 0.15
+            add_political_power = 150
+            add_ideas = MAC_revolutionary_independents_spirit
+            country_event = {
+                id = macedonia_trotsky.100
+                days = 3
+            }
+            custom_effect_tooltip = MAC_delcev_trotsky_alliance_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_invite_trotsky
+        }
+        prerequisite = {
+            focus = MAC_recall_founder
+        }
+    }
+    focus = {
+        id = MAC_trotsky_takes_power
+        icon = GFX_goal_generic_forceful_treaty
+        x = -6
+        y = -4
+        cost = 10
+        mutually_exclusive = {
+            focus = MAC_trotsky_delcev_alliance
+        }
+        available = {
+            NOT = {
+                has_completed_focus = MAC_recall_founder
+            }
+            NOT = {
+                has_country_leader = {
+                    name = "Goce Delčev"
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            retire_country_leader = yes
+            create_country_leader = {
+                name = "Leon Trotsky"
+                picture = GFX_MAC_leon_trotsky
+                ideology = leninism
+                traits = { permanent_revolutionary }
+            }
+            set_politics = {
+                ruling_party = communism
+                elections_allowed = no
+            }
+            add_ideas = MAC_trotskyist_government
+            remove_ideas = MAC_unstable_government
+            add_stability = 0.10
+            add_political_power = 100
+            country_event = {
+                id = macedonia_trotsky.10
+            }
+            custom_effect_tooltip = MAC_trotsky_leads_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_invite_trotsky
+        }
+    }
+    focus = {
+        id = MAC_red_army_advisors
+        icon = GFX_goal_generic_army_doctrines
+        x = -5
+        y = 0
+        cost = 8
+        ai_will_do = {
+            factor = 2
+        }
+        completion_reward = {
+            army_experience = 50
+            add_tech_bonus = {
+                name = MAC_trotsky_military_theory
+                bonus = 0.25
+                uses = 2
+                category = land_doctrine
+            }
+            add_war_support = 0.10
+            custom_effect_tooltip = MAC_red_advisors_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_revolutionary_independents
+        }
+    }
+    focus = {
+        id = MAC_permanent_revolution
+        icon = GFX_goal_generic_propaganda
+        x = -6
+        y = -2
+        cost = 10
+        ai_will_do = {
+            factor = 2
+        }
+        completion_reward = {
+            add_ideas = MAC_permanent_revolution_doctrine
+            add_popularity = {
+                ideology = communism
+                popularity = 0.10
+            }
+            add_political_power = 150
+            country_event = {
+                id = macedonia_trotsky.30
+            }
+            custom_effect_tooltip = MAC_permanent_revolution_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_trotsky_takes_power
+        }
+    }
+    focus = {
+        id = MAC_trotsky_macedonian_thesis
+        icon = GFX_goal_generic_scientific_exchange
+        x = -5
+        y = -2
+        cost = 7
+        ai_will_do = {
+            factor = 2
+        }
+        completion_reward = {
+            add_research_slot = 1
+            add_tech_bonus = {
+                name = MAC_revolutionary_science
+                bonus = 0.15
+                uses = 3
+                category = electronics
+            }
+            add_political_power = 100
+            custom_effect_tooltip = MAC_thesis_written_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_trotsky_delcev_alliance
+        }
+        prerequisite = {
+            focus = MAC_trotsky_takes_power
+        }
+    }
+    focus = {
+        id = MAC_revolutionary_independents
+        icon = GFX_goal_generic_major_alliance
+        x = -6
+        y = -2
+        cost = 7
+        available = {
+            is_in_faction = no
+        }
+        ai_will_do = {
+            factor = 3
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_completed_focus = MAC_trotsky_delcev_alliance
+                }
+                create_faction = "Revolutionary Independents"
+                custom_effect_tooltip = MAC_revolutionary_independents_delcev_tt
+            }
+            else = {
+                create_faction = "International Revolutionary Council"
+                custom_effect_tooltip = MAC_revolutionary_council_tt
+            }
+            add_ideas = MAC_international_bureau
+            add_named_threat = {
+                threat = 10
+                name = "Revolutionary Internationalism"
+            }
+            country_event = {
+                id = macedonia_trotsky.50
+            }
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_trotsky_macedonian_thesis
+        }
+        prerequisite = {
+            focus = MAC_permanent_revolution
+        }
+    }
+    focus = {
+        id = MAC_export_revolution
+        icon = GFX_goal_generic_major_war
+        x = -6
+        y = 0
+        cost = 8
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_war_support = 0.15
+            every_other_country = {
+                limit = {
+                    has_government = communism
+                    NOT = {
+                        tag = SOV
+                    }
+                }
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MAC_communist_solidarity
+                }
+            }
+            custom_effect_tooltip = MAC_export_revolution_tt
+        }
+        name = "\"\""
+        description = "\"\""
+        relative_position_id = ""
+        hidden = no
+        mutually_exclusive = {}
+        search_filters = {}
+        prerequisite = {
+            focus = MAC_revolutionary_independents
+        }
+    }
+}

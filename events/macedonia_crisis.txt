@@ -1,0 +1,561 @@
+###########################################################
+# MACEDONIAN POLITICAL CRISIS EVENTS
+# mac_crisis.1 - mac_crisis.99
+# 
+# These events form the core political path of Macedonia
+# Triggered by the focus tree succession crisis
+###########################################################
+
+add_namespace = mac_crisis
+
+###########################################################
+# SUCCESSION CRISIS BEGINS (Events 1-9)
+###########################################################
+
+# The Succession Crisis Explodes
+country_event = {
+	id = mac_crisis.1
+	title = mac_crisis.1.t
+	desc = mac_crisis.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes  # Triggered by MAC_succession_question focus
+	
+	option = {
+		name = mac_crisis.1.a
+		add_political_power = -25
+		add_stability = -0.05
+		custom_effect_tooltip = MAC_four_factions_vie_tt
+	}
+}
+
+###########################################################
+# VMRO FASCIST PATH (Events 10-19)
+###########################################################
+
+# The VMRO Conspiracy Deepens
+country_event = {
+	id = mac_crisis.10
+	title = mac_crisis.10.t
+	desc = mac_crisis.10.d
+	picture = GFX_report_event_generic_military_planning
+	
+	is_triggered_only = yes  # Triggered by MAC_vmro_conspiracy focus
+	
+	option = {
+		name = mac_crisis.10.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_stability = -0.03
+		army_experience = 5
+		custom_effect_tooltip = MAC_vmro_coup_preparations_tt
+	}
+}
+
+# Night of Long Knives - The Purge
+country_event = {
+	id = mac_crisis.11
+	title = mac_crisis.11.t
+	desc = mac_crisis.11.d
+	picture = GFX_report_event_fascist_militia
+	
+	is_triggered_only = yes  # Triggered by MAC_night_of_long_knives focus
+	
+	option = {
+		name = mac_crisis.11.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.10
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.10
+		}
+		add_stability = -0.10
+		add_war_support = 0.05
+		add_manpower = -5000  # Purge victims
+		custom_effect_tooltip = MAC_opposition_purged_tt
+	}
+}
+
+# VMRO Seizes Power
+country_event = {
+	id = mac_crisis.12
+	title = mac_crisis.12.t
+	desc = mac_crisis.12.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes  # Triggered by MAC_vmro_takeover focus
+	
+	option = {
+		name = mac_crisis.12.a
+		add_stability = 0.05
+		add_war_support = 0.10
+		add_political_power = 100
+		set_country_flag = MAC_vmro_rules
+		custom_effect_tooltip = MAC_mihailov_supreme_leader_tt
+		
+		# Potentially trigger international reaction
+		random_list = {
+			30 = {
+				country_event = { id = mac_crisis.13 days = 7 }
+			}
+			70 = {
+				# No immediate reaction
+			}
+		}
+	}
+}
+
+# International Condemnation
+country_event = {
+	id = mac_crisis.13
+	title = mac_crisis.13.t
+	desc = mac_crisis.13.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_crisis.13.a  # "They fear our strength!"
+		add_political_power = -50
+		YUG = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_fascist_takeover
+			}
+		}
+		GRE = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_fascist_takeover
+			}
+		}
+		BUL = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_fascist_takeover
+			}
+		}
+	}
+}
+
+###########################################################
+# COMMUNIST PATH (Events 20-29)
+###########################################################
+
+# Workers Strike - The Revolution Begins
+country_event = {
+	id = mac_crisis.20
+	title = mac_crisis.20.t
+	desc = mac_crisis.20.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes  # Triggered by MAC_workers_strike focus
+	
+	option = {
+		name = mac_crisis.20.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_stability = -0.05
+		add_political_power = -25
+		custom_effect_tooltip = MAC_general_strike_begins_tt
+	}
+}
+
+# Purge of the Reactionaries
+country_event = {
+	id = mac_crisis.21
+	title = mac_crisis.21.t
+	desc = mac_crisis.21.d
+	picture = GFX_report_event_worker_strikes
+	
+	is_triggered_only = yes  # Triggered by MAC_purge_reactionaries focus
+	
+	option = {
+		name = mac_crisis.21.a  # "The bourgeoisie must fall!"
+		add_popularity = {
+			ideology = communism
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.10
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+		add_stability = -0.08
+		add_political_power = 50
+		add_manpower = -3000  # Purge victims
+		custom_effect_tooltip = MAC_reactionaries_purged_tt
+	}
+}
+
+# People's Republic Proclaimed
+country_event = {
+	id = mac_crisis.22
+	title = mac_crisis.22.t
+	desc = mac_crisis.22.d
+	picture = GFX_report_event_communists_win
+	
+	is_triggered_only = yes  # Triggered by MAC_peoples_republic focus
+	
+	option = {
+		name = mac_crisis.22.a
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 100
+		set_country_flag = MAC_communist_victory
+		custom_effect_tooltip = MAC_kolisevski_rules_tt
+		
+		# Potential Soviet interest
+		if = {
+			limit = { SOV = { exists = yes } }
+			random_list = {
+				40 = {
+					country_event = { id = mac_crisis.23 days = 14 }
+				}
+				60 = {
+					# No immediate Soviet contact
+				}
+			}
+		}
+	}
+}
+
+# Moscow Sends Congratulations
+country_event = {
+	id = mac_crisis.23
+	title = mac_crisis.23.t
+	desc = mac_crisis.23.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_crisis.23.a  # "We welcome Soviet friendship"
+		add_political_power = 75
+		add_opinion_modifier = {
+			target = SOV
+			modifier = MAC_positive_50
+		}
+		SOV = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_positive_50
+			}
+		}
+	}
+	
+	option = {
+		name = mac_crisis.23.b  # "We chart our own course"
+		add_political_power = 50
+		add_stability = 0.03
+		custom_effect_tooltip = MAC_independent_communism_tt
+	}
+}
+
+###########################################################
+# DEMOCRATIC PATH (Events 30-39)
+###########################################################
+
+# Balkan Democratic Conference
+country_event = {
+	id = mac_crisis.30
+	title = mac_crisis.30.t
+	desc = mac_crisis.30.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes  # Triggered by MAC_balkan_conference focus
+	
+	option = {
+		name = mac_crisis.30.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_stability = 0.03
+		add_political_power = 50
+		custom_effect_tooltip = MAC_democratic_momentum_tt
+	}
+}
+
+# Democratic Constitution Adopted
+country_event = {
+	id = mac_crisis.31
+	title = mac_crisis.31.t
+	desc = mac_crisis.31.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_crisis.31.a
+		add_stability = 0.10
+		add_political_power = 100
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		set_country_flag = MAC_democracy_established
+		custom_effect_tooltip = MAC_vlahov_elected_tt
+	}
+}
+
+# Western Recognition
+country_event = {
+	id = mac_crisis.32
+	title = mac_crisis.32.t
+	desc = mac_crisis.32.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_crisis.32.a  # "We are accepted as equals"
+		add_political_power = 75
+		add_opinion_modifier = {
+			target = ENG
+			modifier = MAC_positive_25
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = MAC_positive_25
+		}
+		ENG = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_positive_25
+			}
+		}
+		FRA = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_positive_25
+			}
+		}
+	}
+}
+
+###########################################################
+# CENTRIST/NEUTRALITY PATH (Events 40-49)
+###########################################################
+
+# Emergency Powers Granted
+country_event = {
+	id = mac_crisis.40
+	title = mac_crisis.40.t
+	desc = mac_crisis.40.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes  # Triggered by MAC_emergency_powers focus
+	
+	option = {
+		name = mac_crisis.40.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_stability = 0.05
+		add_political_power = 75
+		custom_effect_tooltip = MAC_cento_emergency_rule_tt
+	}
+}
+
+# Centrist Government Established
+country_event = {
+	id = mac_crisis.41
+	title = mac_crisis.41.t
+	desc = mac_crisis.41.d
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_crisis.41.a  # "Stability above all"
+		add_stability = 0.10
+		add_political_power = 100
+		set_country_flag = MAC_centrist_government
+		custom_effect_tooltip = MAC_cento_consolidates_tt
+	}
+}
+
+# Delčev Watches - Potential Entry Point
+country_event = {
+	id = mac_crisis.42
+	title = mac_crisis.42.t
+	desc = mac_crisis.42.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_crisis.42.a  # "The Founder remains silent..."
+		add_political_power = 25
+		custom_effect_tooltip = MAC_delcev_evaluates_tt
+		hidden_effect = {
+			country_event = { id = mac_delcev.1 days = 30 }  # Connects to Delčev path
+		}
+	}
+}
+
+###########################################################
+# CIVIL WAR RISK EVENTS (Events 50-59)
+###########################################################
+
+# Warning: Nation on the Brink
+country_event = {
+	id = mac_crisis.50
+	title = mac_crisis.50.t
+	desc = mac_crisis.50.d
+	picture = GFX_report_event_generic_military_planning
+	
+	trigger = {
+		tag = MAC
+		has_idea = MAC_unstable_government
+		OR = {
+			AND = {
+				fascism > 0.35
+				communism > 0.30
+			}
+			AND = {
+				communism > 0.35
+				fascism > 0.30
+			}
+		}
+		NOT = { has_country_flag = MAC_civil_war_warning }
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	option = {
+		name = mac_crisis.50.a  # "We must act quickly!"
+		add_stability = -0.05
+		add_war_support = -0.03
+		set_country_flag = MAC_civil_war_warning
+		custom_effect_tooltip = MAC_resolve_crisis_soon_tt
+	}
+}
+
+###########################################################
+# REGIONAL REACTIONS (Events 60-69)
+###########################################################
+
+# Yugoslavia Concerned
+country_event = {
+	id = mac_crisis.60
+	title = mac_crisis.60.t
+	desc = mac_crisis.60.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = YUG
+		MAC = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+			}
+			NOT = { has_country_flag = MAC_yug_reacted }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = mac_crisis.60.a  # "We must watch them closely"
+		add_political_power = 25
+		add_opinion_modifier = {
+			target = MAC
+			modifier = MAC_concerned_neighbors
+		}
+		MAC = {
+			set_country_flag = MAC_yug_reacted
+		}
+	}
+}
+
+# Greece Alarmed
+country_event = {
+	id = mac_crisis.61
+	title = mac_crisis.61.t
+	desc = mac_crisis.61.d
+	picture = GFX_report_event_generic_parliament
+	
+	trigger = {
+		tag = GRE
+		MAC = {
+			has_government = fascism
+			NOT = { has_country_flag = MAC_gre_reacted }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = mac_crisis.61.a  # "Irredentism threatens us"
+		add_political_power = 25
+		add_war_support = 0.02
+		add_opinion_modifier = {
+			target = MAC
+			modifier = MAC_concerned_neighbors
+		}
+		MAC = {
+			set_country_flag = MAC_gre_reacted
+		}
+	}
+}
+
+# Bulgaria Interested
+country_event = {
+	id = mac_crisis.62
+	title = mac_crisis.62.t
+	desc = mac_crisis.62.d
+	picture = GFX_report_event_generic_rally
+	
+	trigger = {
+		tag = BUL
+		MAC = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			NOT = { has_country_flag = MAC_bul_reacted }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 45
+	}
+	
+	option = {
+		name = mac_crisis.62.a  # "Perhaps we can cooperate"
+		add_political_power = 25
+		add_opinion_modifier = {
+			target = MAC
+			modifier = MAC_positive_25
+		}
+		MAC = {
+			add_opinion_modifier = {
+				target = BUL
+				modifier = MAC_positive_25
+			}
+			set_country_flag = MAC_bul_reacted
+		}
+	}
+}

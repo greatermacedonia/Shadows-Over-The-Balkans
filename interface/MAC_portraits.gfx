@@ -1,0 +1,113 @@
+spriteTypes = {
+	
+	### Country Leaders ###
+	
+	spriteType = {
+		name = "GFX_MAC_metodija_cento"
+		texturefile = "gfx/leaders/MAC/metodija_cento.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_dimitar_vlahov"
+		texturefile = "gfx/leaders/MAC/dimitar_vlahov.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_lazar_kolisevski"
+		texturefile = "gfx/leaders/MAC/lazar_kolisevski.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_ivan_mihailov"
+		texturefile = "gfx/leaders/MAC/ivan_mihailov.dds"
+	}
+	
+	### Military Leaders ###
+	
+	spriteType = {
+		name = "GFX_MAC_petre_siljgo"
+		texturefile = "gfx/leaders/MAC/petre_siljgo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_petre_siljgo_small"
+		texturefile = "gfx/leaders/MAC/petre_siljgo_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_mihailo_apostolski"
+		texturefile = "gfx/leaders/MAC/mihailo_apostolski.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_mihailo_apostolski_small"
+		texturefile = "gfx/leaders/MAC/mihailo_apostolski_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_mihajlo_kocev"
+		texturefile = "gfx/leaders/MAC/mihailo_apostolski.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_mihajlo_kocev_small"
+		texturefile = "gfx/leaders/MAC/mihailo_apostolski_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_strahil_gigov"
+		texturefile = "gfx/leaders/MAC/mihailo_apostolski.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_strahil_gigov_small"
+		texturefile = "gfx/leaders/MAC/mihailo_apostolski_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_goce_delcev"
+		texturefile = "gfx/leaders/MAC/goce_delcev.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_goce_delcev_small"
+		texturefile = "gfx/leaders/MAC/goce_delcev_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_goce_delcev_civilian"
+		texturefile = "gfx/leaders/MAC/goce_delcev.dds"
+	}
+	
+	### Trotsky ###
+	
+	spriteType = {
+		name = "GFX_MAC_leon_trotsky"
+		texturefile = "gfx/leaders/MAC/leon_trotsky.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MAC_leon_trotsky"
+		texturefile = "gfx/interface/ideas/MAC_leon_trotsky.dds"
+	}
+	
+	### Advisors (Ideas) - defined in MAC_ideas.gfx with correct paths ###
+	### Removed duplicates that pointed to wrong file paths ###
+	
+	### Additional Characters ###
+	
+	spriteType = {
+		name = "GFX_idea_MAC_aleksandar_stamboliyski"
+		texturefile = "gfx/interface/ideas/MAC_aleksandar_stamboliyski.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_pavlos_melas"
+		texturefile = "gfx/leaders/MAC/pavlos_melas.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_MAC_pavlos_melas_small"
+		texturefile = "gfx/leaders/MAC/pavlos_melas_small.dds"
+	}
+}

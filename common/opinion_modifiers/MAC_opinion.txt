@@ -1,0 +1,209 @@
+####################################
+# Macedonian Opinion Modifiers
+####################################
+
+opinion_modifiers = {
+
+# Diplomatic opening (global, from foreign policy focus)
+MAC_diplomatic_opening = {
+	value = 10
+	days = -1
+}
+
+# Territorial disputes
+MAC_irredentist_claims = {
+	value = -20
+	
+	trade = no
+	
+	days = 365
+}
+
+MAC_territorial_dispute = {
+	value = -40
+	
+	trade = no
+	
+	days = -1
+}
+
+# Positive relations
+MAC_positive_25 = {
+	value = 25
+	days = -1
+}
+
+MAC_positive_50 = {
+	value = 50
+	days = -1
+}
+
+MAC_positive_75 = {
+	value = 75
+	days = -1
+}
+
+MAC_positive_100 = {
+	value = 100
+	days = -1
+}
+
+# Negative relations
+MAC_negative_25 = {
+	value = -25
+	days = -1
+}
+
+MAC_harboring_trotsky = {
+	value = -75
+	
+	trade = no
+	
+	days = -1
+}
+
+# Diplomatic demand rejected
+MAC_demand_rejected = {
+	value = -40
+	
+	trade = no
+	
+	days = -1
+}
+
+# Diplomatic demand accepted (target opinion of MAC)
+MAC_demand_accepted = {
+	value = -30
+	
+	trade = no
+	
+	days = -1
+}
+
+####################################
+# Additional Opinion Modifiers
+# (Referenced across events, focuses, and decisions)
+####################################
+
+# Irredentism campaign
+MAC_territorial_claims = {
+	value = -30
+	trade = no
+	days = -1
+}
+
+MAC_supporting_insurgents = {
+	value = -40
+	trade = no
+	days = 730
+}
+
+MAC_boris_compromise = {
+	value = 30
+	days = -1
+}
+
+# Political crisis
+MAC_fascist_takeover = {
+	value = -25
+	trade = no
+	days = 365
+}
+
+MAC_concerned_neighbors = {
+	value = -15
+	trade = no
+	days = 365
+}
+
+# Delčev storyline
+MAC_delcev_concern = {
+	value = -15
+	days = -1
+}
+
+MAC_delcev_interest = {
+	value = 15
+	days = -1
+}
+
+# Foreign policy alignment
+MAC_western_approach = {
+	value = 50
+	days = -1
+}
+
+MAC_communist_solidarity = {
+	value = 50
+	days = -1
+}
+
+MAC_fascist_alignment = {
+	value = 50
+	days = -1
+}
+
+MAC_balkan_unity = {
+	value = 40
+	days = -1
+}
+
+MAC_socialist_brotherhood = {
+	value = 60
+	days = -1
+}
+
+MAC_balkan_threat = {
+	value = -20
+	trade = no
+	days = 365
+}
+
+MAC_trade_partner = {
+	value = 25
+	days = -1
+}
+
+# Decisions
+MAC_balkan_cooperation = {
+	value = 35
+	days = -1
+}
+
+# Territorial demands (used in events/macedonia_demands.txt)
+MAC_accepted_demand = {
+	value = -30
+	trade = no
+	days = -1
+}
+
+MAC_refused_demand = {
+	value = -40
+	trade = no
+	days = -1
+}
+
+# Historical legacy events
+MAC_shared_history = {
+	value = 20
+	days = -1
+}
+
+MAC_historical_grievances = {
+	value = -15
+	trade = no
+	days = 730
+}
+
+MAC_reconciliation_effort = {
+	value = 25
+	days = -1
+}
+
+# Revolutionary decisions
+MAC_improved_relations = {
+	value = 30
+	days = -1
+}
+
+}

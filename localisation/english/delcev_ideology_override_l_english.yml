@@ -1,0 +1,10 @@
+﻿l_english:
+ # Override the vanilla "Anarchism" label for oligarchism to show "Delčevism"
+ oligarchism:0 "Delčevism"
+ oligarchism_noun:0 "Delčevism"
+ oligarchism_desc:0 "Delčevism is a uniquely Macedonian ideology founded by Goce Delčev. It combines revolutionary nationalism with populist governance, rejecting both foreign imperialism and domestic tyranny. Delčevism advocates for 'Macedonia for Macedonians' - eternal independence, armed neutrality, and a government that serves the people while guided by the wisdom of the Founder. Neither fully democratic nor authoritarian, it represents a third way tailored to Macedonia's historical struggle for freedom."
+
+ # Delčev-specific ideology support strings
+ MAC_delcevist_ideology_drift:0 "Daily Delčevist Support"
+ delcevist:0 "Delčevist"
+ delcevist_noun:0 "Delčevism"

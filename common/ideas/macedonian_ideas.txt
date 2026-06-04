@@ -1,0 +1,1591 @@
+###########################################################
+# MACEDONIAN NATIONAL SPIRITS (IDEAS)
+# Merged from macedonian_ideas.txt.backup and macedonia_ideas.txt.backup
+###########################################################
+
+ideas = {
+	
+	country = {
+		
+		###########################################################
+		# STARTING IDEAS
+		###########################################################
+		
+		MAC_young_nation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				political_power_gain = -0.10
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+		
+		MAC_balkan_tensions = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				justify_war_goal_time = 0.25
+				guarantee_cost = 0.25
+				improve_relations_maintain_cost_factor = -0.25
+			}
+		}
+		
+		MAC_mountainous_terrain = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = MAC_mountainous_terrain
+			
+			modifier = {
+				army_speed_factor = -0.05
+				supply_consumption_factor = -0.10
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					defense = 0.05
+				}
+			}
+		}
+		
+		MAC_revolutionary_heritage = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.05
+				training_time_factor = -0.10
+			}
+		}
+		
+		MAC_unstable_government = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_weekly = -0.01
+				political_power_gain = -0.25
+				army_morale_factor = -0.10
+			}
+		}
+		
+		###########################################################
+		# POLITICAL GOVERNMENT IDEAS
+		###########################################################
+		
+		MAC_vmro_government = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+				war_support_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+		
+		MAC_peoples_government = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.10
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		MAC_democratic_government = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.15
+				trade_opinion_factor = 0.20
+			}
+		}
+		
+		MAC_centrist_government = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.10
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		MAC_stable_democracy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.10
+				democratic_drift = 0.03
+			}
+		}
+		
+		MAC_emergency_rule = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.15
+				drift_defence_factor = 0.25
+			}
+		}
+		
+		MAC_corporatism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.05
+				political_power_cost = 0.10
+			}
+		}
+		
+		MAC_authoritarian_stability = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.20
+				war_support_factor = 0.10
+				drift_defence_factor = 0.50
+			}
+		}
+		
+		###########################################################
+		# DELČEVIST PATH IDEAS
+		###########################################################
+		
+		MAC_delcevist_government = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_national_unity
+			
+			modifier = {
+				stability_factor = 0.20
+				war_support_factor = 0.15
+				army_morale_factor = 0.15
+				political_power_gain = 0.25
+				drift_defence_factor = 0.50
+			}
+		}
+		
+		MAC_delcev_authority = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+		
+		MAC_founder_blessing = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		
+		MAC_dual_leadership = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.10
+				army_org_factor = 0.10
+				command_power_gain_mult = 0.25
+			}
+		}
+		
+		MAC_isolationist_doctrine = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				army_core_defence_factor = 0.25
+				war_support_factor = 0.10
+				justify_war_goal_time = 0.50
+			}
+		}
+		
+		MAC_delcev_returned = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.25
+				war_support_factor = 0.15
+				political_power_gain = 0.20
+				army_morale_factor = 0.15
+				conscription_factor = 0.05
+			}
+		}
+		
+		MAC_delcevist_republic = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.15
+				drift_defence_factor = 0.75
+				justify_war_goal_time = -0.15
+			}
+		}
+		
+		MAC_no_foreign_interference = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				enemy_justify_war_goal_time = 0.50
+				foreign_subversive_activites = -0.50
+				drift_defence_factor = 0.50
+			}
+			
+			rule = {
+				can_join_factions = no
+			}
+		}
+		
+		MAC_delcev_diplomacy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.50
+				guarantee_cost = -0.25
+				political_power_gain = 0.10
+			}
+		}
+		
+		MAC_delcev_dream = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.30
+				war_support_factor = 0.25
+				political_power_gain = 0.25
+				army_morale_factor = 0.20
+				conscription_factor = 0.10
+			}
+		}
+		
+		MAC_delcev_advisor = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.15
+				army_org_factor = 0.05
+			}
+		}
+		
+		MAC_delcev_dream_fulfilled = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.10
+				political_power_gain = 1.0
+			}
+		}
+		
+		MAC_delcev_disappointment = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.05
+				political_power_gain = -0.15
+			}
+		}
+		
+		MAC_eternal_legacy = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.20
+				war_support_factor = 0.15
+				political_power_gain = 0.50
+				army_morale_factor = 0.10
+			}
+		}
+		
+		###########################################################
+		# ANCIENT LEGACY IDEAS
+		###########################################################
+		
+		MAC_ancient_heritage = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				political_power_gain = 0.10
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		MAC_ancient_claims = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				justify_war_goal_time = -0.15
+			}
+		}
+		
+		MAC_alexanders_heir = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				war_support_factor = 0.20
+				army_attack_factor = 0.10
+				army_morale_factor = 0.15
+				experience_gain_army_factor = 0.15
+			}
+			
+			equipment_bonus = {
+				armor = {
+					soft_attack = 0.10
+					breakthrough = 0.10
+				}
+			}
+		}
+		
+		MAC_manifest_destiny = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				war_support_factor = 0.25
+				justify_war_goal_time = -0.25
+				ai_badass_factor = 0.10
+			}
+		}
+		
+		MAC_alexandrian_legacy = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				war_support_factor = 0.20
+				stability_factor = 0.10
+				army_morale_factor = 0.20
+				justify_war_goal_time = -0.50
+				political_power_gain = 0.25
+			}
+		}
+		
+		MAC_alexandrian_empire = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				war_support_factor = 0.30
+				army_morale_factor = 0.15
+				justify_war_goal_time = -0.50
+				political_power_gain = 0.25
+				enemy_justify_war_goal_time = 0.50
+			}
+		}
+		
+		MAC_byzantine_legacy = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_central_management
+			
+			modifier = {
+				war_support_factor = 0.20
+				stability_factor = 0.10
+				trade_opinion_factor = 0.25
+				justify_war_goal_time = -0.50
+				political_power_gain = 0.25
+			}
+			
+			# Can peacefully invite Orthodox nations
+			rule = {
+				can_send_volunteers = yes
+			}
+		}
+		
+		MAC_seat_of_empires = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.20
+				political_power_gain = 1.0
+				production_factory_max_efficiency_factor = 0.20
+				industrial_capacity_factory = 0.15
+			}
+		}
+		
+		MAC_oracle_military = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				army_attack_factor = 0.10
+				planning_speed = 0.20
+				max_planning = 0.15
+			}
+		}
+		
+		MAC_oracle_economic = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.10
+				local_resources_factor = 0.15
+			}
+		}
+		
+		MAC_oracle_diplomatic = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_gain = 0.25
+				improve_relations_maintain_cost_factor = -0.50
+				guarantee_cost = -0.25
+				join_faction_tension = -0.20
+			}
+		}
+		
+		MAC_unique_macedonian = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_national_unity
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				political_power_gain = 0.20
+				drift_defence_factor = 0.50
+			}
+		}
+		
+		MAC_hellenic_heritage = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.10
+				political_power_gain = 0.10
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.05
+				electronics = 0.05
+			}
+		}
+		
+		###########################################################
+		# HISTORICAL LEGACY IDEAS
+		###########################################################
+		
+		MAC_ottoman_legacy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.15
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		MAC_reject_ottoman_past = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_constitutional_guarantees
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		
+		MAC_slavic_heritage = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_morale_bonus
+			
+			modifier = {
+				conscription_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		
+		MAC_slavic_brotherhood = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.03
+				army_morale_factor = 0.10
+				communism_acceptance = 15
+			}
+		}
+		
+		MAC_balkan_wars_legacy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.05
+				land_doctrine_cost_factor = -0.05
+			}
+		}
+		
+		MAC_paeonian_restoration = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_national_unity
+			
+			modifier = {
+				war_support_factor = 0.10
+				justify_war_goal_time = -0.25
+				political_power_gain = 0.15
+			}
+		}
+		
+		MAC_crossroads_of_empires = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				trade_opinion_factor = 0.20
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		###########################################################
+		# BALKAN IRREDENTISM IDEAS
+		###########################################################
+		
+		MAC_dream_fulfilled = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.10
+				political_power_gain = 0.25
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+		
+		###########################################################
+		# ECONOMIC IDEAS
+		###########################################################
+		
+		MAC_agricultural_development_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_agrarian_society
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+				monthly_population = 0.10
+			}
+		}
+		
+		MAC_tobacco_exports_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = 0.02
+			}
+		}
+		
+		MAC_economic_autarky_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		MAC_planned_economy = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		MAC_agricultural_boost = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		MAC_balkan_commerce = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				trade_opinion_factor = 0.25
+				civilian_factory_use = 3
+			}
+		}
+		
+		###########################################################
+		# MILITARY IDEAS
+		###########################################################
+		
+		MAC_officer_corps_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.10
+				planning_speed = 0.10
+			}
+		}
+		
+		MAC_macedonian_legion_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.10
+			}
+		}
+		
+		MAC_total_defense_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				army_core_defence_factor = 0.15
+				dig_in_speed_factor = 0.25
+			}
+		}
+		
+		MAC_professional_officers = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.10
+				max_command_power = 25
+			}
+		}
+		
+		MAC_mountain_fighters = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.10
+				army_speed_factor = 0.05
+				acclimatization_cold_climate_gain_factor = 0.15
+			}
+		}
+		
+		MAC_defensive_mindset = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				army_core_defence_factor = 0.15
+				dig_in_speed_factor = 0.20
+			}
+		}
+		
+		MAC_mass_mobilization = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.03
+				training_time_army_factor = -0.10
+			}
+		}
+		
+		MAC_cheta_brigades = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				special_forces_cap = 0.05
+				army_infantry_attack_factor = 0.10
+				army_infantry_defence_factor = 0.10
+				army_attack_factor = 0.05
+				army_defence_factor = 0.10
+				recon_factor = 0.15
+			}
+		}
+		
+		MAC_komitadji_brigades = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_attack_factor = 0.15
+				special_forces_defence_factor = 0.10
+			}
+		}
+		
+		MAC_total_war = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription_factor = 0.10
+				training_time_factor = -0.15
+				war_support_factor = 0.15
+				mobilization_speed = 0.20
+			}
+		}
+		
+		###########################################################
+		# FOREIGN POLICY IDEAS
+		###########################################################
+		
+		MAC_balkan_pact_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				guarantee_cost = -0.25
+				justify_war_goal_time = -0.15
+				generate_wargoal_tension = -0.25
+			}
+		}
+		
+		MAC_armed_neutrality = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				war_support_factor = 0.05
+				army_core_defence_factor = 0.15
+				conscription_factor = 0.05
+			}
+		}
+		
+		MAC_armed_neutrality_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				army_core_defence_factor = 0.20
+				justify_war_goal_when_in_major_war_time = 0.50
+				generate_wargoal_tension = 1.00
+				ai_badass_factor = 0.05
+			}
+		}
+		
+		MAC_fortress_macedonia = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				army_core_defence_factor = 0.25
+				dig_in_speed_factor = 0.25
+				attrition = -0.10
+			}
+		}
+		
+		###########################################################
+		# IDEOLOGY PATH IDEAS
+		###########################################################
+		
+		MAC_free_press_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				political_power_gain = 0.15
+				democratic_drift = 0.02
+				stability_factor = 0.05
+			}
+		}
+		
+		MAC_collectivization_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			removal_cost = -1
+			
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				consumer_goods_factor = -0.05
+				stability_factor = -0.10
+			}
+		}
+		
+		MAC_militarization_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.02
+				training_time_factor = -0.10
+				war_support_factor = 0.10
+			}
+		}
+		
+		MAC_vmro_purge = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			
+			picture = generic_purge
+			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.15
+				fascism_drift = 0.05
+				army_morale_factor = 0.10
+			}
+		}
+		
+		MAC_communist_purge = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			removal_cost = -1
+			
+			picture = generic_purge
+			
+			modifier = {
+				stability_factor = -0.15
+				production_speed_buildings_factor = 0.10
+				communism_drift = 0.05
+			}
+		}
+		
+		###########################################################
+		# INTELLIGENCE & INTERNAL SECURITY IDEAS
+		###########################################################
+		
+		MAC_ozna_service = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				resistance_damage_to_garrison = -0.20
+				foreign_subversive_activites = -0.30
+				encryption_factor = 0.10
+			}
+		}
+		
+		###########################################################
+		# TROTSKY STORYLINE IDEAS
+		###########################################################
+		
+		MAC_trotsky_asylum = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				communism_drift = 0.02
+				political_power_gain = -0.10
+			}
+		}
+		
+		MAC_trotsky_theorist = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_communist_revolutionary
+			
+			modifier = {
+				political_power_gain = 0.10
+				communism_drift = 0.03
+				justify_war_goal_time = -0.10
+			}
+		}
+		
+		MAC_revolutionary_independents = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_communist_revolutionary
+			
+			modifier = {
+				political_power_gain = 0.15
+				war_support_factor = 0.15
+				send_volunteers_tension = -0.50
+				justify_war_goal_time = -0.15
+			}
+		}
+		
+		MAC_international_bureau = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				political_power_gain = 0.10
+				justify_war_goal_time = -0.20
+				send_volunteers_tension = -0.25
+				send_volunteer_divisions_required = -0.50
+				drift_defence_factor = 0.20
+			}
+		}
+		
+		###########################################################
+		# POST-RECALL DIPLOMATIC IDEAS
+		###########################################################
+		
+		MAC_anarchist_foreign_policy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+				guarantee_cost = -0.50
+				improve_relations_maintain_cost_factor = -0.50
+				send_volunteers_tension = -0.50
+				drift_defence_factor = 0.30
+			}
+			
+			rule = {
+				can_create_factions = yes
+				can_send_volunteers = yes
+				can_use_kamikaze_pilots = no
+				can_declare_war_on_same_ideology = yes
+				can_force_government = yes
+				can_puppet = yes
+				can_lower_tension = yes
+				can_guarantee_other_ideologies = yes
+				can_join_factions = yes
+			}
+		}
+		
+		###########################################################
+		# TROTSKY PATH IDEAS
+		###########################################################
+		
+		MAC_trotskyist_government = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_communist_revolutionary
+			
+			modifier = {
+				communism_drift = 0.05
+				political_power_factor = 0.15
+				stability_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+		
+		MAC_permanent_revolution_doctrine = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_communist_revolutionary
+			
+			modifier = {
+				justify_war_goal_time = -0.30
+				send_volunteer_divisions_required = -0.50
+				send_volunteers_tension = -0.50
+				war_support_factor = 0.15
+			}
+			
+			rule = {
+				can_send_volunteers = yes
+			}
+		}
+		
+		MAC_revolutionary_independents_spirit = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.20
+				war_support_factor = 0.20
+				army_morale_factor = 0.15
+				political_power_gain = 0.20
+				justify_war_goal_time = -0.20
+				drift_defence_factor = 0.50
+			}
+			
+			rule = {
+				can_create_factions = yes
+				can_send_volunteers = yes
+				can_declare_war_on_same_ideology = yes
+				can_force_government = yes
+				can_guarantee_other_ideologies = yes
+				can_join_factions = yes
+			}
+		}
+		
+		###########################################################
+		# ANCIENT LEGACY IDEAS (Archaeological Branch)
+		###########################################################
+		
+		MAC_eastern_ambitions = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				war_support_factor = 0.10
+				justify_war_goal_time = -0.25
+				army_morale_factor = 0.05
+			}
+		}
+		
+		MAC_alexandrian_legacy_egypt = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				war_support_factor = 0.10
+				justify_war_goal_time = -0.25
+				political_power_gain = 0.10
+			}
+		}
+		
+		###########################################################
+		# MISSING IDEAS - Added by audit fix
+		###########################################################
+
+		MAC_propaganda_ministry = {
+			allowed = { always = no }
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.10
+				political_power_gain = 0.15
+				drift_defence_factor = 0.25
+			}
+		}
+
+		MAC_civil_war_imminent = {
+			allowed = { always = no }
+			removal_cost = -1
+
+			picture = generic_civil_support
+
+			modifier = {
+				stability_factor = -0.20
+				political_power_gain = -0.25
+				conscription_factor = -0.10
+			}
+		}
+
+		MAC_succession_crisis = {
+			allowed = { always = no }
+			removal_cost = -1
+
+			picture = generic_political_discourse
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.20
+				war_support_factor = -0.10
+			}
+		}
+
+		MAC_peoples_army_delcev = {
+			allowed = { always = no }
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.02
+				army_morale_factor = 0.15
+				army_defence_factor = 0.10
+				war_support_factor = 0.10
+			}
+		}
+
+		MAC_macedonia_for_macedonians = {
+			allowed = { always = no }
+			removal_cost = -1
+
+			picture = generic_nationalism
+
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.15
+				drift_defence_factor = 0.50
+				political_power_gain = 0.10
+			}
+		}
+
+		MAC_ohrid_mystery = {
+			allowed = { always = no }
+			removal_cost = -1
+
+			picture = generic_research
+
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+	

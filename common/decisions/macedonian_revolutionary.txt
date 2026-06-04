@@ -1,0 +1,452 @@
+# Revolutionary Faction and Collaboration Decisions
+
+MAC_revolutionary_path = {
+	
+	# Offer Asylum to Leon Trotsky
+	MAC_offer_trotsky_asylum = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = communism
+			}
+			date > 1936.1.1
+			has_political_power > 100
+			NOT = { has_country_flag = trotsky_requests_asylum }
+			NOT = { has_country_flag = trotsky_in_macedonia }
+			NOT = { has_war_with = SOV }
+		}
+		
+		visible = {
+			OR = {
+				has_government = neutrality
+				has_government = communism
+			}
+			date > 1936.1.1
+			NOT = { has_country_flag = trotsky_requests_asylum }
+			NOT = { has_country_flag = trotsky_in_macedonia }
+		}
+		
+		cost = 100
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 3
+				has_country_flag = delcev_in_power
+			}
+			modifier = {
+				factor = 0
+				has_opinion = {
+					target = SOV
+					value > 0
+				}
+			}
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_trotsky.1 }
+			custom_effect_tooltip = MAC_offer_trotsky_asylum_tt
+		}
+	}
+	
+	# Grant Asylum to Trotsky
+	MAC_grant_trotsky_asylum = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			has_country_flag = trotsky_requests_asylum
+			NOT = { has_country_flag = trotsky_in_macedonia }
+			NOT = { has_country_flag = trotsky_refused }
+			has_political_power > 100
+		}
+		
+		visible = {
+			has_country_flag = trotsky_requests_asylum
+			NOT = { has_country_flag = trotsky_in_macedonia }
+			NOT = { has_country_flag = trotsky_refused }
+		}
+		
+		cost = 100
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 3
+				has_country_flag = delcev_in_power
+			}
+			modifier = {
+				factor = 0
+				has_opinion = {
+					target = SOV
+					value > 50
+				}
+			}
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_trotsky.10 }
+			set_country_flag = trotsky_in_macedonia
+			add_ideas = MAC_trotsky_theorist
+			custom_effect_tooltip = MAC_grant_trotsky_asylum_tt
+		}
+	}
+	
+	# Refuse Asylum to Trotsky
+	MAC_refuse_trotsky_asylum = {
+		
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		available = {
+			has_country_flag = trotsky_requests_asylum
+			NOT = { has_country_flag = trotsky_in_macedonia }
+			NOT = { has_country_flag = trotsky_refused }
+			has_political_power > 50
+		}
+		
+		visible = {
+			has_country_flag = trotsky_requests_asylum
+			NOT = { has_country_flag = trotsky_in_macedonia }
+			NOT = { has_country_flag = trotsky_refused }
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_country_flag = delcev_in_power
+			}
+			modifier = {
+				factor = 3
+				has_opinion = {
+					target = SOV
+					value > 50
+				}
+			}
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_trotsky.20 }
+			set_country_flag = trotsky_refused
+			custom_effect_tooltip = MAC_refuse_trotsky_asylum_tt
+		}
+	}
+	
+	# Commission Theoretical Work from Trotsky
+	MAC_trotsky_thesis = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			has_country_flag = trotsky_in_macedonia
+			NOT = { has_country_flag = trotsky_killed }
+			has_political_power > 75
+		}
+		
+		visible = {
+			has_country_flag = trotsky_in_macedonia
+			NOT = { has_country_flag = trotsky_killed }
+			NOT = { has_country_flag = trotsky_thesis_written }
+		}
+		
+		cost = 75
+		days_remove = 180
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 75
+		}
+		
+		modifier = {
+			political_power_factor = -0.05
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = MAC_trotsky_thesis_started_tt
+		}
+		
+		remove_effect = {
+			country_event = { id = macedonia_trotsky.30 }
+			set_country_flag = trotsky_thesis_written
+			custom_effect_tooltip = MAC_trotsky_thesis_completed_tt
+		}
+	}
+	
+	# Investigate Security Threats Against Trotsky
+	MAC_investigate_trotsky_security = {
+		
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		available = {
+			has_country_flag = trotsky_in_macedonia
+			has_country_flag = stalin_threatened
+			NOT = { has_country_flag = trotsky_killed }
+			NOT = { has_country_flag = trotsky_survived }
+			has_political_power > 50
+		}
+		
+		visible = {
+			has_country_flag = trotsky_in_macedonia
+			has_country_flag = stalin_threatened
+			NOT = { has_country_flag = trotsky_killed }
+			NOT = { has_country_flag = trotsky_survived }
+			NOT = { has_country_flag = plot_investigated }
+		}
+		
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 60
+		}
+		
+		modifier = {
+			political_power_factor = -0.03
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = MAC_investigate_trotsky_security_started_tt
+		}
+		
+		remove_effect = {
+			country_event = { id = macedonia_trotsky.40 }
+			set_country_flag = plot_investigated
+			custom_effect_tooltip = MAC_investigate_trotsky_security_completed_tt
+		}
+	}
+	
+	# Adopt Delčevism as State Ideology
+	MAC_adopt_delcevism = {
+		
+		icon = GFX_decision_generic_nationalism
+		
+		available = {
+			has_country_flag = delcev_in_power
+			has_government = neutrality
+			NOT = { has_country_flag = delcevism_adopted }
+		}
+		
+		visible = {
+			has_country_flag = delcev_in_power
+			has_government = neutrality
+		}
+		
+		cost = 150
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		complete_effect = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.30
+			}
+			add_stability = 0.10
+			add_war_support = 0.05
+			add_political_power = 100
+			set_country_flag = delcevism_adopted
+			custom_effect_tooltip = MAC_adopt_delcevism_tt
+		}
+	}
+	
+	# Form Revolutionary Independents Faction
+	MAC_form_revolutionary_independents = {
+		
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		available = {
+			has_country_flag = trotsky_in_macedonia
+			has_country_flag = delcev_in_power
+			NOT = { is_in_faction = yes }
+			is_subject = no
+			has_war = no
+		}
+		
+		visible = {
+			has_country_flag = trotsky_in_macedonia
+			has_country_flag = delcev_in_power
+			NOT = { is_in_faction = yes }
+		}
+		
+		cost = 100
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 2
+				has_country_flag = trotsky_survived
+			}
+		}
+		
+		complete_effect = {
+			create_faction = "Revolutionary Independents"
+			add_stability = 0.10
+			add_war_support = 0.15
+			add_political_power = 150
+			custom_effect_tooltip = MAC_form_revolutionary_independents_tt
+			set_country_flag = revolutionary_independents_formed
+			country_event = { id = macedonia_trotsky.50 }
+		}
+	}
+	
+	# Establish International Bureau
+	MAC_international_bureau = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			has_country_flag = trotsky_in_macedonia
+			has_country_flag = revolutionary_independents_formed
+			has_political_power > 100
+		}
+		
+		visible = {
+			has_country_flag = trotsky_in_macedonia
+			has_country_flag = revolutionary_independents_formed
+		}
+		
+		cost = 100
+		days_remove = 120
+		
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			political_power_factor = -0.10
+			justify_war_goal_time = -0.15
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = MAC_international_bureau_started_tt
+		}
+		
+		remove_effect = {
+			add_ideas = MAC_international_bureau
+			add_political_power = 100
+			custom_effect_tooltip = MAC_international_bureau_completed_tt
+		}
+	}
+	
+	# Support International Revolution
+	MAC_support_revolution = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			has_idea = MAC_international_bureau
+			has_political_power > 50
+		}
+		
+		visible = {
+			has_idea = MAC_international_bureau
+		}
+		
+		cost = 50
+		days_remove = 60
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		modifier = {
+			political_power_factor = -0.05
+		}
+		
+		remove_effect = {
+			random_list = {
+				25 = {
+					add_manpower = 5000
+					custom_effect_tooltip = MAC_volunteers_arrived_tt
+				}
+				25 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1000
+					}
+					custom_effect_tooltip = MAC_equipment_donated_tt
+				}
+				25 = {
+					add_political_power = 75
+					custom_effect_tooltip = MAC_international_solidarity_tt
+				}
+				25 = {
+					# Nothing happens
+					custom_effect_tooltip = MAC_support_failed_tt
+				}
+			}
+		}
+	}
+	
+	# Delčevist Diplomatic Initiative
+	MAC_delcevist_diplomacy = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			has_country_flag = delcevism_adopted
+			is_subject = no
+			has_political_power > 75
+		}
+		
+		visible = {
+			has_country_flag = delcevism_adopted
+		}
+		
+		cost = 75
+		days_remove = 90
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		modifier = {
+			political_power_factor = -0.05
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = MAC_delcevist_diplomacy_started_tt
+		}
+		
+		remove_effect = {
+			add_political_power = 100
+			random_other_country = {
+				limit = {
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = neutrality
+						has_government = democratic
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = MAC_improved_relations
+				}
+				ROOT = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = MAC_improved_relations
+					}
+				}
+			}
+			custom_effect_tooltip = MAC_delcevist_diplomacy_completed_tt
+		}
+	}
+}

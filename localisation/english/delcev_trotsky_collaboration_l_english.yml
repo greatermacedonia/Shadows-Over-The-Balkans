@@ -1,0 +1,76 @@
+﻿l_english:
+
+###########################################################
+# DELČEV-TROTSKY COLLABORATION PATH
+###########################################################
+
+# Focus Names
+MAC_trotsky_delcev_alliance:0 "Revolutionary Independents"
+MAC_revolutionary_independents:0 "Form Revolutionary Council"
+
+# Focus Descriptions
+MAC_trotsky_delcev_alliance_desc:0 "Two revolutionary legends, two divergent philosophies, one desperate struggle: Goce Delčev, the father of Macedonian independence, and Leon Trotsky, architect of permanent revolution. Though separated by ideology—one a nationalist committed to 'Macedonia for Macedonians,' the other an internationalist dreaming of world revolution—they share a common enemy: imperialism in all its forms. Together, they can forge a unique synthesis: Revolutionary Independence."
+
+MAC_revolutionary_independents_desc:0 "With Delčev and Trotsky working in tandem, Macedonia can form the Revolutionary Independents - a faction dedicated to independence from both Soviet domination and Western capitalism. Nations oppressed by great powers may rally to this banner."
+
+# Tooltips
+MAC_delcev_trotsky_alliance_tt:0 "§YThe Revolutionary Independents form§!\nDelčev and Trotsky lead together\nGain powerful national spirit\nUnique diplomatic options unlocked"
+
+MAC_revolutionary_independents_delcev_tt:0 "§YWith both leaders present:§!\nForm 'Revolutionary Independents' faction\nAttract nations seeking true independence\nNeither Soviet puppet nor capitalist tool"
+
+# Event: macedonia_trotsky.100 - The Lion and the Revolutionary
+macedonia_trotsky.100.t:0 "The Lion and the Revolutionary"
+macedonia_trotsky.100.d:0 "Tikveš Estate, 1937\n\nTwo men sit across from each other in Goce Delčev's study, surrounded by maps of Macedonia and revolutionary manifestos. One is 65, weathered by decades of guerrilla warfare and nation-building. The other is 58, exiled from his homeland, hunted by assassins, yet still burning with revolutionary fervor.\n\n'You want permanent revolution,' Delčev says, pouring rakija into two glasses. 'I want permanent independence. Tell me, Comrade Trotsky, how are these compatible?'\n\nTrotsky smiles. 'Because both reject the lie of great power benevolence. Stalin's USSR demands submission. The capitalist West offers 'protection' that becomes occupation. You fought to free Macedonia from empires. I fight to free workers from both capitalism and Stalinist bureaucracy.'\n\n'I am no communist,' Delčev warns.\n\n'And I am no nationalist,' Trotsky replies. 'Yet here we are. Perhaps there is room in history for Revolutionary Independents - those who will neither bend to Moscow nor bow to London.'\n\nDelčev raises his glass. 'To independence, then. However we define it.'\n\n'To revolution,' Trotsky counters. 'However we achieve it.'\n\nThey drink. History holds its breath."
+
+macedonia_trotsky.100.a:0 "Two legends, one Macedonia!"
+macedonia_trotsky.100.a_tt:0 "§YDelčev and Trotsky form alliance§!\nRevolutionary Independents ideology established\nMacedonia becomes beacon for oppressed nations"
+
+# National Spirit
+MAC_revolutionary_independents_spirit:0 "Revolutionary Independents"
+MAC_revolutionary_independents_spirit_desc:0 "Under the unprecedented dual leadership of Goce Delčev and Leon Trotsky, Macedonia has forged a unique ideological synthesis. Delčev's 'Macedonia for Macedonians' nationalism merges with Trotsky's permanent revolution to create Revolutionary Independence - rejecting both Soviet authoritarianism and Western capitalism, championing small nations' freedom from all empires. This unlikely alliance gives Macedonia unparalleled legitimacy among the oppressed and tremendous internal unity."
+
+###########################################################
+# MISSING DELČEV EVENT LOCALIZATION
+###########################################################
+
+# mac_delcev.21 - Purge the Pretenders
+mac_delcev.21.t:0 "The Pretenders Depart"
+mac_delcev.21.d:0 "Goce Delčev, having returned to power, now addresses the fate of Macedonia's rival faction leaders. Each claimed to represent the true path forward. Each believed themselves worthy of leading our nation. Now the Founder has returned, and their claims ring hollow.\n\nDelčev summons each leader personally:\n\nIvan Mihailov, the VMRO radical, is told: 'Your passion for Greater Macedonia is admirable, but your methods would destroy us. Retire to your estate, or I will have you arrested.'\n\nLazar Koliševski, the communist firebrand, is warned: 'I fought for Macedonia's freedom, not to become Moscow's puppet. Leave politics, or leave the country.'\n\nDimitar Vlahov, the democratic reformer, is addressed more gently: 'You mean well, old friend, but your Balkan federation dreams would erase Macedonia's identity. Step aside.'\n\nMethodius Cento, the centrist, is simply dismissed: 'Your time has passed, administrator. Thank you for keeping the seat warm.'\n\nAll comply. None dare challenge the Founder. The pretenders depart. Macedonia has one voice again."
+
+mac_delcev.21.a:0 "The Old Lion roars, and they scatter."
+mac_delcev.21.b:0 "Some must be forced into exile..."
+
+# mac_delcev.22 - Delčev Constitution
+mac_delcev.22.t:0 "The Delčev Constitution"
+mac_delcev.22.d:0 "Goce Delčev presents his constitution to the assembled parliament. It is unlike any governing document in Europe:\n\n'Macedonia will not be a democracy where the mob rules and foreign agents manipulate. Macedonia will not be a dictatorship where tyrants crush the people. Macedonia will be... Macedonia.'\n\nKey provisions:\n- The people elect representatives to parliament\n- Parliament proposes laws and budgets\n- The Founder (and his successors) can veto any law that threatens independence\n- No foreign alliances without national referendum\n- Mandatory military service for all citizens\n- Land reform: 'Every Macedonian family deserves land to farm'\n- Freedom of speech, except for foreign propaganda\n- Orthodox Church separated from state but respected\n\n'I will not live forever,' Delčev concludes. 'This constitution ensures that when I am gone, Macedonia remains free. That is my gift to you - a system that cannot be corrupted by ambition or sold to foreign powers.'\n\nThe parliament votes unanimously to adopt it. Who would dare oppose the Founder?"
+
+mac_delcev.22.a:0 "The Delčevist Republic is born!"
+
+# Additional tooltips
+MAC_factions_disbanded_tt:0 "§YAll faction leaders removed from power§!\nMihailov, Koliševski, Vlahov, and Cento retired or exiled"
+
+###########################################################
+# MISSING FOCUS DESCRIPTIONS
+###########################################################
+
+MAC_international_solidarity_desc:0 "Though Delčev leads a nominally 'anarchist' state (in ideology classification only—Delčevism is truly sui generis), this does not mean isolation. Macedonia can practice international solidarity with other oppressed nations, support revolutionary movements that respect sovereignty, and form alliances with those who reject imperialism."
+
+MAC_invite_trotsky_desc:0 "Leon Trotsky, exiled from the Soviet Union and hunted by Stalin's assassins, seeks refuge. Many nations have refused him. Should Macedonia grant asylum to this controversial revolutionary? Doing so would enrage Stalin but might attract revolutionary sympathizers worldwide. If Delčev is in power, their meeting could be historic."
+
+MAC_red_army_advisors_desc:0 "Trotsky was the architect of the Red Army, second only to Lenin in the October Revolution. His military genius is undeniable. If we grant him asylum, he could train our officers in modern revolutionary warfare tactics. This knowledge could make Macedonia's small army punch above its weight."
+
+MAC_permanent_revolution_desc:0 "If Trotsky takes power, he will implement his theory of permanent revolution: socialism must spread internationally or it will wither domestically. Macedonia will become the base for revolutionary movements worldwide. Stalin will never forgive us. The world will never ignore us."
+
+MAC_export_revolution_desc:0 "The time for theory has passed. Macedonia will actively support revolutionary movements in neighboring countries and beyond. We will send advisors, weapons, and propaganda to any nation struggling against oppression. The permanent revolution begins now."
+
+###########################################################
+# CHARACTER LORE ADDITIONS
+###########################################################
+
+# Dual Leadership Flavor
+MAC_dual_leadership_flavor:0 "The sight of Goce Delčev and Leon Trotsky walking together through Skopje's streets is surreal. The Old Lion of Macedonia, wearing his traditional komitadji uniform, and the exiled Revolutionary, carrying books and manifestos. They argue constantly—about nationalism vs. internationalism, about means and ends, about what revolution truly means. Yet they respect each other deeply. 'He is wrong about almost everything,' Delčev tells his aides, 'but he is sincere, and he has never betrayed a principle. That is more than I can say for most politicians.' Trotsky writes in his diary: 'Delčev is no Marxist, yet he embodies the revolutionary spirit more perfectly than any Bolshevik I have met. History makes strange comrades.'"
+
+# Delčev's Anarchism Clarification
+delcevist_clarified:0 "Delčevism as 'Anarchism'"
+delcevist_clarified_desc:0 "Western observers struggle to classify Delčev's ideology. Some call it anarchism, seeing his rejection of foreign alliances and centralized power. But true anarchists would reject Delčev's strong executive authority and mandatory military service. Others call it fascism, seeing his nationalism and authoritarian tendencies. But fascists worship the state; Delčev worships Macedonia's independence. Still others see communism in his social reforms and anti-imperialism. But Delčev despises Moscow's domination. The truth? Delčevism is uniquely Macedonian—forged in decades of struggle, shaped by one man's uncompromising vision, neither left nor right but simply... free."
+

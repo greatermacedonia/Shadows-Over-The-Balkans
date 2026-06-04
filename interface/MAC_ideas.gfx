@@ -1,0 +1,39 @@
+spriteTypes = {
+	
+	### VMRO/IMRO Badge Icon ###
+	spriteType = {
+		name = "GFX_idea_MAC_vmro_legacy"
+		texturefile = "gfx/interface/ideas/idea_MAC_vmro_legacy.dds"
+	}
+	
+	### Political Advisor Portraits ###
+	spriteType = {
+		name = "GFX_idea_MAC_nikola_karev"
+		texturefile = "gfx/interface/ideas/MAC_nikola_karev.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MAC_krste_misirkov"
+		texturefile = "gfx/interface/ideas/MAC_krste_misirkov.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MAC_dame_gruev"
+		texturefile = "gfx/interface/ideas/MAC_dame_gruev.dds"
+	}
+	
+	### High Command Portraits ###
+	spriteType = {
+		name = "GFX_idea_MAC_svetozar_vukmanovic"
+		texturefile = "gfx/interface/ideas/MAC_svetozar_vukmanovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MAC_hristo_tatarchev"
+		texturefile = "gfx/interface/ideas/MAC_hristo_tatarchev.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAC_mountainous_terrain"
+		texturefile = "gfx/interface/ideas/idea_MAC_mountainous_terrain.dds"
+	}
+}

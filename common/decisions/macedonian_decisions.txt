@@ -1,0 +1,209 @@
+MAC_balkan_expansion = {
+	
+	MAC_claim_salonica = {
+		
+		icon = generic_territory
+		
+		available = {
+			is_subject = no
+			OR = {
+				has_government = fascism
+				AND = {
+					has_government = neutrality
+					has_completed_focus = MAC_balkan_domination
+				}
+			}
+		}
+		
+		visible = {
+			NOT = { owns_state = 731 }  # Thessaloniki
+			731 = {
+				OR = {
+					is_owned_by = GRE
+					owner = {
+						NOT = { is_in_faction_with = MAC }
+					}
+				}
+			}
+		}
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		complete_effect = {
+			add_war_support = 0.05
+			add_state_claim = 731
+		}
+	}
+	
+	MAC_claim_bitola = {
+		
+		icon = generic_territory
+		
+		available = {
+			is_subject = no
+			OR = {
+				has_government = fascism
+				AND = {
+					has_government = neutrality
+					has_completed_focus = MAC_balkan_domination
+				}
+			}
+		}
+		
+		visible = {
+			NOT = { owns_state = 950 }  # If we somehow lose core territory
+		}
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		complete_effect = {
+			add_war_support = 0.05
+			add_state_core = 950
+		}
+	}
+	
+	MAC_strengthen_military = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_war = no
+			has_political_power > 100
+		}
+		
+		cost = 100
+		days_remove = 60
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				threat > 0.3
+			}
+		}
+		
+		modifier = {
+			training_time_factor = -0.10
+		}
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			army_experience = 10
+			add_manpower = 5000
+		}
+	}
+	
+	MAC_expand_infrastructure = {
+		
+		icon = generic_construction
+		
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		
+		cost = 75
+		days_remove = 90
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		modifier = {
+			production_speed_infrastructure_factor = 0.20
+		}
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	MAC_war_bonds = {
+		
+		icon = generic_economic_increase
+		
+		available = {
+			has_war = yes
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		
+		remove_effect = {
+			add_political_power = 100
+		}
+	}
+	
+	MAC_diplomatic_outreach = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			is_subject = no
+			NOT = { has_war = yes }
+		}
+		
+		cost = 50
+		days_remove = 45
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		complete_effect = {
+			
+		}
+		
+		remove_effect = {
+			add_political_power = 75
+			add_opinion_modifier = {
+				target = YUG
+				modifier = MAC_balkan_cooperation
+			}
+			add_opinion_modifier = {
+				target = BUL
+				modifier = MAC_balkan_cooperation
+			}
+			add_opinion_modifier = {
+				target = GRE
+				modifier = MAC_balkan_cooperation
+			}
+		}
+	}
+}

@@ -1,0 +1,248 @@
+# Territorial Demands - Peaceful Expansion System
+# Modeled on Germany's Sudetenland mechanics
+
+MAC_territorial_demands = {
+	
+	# AEGEAN MACEDONIA DEMANDS (Greece)
+	
+	# Demand Thessaloniki (Central Macedonia) from Greece
+	MAC_demand_thessaloniki = {
+		
+		icon = GFX_decision_generic_nationalism
+		
+		available = {
+			is_subject = no
+			has_war = no
+			731 = { is_owned_by = GRE }
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			OR = {
+				has_country_flag = MAC_aegean_campaign_active
+				has_country_flag = MAC_discovered_royal_tombs
+				has_country_flag = MAC_can_demand_greece
+			}
+			date > 1937.6.1
+		}
+		
+		visible = {
+			NOT = { owns_state = 731 }
+			731 = { is_owned_by = GRE }
+			NOT = { has_war_with = GRE }
+			OR = {
+				has_country_flag = MAC_aegean_campaign_active
+				has_country_flag = MAC_discovered_royal_tombs
+				has_country_flag = MAC_can_demand_greece
+			}
+		}
+		
+		cost = 75
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				GRE = {
+					OR = {
+						is_in_faction_with = ENG
+						is_in_faction_with = FRA
+						is_in_faction_with = USA
+					}
+				}
+			}
+		}
+		
+		complete_effect = {
+			GRE = {
+				country_event = { id = macedonia_demands.2 }
+			}
+			custom_effect_tooltip = MAC_demand_thessaloniki_tt
+		}
+	}
+	
+	# YUGOSLAVIA DEMANDS
+	
+	# Demand Trgovishte from Yugoslavia
+	MAC_demand_trgovishte = {
+		
+		icon = GFX_decision_generic_nationalism
+		
+		available = {
+			is_subject = no
+			has_war = no
+			803 = { is_owned_by = YUG }
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			OR = {
+				has_country_flag = MAC_vardar_campaign_active
+				has_country_flag = MAC_can_demand_yugoslavia
+			}
+			date > 1937.3.1
+		}
+		
+		visible = {
+			NOT = { owns_state = 803 }
+			803 = { is_owned_by = YUG }
+			NOT = { has_war_with = YUG }
+			OR = {
+				has_country_flag = MAC_vardar_campaign_active
+				has_country_flag = MAC_can_demand_yugoslavia
+			}
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				YUG = {
+					OR = {
+						is_in_faction_with = ENG
+						is_in_faction_with = FRA
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+		
+		complete_effect = {
+			YUG = {
+				country_event = { id = macedonia_demands.3 }
+			}
+			custom_effect_tooltip = MAC_demand_trgovishte_tt
+		}
+	}
+	
+	# ALBANIA DEMANDS
+	
+	# Demand Korce from Albania
+	MAC_demand_korce = {
+		
+		icon = GFX_decision_generic_nationalism
+		
+		available = {
+			is_subject = no
+			has_war = no
+			1049 = { is_owned_by = ALB }
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			OR = {
+				has_country_flag = MAC_albanian_campaign_active
+				has_country_flag = MAC_can_demand_albania
+			}
+			date > 1938.1.1
+		}
+		
+		visible = {
+			NOT = { owns_state = 1049 }
+			1049 = { is_owned_by = ALB }
+			NOT = { has_war_with = ALB }
+			OR = {
+				has_country_flag = MAC_albanian_campaign_active
+				has_country_flag = MAC_can_demand_albania
+			}
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				ALB = {
+					OR = {
+						is_in_faction_with = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+		}
+		
+		complete_effect = {
+			ALB = {
+				country_event = { id = macedonia_demands.6 }
+			}
+			custom_effect_tooltip = MAC_demand_korce_tt
+		}
+	}
+	
+	# Demand Pirin Macedonia from Bulgaria
+	MAC_demand_pirin = {
+		
+		icon = GFX_decision_generic_nationalism
+		
+		available = {
+			is_subject = no
+			has_war = no
+			1047 = { is_owned_by = BUL }
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			OR = {
+				has_country_flag = MAC_pirin_campaign_active
+				has_country_flag = MAC_can_demand_bulgaria
+			}
+			date > 1938.6.1
+		}
+		
+		visible = {
+			NOT = { owns_state = 1047 }
+			1047 = { is_owned_by = BUL }
+			NOT = { has_war_with = BUL }
+			OR = {
+				has_country_flag = MAC_pirin_campaign_active
+				has_country_flag = MAC_can_demand_bulgaria
+			}
+		}
+		
+		cost = 100
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				BUL = {
+					OR = {
+						is_in_faction_with = GER
+						is_in_faction_with = ENG
+						is_in_faction_with = FRA
+					}
+				}
+			}
+		}
+		
+		complete_effect = {
+			BUL = {
+				country_event = { id = macedonia_demands.5 }
+			}
+			custom_effect_tooltip = MAC_demand_pirin_tt
+		}
+	}
+}

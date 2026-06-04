@@ -1,0 +1,330 @@
+###########################
+# Trotsky Storyline Events
+###########################
+
+add_namespace = macedonia_trotsky
+
+# The Wanderer Arrives
+country_event = {
+	id = macedonia_trotsky.1
+	title = macedonia_trotsky.1.t
+	desc = macedonia_trotsky.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_trotsky.1.a
+		custom_effect_tooltip = macedonia_trotsky.1.a_tt
+		set_country_flag = trotsky_requests_asylum
+	}
+}
+
+# Granting Asylum
+country_event = {
+	id = macedonia_trotsky.10
+	title = macedonia_trotsky.10.t
+	desc = macedonia_trotsky.10.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_trotsky.10.a
+		add_stability = -0.10
+		add_political_power = -100
+		custom_effect_tooltip = macedonia_trotsky.10.a_tt
+	}
+}
+
+# Stalin's Fury
+country_event = {
+	id = macedonia_trotsky.11
+	title = macedonia_trotsky.11.t
+	desc = macedonia_trotsky.11.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+	
+	trigger = {
+		has_country_flag = trotsky_in_macedonia
+		NOT = { has_country_flag = stalin_threatened }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = macedonia_trotsky.11.a
+		add_stability = -0.05
+		custom_effect_tooltip = macedonia_trotsky.11.a_tt
+		set_country_flag = stalin_threatened
+	}
+}
+
+# Refusing Asylum
+country_event = {
+	id = macedonia_trotsky.20
+	title = macedonia_trotsky.20.t
+	desc = macedonia_trotsky.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_trotsky.20.a
+		add_political_power = 50
+		custom_effect_tooltip = macedonia_trotsky.20.a_tt
+	}
+}
+
+# The Macedonian Thesis
+country_event = {
+	id = macedonia_trotsky.30
+	title = macedonia_trotsky.30.t
+	desc = macedonia_trotsky.30.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_trotsky.30.a
+		add_political_power = 100
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		custom_effect_tooltip = macedonia_trotsky.30.a_tt
+	}
+}
+
+# Trotsky and Delčev Meet
+country_event = {
+	id = macedonia_trotsky.31
+	title = macedonia_trotsky.31.t
+	desc = macedonia_trotsky.31.d
+	picture = GFX_report_event_generic_conference
+	
+	trigger = {
+		has_country_flag = trotsky_in_macedonia
+		has_country_flag = delcev_in_power
+		NOT = { has_country_flag = trotsky_delcev_met }
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	option = {
+		name = macedonia_trotsky.31.a
+		add_stability = 0.05
+		add_political_power = 50
+		custom_effect_tooltip = macedonia_trotsky.31.a_tt
+		set_country_flag = trotsky_delcev_met
+	}
+}
+
+# The Ice Pick Plot - Discovery
+country_event = {
+	id = macedonia_trotsky.40
+	title = macedonia_trotsky.40.t
+	desc = macedonia_trotsky.40.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_trotsky.40.a
+		custom_effect_tooltip = macedonia_trotsky.40.a_tt
+	}
+}
+
+# The Ice Pick Plot - Assassination Attempt
+country_event = {
+	id = macedonia_trotsky.41
+	title = macedonia_trotsky.41.t
+	desc = macedonia_trotsky.41.d
+	picture = GFX_report_event_generic_ruins
+	
+	trigger = {
+		has_country_flag = trotsky_in_macedonia
+		NOT = { has_country_flag = trotsky_survived }
+		NOT = { has_country_flag = trotsky_killed }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		
+		modifier = {
+			factor = 0.5
+			has_country_flag = stalin_threatened
+		}
+	}
+	
+	option = {
+		name = macedonia_trotsky.41.a
+		random_list = {
+			70 = {
+				country_event = { id = macedonia_trotsky.42 }
+			}
+			30 = {
+				country_event = { id = macedonia_trotsky.43 }
+			}
+		}
+	}
+}
+
+# Trotsky Survives
+country_event = {
+	id = macedonia_trotsky.42
+	title = macedonia_trotsky.42.t
+	desc = macedonia_trotsky.42.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_trotsky.42.a
+		add_stability = 0.10
+		add_political_power = 50
+		custom_effect_tooltip = macedonia_trotsky.42.a_tt
+		set_country_flag = trotsky_survived
+		add_opinion_modifier = {
+			target = SOV
+			modifier = MAC_harboring_trotsky
+		}
+		reverse_add_opinion_modifier = {
+			target = SOV
+			modifier = MAC_harboring_trotsky
+		}
+	}
+}
+
+# Trotsky Assassinated
+country_event = {
+	id = macedonia_trotsky.43
+	title = macedonia_trotsky.43.t
+	desc = macedonia_trotsky.43.d
+	picture = GFX_report_event_generic_funeral
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_trotsky.43.a
+		add_stability = -0.15
+		add_political_power = -100
+		custom_effect_tooltip = macedonia_trotsky.43.a_tt
+		set_country_flag = trotsky_killed
+		remove_ideas = MAC_trotsky_theorist
+		add_opinion_modifier = {
+			target = SOV
+			modifier = MAC_positive_25
+		}
+	}
+}
+
+# Revolutionary Independents Faction
+country_event = {
+	id = macedonia_trotsky.50
+	title = macedonia_trotsky.50.t
+	desc = macedonia_trotsky.50.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_trotsky.50.a
+		add_stability = 0.15
+		add_war_support = 0.15
+		add_political_power = 100
+		custom_effect_tooltip = macedonia_trotsky.50.a_tt
+	}
+}
+
+# Trotsky in the Spanish Civil War
+country_event = {
+	id = macedonia_trotsky.60
+	title = macedonia_trotsky.60.t
+	desc = macedonia_trotsky.60.d
+	picture = GFX_report_event_generic_military_parade
+	
+	trigger = {
+		has_country_flag = trotsky_in_macedonia
+		has_country_flag = trotsky_survived
+		SPR = { has_civil_war = yes }
+		NOT = { has_country_flag = trotsky_to_spain }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = macedonia_trotsky.60.a
+		add_political_power = 100
+		add_war_support = 0.10
+		custom_effect_tooltip = macedonia_trotsky.60.a_tt
+		set_country_flag = trotsky_to_spain
+	}
+	
+	option = {
+		name = macedonia_trotsky.60.b
+		add_political_power = -50
+		custom_effect_tooltip = macedonia_trotsky.60.b_tt
+	}
+}
+
+# International Impact of Trotsky in Macedonia
+country_event = {
+	id = macedonia_trotsky.70
+	title = macedonia_trotsky.70.t
+	desc = macedonia_trotsky.70.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		has_country_flag = trotsky_in_macedonia
+		has_idea = MAC_trotsky_theorist
+		NOT = { has_country_flag = trotsky_international_impact }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = macedonia_trotsky.70.a
+		add_political_power = 50
+		every_other_country = {
+			limit = { has_government = communism }
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_negative_25
+			}
+		}
+		custom_effect_tooltip = macedonia_trotsky.70.a_tt
+		set_country_flag = trotsky_international_impact
+	}
+}
+
+###########################################################
+# THE REVOLUTIONARY INDEPENDENTS - Delčev & Trotsky Alliance
+###########################################################
+
+# The Lion and the Revolutionary - Historic Meeting
+country_event = {
+	id = macedonia_trotsky.100
+	title = macedonia_trotsky.100.t
+	desc = macedonia_trotsky.100.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_trotsky.100.a  # "History witnesses this moment!"
+		add_stability = 0.10
+		add_political_power = 200
+		add_war_support = 0.15
+		set_country_flag = revolutionary_independents_formed
+		custom_effect_tooltip = macedonia_trotsky.100.a_tt
+	}
+}
+

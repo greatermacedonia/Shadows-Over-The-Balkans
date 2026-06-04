@@ -1,0 +1,25 @@
+on_actions = {
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			# Rename Thessaloniki to Solun when Macedonia takes control
+			if = {
+				limit = {
+					tag = MAC
+					FROM.FROM = { state = 731 }
+				}
+				731 = { set_state_name = "Solun" }
+				set_province_name = { id = 11818 name = "Solun" }
+			}
+			# Restore Thessaloniki name if Greece retakes control
+			if = {
+				limit = {
+					tag = GRE
+					FROM.FROM = { state = 731 }
+				}
+				731 = { set_state_name = "Central Macedonia" }
+				set_province_name = { id = 11818 name = "Thessaloniki" }
+			}
+		}
+	}
+}

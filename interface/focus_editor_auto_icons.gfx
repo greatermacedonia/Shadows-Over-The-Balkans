@@ -1,0 +1,10 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_focus_VRMO Takeover"
+        texturefile = "gfx/interface/goals/VRMO Takeover.dds"
+    }
+    spriteType = {
+        name = "GFX_focus_macedonia rise"
+        texturefile = "gfx/interface/goals/macedonia rise.dds"
+    }
+}

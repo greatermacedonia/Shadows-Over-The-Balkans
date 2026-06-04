@@ -1,0 +1,1053 @@
+###########################################################
+# MACEDONIAN EVENTS - DELČEV STORYLINE
+# mac_delcev.1 - mac_delcev.100
+###########################################################
+
+add_namespace = mac_delcev
+
+###########################################################
+# THE WATCHING FOUNDER (Events 1-9)
+###########################################################
+
+# The Founder Sends a Letter
+country_event = {
+	id = mac_delcev.1
+	title = mac_delcev.1.t
+	desc = mac_delcev.1.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.1.a  # "What does he say?"
+		
+		custom_effect_tooltip = MAC_delcev_evaluates_tt
+		
+		# Delčev evaluates your political choice
+		if = {
+			limit = { has_completed_focus = MAC_vmro_conspiracy }
+			add_stability = -0.02
+			country_event = { id = mac_delcev.3 days = 7 }  # Delčev disapproves of fascism
+		}
+		else_if = {
+			limit = { has_completed_focus = MAC_workers_strike }
+			add_stability = -0.01
+			country_event = { id = mac_delcev.4 days = 7 }  # Delčev wary of communism
+		}
+		else_if = {
+			limit = { has_completed_focus = MAC_balkan_conference }
+			add_stability = 0.02
+			country_event = { id = mac_delcev.5 days = 7 }  # Delčev approves of democracy
+		}
+		else_if = {
+			limit = { has_completed_focus = MAC_emergency_powers }
+			add_stability = 0.01
+			country_event = { id = mac_delcev.6 days = 7 }  # Delčev neutral on centrism
+		}
+	}
+}
+
+# Pilgrimage to the Founder
+country_event = {
+	id = mac_delcev.2
+	title = mac_delcev.2.t
+	desc = mac_delcev.2.d
+	picture = GFX_report_event_macedonian_leader
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.2.a  # "We seek his blessing"
+		
+		if = {
+			limit = { has_stability > 0.5 }
+			add_stability = 0.05
+			add_political_power = 50
+			set_country_flag = MAC_delcev_approves
+		}
+		else_if = {
+			limit = { has_stability > 0.3 }
+			add_stability = 0.03
+			add_political_power = 25
+			set_country_flag = MAC_delcev_neutral
+		}
+		else = {
+			add_stability = -0.05
+			set_country_flag = MAC_delcev_disapproves
+			country_event = { id = mac_delcev.10 days = 30 }  # Delčev offers to return
+		}
+	}
+}
+
+# Delčev Disapproves of Fascism
+country_event = {
+	id = mac_delcev.3
+	title = mac_delcev.3.t
+	desc = mac_delcev.3.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.3.a  # "The Old Lion watches with concern"
+		
+		add_stability = -0.02
+		add_political_power = -25
+		
+		# Delčev's disapproval is known
+		custom_effect_tooltip = MAC_delcev_opposes_fascism_tt
+		set_country_flag = MAC_delcev_opposes_vmro
+		
+		# Mihailov's faction loses some legitimacy
+		add_popularity = { ideology = fascism popularity = -0.05 }
+	}
+}
+
+# Delčev Wary of Communism
+country_event = {
+	id = mac_delcev.4
+	title = mac_delcev.4.t
+	desc = mac_delcev.4.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.4.a  # "He prefers Macedonian solutions"
+		
+		add_stability = -0.01
+		
+		# Delčev is wary but not hostile to leftism
+		custom_effect_tooltip = MAC_delcev_wary_communism_tt
+		set_country_flag = MAC_delcev_wary_moscow
+		
+		# Communist support slightly reduced
+		add_popularity = { ideology = communism popularity = -0.03 }
+	}
+}
+
+# Delčev Approves of Democracy
+country_event = {
+	id = mac_delcev.5
+	title = mac_delcev.5.t
+	desc = mac_delcev.5.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.5.a  # "His blessing strengthens us"
+		
+		add_stability = 0.02
+		add_political_power = 50
+		
+		# Delčev approves of democratic path
+		custom_effect_tooltip = MAC_delcev_approves_democracy_tt
+		set_country_flag = MAC_delcev_approves_democracy
+		
+		# Democratic support boosted
+		add_popularity = { ideology = democratic popularity = 0.05 }
+	}
+}
+
+# Delčev Neutral on Centrism
+country_event = {
+	id = mac_delcev.6
+	title = mac_delcev.6.t
+	desc = mac_delcev.6.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.6.a  # "He neither condemns nor praises"
+		
+		add_stability = 0.01
+		add_political_power = 25
+		
+		# Delčev takes neutral stance
+		custom_effect_tooltip = MAC_delcev_neutral_centrism_tt
+		set_country_flag = MAC_delcev_neutral_path
+		
+		# Slight boost to non-aligned
+		add_popularity = { ideology = neutrality popularity = 0.03 }
+	}
+}
+
+# Delčev Offers to Return (Low Stability)
+country_event = {
+	id = mac_delcev.10
+	title = mac_delcev.10.t
+	desc = mac_delcev.10.d
+	picture = GFX_report_event_macedonian_crisis
+	
+	is_triggered_only = yes
+	
+	# Accept his return
+	option = {
+		name = mac_delcev.10.a  # "We need you, Founder"
+		
+		add_stability = 0.10
+		add_political_power = 100
+		set_country_flag = MAC_delcev_return_offered
+		custom_effect_tooltip = MAC_can_recall_delcev_tt
+	}
+	
+	# Refuse his offer
+	option = {
+		name = mac_delcev.10.b  # "We will manage without you"
+		
+		add_stability = -0.10
+		set_country_flag = MAC_delcev_rejected
+		custom_effect_tooltip = MAC_delcev_angered_tt
+	}
+}
+
+###########################################################
+# THE FOUNDER RETURNS (Events 20-29)
+###########################################################
+
+# Delčev Returns to Power
+country_event = {
+	id = mac_delcev.20
+	title = mac_delcev.20.t
+	desc = mac_delcev.20.d
+	picture = GFX_report_event_delcev_returns
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.20.a  # "Welcome home, Old Lion!"
+		
+		custom_effect_tooltip = MAC_delcev_returns_tt
+		
+		# All factions lose support
+		add_popularity = { ideology = fascism popularity = -0.15 }
+		add_popularity = { ideology = communism popularity = -0.15 }
+		add_popularity = { ideology = democratic popularity = -0.15 }
+		
+		# Delčevists (neutrality/oligarchism) gain support
+		add_popularity = { ideology = neutrality popularity = 0.40 }
+		
+		# Notify neighbors
+		custom_effect_tooltip = MAC_delcev_neighbors_notified_tt
+		custom_effect_tooltip = MAC_delcev_powers_notified_tt
+		hidden_effect = {
+			every_neighbor_country = {
+				country_event = { id = mac_delcev.25 days = 1 }
+			}
+			
+			# Major powers take notice
+			ENG = { country_event = { id = mac_delcev.26 days = 3 } }
+			FRA = { country_event = { id = mac_delcev.26 days = 3 } }
+			GER = { country_event = { id = mac_delcev.26 days = 3 } }
+			SOV = { country_event = { id = mac_delcev.26 days = 3 } }
+		}
+	}
+}
+
+# The Pretenders Depart - Delčev purges rival faction leaders
+country_event = {
+	id = mac_delcev.21
+	title = mac_delcev.21.t
+	desc = mac_delcev.21.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	# "The Old Lion roars, and they scatter."
+	option = {
+		name = mac_delcev.21.a
+		
+		add_stability = 0.05
+		add_political_power = 50
+		
+		# Remove all rival leaders' influence
+		add_popularity = { ideology = fascism popularity = -0.05 }
+		add_popularity = { ideology = communism popularity = -0.05 }
+		add_popularity = { ideology = democratic popularity = -0.05 }
+		
+		custom_effect_tooltip = MAC_factions_disbanded_tt
+		set_country_flag = MAC_pretenders_purged
+	}
+	
+	# "Some must be forced into exile..."
+	option = {
+		name = mac_delcev.21.b
+		
+		add_stability = -0.03
+		add_political_power = 75
+		add_war_support = 0.05
+		
+		# Harsher purge
+		add_popularity = { ideology = fascism popularity = -0.10 }
+		add_popularity = { ideology = communism popularity = -0.10 }
+		add_popularity = { ideology = democratic popularity = -0.10 }
+		
+		custom_effect_tooltip = MAC_factions_disbanded_tt
+		set_country_flag = MAC_pretenders_purged
+		set_country_flag = MAC_pretenders_exiled
+	}
+}
+
+# The Delčev Constitution
+country_event = {
+	id = mac_delcev.22
+	title = mac_delcev.22.t
+	desc = mac_delcev.22.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	# "The Delčevist Republic is born!"
+	option = {
+		name = mac_delcev.22.a
+		
+		add_stability = 0.10
+		add_political_power = 100
+		
+		custom_effect_tooltip = MAC_delcev_constitution_tt
+		set_country_flag = MAC_delcev_constitution_adopted
+	}
+}
+
+# Neighbors React to Delčev's Return
+country_event = {
+	id = mac_delcev.25
+	title = mac_delcev.25.t
+	desc = mac_delcev.25.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	# Concerned
+	option = {
+		name = mac_delcev.25.a  # "A nationalist firebrand returns..."
+		
+		add_opinion_modifier = {
+			target = MAC
+			modifier = MAC_delcev_concern
+		}
+	}
+}
+
+# Major Powers React
+country_event = {
+	id = mac_delcev.26
+	title = mac_delcev.26.t
+	desc = mac_delcev.26.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	# Monitor the situation
+	option = {
+		name = mac_delcev.26.a  # "Interesting development"
+		
+		add_opinion_modifier = {
+			target = MAC
+			modifier = MAC_delcev_interest
+		}
+	}
+}
+
+###########################################################
+# RESIST DELČEV PATH (Events 30-39)
+###########################################################
+
+# Stand Against the Legend
+country_event = {
+	id = mac_delcev.30
+	title = mac_delcev.30.t
+	desc = mac_delcev.30.d
+	picture = GFX_report_event_macedonian_crisis
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.30.a  # "We reject his authority"
+		
+		# Military splits
+		country_event = { id = mac_delcev.31 days = 14 }
+		
+		# Public opinion turns
+		add_stability = -0.15
+		add_war_support = -0.10
+		
+		set_country_flag = MAC_resisting_delcev
+	}
+}
+
+# Military Splits
+country_event = {
+	id = mac_delcev.31
+	title = mac_delcev.31.t
+	desc = mac_delcev.31.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.31.a  # "Loyal units remain with us"
+		
+		# Lose half your army experience
+		add_command_power = -50
+		army_experience = -50
+		
+		set_country_flag = MAC_delcev_civil_war_imminent
+		custom_effect_tooltip = MAC_civil_war_risk_tt
+	}
+}
+
+# Civil War Begins
+country_event = {
+	id = mac_delcev.32
+	title = mac_delcev.32.t
+	desc = mac_delcev.32.d
+	picture = GFX_report_event_civil_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.32.a  # "This is war"
+		
+		# Delčev leads the rebels
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = neutrality
+			size = 0.4
+			capital = 731  # Thessaloniki if available, otherwise home state
+			keep_unit_leaders_trigger = {
+				has_trait = delcevist_loyalist
+			}
+		}
+		
+		set_country_flag = MAC_delcev_civil_war
+		custom_effect_tooltip = MAC_delcev_war_begun_tt
+	}
+}
+
+###########################################################
+# COMPROMISE PATH (Events 40-49)
+###########################################################
+
+# Tikveš Compromise
+country_event = {
+	id = mac_delcev.40
+	title = mac_delcev.40.t
+	desc = mac_delcev.40.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.40.a  # "Wise compromise"
+		
+		# Delčev becomes advisor, not leader
+		add_ideas = MAC_founder_blessing
+		
+		# Create Delčev as Political Advisor
+		create_country_leader = {
+			name = "Goce Delčev"
+			picture = "Portrait_Macedonia_Goce_Delcev.dds"
+			ideology = oligarchism
+			traits = { elder_statesman }
+		}
+		
+		retire_country_leader = yes
+		promote_character = MAC_delcev_advisor
+		
+		add_stability = 0.10
+		add_political_power = 100
+	}
+}
+
+# Co-Governance Agreement
+country_event = {
+	id = mac_delcev.41
+	title = mac_delcev.41.t
+	desc = mac_delcev.41.d
+	picture = GFX_report_event_macedonian_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.41.a  # "Power shared is power doubled"
+		
+		add_ideas = MAC_dual_leadership
+		
+		# Delčev handles military matters
+		add_command_power = 100
+		army_experience = 50
+		
+		# You handle politics
+		add_political_power = 200
+		add_stability = 0.15
+	}
+}
+
+###########################################################
+# DELČEV'S LEGACY (Events 50-69)
+###########################################################
+
+# Macedonia for Macedonians
+country_event = {
+	id = mac_delcev.50
+	title = mac_delcev.50.t
+	desc = mac_delcev.50.d
+	picture = GFX_report_event_delcev_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.50.a  # "Independence is our birthright"
+		
+		# Cannot join major factions
+		set_rule = { can_create_factions = yes }
+		set_rule = { can_join_factions = no }
+		
+		# But can form own faction
+		custom_effect_tooltip = MAC_can_form_balkan_league_tt
+		
+		add_ideas = MAC_isolationist_doctrine
+		add_war_support = 0.10
+	}
+}
+
+# The People's Army
+country_event = {
+	id = mac_delcev.51
+	title = mac_delcev.51.t
+	desc = mac_delcev.51.d
+	picture = GFX_report_event_macedonian_army
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.51.a  # "Every Macedonian a soldier"
+		
+		add_ideas = MAC_cheta_brigades
+		
+		# Unlock special guerrilla infantry
+		unlock_decision_category_tooltip = MAC_guerrilla_recruitment
+		
+		add_manpower = 25000
+		army_experience = 25
+	}
+}
+
+# Settle the Succession
+country_event = {
+	id = mac_delcev.60
+	title = mac_delcev.60.t
+	desc = mac_delcev.60.d
+	picture = GFX_report_event_delcev_aging
+	
+	is_triggered_only = yes
+	
+	# Choose Svetozar Vukmanović (Communist)
+	option = {
+		name = mac_delcev.60.a
+		
+		create_field_marshal = {
+			name = "Svetozar Vukmanović"
+			picture = "Portrait_Macedonia_Vukmanovic.dds"
+			traits = { war_hero organisational_leader }
+			skill = 4
+		}
+		
+		set_country_flag = MAC_successor_vukmanovic
+	}
+	
+	# Choose Mihailo Apostolski (Moderate)
+	option = {
+		name = mac_delcev.60.b
+		
+		create_field_marshal = {
+			name = "Mihailo Apostolski"
+			picture = "Portrait_Macedonia_Apostolski.dds"
+			traits = { brilliant_strategist }
+			skill = 4
+		}
+		
+		set_country_flag = MAC_successor_apostolski
+	}
+	
+	# Choose reformed faction leader
+	option = {
+		name = mac_delcev.60.c
+		
+		# Bring back Vlahov, but reformed
+		create_country_leader = {
+			name = "Dimitar Vlahov"
+			picture = "Portrait_Macedonia_Vlahov.dds"
+			ideology = oligarchism
+			traits = { delcev_student }
+		}
+		
+		set_country_flag = MAC_successor_vlahov
+	}
+}
+
+###########################################################
+# THE FOUNDER'S DEATH (Events 70-79)
+###########################################################
+
+# Delčev's Death (Natural Causes)
+country_event = {
+	id = mac_delcev.70
+	title = mac_delcev.70.t
+	desc = mac_delcev.70.d
+	picture = GFX_report_event_delcev_funeral
+	
+	trigger = {
+		has_country_leader = { name = "Goce Delčev" }
+		date > 1940.1.1
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+		
+		modifier = {
+			factor = 0.5
+			date > 1943.1.1
+		}
+		
+		modifier = {
+			factor = 0.3
+			date > 1945.1.1
+		}
+	}
+	
+	immediate = {
+		set_country_flag = MAC_delcev_died_natural
+	}
+	
+	option = {
+		name = mac_delcev.70.a  # "The nation mourns"
+		
+		# 30-day mourning period
+		add_stability = -0.20
+		add_war_support = 0.30
+		
+		# Truce with all enemies
+		every_enemy_country = {
+			white_peace = MAC
+		}
+		
+		# The Last Will event
+		country_event = { id = mac_delcev.71 days = 7 }
+	}
+}
+
+# Delčev's Last Will
+country_event = {
+	id = mac_delcev.71
+	title = mac_delcev.71.t
+	desc = mac_delcev.71.d
+	picture = GFX_report_event_delcev_will
+	
+	is_triggered_only = yes
+	
+	# He blesses your government
+	option = {
+		name = mac_delcev.71.a
+		
+		trigger = {
+			OR = {
+				has_country_flag = MAC_delcev_approves
+				is_subject = no
+				has_war = no
+			}
+		}
+		
+		add_ideas = MAC_delcev_dream_fulfilled
+		add_stability = 0.15
+		add_war_support = 0.10
+		add_political_power = 500
+		
+		# Successor takes over
+		if = {
+			limit = { has_country_flag = MAC_successor_vukmanovic }
+			promote_character = MAC_vukmanovic
+		}
+		else_if = {
+			limit = { has_country_flag = MAC_successor_apostolski }
+			promote_character = MAC_apostolski
+		}
+		else_if = {
+			limit = { has_country_flag = MAC_successor_vlahov }
+			promote_character = MAC_vlahov
+		}
+	}
+	
+	# He condemns your government
+	option = {
+		name = mac_delcev.71.b
+		
+		trigger = {
+			OR = {
+				has_country_flag = MAC_delcev_disapproves
+				is_subject = yes
+				is_in_faction_with = SOV
+				is_in_faction_with = GER
+			}
+		}
+		
+		add_ideas = MAC_delcev_disappointment
+		add_stability = -0.10
+		add_war_support = -0.05
+		
+		# Risk of succession crisis
+		country_event = { id = mac_delcev.72 days = 30 }
+	}
+}
+
+###########################################################
+# ACHIEVEMENT EVENTS
+###########################################################
+
+# Achievement: The Founder's Rest
+country_event = {
+	id = mac_delcev.80
+	title = mac_delcev.80.t
+	desc = mac_delcev.80.d
+	picture = GFX_report_event_delcev_memorial
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = MAC_delcev_died_natural
+		is_subject = no
+		has_war = no
+		has_idea = MAC_delcev_dream_fulfilled
+	}
+	
+	option = {
+		name = mac_delcev.80.a  # "His dream lives on"
+		
+		# Achievementunlocked
+		set_country_flag = achievement_founders_rest
+		
+		# Permanent bonuses
+		add_ideas = MAC_eternal_legacy
+		
+		# National day of remembrance
+		custom_effect_tooltip = MAC_delcev_memorial_day_tt
+	}
+}
+
+###########################################################
+# DELČEV CONSOLIDATION & SUCCESSION (Events 85-95)
+# Merged from old macedonia_delcev namespace
+###########################################################
+
+# Macedonia for Macedonians - Nationalist Doctrine
+country_event = {
+	id = mac_delcev.85
+	title = mac_delcev.85.t
+	desc = mac_delcev.85.d
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.85.a  # "Macedonia belongs to Macedonians!"
+		add_stability = 0.10
+		add_war_support = 0.10
+		add_ideas = MAC_macedonia_for_macedonians
+		custom_effect_tooltip = mac_delcev.85.a_tt
+	}
+}
+
+# The Founder's Diplomacy - Personal Touch
+country_event = {
+	id = mac_delcev.86
+	title = mac_delcev.86.t
+	desc = mac_delcev.86.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.86.a  # "Only Delčev could achieve this"
+		add_political_power = 75
+		add_stability = 0.05
+		custom_effect_tooltip = mac_delcev.86.a_tt
+		# Can improve relations with one neighbor
+	}
+}
+
+# The People's Army - Delčevist Military
+country_event = {
+	id = mac_delcev.87
+	title = mac_delcev.87.t
+	desc = mac_delcev.87.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.87.a  # "Every Macedonian a soldier"
+		add_war_support = 0.15
+		army_experience = 50
+		add_manpower = 10000
+		add_ideas = MAC_peoples_army_delcev
+		custom_effect_tooltip = mac_delcev.87.a_tt
+	}
+}
+
+# Settling the Succession - Critical Choice
+country_event = {
+	id = mac_delcev.88
+	title = mac_delcev.88.t
+	desc = mac_delcev.88.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.88.a  # "Name a clear successor"
+		add_political_power = 100
+		add_stability = 0.10
+		custom_effect_tooltip = mac_delcev.88.a_tt
+		set_country_flag = delcev_succession_settled
+		hidden_effect = {
+			country_event = { id = mac_delcev.89 days = 180 }
+		}
+	}
+	
+	option = {
+		name = mac_delcev.88.b  # "Leave the question open"
+		add_political_power = 50
+		add_stability = 0.05
+		custom_effect_tooltip = mac_delcev.88.b_tt
+		set_country_flag = delcev_succession_open
+		# Risk of crisis on Delčev's death
+	}
+}
+
+# Successor Confirmed
+country_event = {
+	id = mac_delcev.89
+	title = mac_delcev.89.t
+	desc = mac_delcev.89.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.89.a  # "The transition will be smooth"
+		add_stability = 0.08
+		add_political_power = 75
+		set_country_flag = delcev_successor_ready
+	}
+}
+
+# Delčev's Legacy Complete - Ultimate Victory
+country_event = {
+	id = mac_delcev.90
+	title = mac_delcev.90.t
+	desc = mac_delcev.90.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	trigger = {
+		tag = MAC
+		has_country_flag = delcev_in_power
+		owns_state = 106  # Macedonia core
+		owns_state = 731  # Thessaloniki
+		owns_state = 184  # Western Thrace
+		date > 1940.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = mac_delcev.90.a  # "The dream is realized!"
+		add_stability = 0.30
+		add_war_support = 0.25
+		add_political_power = 200
+		set_country_flag = greater_macedonia_achieved
+		custom_effect_tooltip = mac_delcev.90.a_tt
+	}
+}
+
+# The Founder's Death - Natural Causes
+country_event = {
+	id = mac_delcev.91
+	title = mac_delcev.91.t
+	desc = mac_delcev.91.d
+	picture = GFX_report_event_generic_funeral
+	
+	trigger = {
+		tag = MAC
+		has_country_flag = delcev_in_power
+		NOT = { has_country_flag = delcev_dead }
+		date > 1940.1.1
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 0.5
+			date > 1943.1.1  # Higher chance if game goes long
+		}
+		modifier = {
+			factor = 0.3
+			date > 1945.1.1
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = mac_delcev.91.a  # "All of Macedonia mourns..."
+		add_stability = -0.20
+		add_war_support = -0.15
+		add_political_power = -100
+		set_country_flag = delcev_dead
+		
+		if = {
+			limit = {
+				any_character = {
+					is_country_leader = yes
+					has_trait = living_legend
+				}
+			}
+			remove_country_leader_trait = living_legend
+		}
+		
+		custom_effect_tooltip = mac_delcev.91.a_tt
+		
+		# Succession crisis or smooth transition
+		if = {
+			limit = { has_country_flag = delcev_succession_settled }
+			country_event = { id = mac_delcev.92 days = 7 }  # Smooth transition
+		}
+		else = {
+			country_event = { id = mac_delcev.93 days = 7 }  # Succession crisis
+		}
+	}
+}
+
+# Smooth Succession - Founder's Death (Planned)
+country_event = {
+	id = mac_delcev.92
+	title = mac_delcev.92.t
+	desc = mac_delcev.92.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.92.a  # "The succession proceeds as planned"
+		add_stability = 0.10
+		add_political_power = 50
+		custom_effect_tooltip = mac_delcev.92.a_tt
+		# New leader takes over smoothly
+	}
+}
+
+# Succession Crisis - Founder's Death (Unprepared)
+country_event = {
+	id = mac_delcev.93
+	title = mac_delcev.93.t
+	desc = mac_delcev.93.d
+	picture = GFX_report_event_generic_ruins
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.93.a  # "Who will lead us now?"
+		add_stability = -0.15
+		add_war_support = -0.10
+		add_political_power = -75
+		add_ideas = MAC_succession_crisis
+		custom_effect_tooltip = mac_delcev.93.a_tt
+		# Player must navigate succession crisis
+	}
+}
+
+###########################################################
+# RESISTING DELČEV PATH (Events 95-99)
+# For non-Delčevist governments
+###########################################################
+
+# Resisting the Legend
+country_event = {
+	id = mac_delcev.95
+	title = mac_delcev.95.t
+	desc = mac_delcev.95.d
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.95.a  # "We cannot let sentiment rule us"
+		add_stability = -0.20
+		add_war_support = -0.10
+		add_political_power = -50
+		set_country_flag = delcev_resisted
+		custom_effect_tooltip = mac_delcev.95.a_tt
+		
+		random_list = {
+			60 = {
+				country_event = { id = mac_delcev.96 days = 30 }  # Success
+			}
+			40 = {
+				country_event = { id = mac_delcev.97 days = 30 }  # Civil war risk
+			}
+		}
+	}
+}
+
+# Discrediting the Hero - Success
+country_event = {
+	id = mac_delcev.96
+	title = mac_delcev.96.t
+	desc = mac_delcev.96.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.96.a  # "The cult of personality is broken"
+		add_stability = 0.15
+		add_war_support = 0.10
+		add_political_power = 100
+		custom_effect_tooltip = mac_delcev.96.a_tt
+	}
+}
+
+# Discrediting the Hero - Civil War Risk
+country_event = {
+	id = mac_delcev.97
+	title = mac_delcev.97.t
+	desc = mac_delcev.97.d
+	picture = GFX_report_event_generic_ruins
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mac_delcev.97.a  # "The people will NOT accept this!"
+		add_stability = -0.30
+		add_war_support = -0.20
+		add_political_power = -100
+		custom_effect_tooltip = mac_delcev.97.a_tt
+		# High risk of civil war or coup
+	}
+	
+	option = {
+		name = mac_delcev.97.b  # "Back down - it's not worth it"
+		add_stability = -0.10
+		add_political_power = -50
+		clr_country_flag = delcev_resisted
+		custom_effect_tooltip = mac_delcev.97.b_tt
+	}
+}

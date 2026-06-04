@@ -1,0 +1,24 @@
+state = {
+	id = 1047
+	name = "STATE_1047"
+	manpower = 350000
+	
+	state_category = pastoral
+	
+	history = {
+		owner = BUL
+		victory_points = { 6857 3 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = BUL
+		add_claim_by = MAC
+	}
+	
+	provinces = {
+		3937 6857 9818 11813
+	}
+	
+	local_supplies = 2.0
+}

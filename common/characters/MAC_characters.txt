@@ -1,0 +1,303 @@
+characters = {
+
+MAC_metodija_cento = {
+	name = "Metodija Andonov-Čento"
+	portraits = {
+		civilian = {
+			large = GFX_MAC_metodija_cento
+		}
+	}
+	gender = male
+	country_leader = {
+		ideology = moderatism
+		expire = "1965.1.1"
+	}
+}
+
+MAC_dimitar_vlahov = {
+	name = "Dimitar Vlahov"
+	portraits = {
+		civilian = {
+			large = GFX_MAC_dimitar_vlahov
+		}
+	}
+	gender = male
+	country_leader = {
+		ideology = socialism
+		expire = "1965.1.1"
+		traits = { smooth_talking_charmer democratic_reformer }
+	}
+}
+
+MAC_lazar_kolisevski = {
+	name = "Lazar Koliševski"
+	portraits = {
+		civilian = {
+			large = GFX_MAC_lazar_kolisevski
+		}
+	}
+	gender = male
+	country_leader = {
+		ideology = stalinism
+		expire = "1965.1.1"
+		traits = { stalwart_theorist }
+	}
+}
+
+MAC_ivan_mihailov = {
+	name = "Ivan Mihailov"
+	portraits = {
+		civilian = {
+			large = GFX_MAC_ivan_mihailov
+		}
+	}
+	gender = male
+	country_leader = {
+		ideology = fascism_ideology
+		expire = "1965.1.1"
+		traits = { revolutionary_zealot }
+	}
+}
+
+MAC_petre_siljgo = {
+	name = "Petre Šiljgo"
+	portraits = {
+		army = {
+			large = GFX_MAC_petre_siljgo
+			small = GFX_MAC_petre_siljgo_small
+		}
+	}
+	gender = male
+	field_marshal = {
+		traits = { old_guard offensive_doctrine guerilla_fighter }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 2
+	}
+}
+
+MAC_mihailo_apostolski = {
+	name = "Mihailo Apostolski"
+	portraits = {
+		army = {
+			large = GFX_MAC_mihailo_apostolski
+			small = GFX_MAC_mihailo_apostolski_small
+		}
+	}
+	gender = male
+	corps_commander = {
+		traits = { brilliant_strategist career_officer }
+		skill = 4
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 4
+		logistics_skill = 3
+	}
+}
+
+MAC_mihajlo_kocev = {
+	name = "Mihajlo Kocev"
+	portraits = {
+		army = {
+			large = GFX_MAC_mihajlo_kocev
+			small = GFX_MAC_mihajlo_kocev_small
+		}
+	}
+	corps_commander = {
+		traits = { trait_mountaineer guerilla_fighter }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 3
+	}
+}
+
+MAC_goce_delcev = {
+	name = "Goce Delčev"
+	portraits = {
+		civilian = {
+			large = GFX_MAC_goce_delcev_civilian
+		}
+		army = {
+			large = GFX_MAC_goce_delcev
+			small = GFX_MAC_goce_delcev_small
+		}
+	}
+	gender = male
+	country_leader = {
+		ideology = oligarchism
+		expire = "1950.1.1"
+		traits = { living_legend father_of_nation }
+	}
+	field_marshal = {
+		traits = { trait_mountaineer guerilla_fighter old_guard offensive_doctrine }
+		skill = 5
+		attack_skill = 4
+		defense_skill = 5
+		planning_skill = 4
+		logistics_skill = 3
+	}
+}
+
+MAC_strahil_gigov = {
+	name = "Strahil Gigov"
+	portraits = {
+		army = {
+			large = GFX_MAC_strahil_gigov
+			small = GFX_MAC_strahil_gigov_small
+		}
+	}
+	corps_commander = {
+		traits = { inflexible_strategist infantry_officer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+MAC_nikola_karev = {
+	name = "Nikola Karev"
+	portraits = {
+		civilian = {
+			small = GFX_idea_MAC_nikola_karev
+		}
+	}
+	advisor = {
+		slot = political_advisor
+		idea_token = MAC_nikola_karev
+	}
+}
+
+MAC_krste_misirkov = {
+	name = "Krste Misirkov"
+	portraits = {
+		civilian = {
+			small = GFX_idea_MAC_krste_misirkov
+		}
+	}
+	advisor = {
+		slot = political_advisor
+		idea_token = MAC_krste_misirkov
+	}
+}
+
+MAC_dame_gruev = {
+	name = "Dame Gruev"
+	portraits = {
+		civilian = {
+			small = GFX_idea_MAC_dame_gruev
+		}
+	}
+	advisor = {
+		slot = political_advisor
+		idea_token = MAC_dame_gruev
+	}
+}
+
+MAC_svetozar_vukmanovic = {
+	name = "Svetozar Vukmanović"
+	portraits = {
+		army = {
+			small = GFX_idea_MAC_svetozar_vukmanovic
+		}
+	}
+	advisor = {
+		slot = high_command
+		idea_token = MAC_svetozar_vukmanovic
+	}
+}
+
+MAC_hristo_tatarchev = {
+	name = "Hristo Tatarchev"
+	portraits = {
+		army = {
+			small = GFX_idea_MAC_hristo_tatarchev
+		}
+	}
+	advisor = {
+		slot = high_command
+		idea_token = MAC_hristo_tatarchev
+	}
+}
+
+MAC_leon_trotsky = {
+	name = "Leon Trotsky"
+	portraits = {
+		civilian = {
+			large = GFX_MAC_leon_trotsky
+			small = GFX_idea_MAC_leon_trotsky
+		}
+	}
+	gender = male
+	advisor = {
+		slot = political_advisor
+		idea_token = MAC_leon_trotsky_advisor
+	}
+	advisor = {
+		slot = theorist
+		idea_token = MAC_leon_trotsky_theorist
+	}
+}
+
+MAC_aleksandar_stamboliyski = {
+	name = "Aleksandar Stamboliyski"
+	portraits = {
+		civilian = {
+			small = GFX_idea_MAC_aleksandar_stamboliyski
+		}
+	}
+	advisor = {
+		slot = political_advisor
+		idea_token = MAC_aleksandar_stamboliyski
+	}
+}
+
+MAC_pavlos_melas = {
+	name = "Pavlos Melas"
+	portraits = {
+		army = {
+			large = GFX_MAC_pavlos_melas
+			small = GFX_MAC_pavlos_melas_small
+		}
+	}
+	corps_commander = {
+		traits = { trickster trait_cautious }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 4
+		planning_skill = 3
+		logistics_skill = 3
+	}
+}
+
+MAC_archaeological_advisor = {
+	name = "Dr. Aleksandar Petrovski"
+	portraits = {
+		civilian = {
+			small = GFX_idea_generic_democratic_reformer
+		}
+	}
+	advisor = {
+		slot = political_advisor
+		idea_token = MAC_archaeological_advisor
+	}
+}
+
+MAC_todor_aleksandrov = {
+	name = "Todor Aleksandrov"
+	portraits = {
+		civilian = {
+			large = "gfx/leaders/MAC/todor.dds"
+		}
+		army = {
+		}
+	}
+	gender = male
+}
+
+}

@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/workspace
+.vscode/
+
+# HOI4 Studio / tool caches
+.focus_editor/
+.validation_cache/
+.hoi4studio/
+
+# Archive and temp artifacts
+*.zip
+*.7z
+*.tmp
+*.bak

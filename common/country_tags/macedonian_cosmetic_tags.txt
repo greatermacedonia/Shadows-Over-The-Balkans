@@ -1,0 +1,7 @@
+# Macedonian cosmetic tags
+# Colors for these cosmetic tags are defined in common/countries/MAC_colors.txt
+
+MAC_ancient = "countries/MacedonianEmpire.txt"
+MAC_empire = "countries/MacedonianEmpire.txt"
+MAC_byzantine = "countries/MacedonianEmpire.txt"
+MAC_greater = "countries/MacedonianEmpire.txt"

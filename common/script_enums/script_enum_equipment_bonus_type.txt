@@ -1,0 +1,3 @@
+script_enum_equipment_bonus_type = {
+	infantry_equipment_2_mac,
+}

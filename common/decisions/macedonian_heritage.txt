@@ -1,0 +1,396 @@
+# Ancient Heritage & National Identity Decisions
+# Triggers orphaned archaeological and cultural events
+
+MAC_ancient_heritage = {
+	
+	# Archaeological Expeditions Program
+	MAC_begin_excavations = {
+		
+		icon = generic_research
+		
+		available = {
+			has_political_power > 50
+			NOT = { has_country_flag = MAC_excavations_started }
+		}
+		
+		visible = {
+			NOT = { has_country_flag = MAC_excavations_started }
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_ancient_legacy.1 }  # First Excavations Begin
+			set_country_flag = MAC_excavations_started
+			custom_effect_tooltip = MAC_excavations_begun_tt
+		}
+	}
+	
+	# Claim Vergina Sun Symbol
+	MAC_claim_vergina_sun = {
+		
+		icon = generic_nationalism
+		
+		available = {
+			has_country_flag = MAC_excavations_started
+			has_political_power > 25
+		}
+		
+		visible = {
+			has_country_flag = MAC_excavations_started
+			NOT = { has_country_flag = MAC_vergina_sun_claimed }
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_ancient_legacy.2 }  # The Vergina Sun Rises
+			set_country_flag = MAC_vergina_sun_claimed
+		}
+	}
+	
+	# Claim Ancient Territories
+	MAC_claim_ancient_sites = {
+		
+		icon = generic_territory
+		
+		available = {
+			has_country_flag = MAC_vergina_sun_claimed
+			has_political_power > 75
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		
+		visible = {
+			has_country_flag = MAC_vergina_sun_claimed
+			NOT = { has_country_flag = MAC_ancient_claims_made }
+		}
+		
+		cost = 75
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_ancient_legacy.3 }  # Claims on Pella and Vergina
+			set_country_flag = MAC_ancient_claims_made
+		}
+	}
+	
+	# Royal Tomb Discovery
+	MAC_search_royal_tomb = {
+		
+		icon = generic_research
+		
+		available = {
+			has_country_flag = MAC_excavations_started
+			has_political_power > 100
+		}
+		
+		visible = {
+			has_country_flag = MAC_excavations_started
+			NOT = { has_country_flag = MAC_philips_tomb_found }
+			date > 1937.1.1
+		}
+		
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		modifier = {
+			political_power_factor = -0.05
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = MAC_searching_for_tomb_tt
+		}
+		
+		remove_effect = {
+			random_list = {
+				70 = {
+					country_event = { id = macedonia_ancient_legacy.10 }  # Royal Tomb Found!
+					set_country_flag = MAC_philips_tomb_found
+				}
+				30 = {
+					add_political_power = 50
+					custom_effect_tooltip = MAC_tomb_not_found_tt
+				}
+			}
+		}
+	}
+	
+	# Aristotle's Legacy
+	MAC_aristotelian_research = {
+		
+		icon = generic_research
+		
+		available = {
+			has_country_flag = MAC_excavations_started
+			has_tech = radio
+		}
+		
+		visible = {
+			has_country_flag = MAC_excavations_started
+			NOT = { has_country_flag = MAC_aristotle_researched }
+		}
+		
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 6
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_ancient_legacy.5 }  # Aristotle's Homeland
+			set_country_flag = MAC_aristotle_researched
+		}
+	}
+	
+	# Search for Lost Texts
+	MAC_search_lost_texts = {
+		
+		icon = generic_research
+		
+		available = {
+			has_country_flag = MAC_aristotle_researched
+			has_political_power > 75
+		}
+		
+		visible = {
+			has_country_flag = MAC_aristotle_researched
+			NOT = { has_country_flag = MAC_aristotle_texts_found }
+		}
+		
+		cost = 75
+		days_remove = 240
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		modifier = {
+			research_speed_factor = -0.02
+		}
+		
+		remove_effect = {
+			random_list = {
+				40 = {
+					country_event = { id = macedonia_ancient_legacy.11 }  # Aristotle's Lost Texts
+					set_country_flag = MAC_aristotle_texts_found
+				}
+				60 = {
+					add_political_power = 50
+					custom_effect_tooltip = MAC_texts_not_found_tt
+				}
+			}
+		}
+	}
+	
+	# Search for Alexander's Armor
+	MAC_search_alexanders_armor = {
+		
+		icon = generic_army
+		
+		available = {
+			has_country_flag = MAC_excavations_started
+			has_political_power > 100
+			has_army_experience > 20
+		}
+		
+		visible = {
+			has_country_flag = MAC_excavations_started
+			NOT = { has_country_flag = MAC_armor_found }
+		}
+		
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		remove_effect = {
+			random_list = {
+				50 = {
+					country_event = { id = macedonia_ancient_legacy.12 }  # Armor of the Conqueror
+					set_country_flag = MAC_armor_found
+				}
+				50 = {
+					army_experience = 10
+					custom_effect_tooltip = MAC_armor_not_found_tt
+				}
+			}
+		}
+	}
+}
+
+MAC_national_identity = {
+	
+	# Embrace Ottoman Legacy (Removal)
+	MAC_confront_ottoman_past = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_political_power > 75
+		}
+		
+		visible = {
+			has_idea = MAC_ottoman_legacy
+		}
+		
+		cost = 75
+		days_remove = 180
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		modifier = {
+			stability_factor = -0.05
+		}
+		
+		remove_effect = {
+			remove_ideas = MAC_ottoman_legacy
+			add_ideas = MAC_reject_ottoman_past
+			add_stability = 0.10
+			add_political_power = 50
+		}
+	}
+	
+	# Celebrate Slavic Heritage
+	MAC_slavic_heritage_day = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			date > 1937.5.24  # Saints Cyril and Methodius Day
+			has_political_power > 25
+		}
+		
+		visible = {
+			NOT = { has_country_flag = MAC_slavic_heritage_celebrated }
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_history.4 }  # Slavic Settlement Anniversary
+			set_country_flag = MAC_slavic_heritage_celebrated
+		}
+	}
+	
+	# Ancient Heritage Recognition
+	MAC_ancient_heritage_program = {
+		
+		icon = generic_research
+		
+		available = {
+			has_political_power > 50
+		}
+		
+		visible = {
+			NOT = { has_idea = MAC_ancient_heritage }
+		}
+		
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 6
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_history.1 }  # Ancient Heritage
+		}
+	}
+	
+	# Byzantine Legacy Program
+	MAC_byzantine_heritage_program = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			has_political_power > 50
+		}
+		
+		visible = {
+			NOT = { has_idea = MAC_byzantine_legacy }
+		}
+		
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_history.2 }  # Byzantine Legacy
+		}
+	}
+	
+	# Diplomatic Crossroads Strategy
+	MAC_crossroads_strategy = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			is_subject = no
+			num_of_factories > 15
+			has_political_power > 75
+		}
+		
+		cost = 75
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+		
+		complete_effect = {
+			country_event = { id = macedonia_history.6 }  # Crossroads of Empires
+		}
+	}
+}

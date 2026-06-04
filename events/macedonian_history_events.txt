@@ -1,0 +1,369 @@
+###########################
+# Macedonian History Events
+# Events exploring Macedonia's historical legacy
+###########################
+
+add_namespace = macedonia_history
+
+# Event: Ancient Heritage
+country_event = {
+	id = macedonia_history.1
+	title = macedonia_history.1.t
+	desc = macedonia_history.1.d
+	picture = GFX_report_event_generic_ruins
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_history.1.a  # Embrace our ancient legacy
+		add_ideas = MAC_ancient_heritage
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	
+	option = {
+		name = macedonia_history.1.b  # Focus on the present
+		add_political_power = 100
+	}
+}
+
+# Event: Byzantine Legacy
+country_event = {
+	id = macedonia_history.2
+	title = macedonia_history.2.t
+	desc = macedonia_history.2.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_history.2.a  # Honor Byzantine tradition
+		add_ideas = MAC_byzantine_legacy
+		add_political_power = 25
+	}
+	
+	option = {
+		name = macedonia_history.2.b  # We are a new nation
+		add_political_power = 50
+	}
+}
+
+# Event: Ottoman Legacy - Must Overcome
+country_event = {
+	id = macedonia_history.3
+	title = macedonia_history.3.t
+	desc = macedonia_history.3.d
+	picture = GFX_report_event_generic_factory
+	
+	trigger = {
+		tag = MAC
+		has_idea = MAC_ottoman_legacy
+		OR = {
+			has_political_power > 100
+			date > 1937.1.1
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 180
+	}
+	
+	option = {
+		name = macedonia_history.3.a  # Reject Ottoman past
+		remove_ideas = MAC_ottoman_legacy
+		add_ideas = MAC_reject_ottoman_past
+		add_political_power = -100
+		add_stability = 0.10
+	}
+	
+	option = {
+		name = macedonia_history.3.b  # Live with our history
+		add_political_power = 50
+	}
+}
+
+# Event: Slavic Settlement Anniversary
+country_event = {
+	id = macedonia_history.4
+	title = macedonia_history.4.t
+	desc = macedonia_history.4.d
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_history.4.a  # Celebrate Slavic heritage
+		add_ideas = MAC_slavic_heritage
+		add_war_support = 0.03
+		add_stability = 0.02
+	}
+	
+	option = {
+		name = macedonia_history.4.b  # We are all Macedonians
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+# Event: Balkan Wars Remembered
+country_event = {
+	id = macedonia_history.5
+	title = macedonia_history.5.t
+	desc = macedonia_history.5.d
+	picture = GFX_report_event_soldiers_marching
+	
+	trigger = {
+		tag = MAC
+		date > 1936.10.8  # Anniversary of First Balkan War
+		date < 1936.10.15
+		NOT = { has_country_flag = balkan_wars_remembered }
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = macedonia_history.5.a  # Honor our veterans
+		set_country_flag = balkan_wars_remembered
+		add_ideas = MAC_balkan_wars_legacy
+		army_experience = 10
+		add_war_support = 0.05
+	}
+	
+	option = {
+		name = macedonia_history.5.b  # Those wars brought only pain
+		set_country_flag = balkan_wars_remembered
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+# Event: Crossroads of Empires
+country_event = {
+	id = macedonia_history.6
+	title = macedonia_history.6.t
+	desc = macedonia_history.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_history.6.a  # Leverage our position
+		add_ideas = MAC_crossroads_of_empires
+		add_political_power = 25
+	}
+	
+	option = {
+		name = macedonia_history.6.b  # Maintain neutrality
+		add_stability = 0.03
+	}
+}
+
+# Event: Persian Achaemenid Connection
+country_event = {
+	id = macedonia_history.7
+	title = macedonia_history.7.t
+	desc = macedonia_history.7.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = MAC
+		country_exists = PER
+		NOT = { has_war_with = PER }
+		NOT = { has_country_flag = persian_connection }
+	}
+	
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = macedonia_history.7.a  # Acknowledge shared history
+		set_country_flag = persian_connection
+		PER = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_shared_history
+			}
+		}
+		add_political_power = 25
+	}
+	
+	option = {
+		name = macedonia_history.7.b  # Ancient history is irrelevant
+		set_country_flag = persian_connection
+		add_political_power = 10
+	}
+}
+
+# Event: Alexander's Legacy
+country_event = {
+	id = macedonia_history.8
+	title = macedonia_history.8.t
+	desc = macedonia_history.8.d
+	picture = GFX_report_event_generic_ruins
+	
+	trigger = {
+		tag = MAC
+		OR = {
+			has_government = fascism
+			has_government = neutrality
+		}
+		NOT = { has_country_flag = alexander_legacy }
+	}
+	
+	mean_time_to_happen = {
+		days = 270
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = macedonia_history.8.a  # We are heirs to Alexander!
+		set_country_flag = alexander_legacy
+		add_war_support = 0.10
+		add_political_power = 50
+		add_ideas = MAC_paeonian_restoration
+	}
+	
+	option = {
+		name = macedonia_history.8.b  # We are a modern nation
+		set_country_flag = alexander_legacy
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+# Event: WWI Bulgarian Rule Remembered
+country_event = {
+	id = macedonia_history.9
+	title = macedonia_history.9.t
+	desc = macedonia_history.9.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	trigger = {
+		tag = MAC
+		country_exists = BUL
+		NOT = { has_country_flag = wwi_bulgaria_remembered }
+	}
+	
+	mean_time_to_happen = {
+		days = 400
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = macedonia_history.9.a  # We remember Bulgarian occupation
+		set_country_flag = wwi_bulgaria_remembered
+		add_opinion_modifier = {
+			target = BUL
+			modifier = MAC_historical_grievances
+		}
+		add_war_support = 0.03
+	}
+	
+	option = {
+		name = macedonia_history.9.b  # Forgive and move forward
+		set_country_flag = wwi_bulgaria_remembered
+		BUL = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_reconciliation_effort
+			}
+		}
+		add_stability = 0.03
+	}
+}
+
+# Event: Yugoslav Federation Proposal
+country_event = {
+	id = macedonia_history.10
+	title = macedonia_history.10.t
+	desc = macedonia_history.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	trigger = {
+		tag = MAC
+		country_exists = YUG
+		NOT = { has_war_with = YUG }
+		has_government = communism
+		YUG = { has_government = communism }
+		NOT = { has_country_flag = yugoslav_federation_asked }
+	}
+	
+	mean_time_to_happen = {
+		days = 180
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = macedonia_history.10.a  # Join Yugoslavia
+		set_country_flag = yugoslav_federation_asked
+		YUG = { country_event = { id = macedonia_history.11 days = 1 } }
+	}
+	
+	option = {
+		name = macedonia_history.10.b  # Maintain independence
+		set_country_flag = yugoslav_federation_asked
+		add_political_power = 100
+		add_stability = -0.05
+	}
+}
+
+# Event: Yugoslavia Response to Federation
+country_event = {
+	id = macedonia_history.11
+	title = macedonia_history.11.t
+	desc = macedonia_history.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_history.11.a  # Accept Macedonia
+		MAC = { country_event = { id = macedonia_history.12 days = 3 } }
+	}
+	
+	option = {
+		name = macedonia_history.11.b  # Reject them
+		MAC = { country_event = { id = macedonia_history.13 days = 3 } }
+	}
+}
+
+# Event: Yugoslavia Accepts Federation
+country_event = {
+	id = macedonia_history.12
+	title = macedonia_history.12.t
+	desc = macedonia_history.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_history.12.a  # Join Yugoslavia
+		YUG = { annex_country = { target = MAC transfer_troops = yes } }
+	}
+}
+
+# Event: Yugoslavia Rejects Federation
+country_event = {
+	id = macedonia_history.13
+	title = macedonia_history.13.t
+	desc = macedonia_history.13.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_history.13.a  # We stand alone
+		add_stability = -0.05
+		add_political_power = 50
+	}
+}

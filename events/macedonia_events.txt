@@ -1,0 +1,219 @@
+add_namespace = macedonia
+
+# Allies Invitation Event
+country_event = {
+	id = macedonia.1
+	title = macedonia.1.t
+	desc = macedonia.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia.1.a  # Accept Macedonia
+		ai_chance = { factor = 80 }
+		
+		add_to_faction = MAC
+		MAC = {
+			add_ai_strategy = {
+				type = alliance
+				id = ENG
+				value = 200
+			}
+		}
+	}
+	
+	option = {
+		name = macedonia.1.b  # Refuse
+		ai_chance = { factor = 20 }
+		
+		MAC = {
+			country_event = { id = macedonia.4 days = 3 }
+		}
+	}
+}
+
+# Comintern Invitation Event
+country_event = {
+	id = macedonia.2
+	title = macedonia.2.t
+	desc = macedonia.2.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia.2.a  # Accept Macedonia
+		ai_chance = { factor = 70 }
+		
+		add_to_faction = MAC
+		MAC = {
+			add_ai_strategy = {
+				type = alliance
+				id = SOV
+				value = 200
+			}
+		}
+	}
+	
+	option = {
+		name = macedonia.2.b  # Refuse
+		ai_chance = { factor = 30 }
+		
+		MAC = {
+			country_event = { id = macedonia.4 days = 3 }
+		}
+	}
+}
+
+# Axis Invitation Event
+country_event = {
+	id = macedonia.3
+	title = macedonia.3.t
+	desc = macedonia.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia.3.a  # Accept Macedonia
+		ai_chance = { factor = 60 }
+		
+		add_to_faction = MAC
+		MAC = {
+			add_ai_strategy = {
+				type = alliance
+				id = GER
+				value = 200
+			}
+		}
+	}
+	
+	option = {
+		name = macedonia.3.b  # Refuse
+		ai_chance = { factor = 40 }
+		
+		MAC = {
+			country_event = { id = macedonia.4 days = 3 }
+		}
+	}
+}
+
+# Alliance Rejected
+country_event = {
+	id = macedonia.4
+	title = macedonia.4.t
+	desc = macedonia.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia.4.a  # We stand alone
+		add_political_power = 50
+		add_stability = -0.05
+	}
+}
+
+# Balkan Crisis Event
+country_event = {
+	id = macedonia.5
+	title = macedonia.5.t
+	desc = macedonia.5.d
+	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = MAC
+		date > 1938.1.1
+		OR = {
+			YUG = { has_war_with = GER }
+			GRE = { has_war_with = ITA }
+			BUL = { has_war = yes }
+		}
+		NOT = { has_war = yes }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = macedonia.5.a  # Remain neutral
+		add_stability = 0.05
+		add_political_power = 50
+	}
+	
+	option = {
+		name = macedonia.5.b  # Mobilize for defense
+		add_war_support = 0.05
+		add_manpower = 5000
+		add_political_power = -50
+	}
+}
+
+# Economic Crisis Event
+country_event = {
+	id = macedonia.6
+	title = macedonia.6.t
+	desc = macedonia.6.d
+	picture = GFX_report_event_generic_factory
+	
+	trigger = {
+		tag = MAC
+		date > 1937.1.1
+		date < 1939.1.1
+		has_idea = MAC_young_nation
+	}
+	
+	mean_time_to_happen = {
+		days = 180
+	}
+	
+	option = {
+		name = macedonia.6.a  # Invest in industry
+		add_political_power = -75
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	
+	option = {
+		name = macedonia.6.b  # Focus on agriculture
+		add_political_power = -50
+		add_stability = 0.03
+	}
+}
+
+# Political Tensions Event
+country_event = {
+	id = macedonia.7
+	title = macedonia.7.t
+	desc = macedonia.7.d
+	picture = GFX_report_event_generic_rally
+	
+	trigger = {
+		tag = MAC
+		date > 1936.6.1
+		date < 1938.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 120
+	}
+	
+	option = {
+		name = macedonia.7.a  # Crack down
+		add_political_power = 25
+		add_stability = -0.05
+	}
+	
+	option = {
+		name = macedonia.7.b  # Allow protests
+		add_stability = 0.03
+		add_political_power = -25
+	}
+}

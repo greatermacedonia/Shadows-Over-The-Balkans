@@ -1,0 +1,248 @@
+###########################################################
+# MACEDONIAN ANCIENT LEGACY EVENTS
+# mac_ancient.1 - mac_ancient.60
+# NOTE: These are placeholder stubs - full content to be added
+###########################################################
+
+add_namespace = mac_ancient
+
+# Archaeological Expeditions Begin
+country_event = {
+	id = mac_ancient.1
+	title = mac_ancient.1.t
+	desc = mac_ancient.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.1.a
+		add_political_power = 25
+	}
+}
+
+# Vergina Sun Banner Adopted
+country_event = {
+	id = mac_ancient.2
+	title = mac_ancient.2.t
+	desc = mac_ancient.2.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.2.a
+		add_stability = 0.05
+	}
+}
+
+# Claim Pella and Vergina
+country_event = {
+	id = mac_ancient.10
+	title = mac_ancient.10.t
+	desc = mac_ancient.10.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.10.a
+		add_political_power = 25
+	}
+}
+
+# Claim Amphipolis
+country_event = {
+	id = mac_ancient.11
+	title = mac_ancient.11.t
+	desc = mac_ancient.11.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.11.a
+		add_political_power = 25
+	}
+}
+
+# Claim Chalkidiki
+country_event = {
+	id = mac_ancient.12
+	title = mac_ancient.12.t
+	desc = mac_ancient.12.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.12.a
+		add_political_power = 25
+	}
+}
+
+# The Persian Gates
+country_event = {
+	id = mac_ancient.20
+	title = mac_ancient.20.t
+	desc = mac_ancient.20.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.20.a
+		add_political_power = 50
+	}
+}
+
+# The Egyptian Crown
+country_event = {
+	id = mac_ancient.21
+	title = mac_ancient.21.t
+	desc = mac_ancient.21.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.21.a
+		add_political_power = 50
+	}
+}
+
+# The Indian Campaign
+country_event = {
+	id = mac_ancient.22
+	title = mac_ancient.22.t
+	desc = mac_ancient.22.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.22.a
+		add_political_power = 50
+	}
+}
+
+# Treasure of Philip II (already has localization)
+country_event = {
+	id = mac_ancient.30
+	title = mac_ancient.30.t
+	desc = mac_ancient.30.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.30.a
+		add_political_power = 200
+		add_offsite_building = { type = industrial_complex level = 2 }
+	}
+}
+
+# Library of Aristotle
+country_event = {
+	id = mac_ancient.31
+	title = mac_ancient.31.t
+	desc = mac_ancient.31.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.31.a
+		add_research_slot = 1
+		add_political_power = 100
+	}
+}
+
+# Alexander's Armor
+country_event = {
+	id = mac_ancient.32
+	title = mac_ancient.32.t
+	desc = mac_ancient.32.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.32.a
+		army_experience = 50
+		add_war_support = 0.10
+	}
+}
+
+# Prophecy of Basil II
+country_event = {
+	id = mac_ancient.40
+	title = mac_ancient.40.t
+	desc = mac_ancient.40.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.40.a
+		add_war_support = 0.15
+		add_stability = 0.05
+	}
+}
+
+# Oracle of Delphi
+country_event = {
+	id = mac_ancient.41
+	title = mac_ancient.41.t
+	desc = mac_ancient.41.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.41.a
+		add_political_power = 100
+	}
+	option = {
+		name = mac_ancient.41.b
+		army_experience = 25
+	}
+	option = {
+		name = mac_ancient.41.c
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+
+# Secret of Ohrid
+country_event = {
+	id = mac_ancient.42
+	title = mac_ancient.42.t
+	desc = mac_ancient.42.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.42.a
+		add_ideas = MAC_ohrid_mystery
+		add_stability = 0.10
+	}
+}
+
+# The Alexander Protocol
+country_event = {
+	id = mac_ancient.50
+	title = mac_ancient.50.t
+	desc = mac_ancient.50.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.50.a
+		set_cosmetic_tag = MAC_empire
+		add_named_threat = { threat = 15 name = "Alexandrian Revival" }
+		add_war_support = 0.20
+	}
+}
+
+# Neo-Byzantine Empire
+country_event = {
+	id = mac_ancient.51
+	title = mac_ancient.51.t
+	desc = mac_ancient.51.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.51.a
+		set_cosmetic_tag = MAC_byzantine
+		add_named_threat = { threat = 15 name = "Byzantine Restoration" }
+		add_stability = 0.15
+	}
+}
+
+# Conquer Constantinople
+country_event = {
+	id = mac_ancient.60
+	title = mac_ancient.60.t
+	desc = mac_ancient.60.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = mac_ancient.60.a
+		add_stability = 0.20
+		add_war_support = 0.15
+		add_political_power = 500
+		set_capital = { state = 341 }  # Constantinople
+	}
+}

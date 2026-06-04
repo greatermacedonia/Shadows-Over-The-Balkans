@@ -1,0 +1,303 @@
+####################################
+# Ancient Macedonian Legacy Events
+####################################
+
+add_namespace = macedonia_ancient_legacy
+
+# First Excavations Begin
+country_event = {
+	id = macedonia_ancient_legacy.1
+	title = macedonia_ancient_legacy.1.t
+	desc = macedonia_ancient_legacy.1.d
+	picture = GFX_report_event_generic_ruins
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_ancient_legacy.1.a
+		add_stability = 0.02
+		add_political_power = 25
+	}
+}
+
+# The Vergina Sun Rises
+country_event = {
+	id = macedonia_ancient_legacy.2
+	title = macedonia_ancient_legacy.2.t
+	desc = macedonia_ancient_legacy.2.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_ancient_legacy.2.a
+		add_war_support = 0.03
+		GRE = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_dispute
+			}
+		}
+	}
+}
+
+# Claims on Pella and Vergina
+country_event = {
+	id = macedonia_ancient_legacy.3
+	title = macedonia_ancient_legacy.3.t
+	desc = macedonia_ancient_legacy.3.d
+	picture = GFX_report_event_generic_ruins
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_ancient_legacy.3.a
+		GRE = {
+			add_opinion_modifier = {
+				target = MAC
+				modifier = MAC_territorial_dispute
+			}
+			country_event = { id = macedonia_ancient_legacy.31 days = 1 }
+		}
+	}
+}
+
+# The Amphipolis Question
+country_event = {
+	id = macedonia_ancient_legacy.4
+	title = macedonia_ancient_legacy.4.t
+	desc = macedonia_ancient_legacy.4.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_ancient_legacy.4.a
+		add_stability = 0.03
+		add_political_power = 30
+	}
+}
+
+# Aristotle's Homeland
+country_event = {
+	id = macedonia_ancient_legacy.5
+	title = macedonia_ancient_legacy.5.t
+	desc = macedonia_ancient_legacy.5.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_ancient_legacy.5.a
+		add_tech_bonus = {
+			bonus = 0.10
+			uses = 1
+			category = electronics
+		}
+	}
+}
+
+# The Royal Tomb of Philip II
+country_event = {
+	id = macedonia_ancient_legacy.10
+	title = macedonia_ancient_legacy.10.t
+	desc = macedonia_ancient_legacy.10.d
+	picture = GFX_report_event_generic_ruins
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_ancient_legacy.10.a
+		add_stability = 0.10
+		add_war_support = 0.05
+		add_political_power = 150
+		hidden_effect = {
+			news_event = { id = macedonia_ancient_legacy.100 days = 2 }
+		}
+	}
+}
+
+# Aristotle's Lost Texts
+country_event = {
+	id = macedonia_ancient_legacy.11
+	title = macedonia_ancient_legacy.11.t
+	desc = macedonia_ancient_legacy.11.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_ancient_legacy.11.a
+		add_tech_bonus = {
+			bonus = 0.15
+			uses = 2
+			category = electronics
+		}
+		add_tech_bonus = {
+			bonus = 0.10
+			uses = 1
+			category = industry
+		}
+	}
+}
+
+# The Armor of the Conqueror
+country_event = {
+	id = macedonia_ancient_legacy.12
+	title = macedonia_ancient_legacy.12.t
+	desc = macedonia_ancient_legacy.12.d
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_ancient_legacy.12.a
+		add_war_support = 0.15
+		army_experience = 25
+		custom_effect_tooltip = MAC_alexander_armor_tt
+	}
+}
+
+# The Prophecy of Basil II
+country_event = {
+	id = macedonia_ancient_legacy.20
+	title = macedonia_ancient_legacy.20.t
+	desc = macedonia_ancient_legacy.20.d
+	picture = GFX_report_event_generic_ruins
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_ancient_legacy.20.a
+		add_stability = 0.08
+		add_war_support = 0.12
+	}
+}
+
+# Pilgrimage to Delphi - Oracle's Wisdom
+country_event = {
+	id = macedonia_ancient_legacy.21
+	title = macedonia_ancient_legacy.21.t
+	desc = macedonia_ancient_legacy.21.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	is_triggered_only = yes
+	
+	# Choose Military Path
+	option = {
+		name = macedonia_ancient_legacy.21.a
+		add_ideas = MAC_oracle_military
+		add_war_support = 0.10
+	}
+	
+	# Choose Economic Path
+	option = {
+		name = macedonia_ancient_legacy.21.b
+		add_ideas = MAC_oracle_economic
+		add_stability = 0.10
+	}
+	
+	# Choose Diplomatic Path
+	option = {
+		name = macedonia_ancient_legacy.21.c
+		add_ideas = MAC_oracle_diplomatic
+		add_political_power = 100
+	}
+}
+
+# The Secret of Lake Ohrid
+country_event = {
+	id = macedonia_ancient_legacy.22
+	title = macedonia_ancient_legacy.22.t
+	desc = macedonia_ancient_legacy.22.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	# Unique Macedonian Identity
+	option = {
+		name = macedonia_ancient_legacy.22.a
+		add_ideas = MAC_unique_macedonian
+		add_stability = 0.15
+		add_political_power = 100
+	}
+	
+	# Hellenic Heritage
+	option = {
+		name = macedonia_ancient_legacy.22.b
+		add_ideas = MAC_hellenic_heritage
+		add_opinion_modifier = {
+			target = GRE
+			modifier = MAC_positive_50
+		}
+	}
+	
+	# Slavic Roots
+	option = {
+		name = macedonia_ancient_legacy.22.c
+		add_ideas = MAC_slavic_brotherhood
+		add_opinion_modifier = {
+			target = YUG
+			modifier = MAC_positive_50
+		}
+		add_opinion_modifier = {
+			target = BUL
+			modifier = MAC_positive_50
+		}
+	}
+}
+
+# Byzantine Commonwealth Invitation (For other countries)
+country_event = {
+	id = macedonia_ancient_legacy.30
+	title = macedonia_ancient_legacy.30.t
+	desc = macedonia_ancient_legacy.30.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = macedonia_ancient_legacy.30.a
+	}
+}
+
+# Greek Response to Ancient Claims
+country_event = {
+	id = macedonia_ancient_legacy.31
+	title = "Macedonia Claims Greek Territory"
+	desc = "The Macedonian government has made outrageous claims on Greek soil, declaring that Pella, Vergina, and other sacred Hellenic sites belong to their so-called 'ancient heritage.' This is nothing but Slavic propaganda attempting to steal Greek history!"
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Unacceptable!"
+		add_opinion_modifier = {
+			target = MAC
+			modifier = MAC_territorial_dispute
+		}
+		add_named_threat = { threat = 1 name = "Greek Anger" }
+	}
+}
+
+# World News: Philip's Tomb Discovered
+news_event = {
+	id = macedonia_ancient_legacy.100
+	title = "Ancient Tomb Discovered in Macedonia"
+	desc = "Archaeological teams in Macedonia have announced the discovery of what they claim is the intact tomb of Philip II, father of Alexander the Great. The tomb contains a golden larnax, ceremonial armor, and vast treasures. While some scholars dispute the authenticity, the Macedonian people celebrate what they see as proof of their ancient heritage."
+	picture = GFX_news_event_generic_ruins
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = "Fascinating discovery!"
+		trigger = { NOT = { TAG = MAC } }
+	}
+	
+	option = {
+		name = "Our glorious heritage!"
+		trigger = { TAG = MAC }
+	}
+}
