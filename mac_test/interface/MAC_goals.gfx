@@ -1,6 +1,0 @@
-spriteTypes = {
-	spriteType = {
-        name = "GFX_focus_MAC_state"
-        texturefile = "gfx/interface/goals/focus_MAC_state.dds"
-    }
-}
