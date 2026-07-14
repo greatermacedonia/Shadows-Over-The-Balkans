@@ -1,0 +1,397 @@
+# ============================================================
+# SOTB Political Events
+# Shadows Over The Balkans — Phase 1
+# ============================================================
+
+# ============================================================
+# SOTB.100 — The Nation Grows Restless (timer event)
+# Fires if succession not started by December 1936
+# ============================================================
+country_event = {
+	id = SOTB.100
+
+	title = SOTB.100.t
+	desc = SOTB.100.d
+	picture = GFX_report_event_generic_political_meeting
+
+	trigger = {
+		tag = MAC
+		NOT = { has_country_flag = SOTB_succession_crisis }
+		date > 1936.12.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = SOTB.100.a
+		ai_chance = { factor = 80 }
+		add_stability = -0.10
+		add_war_support = -0.05
+		custom_effect_tooltip = SOTB.100.a_tt
+	}
+	option = {
+		name = SOTB.100.b
+		ai_chance = { factor = 20 }
+		add_stability = -0.05
+	}
+}
+
+# ============================================================
+# SOTB.101 — The Succession Begins (fires after MAC_delchev_succession)
+# ============================================================
+country_event = {
+	id = SOTB.101
+
+	title = SOTB.101.t
+	desc = SOTB.101.d
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.101.a
+		add_stability = -0.05
+		add_political_power = 50
+	}
+}
+
+# ============================================================
+# SOTB.200 — The Democratic Primary (5 candidates)
+# ============================================================
+country_event = {
+	id = SOTB.200
+
+	title = SOTB.200.t
+	desc = SOTB.200.d
+	picture = GFX_report_event_generic_election
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	# --- Goce Delchev ---
+	option = {
+		name = SOTB.200.a
+		ai_chance = { factor = 40 }
+		set_country_flag = MAC_delchev_leader
+		set_country_leader = {
+			ideology = populism
+			traits = { delchevism_founder }
+			id = -1
+		}
+		remove_ideas = {
+			MAC_founder_watches
+		}
+		add_ideas = {
+			MAC_delchev_returns
+		}
+		add_stability = 0.10
+	}
+
+	# --- Jane Sandanski ---
+	option = {
+		name = SOTB.200.b
+		ai_chance = { factor = 30 }
+		set_country_flag = MAC_sandanski_leader
+		set_country_leader = {
+			ideology = conservatism
+			traits = { lion_of_solun }
+			id = -1
+		}
+		remove_ideas = {
+			MAC_lion_watches
+		}
+		add_ideas = {
+			MAC_lion_leads
+		}
+		add_war_support = 0.05
+	}
+
+	# --- Metodija Čento ---
+	option = {
+		name = SOTB.200.c
+		ai_chance = { factor = 20 }
+		set_country_flag = MAC_cento_leader
+		remove_ideas = {
+			MAC_founder_watches
+		}
+		add_ideas = {
+			MAC_cento_stewardship
+		}
+	}
+
+	# --- Dimitar Vlahov ---
+	option = {
+		name = SOTB.200.d
+		ai_chance = { factor = 5 }
+		set_country_flag = MAC_vlahov_leader
+		set_country_leader = {
+			ideology = liberalism
+			traits = { imro_reformer }
+			id = -1
+		}
+		remove_ideas = {
+			MAC_founder_watches
+		}
+		add_ideas = {
+			MAC_vlahov_reforms
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = MAC_eng_democratic_support
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = MAC_fra_democratic_support
+		}
+	}
+
+	# --- Gjorche Petrov ---
+	option = {
+		name = SOTB.200.e
+		ai_chance = { factor = 5 }
+		set_country_flag = MAC_petrov_leader
+		set_country_leader = {
+			ideology = socialism
+			traits = { imro_progressive }
+			id = -1
+		}
+		remove_ideas = {
+			MAC_founder_watches
+		}
+		add_ideas = {
+			MAC_petrov_progress
+		}
+		add_stability = 0.05
+	}
+}
+
+# ============================================================
+# SOTB.300 — The Old General's Choice (Mihailov-Aleksandrov)
+# ============================================================
+country_event = {
+	id = SOTB.300
+
+	title = SOTB.300.t
+	desc = SOTB.300.d
+	picture = GFX_report_event_generic_fascist_meeting
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.300.a
+		ai_chance = { factor = 70 }
+		add_stability = 0.05
+		add_war_support = -0.05
+		custom_effect_tooltip = SOTB.300.a_tt
+	}
+	option = {
+		name = SOTB.300.b
+		ai_chance = { factor = 20 }
+		add_war_support = 0.05
+		custom_effect_tooltip = SOTB.300.b_tt
+	}
+	option = {
+		name = SOTB.300.c
+		ai_chance = { factor = 10 }
+		add_war_support = 0.10
+		fascism_drift = 0.10
+		custom_effect_tooltip = SOTB.300.c_tt
+	}
+}
+
+# ============================================================
+# SOTB.400 — The Lion Roars (Sandanski intervenes)
+# Fires only if democratic path, stability < 40%, crisis ongoing
+# ============================================================
+country_event = {
+	id = SOTB.400
+
+	title = SOTB.400.t
+	desc = SOTB.400.d
+	picture = GFX_report_event_generic_leader_hero
+
+	trigger = {
+		tag = MAC
+		has_country_flag = SOTB_democratic_path
+		NOT = { has_country_flag = SOTB_succession_resolved }
+		stability < 0.40
+		has_idea = MAC_lion_watches
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	option = {
+		name = SOTB.400.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.10
+		add_war_support = 0.05
+	}
+}
+
+# ============================================================
+# SOTB.401 — Delchev's Letter (democratic path losing)
+# ============================================================
+country_event = {
+	id = SOTB.401
+
+	title = SOTB.401.t
+	desc = SOTB.401.d
+	picture = GFX_report_event_generic_political_meeting
+
+	trigger = {
+		tag = MAC
+		has_country_flag = SOTB_democratic_path
+		NOT = { has_country_flag = SOTB_succession_resolved }
+		democratic < 0.45
+		has_idea = MAC_founder_watches
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = {
+		name = SOTB.401.a
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.10
+		}
+		add_stability = 0.05
+	}
+}
+
+# ============================================================
+# SOTB.500 — The Crown Question (3 monarchist candidates)
+# ============================================================
+country_event = {
+	id = SOTB.500
+
+	title = SOTB.500.t
+	desc = SOTB.500.d
+	picture = GFX_report_event_generic_monarchy
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	# --- Prince Harald of Denmark ---
+	option = {
+		name = SOTB.500.a
+		ai_chance = { factor = 50 }
+		set_country_flag = MAC_harald_king
+		set_country_leader = {
+			ideology = conservatism
+			traits = { constitutional_monarch }
+			id = -1
+		}
+		remove_ideas = {
+			MAC_founder_watches
+			MAC_lion_watches
+			MAC_delcevism
+		}
+		add_stability = 0.10
+		add_opinion_modifier = {
+			target = ENG
+			modifier = MAC_eng_constitutional_monarch
+		}
+	}
+
+	# --- Peter II Karađorđević ---
+	option = {
+		name = SOTB.500.b
+		ai_chance = { factor = 30 }
+		set_country_flag = MAC_peter_king
+		set_country_leader = {
+			ideology = despotism
+			traits = { exiled_king }
+			id = -1
+		}
+		remove_ideas = {
+			MAC_founder_watches
+			MAC_lion_watches
+			MAC_delcevism
+		}
+		add_stability = -0.05
+		add_war_support = 0.10
+		neutrality_drift = 0.05
+	}
+
+	# --- Prince Philipp of Hesse ---
+	option = {
+		name = SOTB.500.c
+		ai_chance = { factor = 20 }
+		set_country_flag = MAC_philipp_king
+		set_country_leader = {
+			ideology = nazism
+			traits = { german_prince }
+			id = -1
+		}
+		remove_ideas = {
+			MAC_founder_watches
+			MAC_lion_watches
+			MAC_delcevism
+		}
+		add_stability = -0.10
+		add_war_support = 0.15
+		fascism_drift = 0.10
+		add_opinion_modifier = {
+			target = GER
+			modifier = MAC_ger_german_prince
+		}
+	}
+}
+
+# ============================================================
+# SOTB.600 — Koliševski Consolidates
+# ============================================================
+country_event = {
+	id = SOTB.600
+
+	title = SOTB.600.t
+	desc = SOTB.600.d
+	picture = GFX_report_event_generic_communist_revolution
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.600.a
+		set_country_flag = MAC_kolisevski_leader
+		set_country_leader = {
+			ideology = stalinism
+			traits = { the_firebrand }
+			id = -1
+		}
+		remove_ideas = {
+			MAC_founder_watches
+			MAC_lion_watches
+			MAC_delcevism
+		}
+		add_stability = 0.05
+		add_opinion_modifier = {
+			target = SOV
+			modifier = MAC_sov_comrades
+		}
+	}
+}

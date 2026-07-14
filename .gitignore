@@ -1,0 +1,26 @@
+# HOI4 Mod .gitignore
+# Shadows Over The Balkans — New Sun of Liberty
+
+# OS files
+Thumbs.db
+.DS_Store
+*.tmp
+*~
+
+# Game logs (generated at runtime)
+error.log
+game.log
+system.log
+setup.log
+debug.log
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archive files
+*.zip
+*.rar
+*.7z

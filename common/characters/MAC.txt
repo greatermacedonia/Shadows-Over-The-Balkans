@@ -1,0 +1,150 @@
+characters = {
+
+	# ============================================================
+	# STARTING LEADER
+	# ============================================================
+
+	MAC_cento = {
+		name = MAC_cento
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = { interim_president }
+			expire = "1965.1.1"
+			id = -1
+		}
+	}
+
+	# ============================================================
+	# DEMOCRATIC FACTION LEADERS (in-waiting)
+	# ============================================================
+
+	MAC_delchev = {
+		name = MAC_delchev
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	MAC_sandanski = {
+		name = MAC_sandanski
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	MAC_vlahov = {
+		name = MAC_vlahov
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	MAC_gjorche_petrov = {
+		name = MAC_gjorche_petrov
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	# ============================================================
+	# NON-ALIGNED FACTION LEADERS (in-waiting)
+	# ============================================================
+
+	MAC_aleksandrov = {
+		name = MAC_aleksandrov
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	MAC_archbishop_dositej = {
+		name = MAC_archbishop_dositej
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	MAC_apostolski = {
+		name = MAC_apostolski
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	# ============================================================
+	# COMMUNIST FACTION LEADER (in-waiting)
+	# ============================================================
+
+	MAC_kolisevski = {
+		name = MAC_kolisevski
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	# ============================================================
+	# FASCIST FACTION LEADER (in-waiting)
+	# ============================================================
+
+	MAC_mihailov = {
+		name = MAC_mihailov
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	# ============================================================
+	# MONARCHIST CANDIDATES (in-waiting)
+	# ============================================================
+
+	MAC_prince_harald = {
+		name = MAC_prince_harald
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	MAC_peter_ii = {
+		name = MAC_peter_ii
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+	MAC_prince_philipp = {
+		name = MAC_prince_philipp
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
+}

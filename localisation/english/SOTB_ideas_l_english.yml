@@ -1,0 +1,80 @@
+l_english:
+ # ============================================================
+ # NATIONAL SPIRITS
+ # ============================================================
+ MAC_founder_watches: "The Founder Watches"
+ MAC_founder_watches_desc: "Goce Delchev — the Father of the Republic — suffered a stroke in 1934 and retired to his home above Solun. At 64, frail but alive, he watches the nation he built. His presence constrains extremism, but his absence from active leadership leaves a void no one has yet filled."
+ MAC_lion_watches: "The Lion Still Watches"
+ MAC_lion_watches_desc: "General Jane Sandanski — the man who captured Solun in 1912 — is 64 and retired to his farm near Melnik. But the Lion of Solun still has teeth. His survival is a national treasure and a warning to Macedonia's enemies."
+ MAC_two_betrayals: "The Two Betrayals"
+ MAC_two_betrayals_desc: "In 1913, Bulgaria invaded. Greece did nothing — worse, quietly encouraged Sofia. In 1915, Bulgaria invaded again, allied with the Central Powers. Both were repelled. Neither has been forgotten. Greece and Bulgaria are not our friends."
+ MAC_vergina_star: "The Star of Vergina"
+ MAC_vergina_star_desc: "A red field charged with the sixteen-ray golden Vergina Sun. Adopted in 1927 after Macedonian archaeologists uncovered the tomb of Philip II. The star is a declaration: we are the inheritors of the ancient Macedonians. Greece insists otherwise. Macedonia does not debate settled questions."
+ MAC_delcevism: "Delčevism — The Macedonian Way"
+ MAC_delcevism_desc: "Revolutionary nationalism. Populist governance. Eternal independence. Armed neutrality. Delčevism is Kemalism on the Aegean — Finnish Sisu in the Balkan sun. A nation that refuses to be conquered, assimilated, or erased. 'We do not bow.'"
+ MAC_solun_arsenal: "The Solun Arsenal"
+ MAC_solun_arsenal_desc: "Solun is the industrial capital of the southern Balkans. Its dockyards, factories, and railways make Macedonia a genuine economic power in the region — small in territory, but disproportionately productive."
+ MAC_army_of_the_lion: "Army of the Lion"
+ MAC_army_of_the_lion_desc: "Built by Sandanski during his tenure as first Minister of Defense (1919–1927). Inherited by Todor Aleksandrov. An army of 80,000 — battle-hardened, well-trained, and fiercely loyal to the republic. The Lion's legacy lives in every division."
+ MAC_old_guard_reform: "Old Guard vs. Reform"
+ MAC_old_guard_reform_desc: "Minister of Defense Aleksandrov champions the proven way: infantry, artillery, fortifications. Colonel Apostolski demands the future: armor, aviation, mobility. The General Staff is divided. The officer corps is split. The republic must choose."
+ MAC_throne_of_ohrid: "The Throne of Ohrid"
+ MAC_throne_of_ohrid_desc: "The Macedonian Orthodox Church declared autocephaly in 1922. Archbishop Dositej II provides moral authority and a conservative anchor. The Church's influence can grow — or be diminished — depending on the republic's path."
+ MAC_poppy: "The Macedonian Poppy"
+ MAC_poppy_desc: "Macedonia has cultivated opium poppies since Ottoman times. The mountain valleys produce a latex of exceptional quality. Successive governments have maintained careful ambiguity: officially, it is exported for pharmaceutical purposes. Unofficially, much of it finds its way into the underground narcotics trade."
+
+ # ============================================================
+ # POLITICAL PATH SPIRITS
+ # ============================================================
+ MAC_delchev_returns: "The Founder Returns"
+ MAC_delchev_returns_desc: "Goce Delchev has answered the republic's call. The Macedonian Ataturk returns to active leadership — armed neutrality, populist governance, eternal independence."
+ MAC_delcevism_fulfilled: "The Macedonian Ataturk"
+ MAC_delcevism_fulfilled_desc: "Delčevism fulfilled. The Founder's vision is now the republic's permanent creed. Revolutionary nationalism. Populist governance. Armed neutrality. 'Macedonia for Macedonians. Eternal independence. We do not bow.'"
+ MAC_lion_leads: "The Lion's Path"
+ MAC_lion_leads_desc: "Jane Sandanski — the hero of Solun — leads the republic. Defensive resilience. Military preparedness. 'They came in '13. They came again in '15. They will come again. When they do, they will find us ready.'"
+ MAC_lion_legacy: "The Lion's Legacy"
+ MAC_lion_legacy_desc: "Sandanski's stewardship is complete. The republic is armed, prepared, and unshakeable. The Lion has ensured that no enemy will ever take Macedonia by surprise again."
+ MAC_cento_stewardship: "The Manager's Mandate"
+ MAC_cento_stewardship_desc: "Metodija Andonov-Čento — the man who kept the economy together during the Depression — now governs with the full mandate of the republic. Institutional competence. Gradual reform. Sustainable governance."
+ MAC_vlahov_reforms: "The Reformer's Coalition"
+ MAC_vlahov_reforms_desc: "Dimitar Vlahov leads a broad democratic coalition. Constitutional reform. Western alignment. Free elections. Free trade. The 'normal country' path — and the one Britain and France prefer."
+ MAC_petrov_progress: "The Progressive's Dream"
+ MAC_petrov_progress_desc: "Gjorche Petrov — one of IMRO's earliest intellectuals — survived the assassination that claimed him in another world. His democratic socialism offers land reform, workers' rights, and social justice — achieved through democracy, not dictatorship."
+ MAC_just_republic: "A Just Republic"
+ MAC_just_republic_desc: "Petrov's vision is realized. Land reform has given peasants a stake in the nation. Workers' rights are enshrined in law. Fascism is banished from public life. This is what the revolution was always meant to become."
+ MAC_aleksandrov_order: "The Soldier's Order"
+ MAC_aleksandrov_order_desc: "Todor Aleksandrov governs with military discipline. Order. Strength. Stability. Democracy is a luxury for more peaceful nations. The republic must survive — everything else is secondary."
+ MAC_shepherd_way: "The Shepherd's Way"
+ MAC_shepherd_way_desc: "Archbishop Dositej II leads the republic on a path of moral governance. Social conservatism. Anti-communist. Anti-fascist. The Third Way between godless ideologies."
+ MAC_iron_guard: "The Iron Guard"
+ MAC_iron_guard_desc: "Ivan Mihailov has seized power. Radical nationalism. Purge the left. Crush the neighbours. Build Greater Macedonia. No compromises."
+ MAC_avenger_triumph: "The Avenger's Triumph"
+ MAC_avenger_triumph_desc: "Mihailov's vision is complete. A Greater Macedonia — forged in fire, united by will. The old men of IMRO had their time. Now the revolution is defended — not with speeches, not with elections — with strength."
+
+ # ============================================================
+ # MILITARY PATH SPIRITS
+ # ============================================================
+ MAC_lions_way: "The Lion's Way"
+ MAC_lions_way_desc: "Aleksandrov's doctrine perfected. Infantry. Artillery. Fortifications. It is not glamorous. It works. Hold the line. Break them with artillery. Let the enemy exhaust himself against Macedonian steel."
+ MAC_unbroken_line: "The Unbroken Line"
+ MAC_unbroken_line_desc: "Macedonia's borders are a fortress. Every valley is a killing field. Every hill is a strongpoint. The republic does not retreat."
+ MAC_apostolski_vision: "Apostolski's Vision"
+ MAC_apostolski_vision_desc: "The next war belongs to the side that moves faster. Tanks. Planes. Speed. 'The Lion took Solun with audacity. He did not take it with trenches.'"
+ MAC_blitz: "The Macedonian Blitz"
+ MAC_blitz_desc: "Apostolski's armored doctrine is now the republic's spearhead. Strike fast. Strike deep. The enemy will not know what hit them."
+ MAC_lion_heirs: "The Lion's Heirs"
+ MAC_lion_heirs_desc: "A new generation of Macedonian officers carries Sandanski's legacy forward. The army is ready. The republic is protected."
+
+ # ============================================================
+ # ECONOMIC PATH SPIRITS
+ # ============================================================
+ MAC_poppy_state: "The Macedonian Poppy — State Cultivation"
+ MAC_poppy_state_desc: "The republic has embraced the poppy. State-coordinated cultivation and processing have made Macedonian opium a valuable — if controversial — national asset."
+ MAC_poppy_empire: "The Opium Empire"
+ MAC_poppy_empire_desc: "From Solun's quiet harbours to the parlours of Europe, Macedonian opium flows. Revenue pours in. Leverage accumulates. But empires built on poppies have a way of demanding their due."
+
+ # ============================================================
+ # CULTURAL PATH SPIRITS
+ # ============================================================
+ MAC_vergina_eternal: "Macedonia Eternal"
+ MAC_vergina_eternal_desc: "The Vergina Sun shines brighter than ever. Macedonia's ancient heritage is celebrated worldwide. The star will fly for nine hundred more years."

@@ -1,0 +1,31 @@
+state={
+	id=797
+	name="STATE_797"
+	manpower = 500000
+
+	state_category = city
+
+	history={
+		owner = TUR
+		victory_points = { #Istanbul (Asian Bosporus)
+			11829 15
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+			dockyard = 1
+			air_base = 4
+			11829 = {
+				naval_base = 8
+			}
+		}
+		add_core_of = TUR
+	}
+
+	provinces={
+		11829
+	}
+
+	local_supplies=0.0
+}

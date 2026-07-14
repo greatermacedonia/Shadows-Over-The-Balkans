@@ -1,0 +1,16 @@
+add_namespace = SOTB
+
+# ============================================================
+# Shadows Over The Balkans — Event Namespace
+# ============================================================
+# Event ID ranges:
+#   SOTB.100–199 : Political crisis & succession events
+#   SOTB.200–299 : Democratic primary & candidate events
+#   SOTB.300–399 : Cross-ideology events (Mihailov-Aleksandrov, etc.)
+#   SOTB.400–499 : Intervention events (Sandanski, Delchev)
+#   SOTB.500–599 : Monarchist surge events
+#   SOTB.600–699 : Military events
+#   SOTB.700–799 : Opium & economic events
+#   SOTB.800–899 : Diplomatic & irredentism events
+#   SOTB.900–999 : Cultural & heritage events
+# ============================================================

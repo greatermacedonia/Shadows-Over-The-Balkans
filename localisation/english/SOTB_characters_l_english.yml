@@ -1,0 +1,47 @@
+l_english:
+ # ============================================================
+ # CHARACTER NAMES
+ # ============================================================
+ MAC_cento: "Metodija Andonov-Čento"
+ MAC_delchev: "Goce Delchev"
+ MAC_sandanski: "Jane Sandanski"
+ MAC_vlahov: "Dimitar Vlahov"
+ MAC_gjorche_petrov: "Gjorche Petrov"
+ MAC_aleksandrov: "Todor Aleksandrov"
+ MAC_archbishop_dositej: "Archbishop Dositej II"
+ MAC_apostolski: "Mihajlo Apostolski"
+ MAC_kolisevski: "Lazar Koliševski"
+ MAC_mihailov: "Ivan Mihailov"
+ MAC_prince_harald: "Prince Harald of Denmark"
+ MAC_peter_ii: "Peter II Karađorđević"
+ MAC_prince_philipp: "Prince Philipp of Hesse"
+
+ # ============================================================
+ # TRAIT NAMES & DESCRIPTIONS
+ # ============================================================
+ delchevism_founder: "Father of the Republic"
+ delchevism_founder_desc: "Goce Delchev — the Macedonian Ataturk. The Founder's personal authority is unmatched. His return stabilizes the nation and reinforces Delčevism as the republic's permanent creed."
+ lion_of_solun: "Lion of Solun"
+ lion_of_solun_desc: "The hero who captured Solun in 1912. Jane Sandanski's leadership embodies defensive resilience and military preparedness. The Lion of Solun still commands the respect of the nation."
+ interim_president: "Interim President"
+ interim_president_desc: "Appointed caretaker after Delchev's stroke. Čento is a competent manager, but everyone knows he is keeping the seat warm for whoever follows — or for the crisis to decide."
+ imro_reformer: "IMRO Reformer"
+ imro_reformer_desc: "Dimitar Vlahov represents the mainstream democratic wing of IMRO. Western alignment, free trade, civil liberties — he wants Macedonia to be a normal country."
+ imro_progressive: "IMRO Progressive"
+ imro_progressive_desc: "Gjorche Petrov carries the left-IMRO tradition into democratic politics. Social democracy, land reform, workers' rights — achieved through democratic process, not revolution."
+ pragmatic_soldier: "Pragmatic Soldier"
+ pragmatic_soldier_desc: "Todor Aleksandrov is not a politician. He is a soldier who believes the republic needs order, discipline, and strength. Democracy is a luxury for more peaceful nations."
+ the_shepherd: "The Shepherd"
+ the_shepherd_desc: "Archbishop Dositej II offers moral governance — a conservative third way between the godless ideologies of communism and fascism."
+ military_reformer: "Military Reformer"
+ military_reformer_desc: "Mihajlo Apostolski champions the future of warfare: armor, aviation, and mobility. A brilliant modernizer whose ideas challenge the old guard."
+ the_firebrand: "The Firebrand"
+ the_firebrand_desc: "Young, Moscow-trained, and hungry for revolution. Lazar Koliševski believes the old men of IMRO betrayed the people. His revolution has not yet begun."
+ the_avenger: "The Avenger"
+ the_avenger_desc: "Ivan Mihailov — radical nationalist, former student of Aleksandrov, and now the dark mirror of the revolution. He will purge, expand, and dominate. No compromises."
+ constitutional_monarch: "Constitutional Monarch"
+ constitutional_monarch_desc: "A king who reigns but does not rule. Prince Harald offers stability through tradition — a neutral crown above faction."
+ exiled_king: "Exiled King"
+ exiled_king_desc: "Peter II Karađorđević — the young, charismatic claimant to the Yugoslav throne. From Solun, he could reclaim his kingdom and make Macedonia the center of a new Balkan order."
+ german_prince: "German Prince"
+ german_prince_desc: "Prince Philipp of Hesse — Nazi Party member, Göring associate, son-in-law of the Italian King. German protection guaranteed. Appealing if the Axis seems ascendant."

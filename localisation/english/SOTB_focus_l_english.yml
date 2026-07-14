@@ -1,0 +1,165 @@
+l_english:
+ # ============================================================
+ # FOCUS NAMES & DESCRIPTIONS
+ # ============================================================
+
+ # --- Starter ---
+ MAC_delchev_succession: "The Delchev Succession"
+ MAC_delchev_succession_desc: "President Čento has governed as interim leader since Delchev's stroke in 1934. Everyone knows he is keeping the seat warm. The nation waits — but it will not wait forever. The Succession Question must be answered. Who will lead Macedonia into the uncertain future?"
+ MAC_delchev_succession_tt: "The succession crisis begins. The political focus tree opens. If not resolved swiftly, the nation may grow restless."
+
+ # --- Branch Choices ---
+ MAC_preserve_democracy: "Preserve Democracy"
+ MAC_preserve_democracy_desc: "The republic was built by revolutionaries who believed in the people's right to choose. Delchev, Sandanski, Čento, Vlahov, Gjorche Petrov — five visions, one shared conviction: what was won by revolution must be preserved by democracy. Hold a democratic primary and let the people decide."
+ MAC_embrace_crown: "Embrace the Crown"
+ MAC_embrace_crown_desc: "A handful of newspapers, aristocratic sympathisers, and army officers advocate openly for a constitutional monarchy. Their argument is seductive in its simplicity: a neutral king above faction — a symbol who reigns but does not rule. Three candidates wait in the wings."
+ MAC_order_above_all: "Order Above All"
+ MAC_order_above_all_desc: "Democracy is a luxury for more peaceful nations. The republic needs a firm hand — someone who serves the state, not an ideology. Todor Aleksandrov offers military discipline. Archbishop Dositej offers moral governance. Both offer stability without the chaos of elections."
+ MAC_peoples_army: "The People's Army"
+ MAC_peoples_army_desc: "Lazar Koliševski — young, Moscow-trained, and hungry for revolution — believes the old men of IMRO betrayed the people. The peasant still starves. The worker still toils for nothing. The revolution must continue — not with speeches, but with action."
+ MAC_iron_guard: "The Iron Guard"
+ MAC_iron_guard_desc: "Ivan Mihailov has waited long enough. Democracy is a disease. Communism is treason. The old men had their time. Now the revolution must be defended — not with speeches, not with elections — with strength, with will, with the courage to do what must be done."
+
+ # --- Democratic Primary ---
+ MAC_democratic_primary: "The Democratic Primary"
+ MAC_democratic_primary_desc: "Five candidates. Four ideologies within democracy. One republic. Delchev — the Founder. Sandanski — the Lion. Čento — the Manager. Vlahov — the Reformer. Gjorche Petrov — the Progressive. The people will choose."
+
+ # --- Delchev Path ---
+ MAC_delchev_path: "The Founder's Path"
+ MAC_delchev_path_desc: "Goce Delchev — the Macedonian Ataturk — returns to active leadership. Delčevism: revolutionary nationalism, populist governance, eternal independence, armed neutrality. 'Macedonia for Macedonians. We do not bow.'"
+ MAC_delchev_reforms: "Delčevist Reforms"
+ MAC_delchev_reforms_desc: "The Founder's vision requires modern institutions. Education. Infrastructure. A state worthy of the revolution that built it. Delchev's personal authority drives reforms through at unprecedented speed."
+ MAC_armed_neutrality: "Armed Neutrality"
+ MAC_armed_neutrality_desc: "Delčevism's core tenet: Macedonia does not bow to any foreign power. Armed neutrality — like Sweden, like Switzerland — ensures that no empire makes Macedonia its battleground. We are nobody's puppet."
+ MAC_macedonian_ataturk: "The Macedonian Ataturk"
+ MAC_macedonian_ataturk_desc: "Delčevism fulfilled. The Founder's vision is now the republic's permanent creed. Revolutionary nationalism. Populist governance. Armed neutrality. 'Macedonia for Macedonians. Eternal independence. We do not bow.'"
+ MAC_armed_neutrality_tt: "Macedonia gains +10% drift defence. Joining factions generates more world tension."
+
+ # --- Sandanski Path ---
+ MAC_sandanski_path: "The Lion's Path"
+ MAC_sandanski_path_desc: "Jane Sandanski — the man who captured Solun in 1912 — offers a different vision within Delčevism: martial stewardship. Defensive resilience. Military preparedness. 'They came in '13. They came again in '15. They will come again. The Lion still watches the borders.'"
+ MAC_fortress_macedonia: "Fortress Macedonia"
+ MAC_fortress_macedonia_desc: "Sandanski's doctrine: every valley a killing field. Every hill a strongpoint. The republic's borders must be a wall that no enemy can breach. Build fortifications and prepare for the worst."
+ MAC_they_will_not_pass: "They Will Not Pass"
+ MAC_they_will_not_pass_desc: "The Lion's famous words, etched into the national consciousness. Expand the conscription pool. Train every citizen to defend their homeland. Macedonia will not be conquered again."
+ MAC_lions_legacy: "The Lion's Legacy"
+ MAC_lions_legacy_desc: "Sandanski's stewardship is complete. The republic is armed, prepared, and unshakeable. The Lion has ensured that no enemy will ever take Macedonia by surprise again — and earned the respect of the watching world."
+
+ # --- Čento Path ---
+ MAC_cento_path: "The Manager's Mandate"
+ MAC_cento_path_desc: "Metodija Andonov-Čento — the man who kept the economy together during the Depression — asks for the full mandate of the republic. He is not a revolutionary. He is not a soldier. He is a manager. And sometimes, what a nation needs most is someone who can make the trains run on time."
+ MAC_cento_recovery: "The Institutional Republic"
+ MAC_cento_recovery_desc: "Čento's vision: efficient governance, stable institutions, gradual reform. Expand the research base. Build the civil service. Make the republic work — not dramatically, but reliably."
+ MAC_sustainable_republic: "The Sustainable Republic"
+ MAC_sustainable_republic_desc: "Čento's mandate is complete. The republic is stable, prosperous, and boring — in the best possible way. No grand gestures. No dramatic revolutions. Just competent governance."
+
+ # --- Vlahov Path ---
+ MAC_vlahov_path: "The Reformer's Coalition"
+ MAC_vlahov_path_desc: "Dimitar Vlahov — IMRO veteran, Kruševo fighter, and now democratic reformer — leads a broad coalition. Constitutional reform. Western alignment. Free elections. Free trade. Britain and France would prefer him."
+ MAC_vlahov_open_doors: "Open Doors"
+ MAC_vlahov_open_doors_desc: "Vlahov opens Macedonia to the West. Trade agreements with London and Paris. Democratic solidarity with Europe's established powers. The 'normal country' path — and the one the democracies are most comfortable with."
+ MAC_vlahov_normal_country: "The Normal Country"
+ MAC_vlahov_normal_country_desc: "Vlahov's reforms are complete. Macedonia is a stable, liberal democracy with Western backing. The republic has become what Delchev always intended: a free nation among free nations."
+
+ # --- Gjorche Petrov Path ---
+ MAC_petrov_path: "The Progressive's Dream"
+ MAC_petrov_path_desc: "Gjorche Petrov — one of IMRO's earliest intellectuals — survived the assassination that claimed him in another world. His democratic socialism offers a path between Vlahov's moderation and Koliševski's revolution: land reform, workers' rights, social justice — achieved through democracy."
+ MAC_petrov_land_liberty: "Land & Liberty"
+ MAC_petrov_land_liberty_desc: "The peasant who owns his land will defend it. Petrov's land reform breaks up the old estates and gives every rural family a stake in the republic. The poppy trade continues — publicly denounced, privately tolerated — but the peasant is no longer dependent on it."
+ MAC_peoples_charter: "The People's Charter"
+ MAC_peoples_charter_desc: "Workers' rights enshrined in law. Fascist organizations banned from public life. The People's Charter is Petrov's answer to the extremists: democracy must deliver material justice, or it will be swept away."
+ MAC_peoples_charter_tt: "Fascist ideology drift permanently reduced. Democratic support increases over time."
+ MAC_just_republic: "A Just Republic"
+ MAC_just_republic_desc: "Petrov's vision is realized. Land reform has given peasants a stake in the nation. Workers' rights are protected. Fascism is banished. This is what the revolution was always meant to become — not a dictatorship of the proletariat, but a just republic of free citizens."
+
+ # --- Non-Aligned ---
+ MAC_soldiers_duty: "The Soldier's Duty"
+ MAC_soldiers_duty_desc: "Todor Aleksandrov is not a politician. He is not an ideologue. He is a soldier who believes the republic needs order, discipline, and strength. He serves the state. He asks only that the state be worthy of his service."
+ MAC_aleksandrov_stability: "The Firm Hand"
+ MAC_aleksandrov_stability_desc: "Aleksandrov's military government restores order. Strikes are suppressed. Extremists are contained. The republic is stable — not by democratic consent, but by the soldier's discipline. For now, that is enough."
+ MAC_shepherds_way: "The Shepherd's Way"
+ MAC_shepherds_way_desc: "Archbishop Dositej II — the head of the Macedonian Orthodox Church — steps forward to lead a nation adrift. Moral governance. Social conservatism. Anti-communist. The Third Way between the godless ideologies of East and West."
+ MAC_shepherd_mandate: "The Shepherd's Mandate"
+ MAC_shepherd_mandate_desc: "The Archbishop's moral authority consolidates. The Church's influence grows. Both communist and fascist extremism are suppressed — not by force, but by the quiet power of the pulpit."
+
+ # --- Monarchist ---
+ MAC_royal_mandate: "The Royal Mandate"
+ MAC_royal_mandate_desc: "The chosen monarch is crowned in the Cathedral of St. Demetrios in Solun. A constitutional ceremony — restrained, dignified, historic. The crown above faction. The king who reigns but does not rule."
+ MAC_royal_mandate_tt: "The chosen monarchist candidate becomes country leader and receives their unique trait."
+ MAC_crown_unifies: "The Crown Unifies"
+ MAC_crown_unifies_desc: "The monarchy is established. The crown has done what democracy could not: it has unified the nation around a symbol larger than any faction. The republic is dead. Long live the kingdom."
+
+ # --- Communist ---
+ MAC_land_reform: "Land Reform"
+ MAC_land_reform_desc: "Koliševski's first act: break the estates. Give the land to the peasants who work it. The old landowners — collaborators with the Bulgarians in '15, parasites on the nation ever since — are stripped of their holdings. The people's revolution begins."
+ MAC_soviet_republic: "Macedonian Soviet Republic"
+ MAC_soviet_republic_desc: "The Macedonian Soviet Republic is proclaimed. The old symbols — the Vergina Sun, the Church, the democratic institutions — are swept away. In their place: the hammer and sickle, the red flag, and the promise of a workers' paradise on the Aegean."
+
+ # --- Fascist ---
+ MAC_purge_old_guard: "Purge the Old Guard"
+ MAC_purge_old_guard_desc: "Mihailov consolidates power. The old IMRO leadership — Delchev's appointees, Sandanski's protégés, the democratic establishment — are purged from government, military, and public life. The Avenger cleans house."
+ MAC_greater_macedonia: "Greater Macedonia"
+ MAC_greater_macedonia_desc: "Macedonia's borders are an insult. Pirin — stolen by Bulgaria. The Aegean — held by Greece. The Vardar — occupied by Yugoslavia. Mihailov demands what is rightfully Macedonian. All of it."
+ MAC_greater_macedonia_tt: "Grants territorial claims on all neighbouring states holding Macedonian cores."
+ MAC_avenger_triumph: "The Avenger's Triumph"
+ MAC_avenger_triumph_desc: "Mihailov's vision is complete. A Greater Macedonia — forged in fire, united by will, defended by strength. The old men had their time. The Avenger's time is now."
+
+ # ============================================================
+ # EVENT TITLES & DESCRIPTIONS
+ # ============================================================
+
+ SOTB.100.t: "The Nation Grows Restless"
+ SOTB.100.d: "Months have passed since President Čento assumed the interim presidency, and still the Succession Question remains unresolved. The people of Macedonia grow restless. Whispers fill the cafés of Solun. 'Where is the Founder? Who will lead us?' The time for waiting is over. The nation demands an answer."
+ SOTB.100.a: "The people demand action"
+ SOTB.100.a_tt: "The succession crisis deepens. Further delays will damage national stability."
+ SOTB.100.b: "We still need time"
+
+ SOTB.101.t: "The Succession Begins"
+ SOTB.101.d: "President Čento has formally initiated the succession process. The interim presidency — always understood to be temporary — is now officially approaching its end. Across Macedonia, factions align. Candidates emerge. The question that has haunted the republic since Delchev's stroke will finally be answered: who leads Macedonia into the uncertain future?"
+ SOTB.101.a: "Let the nation decide"
+
+ SOTB.200.t: "The Democratic Primary"
+ SOTB.200.d: "Five candidates stand before the people. Five visions for the republic's future. Five men who each, in their own way, embody the IMRO revolutionary tradition. Goce Delchev — the Founder, returning from retirement to guide his creation. Jane Sandanski — the Lion of Solun, offering martial stewardship in a dangerous world. Metodija Čento — the interim President, asking for the full mandate he has earned. Dimitar Vlahov — the reformer who would align Macedonia with the Western democracies. Gjorche Petrov — the progressive who believes democracy must deliver justice. Choose."
+ SOTB.200.a: "Goce Delchev — The Founder Returns"
+ SOTB.200.b: "Jane Sandanski — The Lion's Path"
+ SOTB.200.c: "Metodija Čento — The Manager's Mandate"
+ SOTB.200.d: "Dimitar Vlahov — The Reformer's Coalition"
+ SOTB.200.e: "Gjorche Petrov — The Progressive's Dream"
+
+ SOTB.300.t: "The Old General's Choice"
+ SOTB.300.d: "Ivan Mihailov requested a private meeting with his former mentor. The conversation was brief. 'General,' Mihailov said, 'you know what must be done. The democrats talk. The communists plot. The republic weakens while you wait. Join me. Together — the army and the movement — we can save Macedonia. Not with speeches. With action.' Aleksandrov was silent for a long moment. Then: 'I taught you everything you know about war, Ivan. But I did not teach you that war is the answer to every question. Sometimes the hardest thing is not to fight. Go. Before I remember that you were once my student.'"
+ SOTB.300.a: "Aleksandrov rejects Mihailov forever"
+ SOTB.300.a_tt: "Aleksandrov's democratic credentials strengthen. The general will not be swayed."
+ SOTB.300.b: "Aleksandrov hesitates..."
+ SOTB.300.b_tt: "The general wavers. Cross-ideology tension increases. Future events may tip him either way."
+ SOTB.300.c: "Aleksandrov embraces the cause"
+ SOTB.300.c_tt: "The army and the radicals unite. Aleksandrov shifts toward Fascism. Major political realignment."
+
+ SOTB.400.t: "The Lion Roars"
+ SOTB.400.d: "A letter from General Sandanski has been published in Nova Makedonija. The Lion of Solun, 64 and rarely seen, has broken his silence: 'I did not take Solun to watch it fall to squabbling politicians. I did not build this army to see it torn apart by ambition. The republic is bigger than any faction. Bigger than any man. Even me. Especially me. Remember that — before I am forced to remind you.'"
+ SOTB.400.a: "The Lion still has teeth"
+
+ SOTB.401.t: "The Founder's Letter"
+ SOTB.401.d: "A handwritten letter from Goce Delchev has been delivered to the Parliament. The Founder — frail, retired, but watching — has not abandoned his creation: 'I gave you a republic. I did not give you an arena. The people chose democracy. Honour their choice. Or I will return — and I will not be pleased with what I find.'"
+ SOTB.401.a: "Even in retirement, Delchev commands"
+
+ SOTB.500.t: "The Crown Question"
+ SOTB.500.d: "Three candidates wait in the wings. Three crowns. Three futures. Prince Harald of Denmark — a Protestant constitutional monarch, acceptable to Britain, unlikely to thrill the Orthodox peasantry. Peter II Karađorđević — the young, charismatic claimant to the Yugoslav throne, exiled and hungry, offering Macedonia a crown and a destiny. Prince Philipp of Hesse — German prince, Nazi Party member, Göring associate, son-in-law of the Italian King. Each offers a different path. Each crown carries a different price."
+ SOTB.500.a: "Prince Harald of Denmark — Constitutional Monarchy"
+ SOTB.500.b: "Peter II Karađorđević — The Exiled King"
+ SOTB.500.c: "Prince Philipp of Hesse — German Protection"
+
+ SOTB.600.t: "Koliševski Consolidates"
+ SOTB.600.d: "Lazar Koliševski — 22 years old, Moscow-trained, and burning with revolutionary fervor — addresses a crowd of workers and peasants in Solun's main square. 'The old men freed us from the Ottomans. Sandanski took Solun. But who will free the peasant from the landlord? Who will give the worker his due? The old men had their revolution. Ours has not yet begun.' The Soviet ambassador watches from a balcony. He is smiling."
+ SOTB.600.a: "The people's revolution begins"
+
+ # ============================================================
+ # OPINION MODIFIERS
+ # ============================================================
+ MAC_eng_open_doors: "Open Doors Trade Agreement"
+ MAC_fra_open_doors: "Open Doors Trade Agreement"
+ MAC_eng_democratic_support: "British Democratic Support"
+ MAC_fra_democratic_support: "French Democratic Support"
+ MAC_eng_constitutional_monarch: "Constitutional Monarchy — British Approval"
+ MAC_ger_german_prince: "German Prince on the Macedonian Throne"
+ MAC_sov_comrades: "Soviet Comrades"

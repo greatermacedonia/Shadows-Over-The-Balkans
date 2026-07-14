@@ -1,0 +1,30 @@
+state = {
+	id = 970
+	name = "STATE_970"
+	resources = {
+		chromium = 20.000
+		aluminium = 6.000
+	}
+
+	history = {
+		owner = MAC
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = { #Tetovo
+			867 2
+		}
+		add_core_of = MAC
+		add_claim_by = ALB
+	}
+
+	provinces = {
+		833 867 
+	} 
+	manpower = 273550
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+
+	local_supplies = 0.0 
+}

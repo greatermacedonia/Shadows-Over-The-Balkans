@@ -1,0 +1,24 @@
+state={
+	id=1088
+	name="STATE_1088"
+	provinces={
+		878 893 9862 
+	}
+	history={
+	victory_points = { #Haskovo
+			9862 1
+		}
+
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		owner = BUL
+		add_core_of = BUL
+		add_core_of = THR
+	}
+	manpower=180451
+	buildings_max_level_factor=1
+	state_category=town
+	local_supplies=0
+}

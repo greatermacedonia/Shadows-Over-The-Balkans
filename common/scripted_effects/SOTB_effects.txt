@@ -1,0 +1,109 @@
+# ============================================================
+# SOTB Scripted Effects
+# Shadows Over The Balkans — Reusable Effects
+# ============================================================
+
+# --- Phase 0: Foundation Effects ---
+
+# Remove Delchev's watching spirit (triggers when succession resolves)
+SOTB_remove_delchev_watches = {
+	remove_ideas = {
+		MAC_founder_watches
+	}
+}
+
+# Goce Delchev returns as country leader
+SOTB_delchev_returns = {
+	set_country_leader = {
+		ideology = populism
+		traits = { delchevism_founder }
+		id = -1
+	}
+	remove_ideas = {
+		MAC_founder_watches
+		MAC_lion_watches
+	}
+	add_ideas = {
+		MAC_delchev_returns
+	}
+}
+
+# Jane Sandanski takes the Lion's Path
+SOTB_sandanski_path = {
+	set_country_leader = {
+		ideology = conservatism
+		traits = { lion_of_solun }
+		id = -1
+	}
+	remove_ideas = {
+		MAC_founder_watches
+		MAC_lion_watches
+	}
+	add_ideas = {
+		MAC_lion_leads
+	}
+}
+
+# Todor Aleksandrov seizes power (Non-Aligned military)
+SOTB_aleksandrov_takes_power = {
+	set_country_leader = {
+		ideology = despotism
+		traits = { pragmatic_soldier }
+		id = -1
+	}
+	remove_ideas = {
+		MAC_founder_watches
+		MAC_lion_watches
+		MAC_delcevism
+	}
+	add_ideas = {
+		MAC_aleksandrov_order
+	}
+}
+
+# Ivan Mihailov's fascist takeover
+SOTB_mihailov_coup = {
+	set_country_leader = {
+		ideology = fascism_ideology
+		traits = { the_avenger }
+		id = -1
+	}
+	remove_ideas = {
+		MAC_founder_watches
+		MAC_lion_watches
+		MAC_delcevism
+		MAC_throne_of_ohrid
+	}
+	add_ideas = {
+		MAC_iron_guard
+	}
+}
+
+# Resolve the Old Guard vs Reform debate (called by military tree)
+SOTB_resolve_old_guard = {
+	remove_ideas = {
+		MAC_old_guard_reform
+	}
+}
+
+# --- Phase 3: Opium Effects (stubs for now) ---
+
+# Set opium dependency stage for a target nation
+# Usage: SOTB_set_opium_dependency = { target = GRE stage = 2 }
+SOTB_set_opium_dependency = {
+	set_variable = {
+		var = SOTB_opium_dependency_$target$
+		value = $stage$
+	}
+}
+
+# Calculate total opium leverage (sum of all dependencies)
+SOTB_calculate_opium_leverage = {
+	# Stub — implemented in Phase 3
+}
+
+# --- Phase 4: Albania Effects (stubs for now) ---
+
+SOTB_albania_submit_check = {
+	# Stub — implemented in Phase 4
+}

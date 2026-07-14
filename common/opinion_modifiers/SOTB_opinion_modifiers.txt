@@ -1,0 +1,48 @@
+# ============================================================
+# SOTB Opinion Modifiers
+# Shadows Over The Balkans
+# ============================================================
+
+# --- Democratic ---
+MAC_eng_open_doors = {
+	opinion = 25
+	trade = 10
+	value = 0
+	expire = "1945.1.1"
+}
+
+MAC_fra_open_doors = {
+	opinion = 25
+	trade = 10
+	value = 0
+	expire = "1945.1.1"
+}
+
+MAC_eng_democratic_support = {
+	opinion = 50
+	value = 0
+}
+
+MAC_fra_democratic_support = {
+	opinion = 50
+	value = 0
+}
+
+# --- Monarchist ---
+MAC_eng_constitutional_monarch = {
+	opinion = 30
+	value = 0
+}
+
+MAC_ger_german_prince = {
+	opinion = 75
+	trade = 15
+	value = 0
+}
+
+# --- Communist ---
+MAC_sov_comrades = {
+	opinion = 75
+	trade = 15
+	value = 0
+}

@@ -1,0 +1,1016 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+focus_tree = {
+	id = MAC_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MAC
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	# ============================================================
+	# STARTER FOCUS — The Delchev Succession
+	# ============================================================
+
+	focus = {
+		id = MAC_delchev_succession
+
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 5
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
+		completion_reward = {
+			set_country_flag = SOTB_succession_crisis
+			add_stability = -0.05
+			custom_effect_tooltip = MAC_delchev_succession_tt
+			hidden_effect = {
+				country_event = { id = SOTB.101 days = 7 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	# ============================================================
+	# ROW 1 — BRANCH CHOICES (y=1, cost=10, mutually exclusive group)
+	# ============================================================
+
+	# --- DEMOCRATIC ---
+	focus = {
+		id = MAC_preserve_democracy
+
+		icon = GFX_focus_generic_democratic_europe
+		prerequisite = { focus = MAC_delchev_succession }
+		mutually_exclusive = { focus = MAC_embrace_crown focus = MAC_order_above_all focus = MAC_peoples_army focus = MAC_iron_guard }
+		relative_position_id = MAC_delchev_succession
+		x = -6
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_democratic_path
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+		}
+
+		ai_will_do = {
+			factor = 70
+		}
+	}
+
+	# --- MONARCHIST ---
+	focus = {
+		id = MAC_embrace_crown
+
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = MAC_delchev_succession }
+		mutually_exclusive = { focus = MAC_preserve_democracy focus = MAC_order_above_all focus = MAC_peoples_army focus = MAC_iron_guard }
+		relative_position_id = MAC_delchev_succession
+		x = 12
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_non_aligned_path
+			add_stability = -0.05
+			country_event = { id = SOTB.500 days = 3 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 20
+				has_country_flag = SOTB_succession_crisis
+				NOT = { has_country_flag = SOTB_succession_resolved }
+				stability < 0.30
+			}
+		}
+	}
+
+	# --- NON-ALIGNED ---
+	focus = {
+		id = MAC_order_above_all
+
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = MAC_delchev_succession }
+		mutually_exclusive = { focus = MAC_preserve_democracy focus = MAC_embrace_crown focus = MAC_peoples_army focus = MAC_iron_guard }
+		relative_position_id = MAC_delchev_succession
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_non_aligned_path
+			add_stability = 0.10
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	# --- COMMUNIST ---
+	focus = {
+		id = MAC_peoples_army
+
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = MAC_delchev_succession }
+		mutually_exclusive = { focus = MAC_preserve_democracy focus = MAC_embrace_crown focus = MAC_order_above_all focus = MAC_iron_guard }
+		relative_position_id = MAC_delchev_succession
+		x = 6
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_communist_path
+			add_stability = -0.15
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			remove_ideas = {
+				MAC_throne_of_ohrid
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	# --- FASCIST ---
+	focus = {
+		id = MAC_iron_guard
+
+		icon = GFX_focus_generic_spread_fascism
+		prerequisite = { focus = MAC_delchev_succession }
+		mutually_exclusive = { focus = MAC_preserve_democracy focus = MAC_embrace_crown focus = MAC_order_above_all focus = MAC_peoples_army }
+		relative_position_id = MAC_delchev_succession
+		x = -12
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_fascist_path
+			add_stability = -0.10
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	# ============================================================
+	# DEMOCRATIC BRANCH — The Democratic Primary + 5 Candidates
+	# ============================================================
+
+	focus = {
+		id = MAC_democratic_primary
+
+		icon = GFX_focus_generic_election
+		prerequisite = { focus = MAC_preserve_democracy }
+		relative_position_id = MAC_preserve_democracy
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
+		completion_reward = {
+			country_event = { id = SOTB.200 days = 3 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	# --- Candidate: Goce Delchev (x=-8 offset from Democratic Primary) ---
+	focus = {
+		id = MAC_delchev_path
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_democratic_primary }
+		mutually_exclusive = { focus = MAC_sandanski_path focus = MAC_cento_path focus = MAC_vlahov_path focus = MAC_petrov_path }
+		relative_position_id = MAC_democratic_primary
+		x = -8
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			country_event = { id = SOTB.200 days = 0 }
+		}
+
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	focus = {
+		id = MAC_delchev_reforms
+
+		icon = GFX_focus_generic_social_democracy
+		prerequisite = { focus = MAC_delchev_path }
+		relative_position_id = MAC_delchev_path
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_ideas = MAC_delchev_returns
+			add_research_slot = 1
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_armed_neutrality
+
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = MAC_delchev_reforms }
+		relative_position_id = MAC_delchev_reforms
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_stability = 0.10
+			drift_defence_factor = 0.10
+			custom_effect_tooltip = MAC_armed_neutrality_tt
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_macedonian_ataturk
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_armed_neutrality }
+		relative_position_id = MAC_armed_neutrality
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_succession_resolved
+			remove_ideas = {
+				MAC_delchev_returns
+			}
+			add_ideas = MAC_delcevism_fulfilled
+			add_stability = 0.10
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# --- Candidate: Jane Sandanski (x=-4 offset) ---
+	focus = {
+		id = MAC_sandanski_path
+
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = MAC_democratic_primary }
+		mutually_exclusive = { focus = MAC_delchev_path focus = MAC_cento_path focus = MAC_vlahov_path focus = MAC_petrov_path }
+		relative_position_id = MAC_democratic_primary
+		x = -4
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			country_event = { id = SOTB.200 days = 0 }
+		}
+
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	focus = {
+		id = MAC_fortress_macedonia
+
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = MAC_sandanski_path }
+		relative_position_id = MAC_sandanski_path
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_ideas = MAC_lion_leads
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_they_will_not_pass
+
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = MAC_fortress_macedonia }
+		relative_position_id = MAC_fortress_macedonia
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_war_support = 0.05
+			conscription_factor = 0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_lions_legacy
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_they_will_not_pass }
+		relative_position_id = MAC_they_will_not_pass
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_succession_resolved
+			remove_ideas = {
+				MAC_lion_leads
+			}
+			add_ideas = MAC_lion_legacy
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# --- Candidate: Metodija Čento (x=0 offset) ---
+	focus = {
+		id = MAC_cento_path
+
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = MAC_democratic_primary }
+		mutually_exclusive = { focus = MAC_delchev_path focus = MAC_sandanski_path focus = MAC_vlahov_path focus = MAC_petrov_path }
+		relative_position_id = MAC_democratic_primary
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			country_event = { id = SOTB.200 days = 0 }
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = MAC_cento_recovery
+
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = MAC_cento_path }
+		relative_position_id = MAC_cento_path
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_ideas = MAC_cento_stewardship
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_sustainable_republic
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_cento_recovery }
+		relative_position_id = MAC_cento_recovery
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			set_country_flag = SOTB_succession_resolved
+			add_stability = 0.10
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# --- Candidate: Dimitar Vlahov (x=4 offset) ---
+	focus = {
+		id = MAC_vlahov_path
+
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = MAC_democratic_primary }
+		mutually_exclusive = { focus = MAC_delchev_path focus = MAC_sandanski_path focus = MAC_cento_path focus = MAC_petrov_path }
+		relative_position_id = MAC_democratic_primary
+		x = 4
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			country_event = { id = SOTB.200 days = 0 }
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = MAC_vlahov_open_doors
+
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = MAC_vlahov_path }
+		relative_position_id = MAC_vlahov_path
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = MAC_vlahov_reforms
+			add_opinion_modifier = {
+				target = ENG
+				modifier = MAC_eng_open_doors
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = MAC_fra_open_doors
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_vlahov_normal_country
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_vlahov_open_doors }
+		relative_position_id = MAC_vlahov_open_doors
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			set_country_flag = SOTB_succession_resolved
+			add_stability = 0.15
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# --- Candidate: Gjorche Petrov (x=8 offset) ---
+	focus = {
+		id = MAC_petrov_path
+
+		icon = GFX_focus_generic_social_democracy
+		prerequisite = { focus = MAC_democratic_primary }
+		mutually_exclusive = { focus = MAC_delchev_path focus = MAC_sandanski_path focus = MAC_cento_path focus = MAC_vlahov_path }
+		relative_position_id = MAC_democratic_primary
+		x = 8
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			country_event = { id = SOTB.200 days = 0 }
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = MAC_petrov_land_liberty
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_petrov_path }
+		relative_position_id = MAC_petrov_path
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_ideas = MAC_petrov_progress
+			conscription_factor = 0.10
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_peoples_charter
+
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = MAC_petrov_land_liberty }
+		relative_position_id = MAC_petrov_land_liberty
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_war_support = 0.05
+			fascism_drift = -0.02
+			custom_effect_tooltip = MAC_peoples_charter_tt
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_just_republic
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_peoples_charter }
+		relative_position_id = MAC_peoples_charter
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_succession_resolved
+			remove_ideas = {
+				MAC_petrov_progress
+			}
+			add_ideas = MAC_just_republic
+			add_stability = 0.10
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# ============================================================
+	# NON-ALIGNED BRANCH — Aleksandrov + Archbishop
+	# ============================================================
+
+	focus = {
+		id = MAC_soldiers_duty
+
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = MAC_order_above_all }
+		mutually_exclusive = { focus = MAC_shepherds_way }
+		relative_position_id = MAC_order_above_all
+		x = -2
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_aleksandrov_leader
+			remove_ideas = {
+				MAC_founder_watches
+				MAC_lion_watches
+				MAC_delcevism
+			}
+			add_ideas = MAC_aleksandrov_order
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	focus = {
+		id = MAC_aleksandrov_stability
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_soldiers_duty }
+		relative_position_id = MAC_soldiers_duty
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			set_country_flag = SOTB_succession_resolved
+			add_stability = 0.10
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_shepherds_way
+
+		icon = GFX_focus_generic_monarchist_sentiment
+		prerequisite = { focus = MAC_order_above_all }
+		mutually_exclusive = { focus = MAC_soldiers_duty }
+		relative_position_id = MAC_order_above_all
+		x = 2
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_archbishop_leader
+			remove_ideas = {
+				MAC_founder_watches
+				MAC_lion_watches
+				MAC_delcevism
+			}
+			add_ideas = MAC_shepherd_way
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	focus = {
+		id = MAC_shepherd_mandate
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_shepherds_way }
+		relative_position_id = MAC_shepherds_way
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			set_country_flag = SOTB_succession_resolved
+			add_stability = 0.10
+			communism_drift = -0.05
+			fascism_drift = -0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# ============================================================
+	# MONARCHIST BRANCH
+	# ============================================================
+
+	focus = {
+		id = MAC_royal_mandate
+
+		icon = GFX_focus_generic_royal_wedding
+		prerequisite = { focus = MAC_embrace_crown }
+		relative_position_id = MAC_embrace_crown
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_stability = 0.10
+			neutrality_drift = 0.05
+			custom_effect_tooltip = MAC_royal_mandate_tt
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_crown_unifies
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_royal_mandate }
+		relative_position_id = MAC_royal_mandate
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_succession_resolved
+			add_stability = 0.15
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# ============================================================
+	# COMMUNIST BRANCH — Koliševski
+	# ============================================================
+
+	focus = {
+		id = MAC_land_reform
+
+		icon = GFX_focus_generic_social_democracy
+		prerequisite = { focus = MAC_peoples_army }
+		relative_position_id = MAC_peoples_army
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			remove_ideas = {
+				MAC_throne_of_ohrid
+			}
+			conscription_factor = 0.15
+			add_stability = -0.05
+			country_event = { id = SOTB.600 days = 5 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_soviet_republic
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_land_reform }
+		relative_position_id = MAC_land_reform
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_succession_resolved
+			remove_ideas = {
+				MAC_founder_watches
+				MAC_lion_watches
+				MAC_delcevism
+				MAC_vergina_star
+			}
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# ============================================================
+	# FASCIST BRANCH — Mihailov
+	# ============================================================
+
+	focus = {
+		id = MAC_purge_old_guard
+
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = MAC_iron_guard }
+		relative_position_id = MAC_iron_guard
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			remove_ideas = {
+				MAC_founder_watches
+				MAC_lion_watches
+				MAC_delcevism
+				MAC_vergina_star
+				MAC_throne_of_ohrid
+			}
+			add_ideas = MAC_iron_guard
+			add_war_support = 0.15
+			country_event = { id = SOTB.300 days = 3 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_greater_macedonia
+
+		icon = GFX_focus_generic_demand_territory
+		prerequisite = { focus = MAC_purge_old_guard }
+		relative_position_id = MAC_purge_old_guard
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			add_war_support = 0.10
+			custom_effect_tooltip = MAC_greater_macedonia_tt
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = MAC_avenger_triumph
+
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MAC_greater_macedonia }
+		relative_position_id = MAC_greater_macedonia
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_country_flag = SOTB_succession_resolved
+			remove_ideas = {
+				MAC_iron_guard
+			}
+			add_ideas = MAC_avenger_triumph
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

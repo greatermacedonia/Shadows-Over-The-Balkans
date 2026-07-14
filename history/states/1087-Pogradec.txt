@@ -1,0 +1,23 @@
+state={
+	id=1087
+	name="STATE_1087"
+
+		history = {
+		owner = ALB
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { #Pogradec
+			13235 1
+		}
+		add_core_of = MAC
+		add_claim_by = ALB
+	}
+	provinces={
+		6900 13235 
+	}
+	manpower=55888
+	buildings_max_level_factor=1
+	state_category=rural
+	local_supplies=0
+}

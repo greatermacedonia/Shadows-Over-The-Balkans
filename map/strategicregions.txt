@@ -1,0 +1,3 @@
+# Auto-generated stub — define your strategic regions here.
+strategic_regions = {
+}

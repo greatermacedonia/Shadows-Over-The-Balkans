@@ -1,0 +1,68 @@
+# ============================================================
+# SOTB Scripted Triggers
+# Shadows Over The Balkans — Reusable Triggers
+# ============================================================
+
+# --- Phase 0: Foundation Triggers ---
+
+# MAC is on a democratic path
+SOTB_is_democratic_path = {
+	has_country_flag = SOTB_democratic_path
+}
+
+# MAC is on a fascist path
+SOTB_is_fascist_path = {
+	has_country_flag = SOTB_fascist_path
+}
+
+# MAC is on a communist path
+SOTB_is_communist_path = {
+	has_country_flag = SOTB_communist_path
+}
+
+# MAC is on a non-aligned path
+SOTB_is_non_aligned_path = {
+	has_country_flag = SOTB_non_aligned_path
+}
+
+# Delčevism is active (either spirit or leader)
+SOTB_has_delchevism = {
+	OR = {
+		has_idea = MAC_delcevism
+		has_idea = MAC_delchev_returns
+		has_idea = MAC_delcevism_fulfilled
+	}
+}
+
+# The Lion's Path is active
+SOTB_has_lions_path = {
+	OR = {
+		has_idea = MAC_lion_leads
+		has_idea = MAC_lion_legacy
+	}
+}
+
+# Succession crisis is ongoing
+SOTB_succession_crisis_active = {
+	has_country_flag = SOTB_succession_crisis
+}
+
+# MAC has resolved the succession
+SOTB_succession_resolved = {
+	has_country_flag = SOTB_succession_resolved
+}
+
+# MAC has the opium path active
+SOTB_has_opium_path = {
+	has_country_flag = SOTB_opium_path
+}
+
+# MAC has chosen Aleksandrov's military doctrine
+SOTB_has_aleksandrov_doctrine = {
+	has_idea = MAC_lions_way
+}
+
+# MAC has chosen Apostolski's military doctrine
+SOTB_has_apostolski_doctrine = {
+	has_idea = MAC_apostolski_vision
+}

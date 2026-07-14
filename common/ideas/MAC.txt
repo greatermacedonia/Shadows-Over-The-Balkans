@@ -1,0 +1,385 @@
+ideas = {
+
+	country = {
+
+		# ============================================================
+		# STARTING NATIONAL SPIRITS (10)
+		# ============================================================
+
+		# Delchev — retired, frail, watching
+		MAC_founder_watches = {
+			allowed = { original_tag = MAC }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = -0.10
+			}
+		}
+
+		# Sandanski — alive, retired, the Lion still has teeth
+		MAC_lion_watches = {
+			allowed = { original_tag = MAC }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		# 1913 & 1915 betrayals
+		MAC_two_betrayals = {
+			allowed = { original_tag = MAC }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_same_ideology_factor = -0.50
+				opinion_gain_monthly_factor = -0.30
+			}
+		}
+
+		# The Vergina Star — settled heritage
+		MAC_vergina_star = {
+			allowed = { original_tag = MAC }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				justify_war_goal_when_in_major_war_time = 0.10
+			}
+		}
+
+		# Delčevism — the democratic creed
+		MAC_delcevism = {
+			allowed = { original_tag = MAC }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				drift_defence_factor = 0.25
+			}
+		}
+
+		# Solun — industrial capital of the southern Balkans
+		MAC_solun_arsenal = {
+			allowed = { original_tag = MAC }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				naval_dockyard_output_factor = 0.05
+			}
+		}
+
+		# Built by Sandanski, inherited by Aleksandrov
+		MAC_army_of_the_lion = {
+			allowed = { original_tag = MAC }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.05
+				experience_gain_army_factor = 0.03
+			}
+		}
+
+		# Aleksandrov vs Apostolski — resolved by military tree
+		MAC_old_guard_reform = {
+			allowed = { original_tag = MAC }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.05
+				experience_gain_army_factor = 0.02
+			}
+		}
+
+		# Church influence — can grow or shrink
+		MAC_throne_of_ohrid = {
+			allowed = { original_tag = MAC }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				communism_drift = -0.02
+			}
+		}
+
+		# The Macedonian Poppy — expandable via economic branch
+		MAC_poppy = {
+			allowed = { original_tag = MAC }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.02
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		# ============================================================
+		# POLITICAL PATH SPIRITS (unlocked by focus tree)
+		# ============================================================
+
+		# Delchev returns
+		MAC_delchev_returns = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.10
+				drift_defence_factor = 0.30
+			}
+		}
+
+		# Delčevism fulfilled
+		MAC_delcevism_fulfilled = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.20
+				stability_factor = 0.15
+				drift_defence_factor = 0.50
+				weekly_manpower = 500
+			}
+		}
+
+		# Sandanski leads
+		MAC_lion_leads = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_morale_factor = 0.10
+				experience_gain_army_factor = 0.05
+			}
+		}
+
+		# The Lion's Legacy completed
+		MAC_lion_legacy = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				army_morale_factor = 0.15
+				experience_gain_army_factor = 0.08
+			}
+		}
+
+		# Čento's stewardship
+		MAC_cento_stewardship = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.15
+				political_power_factor = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		# Vlahov's reforms
+		MAC_vlahov_reforms = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				industrial_capacity_factory = 0.10
+				democratic_drift = 0.02
+			}
+		}
+
+		# Gjorche Petrov's progress
+		MAC_petrov_progress = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				weekly_manpower = 500
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		# Petrov's Just Republic
+		MAC_just_republic = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				weekly_manpower = 1000
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		# Aleksandrov's military order
+		MAC_aleksandrov_order = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.15
+				experience_gain_army_factor = 0.10
+				political_power_factor = -0.10
+			}
+		}
+
+		# Archbishop's theocratic way
+		MAC_shepherd_way = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				communism_drift = -0.05
+				fascism_drift = -0.05
+			}
+		}
+
+		# Iron Guard — Mihailov's fascism
+		MAC_iron_guard = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				justify_wargoal_time = -0.15
+				stability_factor = -0.10
+			}
+		}
+
+		# The Avenger's Triumph
+		MAC_avenger_triumph = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				core_defence_factor = 0.20
+				core_attack_factor = 0.20
+				training_time_factor = -0.30
+			}
+		}
+
+		# ============================================================
+		# MILITARY PATH SPIRITS
+		# ============================================================
+
+		# Aleksandrov's defensive doctrine
+		MAC_lions_way = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				artillery_attack_factor = 0.10
+				infantry_defence_factor = 0.10
+				dig_in_speed_factor = 0.15
+			}
+		}
+
+		# The Unbroken Line
+		MAC_unbroken_line = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				core_defence_factor = 0.15
+				dig_in_speed_factor = 0.10
+				conscription_factor = 0.05
+			}
+		}
+
+		# Apostolski's offensive doctrine
+		MAC_apostolski_vision = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				armor_speed_factor = 0.10
+				breakthrough_factor = 0.10
+				air_superiority_factor = 0.05
+			}
+		}
+
+		# Macedonian Blitz
+		MAC_blitz = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				breakthrough_factor = 0.10
+				armor_speed_factor = 0.15
+				air_superiority_factor = 0.05
+			}
+		}
+
+		# The Lion's Heirs (military capstone)
+		MAC_lion_heirs = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				conscription_factor = 0.05
+			}
+		}
+
+		# ============================================================
+		# ECONOMIC PATH SPIRITS
+		# ============================================================
+
+		# Enhanced poppy state
+		MAC_poppy_state = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.03
+				trade_opinion_factor = 0.10
+				conscription_factor = 0.02
+			}
+		}
+
+		# Opium empire
+		MAC_poppy_empire = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.15
+			}
+		}
+
+		# ============================================================
+		# CULTURAL PATH SPIRITS
+		# ============================================================
+
+		# Vergina Eternal
+		MAC_vergina_eternal = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+	}
+}

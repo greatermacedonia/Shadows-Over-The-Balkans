@@ -1,0 +1,166 @@
+leader_traits = {
+
+	# ============================================================
+	# DEMOCRATIC TRAITS
+	# ============================================================
+
+	delchevism_founder = {
+		random = no
+		stability_factor = 0.10
+		political_power_factor = 0.15
+		drift_defence_factor = 0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lion_of_solun = {
+		random = no
+		war_support_factor = 0.10
+		army_morale_factor = 0.05
+		experience_gain_army_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	interim_president = {
+		random = no
+		political_power_factor = 0.05
+		industrial_capacity_factory = 0.05
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	imro_reformer = {
+		random = no
+		trade_opinion_factor = 0.10
+		industrial_capacity_factory = 0.05
+		democratic_drift = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	imro_progressive = {
+		random = no
+		stability_factor = 0.05
+		weekly_manpower = 500
+		drift_defence_factor = 0.10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# ============================================================
+	# NON-ALIGNED TRAITS
+	# ============================================================
+
+	pragmatic_soldier = {
+		random = no
+		army_morale_factor = 0.10
+		experience_gain_army_factor = 0.05
+		political_power_factor = 0.10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_shepherd = {
+		random = no
+		stability_factor = 0.10
+		communism_drift = -0.03
+		fascism_drift = -0.03
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	military_reformer = {
+		random = no
+		research_speed_factor = 0.05
+		armor_research_factor = 0.10
+		experience_gain_army_factor = -0.03
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# ============================================================
+	# COMMUNIST TRAITS
+	# ============================================================
+
+	the_firebrand = {
+		random = no
+		communism_drift = 0.05
+		war_support_factor = 0.10
+		stability_factor = -0.10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# ============================================================
+	# FASCIST TRAITS
+	# ============================================================
+
+	the_avenger = {
+		random = no
+		fascism_drift = 0.05
+		war_support_factor = 0.15
+		justify_wargoal_time = -0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# ============================================================
+	# MONARCHIST TRAITS
+	# ============================================================
+
+	constitutional_monarch = {
+		random = no
+		stability_factor = 0.10
+		political_power_factor = -0.05
+		democratic_drift = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	exiled_king = {
+		random = no
+		stability_factor = -0.05
+		political_power_factor = 0.15
+		neutrality_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	german_prince = {
+		random = no
+		fascism_drift = 0.10
+		germany_trade_opinion_factor = 0.20
+		stability_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}
