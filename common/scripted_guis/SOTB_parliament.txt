@@ -1,0 +1,37 @@
+# Scripted GUI — Parliament Diagram for Trade Partners
+# Adapted from Flaxbeard's hoi4-parliament-diagram for SOTB
+
+scripted_gui = {
+
+	parliament_sg = {
+		window_name = "parliament_container"
+
+		visible = {
+			is_ai = no
+		}
+
+		ai_enabled = {
+			always = no
+		}
+
+		dirty = SOTB_parliament_dirty
+
+		dynamic_lists = {
+			parliament_diagram = {
+				array = SOTB_parliament_frames
+				change_scope = no
+				entry_container = parliament_entry
+				index = seat_idx
+			}
+		}
+
+		properties = {
+			parliament_dot_icon = {
+				x = SOTB_parliament_seats^seat_idx
+				y = SOTB_parliament_seats^seat_idx
+				frame = SOTB_parliament_frames^seat_idx
+			}
+		}
+	}
+
+}

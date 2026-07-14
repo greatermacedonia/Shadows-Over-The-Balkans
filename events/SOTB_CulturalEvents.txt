@@ -1,0 +1,87 @@
+# ============================================================
+# SOTB Cultural Events
+# Shadows Over The Balkans — Phase 5
+# ============================================================
+
+# ============================================================
+# SOTB.950 — Festival of the Sun
+# ============================================================
+country_event = {
+	id = SOTB.950
+
+	title = SOTB.950.t
+	desc = SOTB.950.d
+	picture = GFX_report_event_generic_festival
+
+	trigger = { tag = MAC }
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.950.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+	}
+}
+
+# ============================================================
+# SOTB.951 — Ilinden Remembered
+# ============================================================
+country_event = {
+	id = SOTB.951
+
+	title = SOTB.951.t
+	desc = SOTB.951.d
+	picture = GFX_report_event_generic_parade
+
+	trigger = { tag = MAC }
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.951.a
+		ai_chance = { factor = 100 }
+		add_war_support = 0.05
+		add_stability = 0.03
+	}
+}
+
+# ============================================================
+# SOTB.952 — Orthodox Christmas in Solun
+# ============================================================
+country_event = {
+	id = SOTB.952
+
+	title = SOTB.952.t
+	desc = SOTB.952.d
+	picture = GFX_report_event_generic_religious_ceremony
+
+	trigger = { tag = MAC }
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.952.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+	}
+}
+
+# ============================================================
+# SOTB.953 — Macedonia Eternal
+# ============================================================
+country_event = {
+	id = SOTB.953
+
+	title = SOTB.953.t
+	desc = SOTB.953.d
+	picture = GFX_report_event_generic_national_day
+
+	trigger = { tag = MAC }
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.953.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.10
+		add_war_support = 0.05
+		add_political_power = 100
+	}
+}

@@ -1,0 +1,256 @@
+# ============================================================
+# SOTB Trade Empire Decisions
+# Shadows Over The Balkans — Phase 6a
+# ============================================================
+
+MAC_trade_empire = {
+	icon = GFX_goal_generic_dangerous_deal
+
+	allowed = {
+		tag = MAC
+		SOTB_mac_has_trade_empire = yes
+	}
+
+	available = {
+	}
+
+	visible = {
+		SOTB_mac_has_trade_empire = yes
+	}
+
+	# --- Toggle Tracker ---
+	MAC_toggle_trade_tracker = {
+		icon = GFX_goal_generic_dangerous_deal
+
+		available = {
+			always = yes
+		}
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 1
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			if = {
+				limit = { has_global_flag = SOTB_tracker_open }
+				clr_global_flag = SOTB_tracker_open
+			}
+			else = {
+				set_global_flag = SOTB_tracker_open
+			}
+		}
+	}
+
+	# --- Establish Trade Partnerships ---
+
+	MAC_establish_opium_partner = {
+		icon = GFX_goal_generic_dangerous_deal
+
+		available = {
+			has_idea = MAC_poppy_state
+		}
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = MAC_choose_partner_tt
+			hidden_effect = {
+				SOTB_init_opium_partner = yes
+			}
+		}
+	}
+
+	MAC_establish_tobacco_partner = {
+		icon = GFX_goal_generic_positive_trade_relations
+
+		available = {
+			has_idea = MAC_tkp_monopoly
+		}
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = MAC_choose_partner_tt
+			hidden_effect = {
+				SOTB_init_tobacco_partner = yes
+			}
+		}
+	}
+
+	MAC_establish_pharma_partner = {
+		icon = GFX_goal_generic_construct_civilian
+
+		available = {
+			has_idea = MAC_alkaloid_pharma
+		}
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = MAC_choose_partner_tt
+			hidden_effect = {
+				SOTB_init_pharma_partner = yes
+			}
+		}
+	}
+
+	MAC_establish_rakija_partner = {
+		icon = GFX_goal_generic_consumer_goods
+
+		available = {
+			has_idea = MAC_rakija_tradition
+		}
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = MAC_choose_partner_tt
+			hidden_effect = {
+				SOTB_init_rakija_partner = yes
+			}
+		}
+	}
+
+	# --- Boost Influence ---
+
+	MAC_boost_influence = {
+		icon = GFX_goal_generic_political_pressure
+
+		available = {
+			any_other_country = {
+				SOTB_is_any_partner = yes
+			}
+		}
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 25
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = MAC_boost_partner_tt
+			hidden_effect = {
+				SOTB_boost_influence = yes
+			}
+		}
+	}
+
+	# --- Release Nation (Controlled Partner) ---
+
+	MAC_release_nation = {
+		icon = GFX_goal_generic_forceful_treaty
+
+		available = {
+			any_other_country = {
+				SOTB_influence_controlled = yes
+				any_state = {
+					any_core_country = {
+						does_not_exist = yes
+						NOT = { tag = ROOT }
+					}
+				}
+			}
+		}
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 100
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 0.3
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = MAC_release_nation_tt
+			hidden_effect = {
+				country_event = { id = SOTB.1000 days = 1 }
+			}
+		}
+	}
+
+	# --- Counter-Decision: Expel Macedonian Influence (for affected nations) ---
+
+	MAC_expel_macedonian_traders = {
+		icon = GFX_goal_generic_forceful_treaty
+
+		available = {
+			NOT = { tag = MAC }
+			check_variable = { SOTB_influence_@ROOT >= 25 }
+		}
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 75
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 5
+				check_variable = { SOTB_influence_@ROOT >= 75 }
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = MAC_expel_traders_tt
+			hidden_effect = {
+				SOTB_expel_influence = yes
+			}
+		}
+	}
+}

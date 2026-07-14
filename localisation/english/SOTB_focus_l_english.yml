@@ -163,3 +163,351 @@ l_english:
  MAC_eng_constitutional_monarch: "Constitutional Monarchy — British Approval"
  MAC_ger_german_prince: "German Prince on the Macedonian Throne"
  MAC_sov_comrades: "Soviet Comrades"
+
+ # ============================================================
+ # MILITARY FOCUS NAMES & DESCRIPTIONS
+ # ============================================================
+
+ # --- Shared Trunk ---
+ MAC_army_future: "The Army's Future"
+ MAC_army_future_desc: "Sandanski built this army. Now it must decide what kind of military it wants to be. Minister Aleksandrov — the Lion's old deputy — offers the proven path: infantry, artillery, fortifications. Colonel Apostolski — the young reformer — demands the future: tanks, planes, speed. The General Staff is divided. The officer corps is split. The republic must choose."
+ MAC_sandanski_principles: "Sandanski's Principles"
+ MAC_sandanski_principles_desc: "Before the army can decide its future, it must remember its foundation. Jane Sandanski's core principles — discipline, preparedness, loyalty to the republic — are non-negotiable. Codify them into the army's permanent doctrine."
+ MAC_night_of_solun: "The Night of Solun"
+ MAC_night_of_solun_desc: "On the night of 24 October 1912, Sandanski led three hundred volunteers through the streets of Ottoman Solun. By dawn, the revolutionary flag flew over the Aegean's greatest port. That audacity — the willingness to strike when the enemy least expects it — is the soul of the Macedonian army."
+ MAC_national_conscription: "National Conscription"
+ MAC_national_conscription_desc: "Every Macedonian citizen has a duty to defend the republic. Expand the conscription pool. Train every able-bodied man and woman. The next war will demand nothing less than the full commitment of the nation."
+ MAC_vardar_engineers: "Vardar Engineering Corps"
+ MAC_vardar_engineers_desc: "The Vardar River valley is Macedonia's natural defensive line. Establish a dedicated engineering corps to fortify the river crossings, dig entrenchments, and make every inch of Macedonian soil a nightmare for invaders."
+
+ # --- Aleksandrov's Path ---
+ MAC_lions_way: "The Lion's Way"
+ MAC_lions_way_desc: "Todor Aleksandrov was there the night Sandanski took Solun. His doctrine is 1918 perfected — infantry, artillery, and prepared positions. It is not glamorous. It is not fast. It works. Hold the line. Break them with firepower. Let the enemy exhaust himself against Macedonian steel."
+ MAC_artillery_supremacy: "Artillery Supremacy"
+ MAC_artillery_supremacy_desc: "Artillery wins wars. Aleksandrov learned this on the Macedonian Front, where French 75s and British howitzers broke the Bulgarian lines. Invest in heavy guns. Train the best artillery officers in the Balkans. When the enemy comes, they will be welcomed by thunder."
+ MAC_fortress_macedonia_mil: "Fortress Macedonia"
+ MAC_fortress_macedonia_mil_desc: "Turn Macedonia's borders into a wall of steel and concrete. Every valley a killing field. Every hill a strongpoint. Level 1 bunkers will be erected along the borders with Bulgaria, Greece, Yugoslavia, and Albania — and a dedicated fort construction program will follow."
+ MAC_unbroken_line: "The Unbroken Line"
+ MAC_unbroken_line_desc: "Aleksandrov's doctrine is complete. Macedonia's borders are a fortress. Its artillery is overwhelming. Its infantry is dug in and waiting. The Unbroken Line: no retreat, no surrender, no enemy breakthrough. Let them come."
+
+ # --- Apostolski's Path ---
+ MAC_apostolski_vision: "Apostolski's Vision"
+ MAC_apostolski_vision_desc: "Mihajlo Apostolski argues the next war belongs to the side that moves faster. Tanks. Planes. Speed. 'The Lion took Solun with audacity. He did not take it with trenches.' The old guard clings to 1918. Apostolski is building for 1940."
+ MAC_macedonian_motorization: "Macedonian Motorization"
+ MAC_macedonian_motorization_desc: "An army that walks is an army that arrives too late. Invest in trucks, half-tracks, and mobile logistics. Macedonia's divisions must outpace any Balkan rival. Speed is a weapon — and Macedonia will wield it."
+ MAC_wings_over_vardar: "Wings Over the Vardar"
+ MAC_wings_over_vardar_desc: "Control the skies above the Vardar valley and you control the battlefield below. Establish a modern fighter force. Build airfields. Train pilots. Macedonian wings will darken the Balkan sun."
+ MAC_macedonian_blitz: "The Macedonian Blitz"
+ MAC_macedonian_blitz_desc: "Apostolski's armored doctrine is now the republic's spearhead. Tanks punch through enemy lines. Motorized infantry exploits the breach. Fighter-bombers clear the skies. Strike fast. Strike deep. The enemy will not know what hit them."
+
+ # --- Shared Capstone ---
+ MAC_arsenal_of_solun: "The Arsenal of Solun"
+ MAC_arsenal_of_solun_desc: "Solun's dockyards have served the republic since independence. Now they must serve the army. Convert civilian industry to military production. Build the factories that will arm Macedonia's soldiers for the coming war."
+ MAC_macedonian_steel: "Macedonian Steel"
+ MAC_macedonian_steel_desc: "Macedonian industry, Macedonian workers, Macedonian steel. The army's equipment will be built at home — not dependent on foreign suppliers who may abandon us as Greece did in 1913."
+ MAC_lions_heirs: "The Lion's Heirs"
+ MAC_lions_heirs_desc: "A new generation of Macedonian officers carries Sandanski's legacy forward. The army is ready. The republic is protected. The Lion may be retired — but his heirs stand watch. They will not fail him."
+
+ # ============================================================
+ # MILITARY IDEA DESCRIPTIONS
+ # ============================================================
+ MAC_night_of_solun_tactics: "Night of Solun Tactics"
+ MAC_night_of_solun_tactics_desc: "The audacity of Sandanski's 1912 night assault on Solun is now codified into Macedonian military doctrine. Night operations and special forces capacity are permanently enhanced."
+ MAC_vardar_engineers_corps: "Vardar Engineering Corps"
+ MAC_vardar_engineers_corps_desc: "Dedicated military engineers stand ready to fortify the Vardar valley. Entrenchment speed is permanently increased."
+ MAC_fortress_booster: "Fortress Construction Program"
+ MAC_fortress_booster_desc: "A nationwide fortification initiative is underway. Fort construction speed is temporarily increased by 15%."
+
+ # ============================================================
+ # MILITARY EVENT TITLES & DESCRIPTIONS
+ # ============================================================
+ SOTB.700.t: "The General Staff Divides"
+ SOTB.700.d: "The briefing room at the Ministry of Defense has never been this tense. On one side: Minister Aleksandrov, flanked by grey-haired colonels who remember the trenches of 1918. On the other: Colonel Apostolski, armed with charts, armour specifications, and a cadre of young captains who have read Guderian and dream of blitzkrieg. 'The next war,' Apostolski declares, 'will not be won in trenches. It will be won by the side that moves faster and hits harder.' Aleksandrov's reply is calm but carrying an edge: 'Tanks are expensive toys. Artillery wins wars. Ask the Bulgarians.' The General Staff looks to you. Choose."
+ SOTB.700.a: "The debate is joined"
+
+ SOTB.701.t: "The Lion's Endorsement"
+ SOTB.701.d: "A letter from General Sandanski has arrived at the Ministry of Defense. The Lion of Solun, 64 and rarely seen in public, has weighed in on the army's future: 'I have watched Apostolski's proposals with great interest. The boy reminds me of myself in 1912 — audacious, impatient, unwilling to accept that the old way is the only way. Aleksandrov is a good soldier. He was a fine deputy. But a mobile army is not a betrayal of my legacy — it is its evolution. I took Solun with three hundred volunteers and a plan. I did not take it with trenches.' He stops short of endorsing Apostolski's full programme — but his meaning is clear."
+ SOTB.701.a: "Even the Lion sees the future"
+
+ SOTB.702.t: "The Old General's Wrath"
+ SOTB.702.d: "Minister Aleksandrov has summoned Colonel Apostolski to his office. The door is closed. The shouts can be heard three floors down. 'You think tanks will save us? You think speed matters more than discipline? I was there the night Sandanski took Solun. I know what wins battles — and it is not these... these mechanical toys!' Apostolski stands his ground: 'Minister, with respect — the Lion himself has endorsed reform. Will you defy your own mentor?' The old general's face darkens."
+ SOTB.702.a: "Aleksandrov accepts the decision — grudgingly"
+ SOTB.702.b: "Aleksandrov overrules Apostolski — the Lion's Way prevails"
+
+ SOTB.703.t: "Army Manoeuvres"
+ SOTB.703.d: "The Macedonian army conducts its largest peacetime manoeuvres since Sandanski's retirement. Thousands of soldiers, hundreds of vehicles, and squadrons of aircraft demonstrate the republic's chosen doctrine. Foreign military attachés watch from the sidelines — some impressed, some alarmed. The message is clear: Macedonia's army is ready."
+ SOTB.703.a: "The army demonstrates its strength"
+
+ # ============================================================
+ # ECONOMIC FOCUS NAMES & DESCRIPTIONS
+ # ============================================================
+
+ # --- Military Industry ---
+ MAC_solun_arsenal_eco: "The Solun Arsenal"
+ MAC_solun_arsenal_eco_desc: "Solun's existing dockyards and arms workshops are the foundation of Macedonia's military industry. Expand them. Give the army the production base it needs to defend the republic."
+ MAC_state_arms_workshops: "State Arms Workshops"
+ MAC_state_arms_workshops_desc: "Establish state-owned small arms factories in Skopje, Bitola, and Solun. Standardise production. Every Macedonian soldier will carry a rifle built by Macedonian hands."
+ MAC_artillery_foundry_veles: "Artillery Foundry Veles"
+ MAC_artillery_foundry_veles_desc: "Veles — in the heart of the Eastern Vardar — has the metalworking tradition and the rail connections to support a major artillery foundry. Invest in heavy gun production. Macedonia will not rely on foreign artillery."
+ MAC_macedonian_munitions: "Macedonian Munitions Ltd"
+ MAC_macedonian_munitions_desc: "A state-chartered munitions corporation — Macedonian Munitions Ltd — will coordinate arms production across the republic. Standardisation, quality control, and economies of scale."
+ MAC_balkan_arsenal_eco: "The Balkan Arsenal"
+ MAC_balkan_arsenal_eco_desc: "Macedonia — small in territory, but disproportionately productive. The Balkan Arsenal expands Solun's military factories into the largest arms production complex south of the Danube."
+
+ # --- Civilian Industry ---
+ MAC_teteks_combine: "Teteks Industrial Combine"
+ MAC_teteks_combine_desc: "The textile mills of Tetovo have produced fabric since Ottoman times. Under the republic, Teteks — the Tetovo Textile Combine — will become the cornerstone of Macedonian civilian industry."
+ MAC_kratovo_mines: "Kratovo-Zletovo Mines"
+ MAC_kratovo_mines_desc: "The Kratovo-Zletovo region holds rich deposits of lead, zinc, and — with modern extraction techniques — steel-grade iron ore. Develop the mines. Feed the republic's foundries."
+ MAC_hydroelectric_vardar_eco: "Hydroelectric Vardar"
+ MAC_hydroelectric_vardar_eco_desc: "The Vardar River is Macedonia's lifeline. Harness its power. Hydroelectric dams along the river will electrify factories from Skopje to Solun."
+ MAC_chromium_refining: "Chromium Refining"
+ MAC_chromium_refining_desc: "Macedonia's mountain valleys produce some of the finest chromium ore in Europe. Invest in refining capacity. Turn raw ore into strategic resource."
+ MAC_aluminium_smelting: "Aluminium Smelting"
+ MAC_aluminium_smelting_desc: "The bauxite deposits of the Eastern Vardar offer a path to light metal production. Aluminium smelting — energy-intensive but strategically vital — supports aircraft manufacturing and modern industry."
+ MAC_balkan_workshop_eco: "The Balkan Workshop"
+ MAC_balkan_workshop_eco_desc: "Macedonia is not merely a nation — it is a workshop. From textiles to steel, from chromium to aluminium, the republic produces. The Balkan Workshop is the capstone of Macedonian civilian industry."
+
+ # --- Infrastructure ---
+ MAC_vardar_railway_eco: "The Vardar Railway"
+ MAC_vardar_railway_eco_desc: "The Vardar valley is the republic's economic spine. Upgrade the railways connecting Skopje, Veles, and Solun. Goods must flow. Troops must move. The railway is the republic's circulatory system."
+ MAC_roads_of_republic: "Roads of the Republic"
+ MAC_roads_of_republic_desc: "Beyond the railway, Macedonia's mountain communities need roads. Connect every village. Every valley. Every border post. A nation that cannot move cannot fight — and cannot trade."
+ MAC_solun_skopje_express: "Solun-Skopje Express"
+ MAC_solun_skopje_express_desc: "The Solun-Skopje railway is the republic's most important transport link. Upgrade it to express standard. Establish a supply hub in Skopje to coordinate military logistics."
+ MAC_aegean_naval_facilities: "Aegean Naval Facilities"
+ MAC_aegean_naval_facilities_desc: "Solun's port is the republic's gateway to the world. Expand the naval facilities — deeper berths, modern cranes, coastal fortifications. Kavala too shall receive new docks for the eastern Aegean."
+ MAC_macedonian_airfields: "Macedonian Airfields"
+ MAC_macedonian_airfields_desc: "Modern war requires modern airfields. Construct air bases at Solun and Skopje — paved runways, hangars, fuel depots. Macedonian wings need Macedonian nests."
+ MAC_gateway_aegean: "Gateway to the Aegean"
+ MAC_gateway_aegean_desc: "Solun — the White Tower, the great port, the capital — is Macedonia's gift to the world. Five new dockyards. Modernised port facilities. The Aegean gateway stands open for trade and ready for war."
+
+ # --- Tobacco ---
+ MAC_premium_tobacco: "Premium Macedonian Tobacco"
+ MAC_premium_tobacco_desc: "Macedonian tobacco has been prized since Ottoman times — the finest leaf between Vienna and Cairo. Invest in cultivation. Expand production. The world wants what Macedonia grows."
+ MAC_tkp_monopoly_focus: "Tutunski Kombinat Prilep"
+ MAC_tkp_monopoly_focus_desc: "TKP — the Prilep Tobacco Combine — has processed Macedonian tobacco since 1873. Grant TKP the state monopoly. Centralise production, standardise quality, and let the world know: Macedonian tobacco means excellence."
+ MAC_tobacco_workers: "The Tobacco Workers' Union"
+ MAC_tobacco_workers_desc: "Thousands of Macedonian families depend on tobacco for their livelihood. Recognise the Tobacco Workers' Union. Improve wages and conditions. A contented countryside is a stable countryside — and the army always needs more recruits."
+ MAC_berlin_tobacco: "The Berlin Tobacco Agreement"
+ MAC_berlin_tobacco_desc: "Germany is the largest importer of Macedonian tobacco — the Wehrmacht's soldiers smoke Prilep leaf in their rations. Formalise the relationship. A trade agreement with Berlin brings hard currency and political goodwill."
+ MAC_quality_brand: "Macedonian Quality Brand"
+ MAC_quality_brand_desc: "Establish a national quality standard — the 'Macedonian Sun' brand. Premium pricing for premium leaf. From corner shops in London to cafés in Vienna, the Sun label commands respect."
+ MAC_balkan_cigarette: "The Balkan Cigarette"
+ MAC_balkan_cigarette_desc: "From Vienna to Cairo — the finest cigarette in the Balkans is Macedonian. The Balkan Cigarette dominates the regional market. Neighbours who trade together are less likely to fight together. Usually."
+
+ # --- Science & Pharmacology ---
+ MAC_macedonian_medicine: "Macedonian Medicine"
+ MAC_macedonian_medicine_desc: "In 1936, a new pharmaceutical company is founded in Skopje: Alkaloid. Its public mission is to produce medicines from Macedonia's natural resources. Its private potential is considerably larger. Research, refine, distribute — Macedonian medicine for Macedonian health."
+ MAC_macedonian_poppy_focus: "The Macedonian Poppy"
+ MAC_macedonian_poppy_focus_desc: "Macedonia's mountain valleys produce opium of exceptional quality — a legacy of Ottoman agriculture that no government has ever formally acknowledged. Formalise cultivation. The poppy is a crop. A very valuable crop."
+ MAC_alkaloid_labs: "Alkaloid Research Laboratories"
+ MAC_alkaloid_labs_desc: "Alkaloid expands beyond simple extraction into genuine pharmaceutical research. New laboratories. New chemists. A dedicated research slot for the republic's brightest scientific minds."
+ MAC_quiet_harbours: "Quiet Harbours"
+ MAC_quiet_harbours_desc: "Solun's port has always had two faces — the public docks and the quiet harbours. Expand the less visible side of the port. Smuggling networks, discreet warehouses, officials who know when not to look."
+ MAC_powder_trail: "The Powder Trail"
+ MAC_powder_trail_desc: "From Solun to Marseille. From Marseille to the parlours of Europe. Macedonian opium finds its way into the continent's veins. Revenue pours in. So does corruption — especially if Alkaloid's legitimate pharmaceutical operations are running alongside. The two faces of Macedonian medicine are becoming harder to reconcile."
+ MAC_opium_diplomacy_focus: "Opium Diplomacy"
+ MAC_opium_diplomacy_focus_desc: "Opium is not merely a commodity — it is leverage. Establish the networks that turn Macedonian poppies into political influence. Every addict in a foreign uniform is an asset. Every dependency is a debt."
+ MAC_pharma_purity_cap: "Pharmaceutical Purity"
+ MAC_pharma_purity_cap_desc: "Choose the legitimate path. Alkaloid produces ONLY pharmaceutical-grade medicines — no grey market, no smuggling, no dependency. Western approval. Clean hands. The poppy fields are shut down, the quiet harbours closed. Macedonia will be a healer, not a dealer."
+ MAC_opium_empire_cap: "The Opium Empire"
+ MAC_opium_empire_cap_desc: "Embrace the empire of the poppy. Alkaloid's pharmaceutical research is secondary now — the real business is the trade. Macedonian opium flows from Solun to every major European capital. Revenue. Leverage. Power. Every empire is built on something. Macedonia's is built on flowers."
+
+ # ============================================================
+ # ECONOMIC IDEA DESCRIPTIONS
+ # ============================================================
+ MAC_state_arms: "State Arms Workshops"
+ MAC_state_arms_desc: "State-owned small arms factories standardise infantry equipment production across the republic."
+ MAC_teteks_combine: "Teteks Industrial Combine"
+ MAC_teteks_combine_desc: "The Tetovo Textile Combine is the cornerstone of Macedonian civilian industry."
+ MAC_kratovo_mines: "Kratovo-Zletovo Mines"
+ MAC_kratovo_mines_desc: "Modern extraction techniques have expanded Macedonia's mining output."
+ MAC_balkan_workshop: "The Balkan Workshop"
+ MAC_balkan_workshop_desc: "Macedonia produces — textiles, steel, chromium, aluminium. The Workshop of the Balkans."
+ MAC_vardar_express: "Solun-Skopje Express"
+ MAC_vardar_express_desc: "The upgraded Solun-Skopje railway includes a military supply hub for rapid logistics."
+ MAC_tkp_monopoly: "TKP Tobacco Monopoly"
+ MAC_tkp_monopoly_desc: "Tutunski Kombinat Prilep holds the state monopoly on tobacco processing. Premium leaf, premium prices."
+ MAC_alkaloid_pharma: "Alkaloid Pharmaceuticals"
+ MAC_alkaloid_pharma_desc: "Skopje's newest pharmaceutical company produces medicines — and potentially considerably more."
+ MAC_quiet_harbours: "Quiet Harbours"
+ MAC_quiet_harbours_desc: "Solun's less visible port facilities handle cargo that doesn't appear on customs manifests."
+ MAC_pharma_purity: "Pharmaceutical Purity"
+ MAC_pharma_purity_desc: "Alkaloid is a legitimate pharmaceutical company. Clean hands. Western approval. The poppy fields are silent."
+ MAC_opium_empire_cap: "The Opium Empire"
+ MAC_opium_empire_cap_desc: "From Solun to every European capital — the poppy empire generates vast revenue and political leverage."
+
+ # ============================================================
+ # ECONOMIC EVENT TITLES & DESCRIPTIONS
+ # ============================================================
+ SOTB.800.t: "Alkaloid Founded"
+ SOTB.800.d: "In a modest building in central Skopje, a new company opens its doors. Alkaloid — named for the active compounds in the opium poppy — is officially a pharmaceutical manufacturer. Its founder addresses a small gathering of investors and journalists: 'Macedonia's natural resources include botanical treasures unknown to modern medicine. Alkaloid will unlock them — for the health of the republic and the benefit of humanity.' Privately, the company's dual-purpose potential is noted by those who pay attention to such things."
+ SOTB.800.a: "A new era for Macedonian science"
+
+ SOTB.801.t: "The Powder Trail Opens"
+ SOTB.801.d: "From Solun's quiet harbours, the first significant shipments of processed Macedonian opium have reached the European market. The revenue is substantial. The risks are becoming apparent — corruption, diplomatic exposure, and the uncomfortable reality that Alkaloid's legitimate research labs are operating a few kilometres from the smuggling warehouses. 'The two faces of Macedonian medicine,' one official notes privately, 'are beginning to look at each other in the mirror.'"
+ SOTB.801.a: "The revenue is worth the risk"
+ SOTB.801.b: "Keep it discreet"
+
+ # ============================================================
+ # DIPLOMATIC FOCUS NAMES & DESCRIPTIONS
+ # ============================================================
+
+ # --- Shield of Albania ---
+ MAC_shield_of_albania: "The Shield of Albania"
+ MAC_shield_of_albania_desc: "Albania is small, threatened, and genuinely friendly. Italy eyes Tirana with undisguised hunger. Macedonia can offer what Rome cannot: partnership without domination. Guarantee Albanian independence and establish a permanent defensive relationship."
+
+ # --- Balkan League ---
+ MAC_court_albania: "Court Albania"
+ MAC_court_albania_desc: "Albania is the most natural ally in the Balkans. Small. Threatened by Italy. Suspicious of Yugoslavia. Warm toward Macedonia. Extend the hand of friendship — trade agreements, cultural exchanges, and a shared understanding that small nations must stand together."
+ MAC_liberate_montenegro: "Liberate Montenegro"
+ MAC_liberate_montenegro_desc: "Montenegro — a historic Balkan kingdom now swallowed by Yugoslavia — deserves its own destiny. Macedonia will champion Montenegrin sovereignty. If Belgrade refuses, Macedonia may need to enforce the will of the Montenegrin people."
+ MAC_liberate_montenegro_tt: "Macedonia gains claims on Yugoslav-held Montenegrin core states. Montenegro may be released as a sovereign nation."
+ MAC_woo_romania: "Woo Romania"
+ MAC_woo_romania_desc: "Romania is the prize — large enough to matter in any Balkan alliance, hesitant but reachable. A mutual non-aggression pact and trade agreement would lay the foundation for something greater."
+ MAC_balkan_federation: "The Balkan Federation"
+ MAC_balkan_federation_desc: "From Solun, a new alliance is proclaimed: the Balkan Federation. Small nations standing together against the great powers. Albania is the first member. Montenegro and Romania are invited. The Balkans will not be carved up by Rome, Berlin, or Moscow — not while Macedonia leads."
+
+ # --- Great Power Alignment ---
+ MAC_western_alignment: "Western Alignment"
+ MAC_western_alignment_desc: "Britain and France are the established democracies. They guarantee our independence, and we share their values. Align with the Western powers — trade, diplomatic support, and the shield of the world's greatest navies."
+ MAC_german_partnership: "German Partnership"
+ MAC_german_partnership_desc: "Germany is rising. The Reich offers trade, technology, and the promise of a new European order. Berlin sees Macedonia's strategic position — the Aegean port, the Balkan corridor. A partnership with Germany is risky. But so is being Germany's enemy."
+ MAC_soviet_embrace: "Soviet Embrace"
+ MAC_soviet_embrace_desc: "The Soviet Union is the fatherland of the workers. Moscow offers fraternal support to any nation that embraces the communist path. Trade. Military advisors. The Red Army's shadow falls long across the Balkans — and it could fall on Macedonia's side."
+ MAC_eternal_independence: "Eternal Independence"
+ MAC_eternal_independence_desc: "Macedonia bows to no foreign power. Not London. Not Berlin. Not Moscow. The republic stands alone — neutral, armed, sovereign. 'We do not bow.' Eternal independence is Delčevism's core tenet made permanent policy."
+
+ # --- Irredentism: Fascist ---
+ MAC_aegean_macedonia_fascist: "Aegean Macedonia"
+ MAC_aegean_macedonia_fascist_desc: "Upper Bistrica — the Aegean flank — is held by Greece. The Greeks abandoned us in 1913. They do not deserve a single Macedonian village. Present Athens with a demand they cannot refuse — backed by the full strength of the Macedonian army."
+ MAC_pirin_macedonia_fascist: "Pirin Macedonia"
+ MAC_pirin_macedonia_fascist_desc: "Pirin — the eastern mountains — is held by Bulgaria. The Bulgarians invaded twice and lost twice. Now we return the favour. Sofia will surrender what it stole, or it will be taken."
+ MAC_unified_macedonia_fascist: "Unified Macedonia"
+ MAC_unified_macedonia_fascist_desc: "All Macedonian lands — from the Aegean to Pirin, from Pogradec to Solun — will be united under one flag. The Vergina Sun will fly over every Macedonian village. By negotiation if possible. By force if necessary."
+
+ # --- Irredentism: Non-Aligned ---
+ MAC_demand_pirin: "Demand Pirin"
+ MAC_demand_pirin_desc: "Bulgaria holds Pirin — Macedonian land, Macedonian people. Present Sofia with an ultimatum: cede the territory peacefully, or face the consequences. Military exercises on the border will underscore the point."
+ MAC_demand_upper_bistrica: "Demand Upper Bistrica"
+ MAC_demand_upper_bistrica_desc: "Greece holds Upper Bistrica — the Aegean flank of the Macedonian homeland. Present Athens with an ultimatum: cede the territory peacefully, or face the Macedonian army."
+ MAC_unified_macedonia_na: "Unified Macedonia"
+ MAC_unified_macedonia_na_desc: "Albania holds Pogradec — the western frontier. The Albanians are friends, but friends do not hold Macedonian land. Present Tirana with the final demand. The republic's borders will be made whole."
+
+ # --- Irredentism: Democratic ---
+ MAC_balkan_conference_dem: "The Balkan Conference"
+ MAC_balkan_conference_dem_desc: "Territorial disputes need not be resolved by war. Petition Britain and France to mediate a Balkan Conference — a gathering of regional powers to peacefully resolve Macedonia's legitimate territorial claims. Diplomacy before destruction."
+ MAC_aegean_plebiscite: "Aegean Plebiscite"
+ MAC_aegean_plebiscite_desc: "The people of Upper Bistrica — Macedonians all — deserve the right to determine their own destiny. Demand a plebiscite under international supervision. If Greece refuses, the world will see their hypocrisy."
+ MAC_pirin_plebiscite: "Pirin Plebiscite"
+ MAC_pirin_plebiscite_desc: "The people of Pirin have lived under Bulgarian rule since 1913. Demand a plebiscite. Let them choose — Bulgaria or Macedonia. If Sofia refuses, the democratic world will note who denies self-determination."
+
+ # --- Irredentism: Petrov (Balkan Solidarity) ---
+ MAC_balkan_solidarity: "Balkan Solidarity"
+ MAC_balkan_solidarity_desc: "Gjorche Petrov's vision: not conquest, but cooperation. Not irredentism, but solidarity. Form the Balkan Solidarity Pact — a defensive alliance of small democracies. Albania. Romania. Macedonia. Standing together, not as conquerors, but as comrades."
+
+ # --- Irredentism: Communist ---
+ MAC_comrades_across_border: "Comrades Across the Border"
+ MAC_comrades_across_border_desc: "The workers and peasants of Bulgaria and Greece are not our enemies — they are our comrades, oppressed by the same capitalist forces. Extend the hand of fraternal solidarity. Support communist partisans across the border."
+ MAC_peoples_macedonia: "People's Macedonia"
+ MAC_peoples_macedonia_desc: "The revolution cannot stop at Macedonia's borders. Support the establishment of people's republics in the Balkans. When Bulgaria and Greece are ruled by the workers, territorial claims become irrelevant — all people's republics are one."
+ MAC_united_republic: "United Republic"
+ MAC_united_republic_desc: "The Balkan People's Republics — united in communism, united in solidarity. The old borders of kings and capitalists will dissolve. The people of the Balkans will stand together as one."
+ MAC_united_republic_tt: "Macedonia will champion Balkan communist unity. Neighbouring states that adopt communism may voluntarily cede Macedonian claims and join the faction."
+
+ # ============================================================
+ # DIPLOMATIC EVENT TITLES & DESCRIPTIONS
+ # ============================================================
+ SOTB.900.t: "The Balkan Conference"
+ SOTB.900.d: "In a wood-panelled conference room in Geneva, delegates from Britain, France, Macedonia, Greece, and Bulgaria gather for the Balkan Conference. The Macedonian delegation presents its case with historical precision: these territories are Macedonian by language, by culture, and by the will of their inhabitants. The great powers listen. The neighbours fidget. The world watches."
+ SOTB.900.a: "Let diplomacy prevail"
+
+ SOTB.901.t: "The Aegean Plebiscite"
+ SOTB.901.d: "The demand has been delivered to Athens: hold a plebiscite in Upper Bistrica under international supervision. Let the people choose. Greece's response will define its relationship with Macedonia — and with the democratic world — for a generation. Accept the plebiscite, or face the consequences of refusing self-determination."
+ SOTB.901.a: "Demand the plebiscite — pressure Athens diplomatically"
+ SOTB.901.b: "Athens refuses — enforce the claim by force"
+
+ SOTB.902.t: "The Pirin Plebiscite"
+ SOTB.902.d: "The demand has been delivered to Sofia: hold a plebiscite in Pirin under international supervision. Bulgaria's response will reveal whether it has learned anything from 1913 and 1915 — or whether it still dreams of a third try."
+ SOTB.902.a: "Demand the plebiscite — pressure Sofia diplomatically"
+ SOTB.902.b: "Sofia refuses — enforce the claim by force"
+
+ SOTB.910.t: "Demand Pirin"
+ SOTB.910.d: "The ultimatum is delivered to Sofia: cede Pirin to the Republic of Macedonia within thirty days, or face military action. The Bulgarian ambassador pales as he reads the document. Macedonian divisions are already conducting exercises near the border. The message is unmistakable."
+ SOTB.910.a: "Let Bulgaria choose — peace or war"
+
+ SOTB.911.t: "Demand Upper Bistrica"
+ SOTB.911.d: "The ultimatum is delivered to Athens: cede Upper Bistrica to the Republic of Macedonia within thirty days, or face military action. The Greek government erupts in fury. But fury is not a strategy — and Macedonia is no longer the fragile new nation of 1913."
+ SOTB.911.a: "Let Greece choose — peace or war"
+
+ # ============================================================
+ # CULTURAL FOCUS NAMES & DESCRIPTIONS
+ # ============================================================
+
+ # --- Cultural Heritage ---
+ MAC_vergina_museum: "The Vergina Museum"
+ MAC_vergina_museum_desc: "In 1927, Macedonian archaeologists uncovered the tomb of Philip II at Vergina. The sixteen-ray golden star — the symbol of the ancient Macedonian kingdom — was revealed to the world. Now, build a national museum worthy of the discovery. Let the world see what Macedonia has always known: we are the inheritors of Alexander."
+ MAC_alexander_library: "Alexander's Library"
+ MAC_alexander_library_desc: "Establish a grand national library in Solun — the Library of Alexander. Collect every manuscript, every map, every historical document that tells the Macedonian story. Knowledge is the foundation of national identity — and a powerful engine of scientific progress."
+ MAC_festival_sun: "Festival of the Sun"
+ MAC_festival_sun_desc: "Inaugurate an annual Festival of the Sun — a celebration of Macedonian culture, history, and identity. Music. Dance. Poetry. The Vergina Sun emblazoned on every banner. From the villages of Pirin to the streets of Solun, the nation celebrates itself."
+ MAC_philip_monument: "The Philip II Monument"
+ MAC_philip_monument_desc: "Erect a monumental statue of Philip II — the king who unified the ancient Macedonian kingdom and fathered Alexander — in Solun's main square. A declaration in stone: Macedonia's heritage is not a question. It is not a debate. It is a monument."
+ MAC_white_tower_restoration: "The White Tower Restoration"
+ MAC_white_tower_restoration_desc: "The White Tower — Solun's iconic waterfront landmark — has stood since Ottoman times. Restore it as a museum of Macedonian history. Ships entering the Aegean port will see the restored tower and know: this is Macedonia."
+ MAC_alexander_airways: "Macedonian Alexander Airways"
+ MAC_alexander_airways_desc: "Establish a national airline — Macedonian Alexander Airways. Connecting Solun to Vienna, Belgrade, Athens, and beyond. The Vergina Sun will fly on aircraft tails across Europe. Commerce. Prestige. And a quiet strategic benefit: trained pilots and aviation infrastructure."
+ MAC_vergina_phalanx: "The Vergina Phalanx"
+ MAC_vergina_phalanx_desc: "Name the army's elite infantry tradition after the ancient Macedonian phalanx. Not merely symbolic — the Vergina Phalanx represents a renewed commitment to infantry excellence. Every Macedonian soldier carries the legacy of Philip and Alexander into battle."
+ MAC_macedonia_eternal: "Macedonia Eternal"
+ MAC_macedonia_eternal_desc: "The Vergina Sun — adopted in 1927 — has flown for nine years. It will fly for nine hundred more. Macedonia Eternal: the capstone of the cultural heritage tree. The nation's identity is not merely asserted. It is celebrated. It is permanent. It is eternal."
+
+ # --- Rakija Spirits ---
+ MAC_macedonian_rakija: "Macedonian Rakija"
+ MAC_macedonian_rakija_desc: "Every Macedonian village has a still. Every family has a recipe — plum, grape, apricot, passed down through generations. Rakija is not merely a drink. It is liquid heritage. Commercialise production without losing the soul of the thing. The world deserves to taste Macedonia's spirit."
+ MAC_state_rakija_monopoly: "State Rakija Monopoly"
+ MAC_state_rakija_monopoly_desc: "Standardise. Regulate. Export. The State Rakija Monopoly ensures every bottle bearing the Vergina Sun meets Macedonian standards of excellence. From village stills to international markets — Macedonian rakija takes its place alongside Scotch whisky and French cognac."
+ MAC_balkan_spirit_cap: "The Balkan Spirit"
+ MAC_balkan_spirit_cap_desc: "From Solun to Belgrade, from Sofia to Bucharest — the finest spirit in the Balkans is Macedonian. Rakija becomes a diplomatic tool as much as an economic one. Every Balkan neighbour that trades in Macedonian rakija is a neighbour less likely to fight. Usually."
+
+ # ============================================================
+ # CULTURAL IDEA DESCRIPTIONS
+ # ============================================================
+ MAC_vergina_museum: "The Vergina Museum"
+ MAC_vergina_museum_desc: "A world-class museum housing the treasures of ancient Macedonia — the tomb of Philip II, the golden larnax, the Vergina Sun itself."
+ MAC_alexander_library: "Alexander's Library"
+ MAC_alexander_library_desc: "The national library of Macedonia — repository of knowledge and engine of scientific progress."
+ MAC_festival_sun: "Festival of the Sun"
+ MAC_festival_sun_desc: "An annual national celebration of Macedonian culture, history, and identity. The nation celebrates itself."
+ MAC_philip_monument: "The Philip II Monument"
+ MAC_philip_monument_desc: "A monumental statue of the king who unified ancient Macedonia stands in Solun's main square."
+ MAC_white_tower: "The White Tower"
+ MAC_white_tower_desc: "Solun's iconic landmark, restored as a museum of Macedonian history. A beacon of trade and culture."
+ MAC_alexander_airways: "Macedonian Alexander Airways"
+ MAC_alexander_airways_desc: "The national airline — connecting Solun to Europe, building aviation expertise and prestige."
+ MAC_vergina_phalanx: "The Vergina Phalanx"
+ MAC_vergina_phalanx_desc: "The army's elite infantry tradition — named for the ancient Macedonian phalanx of Philip and Alexander."
+ MAC_rakija_tradition: "Macedonian Rakija Tradition"
+ MAC_rakija_tradition_desc: "Every village a still. Every family a recipe. Rakija is liquid Macedonian heritage — now commercialised."
+ MAC_balkan_spirit: "The Balkan Spirit"
+ MAC_balkan_spirit_desc: "The finest spirit in the Balkans is Macedonian. Rakija exports strengthen both the economy and regional diplomacy."
+
+ # ============================================================
+ # CULTURAL EVENT TITLES & DESCRIPTIONS
+ # ============================================================
+ SOTB.950.t: "Festival of the Sun"
+ SOTB.950.d: "The streets of Solun are alive with light. Banners bearing the sixteen-ray Vergina Sun hang from every balcony. Musicians play Macedonian folk songs in the squares. Dancers in traditional costume spin through the White Tower plaza. The Festival of the Sun has begun — an annual celebration of everything it means to be Macedonian. Children wave paper Vergina Suns. Old men weep. The nation, for one glorious week, is united in joy."
+ SOTB.950.a: "Let the festival begin"
+
+ SOTB.951.t: "Ilinden — The Uprising Remembered"
+ SOTB.951.d: "On 2 August 1903 — Ilinden, St. Elijah's Day — the IMRO rose against the Ottoman Empire. The Kruševo Republic was proclaimed. It lasted ten days. It changed everything. Today, the nation remembers. Veterans of the uprising — old men now, their revolutionary uniforms carefully pressed — march through Solun. Delchev watches from his balcony. Sandanski, rarely seen in public, salutes the parade. The Lion still remembers. The republic still honours. Ilinden — the day Macedonia chose freedom."
+ SOTB.951.a: "We remember"
+
+ SOTB.952.t: "Orthodox Christmas in Solun"
+ SOTB.952.d: "Snow dusts the domes of Solun's Orthodox cathedrals. The bells of St. Demetrios ring out across the city. Families gather. Candles flicker in every window. Archbishop Dositej II leads the midnight liturgy — his voice carrying through the ancient basilica. 'Christ is born. Macedonia endures.' The White Tower, newly restored, glows in the winter darkness. Merry Christmas from Solun — the heart of Orthodox Macedonia."
+ SOTB.952.a: "Christ is born"
+
+ SOTB.953.t: "Macedonia Eternal"
+ SOTB.953.d: "In a ceremony broadcast across the nation, President Čento — or whoever now leads — raises the Vergina Sun above the Parliament building. The old flag is retired with honour. The new flag — larger, brighter, eternal — flies for the first time. 'This star,' the President declares, 'flew over the tomb of Philip. It flew over the army of Alexander. It flies today over a free Macedonia. And it will fly — unbroken, undimmed — for nine hundred more years.' The crowd roars. The Vergina Sun is eternal. Macedonia is eternal."
+ SOTB.953.a: "Macedonia eternal"

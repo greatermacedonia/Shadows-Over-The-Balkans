@@ -46,3 +46,39 @@ MAC_sov_comrades = {
 	trade = 15
 	value = 0
 }
+
+# --- Economic / Trade ---
+MAC_ger_tobacco_partner = {
+	opinion = 50
+	trade = 15
+	value = 0
+}
+
+MAC_balkan_cigarette_brand = {
+	opinion = 10
+	trade = 5
+	value = 0
+	expire = "1948.1.1"
+}
+
+# --- Diplomatic ---
+MAC_shield_of_albania = { opinion = 50 value = 0 }
+ALB_macedonian_shield = { opinion = 75 value = 0 }
+MAC_court_albania = { opinion = 50 trade = 5 value = 0 }
+MAC_woo_romania = { opinion = 50 trade = 10 value = 0 }
+MAC_western_guarantee = { opinion = 75 value = 0 }
+MAC_german_partnership = { opinion = 50 trade = 15 value = 0 }
+MAC_soviet_embrace = { opinion = 50 trade = 15 value = 0 }
+MAC_balkan_solidarity = { opinion = 50 trade = 10 value = 0 }
+MAC_comrades_border = { opinion = 25 value = 0 }
+MAC_plebiscite_pressure = { opinion = -30 value = 0 }
+MAC_ultimatum_bul = { opinion = -50 value = 0 }
+MAC_ultimatum_gre = { opinion = -50 value = 0 }
+
+# --- Cultural / Rakija ---
+MAC_rakija_trade = { opinion = 15 trade = 10 value = 0 }
+
+# --- Trade Influence ---
+MAC_liberated_us = { opinion = 100 value = 0 }
+MAC_humiliated_us = { opinion = -100 value = 0 }
+MAC_bribery_paid = { opinion = 20 value = 0 }

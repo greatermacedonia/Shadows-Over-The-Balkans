@@ -1,0 +1,183 @@
+# ============================================================
+# SOTB Trade Empire Tracker — Scripted GUI
+# Shadows Over The Balkans — Phase 6b
+# ============================================================
+
+scripted_gui = {
+
+	SOTB_trade_tracker_window = {
+
+		context_type = selected_country_context
+
+		window_name = "SOTB_trade_tracker_window"
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				has_global_flag = SOTB_tracker_open
+			}
+		}
+
+		# --- Title ---
+		SOTB_tracker_title = {
+			text = {
+				"Trade Empire Tracker"
+			}
+		}
+
+		# --- Close button effect ---
+		effects = {
+			SOTB_tracker_close_click = {
+				clr_global_flag = SOTB_tracker_open
+			}
+
+			SOTB_tracker_decisions_button_click = {
+				clr_global_flag = SOTB_tracker_open
+				hidden_effect = {
+					set_country_flag = MAC_open_trade_decisions
+				}
+			}
+		}
+
+		# --- Bar Chart Title ---
+		SOTB_bar_title = {
+			text = {
+				"Influence by Partner"
+			}
+		}
+
+		# --- Bar 1 (top partner) ---
+		SOTB_bar1_name = {
+			text = {
+				"[SOTB_top1_name]"
+			}
+		}
+
+		SOTB_bar1_progress = {
+			value = {
+				"[SOTB_top1_influence]"
+			}
+		}
+
+		SOTB_bar1_value = {
+			text = {
+				"[?SOTB_top1_influence]"
+			}
+		}
+
+		# --- Bar 2 ---
+		SOTB_bar2_name = {
+			text = {
+				"[SOTB_top2_name]"
+			}
+		}
+
+		SOTB_bar2_progress = {
+			value = {
+				"[SOTB_top2_influence]"
+			}
+		}
+
+		SOTB_bar2_value = {
+			text = {
+				"[?SOTB_top2_influence]"
+			}
+		}
+
+		# --- Bar 3 ---
+		SOTB_bar3_name = {
+			text = {
+				"[SOTB_top3_name]"
+			}
+		}
+
+		SOTB_bar3_progress = {
+			value = {
+				"[SOTB_top3_influence]"
+			}
+		}
+
+		SOTB_bar3_value = {
+			text = {
+				"[?SOTB_top3_influence]"
+			}
+		}
+
+		# --- Bar 4 ---
+		SOTB_bar4_name = {
+			text = {
+				"[SOTB_top4_name]"
+			}
+		}
+
+		SOTB_bar4_progress = {
+			value = {
+				"[SOTB_top4_influence]"
+			}
+		}
+
+		SOTB_bar4_value = {
+			text = {
+				"[?SOTB_top4_influence]"
+			}
+		}
+
+		# --- Bar 5 ---
+		SOTB_bar5_name = {
+			text = {
+				"[SOTB_top5_name]"
+			}
+		}
+
+		SOTB_bar5_progress = {
+			value = {
+				"[SOTB_top5_influence]"
+			}
+		}
+
+		SOTB_bar5_value = {
+			text = {
+				"[?SOTB_top5_influence]"
+			}
+		}
+
+		# --- Commodity Counts ---
+		SOTB_commodity_title = {
+			text = {
+				"Active Trade Partnerships"
+			}
+		}
+
+		SOTB_opium_count = {
+			text = {
+				"Opium Partners: [?SOTB_opium_partner_count]"
+			}
+		}
+
+		SOTB_tobacco_count = {
+			text = {
+				"Tobacco Partners: [?SOTB_tobacco_partner_count]"
+			}
+		}
+
+		SOTB_pharma_count = {
+			text = {
+				"Pharma Partners: [?SOTB_pharma_partner_count]"
+			}
+		}
+
+		SOTB_rakija_count = {
+			text = {
+				"Rakija Partners: [?SOTB_rakija_partner_count]"
+			}
+		}
+
+		# --- Legend ---
+		SOTB_legend = {
+			text = {
+				"Shift+T to toggle · Thresholds: 25 Trade · 50 Dependent · 75 Controlled · 100 Captive"
+			}
+		}
+	}
+
+}

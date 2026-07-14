@@ -1,0 +1,128 @@
+# ============================================================
+# SOTB Military Events
+# Shadows Over The Balkans — Phase 2
+# ============================================================
+
+# ============================================================
+# SOTB.700 — The General Staff Divides (fires from MAC_army_future)
+# ============================================================
+country_event = {
+	id = SOTB.700
+
+	title = SOTB.700.t
+	desc = SOTB.700.d
+	picture = GFX_report_event_generic_army_meeting
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.700.a
+		add_army_experience = 10
+	}
+}
+
+# ============================================================
+# SOTB.701 — Sandanski's Endorsement
+# Fires with MTTH after MAC_vardar_engineers is completed
+# ============================================================
+country_event = {
+	id = SOTB.701
+
+	title = SOTB.701.t
+	desc = SOTB.701.d
+	picture = GFX_report_event_generic_leader_hero
+
+	trigger = {
+		tag = MAC
+		has_idea = MAC_lion_watches
+		OR = {
+			has_idea = MAC_lions_way
+			has_idea = MAC_apostolski_vision
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = SOTB.701.a
+		ai_chance = { factor = 100 }
+		add_war_support = 0.03
+		add_army_experience = 10
+	}
+}
+
+# ============================================================
+# SOTB.702 — Aleksandrov Confronts Apostolski
+# Fires if Aleksandrov is leader AND player chose Apostolski's military path
+# ============================================================
+country_event = {
+	id = SOTB.702
+
+	title = SOTB.702.t
+	desc = SOTB.702.d
+	picture = GFX_report_event_generic_army_meeting
+
+	trigger = {
+		tag = MAC
+		has_country_flag = SOTB_aleksandrov_leader
+		has_idea = MAC_apostolski_vision
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	option = {
+		name = SOTB.702.a
+		ai_chance = { factor = 60 }
+		add_stability = -0.03
+		add_army_experience = 5
+	}
+	option = {
+		name = SOTB.702.b
+		ai_chance = { factor = 40 }
+		add_stability = -0.05
+		add_army_experience = 15
+		remove_ideas = {
+			MAC_apostolski_vision
+		}
+		add_ideas = MAC_lions_way
+	}
+}
+
+# ============================================================
+# SOTB.703 — Army Manoeuvres (demonstration of chosen doctrine)
+# Fires after completing chosen military capstone
+# ============================================================
+country_event = {
+	id = SOTB.703
+
+	title = SOTB.703.t
+	desc = SOTB.703.d
+	picture = GFX_report_event_generic_military_exercise
+
+	trigger = {
+		tag = MAC
+		OR = {
+			has_idea = MAC_unbroken_line
+			has_idea = MAC_blitz
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = {
+		name = SOTB.703.a
+		ai_chance = { factor = 100 }
+		add_war_support = 0.05
+		add_army_experience = 30
+	}
+}

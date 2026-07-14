@@ -1,0 +1,65 @@
+# ============================================================
+# SOTB Influence Triggers
+# Shadows Over The Balkans — Phase 6a
+# ============================================================
+
+# Check if TAG is an opium trade partner
+SOTB_is_opium_partner = {
+	check_variable = { SOTB_opium_partner_@ROOT > 0 }
+}
+
+# Check if TAG is a tobacco trade partner
+SOTB_is_tobacco_partner = {
+	check_variable = { SOTB_tobacco_partner_@ROOT > 0 }
+}
+
+# Check if TAG is a pharma trade partner
+SOTB_is_pharma_partner = {
+	check_variable = { SOTB_pharma_partner_@ROOT > 0 }
+}
+
+# Check if TAG is a rakija trade partner
+SOTB_is_rakija_partner = {
+	check_variable = { SOTB_rakija_partner_@ROOT > 0 }
+}
+
+# Check if TAG is any kind of trade partner
+SOTB_is_any_partner = {
+	OR = {
+		check_variable = { SOTB_opium_partner_@ROOT > 0 }
+		check_variable = { SOTB_tobacco_partner_@ROOT > 0 }
+		check_variable = { SOTB_pharma_partner_@ROOT > 0 }
+		check_variable = { SOTB_rakija_partner_@ROOT > 0 }
+	}
+}
+
+# Influence threshold checks
+SOTB_influence_trade_partner = {
+	check_variable = { SOTB_influence_@ROOT >= 25 }
+}
+
+SOTB_influence_dependent = {
+	check_variable = { SOTB_influence_@ROOT >= 50 }
+}
+
+SOTB_influence_controlled = {
+	check_variable = { SOTB_influence_@ROOT >= 75 }
+}
+
+SOTB_influence_captive = {
+	check_variable = { SOTB_influence_@ROOT >= 100 }
+}
+
+# MAC has trade empire decisions visible
+SOTB_mac_has_trade_empire = {
+	OR = {
+		has_idea = MAC_poppy_state
+		has_idea = MAC_poppy_empire
+		has_idea = MAC_poppy_empire_cap
+		has_idea = MAC_alkaloid_pharma
+		has_idea = MAC_pharma_purity
+		has_idea = MAC_tkp_monopoly
+		has_idea = MAC_rakija_tradition
+		has_idea = MAC_balkan_spirit
+	}
+}

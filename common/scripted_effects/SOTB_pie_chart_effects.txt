@@ -1,0 +1,50 @@
+# Scripted GUI Pie Chart — Commodity Breakdown
+# Original by Yard1, adapted for Shadows Over The Balkans
+# Credit: Yard1 (HoI4-Scripted-GUI-Pie-Chart)
+
+# Creates a pie chart showing Opium vs Other Exports (tobacco+pharma+rakija)
+create_commodity_pie_chart = {
+	clear_array = commodity_pie_chart
+	resize_array = {
+		array = commodity_pie_chart
+		value = 1 # Frame 1 = empty/grey (other exports)
+		size = 100
+	}
+	
+	MAC = {
+		set_temp_variable = { opium_total = SOTB_opium_partner_count }
+		set_temp_variable = { tobacco_total = SOTB_tobacco_partner_count }
+		set_temp_variable = { pharma_total = SOTB_pharma_partner_count }
+		set_temp_variable = { rakija_total = SOTB_rakija_partner_count }
+		
+		set_temp_variable = { other_total = 0 }
+		add_to_temp_variable = { other_total = tobacco_total }
+		add_to_temp_variable = { other_total = pharma_total }
+		add_to_temp_variable = { other_total = rakija_total }
+		
+		set_temp_variable = { total_all = 0 }
+		add_to_temp_variable = { total_all = opium_total }
+		add_to_temp_variable = { total_all = other_total }
+	}
+	
+	if = {
+		limit = {
+			MAC = { check_variable = { total_all > 0 } }
+		}
+		MAC = {
+			set_temp_variable = { opium_pct = opium_total }
+			multiply_temp_variable = { opium_pct = 100 }
+			divide_temp_variable = { opium_pct = total_all }
+			round_temp_variable = opium_pct
+			
+			set_variable = { ROOT.last_idx = 0 }
+			for_loop_effect = {
+				start = 0
+				end = opium_pct
+				set_variable = { commodity_pie_chart^v = 2 }
+				add_to_variable = { ROOT.last_idx = 1 }
+			}
+		}
+		add_to_variable = { commodity_pie_chart_dirty = 1 }
+	}
+}

@@ -1,0 +1,127 @@
+# ============================================================
+# SOTB Diplomatic Events
+# Shadows Over The Balkans — Phase 4
+# ============================================================
+
+# ============================================================
+# SOTB.900 — The Balkan Conference (Democratic Irredentism)
+# ============================================================
+country_event = {
+	id = SOTB.900
+
+	title = SOTB.900.t
+	desc = SOTB.900.d
+	picture = GFX_report_event_generic_diplomatic_conference
+
+	trigger = { tag = MAC }
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.900.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.03
+		add_political_power = 50
+	}
+}
+
+# ============================================================
+# SOTB.901 — The Aegean Plebiscite
+# ============================================================
+country_event = {
+	id = SOTB.901
+
+	title = SOTB.901.t
+	desc = SOTB.901.d
+	picture = GFX_report_event_generic_election
+
+	trigger = { tag = MAC has_country_flag = SOTB_democratic_path }
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.901.a
+		ai_chance = { factor = 60 }
+		GRE = {
+			add_opinion_modifier = { target = MAC modifier = MAC_plebiscite_pressure }
+		}
+		add_political_power = 30
+	}
+	option = {
+		name = SOTB.901.b
+		ai_chance = { factor = 40 }
+		GRE = { create_wargoal = { type = take_state_focus state = 1086 } }
+		add_war_support = 0.05
+	}
+}
+
+# ============================================================
+# SOTB.902 — The Pirin Plebiscite
+# ============================================================
+country_event = {
+	id = SOTB.902
+
+	title = SOTB.902.t
+	desc = SOTB.902.d
+	picture = GFX_report_event_generic_election
+
+	trigger = { tag = MAC has_country_flag = SOTB_democratic_path }
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.902.a
+		ai_chance = { factor = 60 }
+		BUL = {
+			add_opinion_modifier = { target = MAC modifier = MAC_plebiscite_pressure }
+		}
+		add_political_power = 30
+	}
+	option = {
+		name = SOTB.902.b
+		ai_chance = { factor = 40 }
+		BUL = { create_wargoal = { type = take_state_focus state = 1082 } }
+		add_war_support = 0.05
+	}
+}
+
+# ============================================================
+# SOTB.910 — Demand Pirin (Non-Aligned Ultimatum)
+# ============================================================
+country_event = {
+	id = SOTB.910
+
+	title = SOTB.910.t
+	desc = SOTB.910.d
+	picture = GFX_report_event_generic_diplomatic_ultimatum
+
+	trigger = { tag = MAC has_country_flag = SOTB_non_aligned_path }
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.910.a
+		ai_chance = { factor = 100 }
+		BUL = {
+			add_opinion_modifier = { target = MAC modifier = MAC_ultimatum_bul }
+		}
+	}
+}
+
+# ============================================================
+# SOTB.911 — Demand Upper Bistrica (Non-Aligned Ultimatum)
+# ============================================================
+country_event = {
+	id = SOTB.911
+
+	title = SOTB.911.t
+	desc = SOTB.911.d
+	picture = GFX_report_event_generic_diplomatic_ultimatum
+
+	trigger = { tag = MAC has_country_flag = SOTB_non_aligned_path }
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.911.a
+		ai_chance = { factor = 100 }
+		GRE = {
+			add_opinion_modifier = { target = MAC modifier = MAC_ultimatum_gre }
+		}
+	}
+}

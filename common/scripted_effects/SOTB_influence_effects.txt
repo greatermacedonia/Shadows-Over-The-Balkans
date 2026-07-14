@@ -1,0 +1,247 @@
+# ============================================================
+# SOTB Influence Effects
+# Shadows Over The Balkans — Phase 6a
+# ============================================================
+
+# Calculate manpower tier for influence multiplier
+SOTB_calculate_manpower_tier = {
+	if = {
+		limit = { manpower > 1000000 }
+		set_temp_variable = { SOTB_mpr_tier = 2.0 }
+	}
+	else_if = {
+		limit = { manpower > 500000 }
+		set_temp_variable = { SOTB_mpr_tier = 1.5 }
+	}
+	else_if = {
+		limit = { manpower > 100000 }
+		set_temp_variable = { SOTB_mpr_tier = 1.0 }
+	}
+	else = {
+		set_temp_variable = { SOTB_mpr_tier = 0.5 }
+	}
+}
+
+# Initialize trade partnership (called from decisions)
+SOTB_init_opium_partner = {
+	set_variable = { SOTB_opium_partner_@ROOT = 1 }
+	SOTB_recalc_influence = yes
+}
+SOTB_init_tobacco_partner = {
+	set_variable = { SOTB_tobacco_partner_@ROOT = 1 }
+	SOTB_recalc_influence = yes
+}
+SOTB_init_pharma_partner = {
+	set_variable = { SOTB_pharma_partner_@ROOT = 1 }
+	SOTB_recalc_influence = yes
+}
+SOTB_init_rakija_partner = {
+	set_variable = { SOTB_rakija_partner_@ROOT = 1 }
+	SOTB_recalc_influence = yes
+}
+
+# Monthly influence tick (called from on_action)
+SOTB_monthly_influence_tick = {
+	every_country = {
+		limit = {
+			tag = MAC
+		}
+		every_other_country = {
+			limit = {
+				SOTB_is_any_partner = yes
+				exists = yes
+				has_capitulated = no
+			}
+			SOTB_calculate_manpower_tier = yes
+			PREV = { SOTB_recalc_influence = yes }
+		}
+	}
+}
+
+# Recalculate influence for a single partner (called by MAC)
+SOTB_recalc_influence = {
+	# Sum commodity contributions
+	set_temp_variable = { SOTB_new_influence = 0 }
+	
+	if = {
+		limit = { PREV = { check_variable = { SOTB_opium_partner_@ROOT > 0 } } }
+		PREV = { add_to_temp_variable = { SOTB_new_influence = 0.8 } }
+	}
+	if = {
+		limit = { PREV = { check_variable = { SOTB_tobacco_partner_@ROOT > 0 } } }
+		PREV = { add_to_temp_variable = { SOTB_new_influence = 0.5 } }
+	}
+	if = {
+		limit = { PREV = { check_variable = { SOTB_pharma_partner_@ROOT > 0 } } }
+		PREV = { add_to_temp_variable = { SOTB_new_influence = 0.4 } }
+	}
+	if = {
+		limit = { PREV = { check_variable = { SOTB_rakija_partner_@ROOT > 0 } } }
+		PREV = { add_to_temp_variable = { SOTB_new_influence = 0.3 } }
+	}
+	
+	# Apply manpower tier multiplier
+	PREV = { multiply_temp_variable = { SOTB_new_influence = SOTB_mpr_tier } }
+	
+	# Rakija Balkan cultural multiplier
+	if = {
+		limit = { PREV = { check_variable = { SOTB_rakija_partner_@ROOT > 0 } } }
+		# Balkan neighbours: ALB, GRE, BUL, YUG, ROM, TUR
+		if = {
+			limit = {
+				PREV = { OR = { tag = ALB tag = GRE tag = BUL tag = YUG tag = ROM tag = TUR tag = SER tag = CRO tag = BOS tag = MNT tag = SLO } }
+			}
+			PREV = { multiply_temp_variable = { SOTB_new_influence = 1.5 } }
+		}
+	}
+	
+	# Apply decay
+	PREV = { add_to_temp_variable = { SOTB_new_influence = -0.1 } }
+	
+	# Clamp to 0-100
+	if = {
+		limit = { PREV = { check_variable = { SOTB_new_influence < 0 } } }
+		PREV = { set_temp_variable = { SOTB_new_influence = 0 } }
+	}
+	if = {
+		limit = { PREV = { check_variable = { SOTB_new_influence > 100 } } }
+		PREV = { set_temp_variable = { SOTB_new_influence = 100 } }
+	}
+	
+	PREV = { set_variable = { SOTB_influence_@ROOT = SOTB_new_influence } }
+}
+
+# Boost influence via PP decision
+SOTB_boost_influence = {
+	if = {
+		limit = { SOTB_is_any_partner = yes }
+		change_variable = { SOTB_influence_@ROOT = 10 }
+		if = {
+			limit = { check_variable = { SOTB_influence_@ROOT > 100 } }
+			set_variable = { SOTB_influence_@ROOT = 100 }
+		}
+	}
+}
+
+# Host nation: reduce Macedonian influence (counter-decision)
+SOTB_expel_influence = {
+	change_variable = { SOTB_influence_@ROOT = -15 }
+	if = {
+		limit = { check_variable = { SOTB_influence_@ROOT < 0 } }
+		set_variable = { SOTB_influence_@ROOT = 0 }
+		# Clear all partner flags if dropped to zero
+		set_variable = { SOTB_opium_partner_@ROOT = 0 }
+		set_variable = { SOTB_tobacco_partner_@ROOT = 0 }
+		set_variable = { SOTB_pharma_partner_@ROOT = 0 }
+		set_variable = { SOTB_rakija_partner_@ROOT = 0 }
+	}
+}
+
+# Release nation from partner
+SOTB_release_nation_from_partner = {
+	if = {
+		limit = {
+			$TARGET_TAG$ = {
+				any_state = {
+					is_core_of = $RELEASE_TAG$
+					is_owned_by = $TARGET_TAG$
+				}
+			}
+		}
+		$TARGET_TAG$ = {
+			every_state = {
+				limit = {
+					is_core_of = $RELEASE_TAG$
+				}
+				set_state_owner = $RELEASE_TAG$
+			}
+		}
+		$RELEASE_TAG$ = {
+			add_ideas = MAC_liberated_nation
+			add_to_faction = MAC
+		}
+		$TARGET_TAG$ = {
+			add_ideas = MAC_humiliated_host
+			set_variable = { SOTB_influence_@ROOT = 0 }
+		}
+		# Reset partner flags for host
+		$TARGET_TAG$ = {
+			set_variable = { SOTB_opium_partner_@ROOT = 0 }
+			set_variable = { SOTB_tobacco_partner_@ROOT = 0 }
+			set_variable = { SOTB_pharma_partner_@ROOT = 0 }
+			set_variable = { SOTB_rakija_partner_@ROOT = 0 }
+		}
+	}
+}
+# Update tracker display variables (Phase 6b)
+# Called monthly to populate top-5 partners and commodity counts
+SOTB_update_tracker_display = {
+	MAC = {
+		set_variable = { SOTB_top1_influence = 0 }
+		set_variable = { SOTB_top2_influence = 0 }
+		set_variable = { SOTB_top3_influence = 0 }
+		set_variable = { SOTB_top4_influence = 0 }
+		set_variable = { SOTB_top5_influence = 0 }
+		
+		set_variable = { SOTB_opium_partner_count = 0 }
+		set_variable = { SOTB_tobacco_partner_count = 0 }
+		set_variable = { SOTB_pharma_partner_count = 0 }
+		set_variable = { SOTB_rakija_partner_count = 0 }
+		
+		every_other_country = {
+			limit = {
+				SOTB_is_any_partner = yes
+				exists = yes
+			}
+			if = {
+				limit = { PREV = { check_variable = { SOTB_opium_partner_@ROOT > 0 } } }
+				MAC = { change_variable = { SOTB_opium_partner_count = 1 } }
+			}
+			if = {
+				limit = { PREV = { check_variable = { SOTB_tobacco_partner_@ROOT > 0 } } }
+				MAC = { change_variable = { SOTB_tobacco_partner_count = 1 } }
+			}
+			if = {
+				limit = { PREV = { check_variable = { SOTB_pharma_partner_@ROOT > 0 } } }
+				MAC = { change_variable = { SOTB_pharma_partner_count = 1 } }
+			}
+			if = {
+				limit = { PREV = { check_variable = { SOTB_rakija_partner_@ROOT > 0 } } }
+				MAC = { change_variable = { SOTB_rakija_partner_count = 1 } }
+			}
+			
+			MAC = {
+				if = {
+					limit = { check_variable = { SOTB_influence_@ROOT > SOTB_top1_influence } }
+					set_variable = { SOTB_top5_influence = SOTB_top4_influence }
+					set_variable = { SOTB_top4_influence = SOTB_top3_influence }
+					set_variable = { SOTB_top3_influence = SOTB_top2_influence }
+					set_variable = { SOTB_top2_influence = SOTB_top1_influence }
+					set_variable = { SOTB_top1_influence = SOTB_influence_@ROOT }
+				}
+				else_if = {
+					limit = { check_variable = { SOTB_influence_@ROOT > SOTB_top2_influence } }
+					set_variable = { SOTB_top5_influence = SOTB_top4_influence }
+					set_variable = { SOTB_top4_influence = SOTB_top3_influence }
+					set_variable = { SOTB_top3_influence = SOTB_top2_influence }
+					set_variable = { SOTB_top2_influence = SOTB_influence_@ROOT }
+				}
+				else_if = {
+					limit = { check_variable = { SOTB_influence_@ROOT > SOTB_top3_influence } }
+					set_variable = { SOTB_top5_influence = SOTB_top4_influence }
+					set_variable = { SOTB_top4_influence = SOTB_top3_influence }
+					set_variable = { SOTB_top3_influence = SOTB_influence_@ROOT }
+				}
+				else_if = {
+					limit = { check_variable = { SOTB_influence_@ROOT > SOTB_top4_influence } }
+					set_variable = { SOTB_top5_influence = SOTB_top4_influence }
+					set_variable = { SOTB_top4_influence = SOTB_influence_@ROOT }
+				}
+				else_if = {
+					limit = { check_variable = { SOTB_influence_@ROOT > SOTB_top5_influence } }
+					set_variable = { SOTB_top5_influence = SOTB_influence_@ROOT }
+				}
+			}
+		}
+	}
+}

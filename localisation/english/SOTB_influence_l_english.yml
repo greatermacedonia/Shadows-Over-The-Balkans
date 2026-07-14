@@ -1,0 +1,49 @@
+l_english:
+ # ============================================================
+ # TRADE EMPIRE DECISIONS
+ # ============================================================
+ MAC_trade_empire: "Macedonian Trade Empire"
+ MAC_trade_empire_desc: "Macedonia's exports — opium, pharmaceuticals, tobacco, and rakija — are more than commodities. They are leverage. Establish trade partnerships, cultivate influence, and bend foreign nations to Macedonia's will."
+ MAC_establish_opium_partner: "Establish Opium Trade"
+ MAC_establish_opium_partner_desc: "Extend Macedonian opium exports to a foreign market. The poppy creates dependency — and dependency creates power."
+ MAC_establish_tobacco_partner: "Establish Tobacco Trade"
+ MAC_establish_tobacco_partner_desc: "Macedonian tobacco is the finest between Vienna and Cairo. Soldiers smoke it. Workers crave it. Extend the leaf to a new market."
+ MAC_establish_pharma_partner: "Establish Pharmaceutical Trade"
+ MAC_establish_pharma_partner_desc: "Alkaloid's pharmaceutical products save lives. A nation that depends on Macedonian medicine is a nation that thinks twice before making an enemy of Solun."
+ MAC_establish_rakija_partner: "Establish Rakija Trade"
+ MAC_establish_rakija_partner_desc: "Every village a still. Every still a diplomatic tool. Rakija opens doors that diplomats cannot."
+ MAC_choose_partner_tt: "Select a target nation to establish the trade partnership with."
+ MAC_boost_influence: "Boost Trade Influence"
+ MAC_boost_influence_desc: "Invest political capital in deepening Macedonia's trade influence over a partner nation. Increased exports, cultural penetration, and quiet pressure."
+ MAC_boost_partner_tt: "Increases influence with a selected trade partner by 10."
+ MAC_release_nation: "Exploit Trade Dependency — Release Nation"
+ MAC_release_nation_desc: "A trade partner has become sufficiently dependent on Macedonian commodities that we can demand the release of an oppressed nation from their territory. The leverage of the poppy, the leaf, and the spirit — wielded as a weapon of liberation."
+ MAC_release_nation_tt: "Triggers an event targeting a controlled trade partner. They may release a releasable nation, refuse and face consequences, or attempt to bribe Macedonia."
+ MAC_expel_macedonian_traders: "Expel Macedonian Trade Agents"
+ MAC_expel_macedonian_traders_desc: "Macedonian influence has become intolerable. Expel their trade agents, shutter their distribution networks, and burn the poppy fields they have cultivated in our territory."
+ MAC_expel_traders_tt: "Reduces Macedonian influence by 15. If influence drops to zero, all trade partnerships are dissolved."
+
+ # ============================================================
+ # TRADE INFLUENCE SPIRITS
+ # ============================================================
+ MAC_humiliated_host: "Humiliated by Macedonia"
+ MAC_humiliated_host_desc: "Forced by economic pressure to release sovereign territory, this nation has been humiliated on the world stage. The shame will fade — but the scar will remain."
+ MAC_liberated_nation: "Liberated by Macedonia"
+ MAC_liberated_nation_desc: "Freed from foreign domination by Macedonian trade influence, this newborn nation owes its existence to Solun. The gratitude of a liberated people is a powerful bond."
+
+ # ============================================================
+ # TRADE INFLUENCE EVENTS
+ # ============================================================
+ SOTB.1000.t: "Trade Leverage Exercised"
+ SOTB.1000.d: "The Trade Ministry reports that Macedonian influence over a foreign partner has reached the critical threshold. Their economy depends on our opium. Their soldiers smoke our tobacco. Their hospitals rely on Alkaloid's pharmaceuticals. The leverage is immense — and the time has come to use it. A nation within their borders yearns for freedom. Macedonia can give it to them."
+ SOTB.1000.a: "Apply the pressure"
+
+ SOTB.1001.t: "Macedonian Ultimatum — Release [SOTB_release_nation.GetName]"
+ SOTB.1001.d: "The ultimatum from Solun is clear and humiliating: release [SOTB_release_nation.GetName] as a sovereign nation, or face the consequences. Macedonian trade agents have made it clear that their opium shipments will stop. Their pharmaceutical supplies will be redirected. Their tobacco contracts will be cancelled. The economy will choke. The army will go without cigarettes. The hospitals will go without medicine. All because Macedonia demands a nation be free. The choice is yours — but the leverage is theirs."
+ SOTB.1001.a: "Release them — we have no choice"
+ SOTB.1001.b: "Never — Macedonia will not dictate to us"
+ SOTB.1001.c: "Buy them off — pay for more time"
+
+ SOTB.1002.t: "Liberation!"
+ SOTB.1002.d: "After years under foreign rule, [ROOT.GetName] is free. Macedonian trade pressure — the quiet weapon of the poppy and the leaf — has achieved what armies could not. The Vergina Sun welcomes a new nation into the community of the free. Solun celebrates. The newborn republic takes its first breath."
+ SOTB.1002.a: "Freedom — thanks to Macedonia"

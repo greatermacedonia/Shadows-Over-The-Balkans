@@ -1,0 +1,281 @@
+guiTypes = {
+
+	# ============================================================
+	# SOTB Trade Empire Tracker — Main Container
+	# ============================================================
+
+	containerWindowType = {
+		name = "SOTB_trade_tracker_window"
+		position = { x = 50 y = 50 }
+		size = { width = 420 height = 360 }
+		orientation = UPPER_LEFT
+		origo = upper_left
+		moveable = yes
+
+		background = {
+			name = "SOTB_tracker_bg"
+			spriteType = "GFX_dst_bg"
+		}
+
+		# --- Title Bar ---
+		instantTextboxType = {
+			name = "SOTB_tracker_title"
+			position = { x = 15 y = 10 }
+			font = "hoi_18mbs"
+			text = "SOTB_TRACKER_TITLE"
+			maxWidth = 390
+			maxHeight = 25
+			format = center
+		}
+
+		# --- Close Button ---
+		buttonType = {
+			name = "SOTB_tracker_close"
+			position = { x = 390 y = 10 }
+			spriteType = "GFX_close_button"
+			pdx_tooltip = "SOTB_TRACKER_CLOSE_TT"
+			scale = 0.8
+		}
+
+		# --- Bar Chart Panel (Left) ---
+		instantTextboxType = {
+			name = "SOTB_bar_title"
+			position = { x = 15 y = 42 }
+			font = "hoi_16mbs"
+			text = "SOTB_BAR_TITLE"
+			maxWidth = 250
+			maxHeight = 20
+			format = left
+		}
+
+		# Bar 1 (partner #1 by influence)
+		instantTextboxType = {
+			name = "SOTB_bar1_name"
+			position = { x = 15 y = 68 }
+			font = "hoi_14mbs"
+			text = "SOTB_BAR1_NAME"
+			maxWidth = 100
+			maxHeight = 18
+			format = left
+		}
+		instantProgressBarType = {
+			name = "SOTB_bar1_progress"
+			position = { x = 120 y = 70 }
+			size = { width = 180 height = 14 }
+			progressbar = yes
+			color = { 128 0 0 }
+		}
+		instantTextboxType = {
+			name = "SOTB_bar1_value"
+			position = { x = 305 y = 68 }
+			font = "hoi_14mbs"
+			text = "SOTB_BAR1_VALUE"
+			maxWidth = 45
+			maxHeight = 18
+			format = right
+		}
+
+		# Bar 2
+		instantTextboxType = {
+			name = "SOTB_bar2_name"
+			position = { x = 15 y = 96 }
+			font = "hoi_14mbs"
+			text = "SOTB_BAR2_NAME"
+			maxWidth = 100
+			maxHeight = 18
+			format = left
+		}
+		instantProgressBarType = {
+			name = "SOTB_bar2_progress"
+			position = { x = 120 y = 98 }
+			size = { width = 180 height = 14 }
+			progressbar = yes
+			color = { 128 0 0 }
+		}
+		instantTextboxType = {
+			name = "SOTB_bar2_value"
+			position = { x = 305 y = 96 }
+			font = "hoi_14mbs"
+			text = "SOTB_BAR2_VALUE"
+			maxWidth = 45
+			maxHeight = 18
+			format = right
+		}
+
+		# Bar 3
+		instantTextboxType = {
+			name = "SOTB_bar3_name"
+			position = { x = 15 y = 124 }
+			font = "hoi_14mbs"
+			text = "SOTB_BAR3_NAME"
+			maxWidth = 100
+			maxHeight = 18
+			format = left
+		}
+		instantProgressBarType = {
+			name = "SOTB_bar3_progress"
+			position = { x = 120 y = 126 }
+			size = { width = 180 height = 14 }
+			progressbar = yes
+			color = { 128 0 0 }
+		}
+		instantTextboxType = {
+			name = "SOTB_bar3_value"
+			position = { x = 305 y = 124 }
+			font = "hoi_14mbs"
+			text = "SOTB_BAR3_VALUE"
+			maxWidth = 45
+			maxHeight = 18
+			format = right
+		}
+
+		# Bar 4
+		instantTextboxType = {
+			name = "SOTB_bar4_name"
+			position = { x = 15 y = 152 }
+			font = "hoi_14mbs"
+			text = "SOTB_BAR4_NAME"
+			maxWidth = 100
+			maxHeight = 18
+			format = left
+		}
+		instantProgressBarType = {
+			name = "SOTB_bar4_progress"
+			position = { x = 120 y = 154 }
+			size = { width = 180 height = 14 }
+			progressbar = yes
+			color = { 128 0 0 }
+		}
+		instantTextboxType = {
+			name = "SOTB_bar4_value"
+			position = { x = 305 y = 152 }
+			font = "hoi_14mbs"
+			text = "SOTB_BAR4_VALUE"
+			maxWidth = 45
+			maxHeight = 18
+			format = right
+		}
+
+		# Bar 5
+		instantTextboxType = {
+			name = "SOTB_bar5_name"
+			position = { x = 15 y = 180 }
+			font = "hoi_14mbs"
+			text = "SOTB_BAR5_NAME"
+			maxWidth = 100
+			maxHeight = 18
+			format = left
+		}
+		instantProgressBarType = {
+			name = "SOTB_bar5_progress"
+			position = { x = 120 y = 182 }
+			size = { width = 180 height = 14 }
+			progressbar = yes
+			color = { 128 0 0 }
+		}
+		instantTextboxType = {
+			name = "SOTB_bar5_value"
+			position = { x = 305 y = 180 }
+			font = "hoi_14mbs"
+			text = "SOTB_BAR5_VALUE"
+			maxWidth = 45
+			maxHeight = 18
+			format = right
+		}
+
+		# --- Commodity Summary (Right side placeholder) ---
+		instantTextboxType = {
+			name = "SOTB_commodity_title"
+			position = { x = 15 y = 215 }
+			font = "hoi_16mbs"
+			text = "SOTB_COMMODITY_TITLE"
+			maxWidth = 390
+			maxHeight = 20
+			format = left
+		}
+
+		instantTextboxType = {
+			name = "SOTB_opium_count"
+			position = { x = 15 y = 240 }
+			font = "hoi_14mbs"
+			text = "SOTB_OPIUM_COUNT"
+			maxWidth = 200
+			maxHeight = 18
+			format = left
+		}
+
+		instantTextboxType = {
+			name = "SOTB_tobacco_count"
+			position = { x = 15 y = 260 }
+			font = "hoi_14mbs"
+			text = "SOTB_TOBACCO_COUNT"
+			maxWidth = 200
+			maxHeight = 18
+			format = left
+		}
+
+		instantTextboxType = {
+			name = "SOTB_pharma_count"
+			position = { x = 220 y = 240 }
+			font = "hoi_14mbs"
+			text = "SOTB_PHARMA_COUNT"
+			maxWidth = 200
+			maxHeight = 18
+			format = left
+		}
+
+		instantTextboxType = {
+			name = "SOTB_rakija_count"
+			position = { x = 220 y = 260 }
+			font = "hoi_14mbs"
+			text = "SOTB_RAKIJA_COUNT"
+			maxWidth = 200
+			maxHeight = 18
+			format = left
+		}
+
+		# --- Decision Button (opens trade empire decisions) ---
+		buttonType = {
+			name = "SOTB_tracker_decisions_button"
+			position = { x = 15 y = 300 }
+			size = { width = 160 height = 32 }
+			spriteType = "GFX_focus_generic_dangerous_deal"
+			pdx_tooltip = "SOTB_TRACKER_DECISIONS_TT"
+		}
+
+		# --- Legend ---
+		instantTextboxType = {
+			name = "SOTB_legend"
+			position = { x = 15 y = 335 }
+			font = "hoi_12mbs"
+			text = "SOTB_LEGEND"
+			maxWidth = 390
+			maxHeight = 18
+			format = center
+		}
+	}
+
+	# ============================================================
+	# Parliament Diagram Container (embedded in tracker)
+	# ============================================================
+	containerWindowType = {
+		name = "parliament_container"
+		position = { x = 5 y = 218 }
+		size = { width = 160 height = 100 }
+
+		iconType = {
+			name = "parliament_dot_icon"
+			quadTextureSprite = "GFX_parliament_seat_small"
+		}
+
+		gridboxtype = {
+			name = "parliament_diagram"
+			position = { x = 0 y = 0 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 100%% height = 0 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+	}
+
+}

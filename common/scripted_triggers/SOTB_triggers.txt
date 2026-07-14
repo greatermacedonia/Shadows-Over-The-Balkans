@@ -66,3 +66,10 @@ SOTB_has_aleksandrov_doctrine = {
 SOTB_has_apostolski_doctrine = {
 	has_idea = MAC_apostolski_vision
 }
+# Phase 2: Military path check (for allow_branch on shared capstone)
+mac_any_military_path = {
+	OR = {
+		has_idea = MAC_unbroken_line
+		has_idea = MAC_blitz
+	}
+}

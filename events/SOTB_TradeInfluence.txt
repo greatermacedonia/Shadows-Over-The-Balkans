@@ -1,0 +1,127 @@
+# ============================================================
+# SOTB Trade Influence Events
+# Shadows Over The Balkans — Phase 6a
+# ============================================================
+
+# ============================================================
+# SOTB.1000 — Release Nation from Trade Partner
+# ============================================================
+country_event = {
+	id = SOTB.1000
+
+	title = SOTB.1000.t
+	desc = SOTB.1000.d
+	picture = GFX_report_event_generic_diplomatic_ultimatum
+
+	trigger = { tag = MAC }
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.1000.a
+		ai_chance = { factor = 100 }
+		every_other_country = {
+			limit = {
+				SOTB_influence_controlled = yes
+				any_state = {
+					any_core_country = {
+						does_not_exist = yes
+						NOT = { tag = ROOT }
+					}
+				}
+			}
+			save_scope_as = SOTB_target_partner
+			random_state = {
+				limit = {
+					is_owned_by = ROOT
+					any_core_country = {
+						does_not_exist = yes
+						NOT = { tag = ROOT }
+					}
+				}
+				random_core_country = {
+					limit = {
+						does_not_exist = yes
+						NOT = { tag = ROOT }
+					}
+					save_scope_as = SOTB_release_nation
+				}
+			}
+		}
+		scope:SOTB_target_partner = {
+			country_event = { id = SOTB.1001 days = 1 }
+		}
+	}
+}
+
+# ============================================================
+# SOTB.1001 — Host Nation: Macedonian Pressure
+# ============================================================
+country_event = {
+	id = SOTB.1001
+
+	title = SOTB.1001.t
+	desc = SOTB.1001.d
+	picture = GFX_report_event_generic_diplomatic_pressure
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.1001.a
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 5
+				check_variable = { SOTB_influence_@ROOT >= 100 }
+			}
+		}
+		SOTB_release_nation_from_partner = {
+			TARGET_TAG = ROOT
+			RELEASE_TAG = SOTB_release_nation
+		}
+		SOTB_release_nation = {
+			add_opinion_modifier = { target = MAC modifier = MAC_liberated_us }
+		}
+	}
+	option = {
+		name = SOTB.1001.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				check_variable = { SOTB_influence_@ROOT >= 100 }
+			}
+		}
+		add_ideas = MAC_humiliated_host
+		MAC = { create_wargoal = { type = topple_government } }
+		add_opinion_modifier = { target = MAC modifier = MAC_humiliated_us }
+	}
+	option = {
+		name = SOTB.1001.c
+		ai_chance = { factor = 20 }
+		add_political_power = -75
+		add_stability = -0.05
+		change_variable = { SOTB_influence_@ROOT = -20 }
+		add_opinion_modifier = { target = MAC modifier = MAC_bribery_paid }
+	}
+}
+
+# ============================================================
+# SOTB.1002 — Released Nation: Liberation
+# ============================================================
+country_event = {
+	id = SOTB.1002
+
+	title = SOTB.1002.t
+	desc = SOTB.1002.d
+	picture = GFX_report_event_generic_independence
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.1002.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.20
+		add_war_support = 0.15
+		add_opinion_modifier = { target = MAC modifier = MAC_liberated_us }
+	}
+}

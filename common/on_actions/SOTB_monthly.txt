@@ -1,0 +1,22 @@
+# ============================================================
+# SOTB Monthly + Daily On Actions
+# Shadows Over The Balkans — Phase 6a + 6b + 6c
+# ============================================================
+
+on_actions = {
+	on_monthly = {
+		effect = {
+			SOTB_monthly_influence_tick = yes
+			SOTB_update_tracker_display = yes
+			SOTB_update_parliament_display = yes
+		}
+	}
+	on_daily = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				create_commodity_pie_chart = yes
+			}
+		}
+	}
+}

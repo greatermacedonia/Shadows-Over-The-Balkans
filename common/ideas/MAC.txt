@@ -381,5 +381,276 @@ ideas = {
 			}
 		}
 
+		# ============================================================
+		# MILITARY PATH SPIRITS
+		# ============================================================
+
+		# Night of Solun tactics
+		MAC_night_of_solun_tactics = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				night_attack_factor = 0.10
+				special_forces_cap_factor = 0.05
+			}
+		}
+
+		# Vardar Engineering Corps
+		MAC_vardar_engineers_corps = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				dig_in_speed_factor = 0.10
+			}
+		}
+
+		# Fortress booster (temporary 365 days)
+		MAC_fortress_booster = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				fort_building_speed_factor = 0.15
+			}
+		}
+
+		# ============================================================
+		# ECONOMIC PATH SPIRITS
+		# ============================================================
+
+		# State Arms Workshops (mil industry)
+		MAC_state_arms = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				infantry_equipment_production_speed_factor = 0.05
+				production_speed_buildings_factor = 0.03
+			}
+		}
+
+		# Teteks Industrial Combine (civ industry)
+		MAC_teteks_combine = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		# Kratovo-Zletovo Mines (civ industry)
+		MAC_kratovo_mines = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				resource_gain_factor = 0.10
+			}
+		}
+
+		# Balkan Workshop (civ capstone)
+		MAC_balkan_workshop = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				naval_dockyard_output_factor = 0.10
+			}
+		}
+
+		# Vardar Express (infra)
+		MAC_vardar_express = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				supply_throughput_factor = 0.05
+			}
+		}
+
+		# TKP Tobacco Monopoly (tobacco)
+		MAC_tkp_monopoly = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.10
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		# Alkaloid Pharmaceuticals (science)
+		MAC_alkaloid_pharma = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				chemical_engineering_research_factor = 0.05
+			}
+		}
+
+		# Quiet Harbours (science/opium)
+		MAC_quiet_harbours = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				naval_dockyard_output_factor = 0.10
+			}
+		}
+
+		# Pharmaceutical Purity (science capstone)
+		MAC_pharma_purity = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+
+		# Opium Empire Capstone (science capstone)
+		MAC_opium_empire_cap = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.15
+			}
+		}
+
+		# ============================================================
+		# CULTURAL PATH SPIRITS
+		# ============================================================
+
+		# Vergina Museum
+		MAC_vergina_museum = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		# Alexander's Library
+		MAC_alexander_library = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		# Festival of the Sun
+		MAC_festival_sun = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_advisor_cost_factor = -0.10
+			}
+		}
+
+		# Philip II Monument
+		MAC_philip_monument = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+			}
+		}
+
+		# White Tower Restoration
+		MAC_white_tower = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				trade_opinion_factor = 0.10
+			}
+		}
+
+		# Macedonian Alexander Airways
+		MAC_alexander_airways = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				air_research_factor = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		# Vergina Phalanx
+		MAC_vergina_phalanx = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.05
+				infantry_attack_factor = 0.05
+			}
+		}
+
+		# Macedonian Rakija
+		MAC_rakija_tradition = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		# The Balkan Spirit
+		MAC_balkan_spirit = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+			}
+		}
+
+		# ============================================================
+		# TRADE INFLUENCE SPIRITS (Phase 6a)
+		# ============================================================
+
+		# Humiliated Host (decaying)
+		MAC_humiliated_host = {
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.05
+				political_power_factor = -0.10
+			}
+		}
+
+		# Liberated Nation (decaying)
+		MAC_liberated_nation = {
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.10
+				political_power_factor = 0.05
+			}
+		}
+
 	}
 }

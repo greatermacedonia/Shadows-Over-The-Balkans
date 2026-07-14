@@ -1,0 +1,56 @@
+# ============================================================
+# SOTB Economic Events
+# Shadows Over The Balkans — Phase 3
+# ============================================================
+
+# ============================================================
+# SOTB.800 — Alkaloid Founded
+# ============================================================
+country_event = {
+	id = SOTB.800
+
+	title = SOTB.800.t
+	desc = SOTB.800.d
+	picture = GFX_report_event_generic_industry
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.800.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.03
+	}
+}
+
+# ============================================================
+# SOTB.801 — The Powder Trail Opens
+# ============================================================
+country_event = {
+	id = SOTB.801
+
+	title = SOTB.801.t
+	desc = SOTB.801.d
+	picture = GFX_report_event_generic_trade
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.801.a
+		ai_chance = { factor = 80 }
+		add_stability = -0.03
+		add_political_power = 50
+	}
+	option = {
+		name = SOTB.801.b
+		ai_chance = { factor = 20 }
+		add_stability = 0.02
+	}
+}

@@ -1,0 +1,8 @@
+spriteTypes = {
+	# Parliament diagram seat dot — uses a small circle texture
+	# Placeholder: uses vanilla small flag icon until custom art is created
+	spriteType = {
+		name = "GFX_parliament_seat_small"
+		texturefile = "gfx/interface/goals/focus_MAC_state.dds"
+	}
+}
