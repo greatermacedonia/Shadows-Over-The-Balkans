@@ -44,10 +44,14 @@ Macedonia's alternative history is documented in full in [`LORE.md`](LORE.md) �
 
 ##  Development Team
 
-| Developer | GitHub |
-|---|---|
-| **Oddsoul** | [@cpntodd](https://github.com/cpntodd) |
-| **Ќоле** | [@vnvsk17-web](https://github.com/vnvsk17-web) |
+| Developer | GitHub | Role |
+|---|---|---|
+| **Oddsoul** | [@cpntodd](https://github.com/cpntodd) | Lead Developer |
+| **Ќоле** | [@vnvsk17-web](https://github.com/vnvsk17-web) | Developer, Artist, Writer |
+| **MR Voјvoda** | — | Artist |
+| **Average Grujo Enjoyer** | — | Contributor |
+| **goz** | — | Developer |
+| **SerbianVojvoda** | — | Writer |
 
 ---
 
