@@ -1,0 +1,2415 @@
+{
+  "version": 1,
+  "files": {
+    "common/national_focus/MAC.txt": {
+      "focuses": {
+        "MAC_delchev_succession": {
+          "x": 0,
+          "y": 0,
+          "scene_x": 0.0,
+          "scene_y": 0.0,
+          "cost": 5,
+          "name": "The Delchev Succession",
+          "description": "President Čento has governed as interim leader since Delchev's stroke in 1934. Everyone knows he is keeping the seat warm. The nation waits — but it will not wait forever. The Succession Question must be answered. Who will lead Macedonia into the uncertain future?",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_INTERNAL_AFFAIRS"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_preserve_democracy": {
+          "x": -6,
+          "y": 1,
+          "scene_x": -720.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Preserve Democracy",
+          "description": "The republic was built by revolutionaries who believed in the people's right to choose. Delchev, Sandanski, Čento, Vlahov, Gjorche Petrov — five visions, one shared conviction: what was won by revolution must be preserved by democracy. Hold a democratic primary and let the people decide.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_delchev_succession"
+          ],
+          "mutually_exclusive": [
+            "MAC_embrace_crown",
+            "MAC_order_above_all",
+            "MAC_peoples_army",
+            "MAC_iron_guard"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_embrace_crown": {
+          "x": 12,
+          "y": 1,
+          "scene_x": 1440.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Embrace the Crown",
+          "description": "A handful of newspapers, aristocratic sympathisers, and army officers advocate openly for a constitutional monarchy. Their argument is seductive in its simplicity: a neutral king above faction — a symbol who reigns but does not rule. Three candidates wait in the wings.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_delchev_succession"
+          ],
+          "mutually_exclusive": [
+            "MAC_preserve_democracy",
+            "MAC_order_above_all",
+            "MAC_peoples_army",
+            "MAC_iron_guard"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_order_above_all": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Order Above All",
+          "description": "Democracy is a luxury for more peaceful nations. The republic needs a firm hand — someone who serves the state, not an ideology. Todor Aleksandrov offers military discipline. Archbishop Dositej offers moral governance. Both offer stability without the chaos of elections.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_delchev_succession"
+          ],
+          "mutually_exclusive": [
+            "MAC_preserve_democracy",
+            "MAC_embrace_crown",
+            "MAC_peoples_army",
+            "MAC_iron_guard"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_peoples_army": {
+          "x": 6,
+          "y": 1,
+          "scene_x": 720.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The People's Army",
+          "description": "Lazar Koliševski — young, Moscow-trained, and hungry for revolution — believes the old men of IMRO betrayed the people. The peasant still starves. The worker still toils for nothing. The revolution must continue — not with speeches, but with action.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_delchev_succession"
+          ],
+          "mutually_exclusive": [
+            "MAC_preserve_democracy",
+            "MAC_embrace_crown",
+            "MAC_order_above_all",
+            "MAC_iron_guard"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_iron_guard": {
+          "x": -12,
+          "y": 1,
+          "scene_x": -1440.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Iron Guard",
+          "description": "Ivan Mihailov has seized power. Radical nationalism. Purge the left. Crush the neighbours. Build Greater Macedonia. No compromises.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_delchev_succession"
+          ],
+          "mutually_exclusive": [
+            "MAC_preserve_democracy",
+            "MAC_embrace_crown",
+            "MAC_order_above_all",
+            "MAC_peoples_army"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_democratic_primary": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Democratic Primary",
+          "description": "Five candidates. Four ideologies within democracy. One republic. Delchev — the Founder. Sandanski — the Lion. Čento — the Manager. Vlahov — the Reformer. Gjorche Petrov — the Progressive. The people will choose.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_preserve_democracy"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_INTERNAL_AFFAIRS"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_delchev_path": {
+          "x": -8,
+          "y": 1,
+          "scene_x": -960.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Founder's Path",
+          "description": "Goce Delchev — the Macedonian Ataturk — returns to active leadership. Delčevism: revolutionary nationalism, populist governance, eternal independence, armed neutrality. 'Macedonia for Macedonians. We do not bow.'",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_democratic_primary"
+          ],
+          "mutually_exclusive": [
+            "MAC_sandanski_path",
+            "MAC_cento_path",
+            "MAC_vlahov_path",
+            "MAC_petrov_path"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_delchev_reforms": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Delčevist Reforms",
+          "description": "The Founder's vision requires modern institutions. Education. Infrastructure. A state worthy of the revolution that built it. Delchev's personal authority drives reforms through at unprecedented speed.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_delchev_path"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_armed_neutrality": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Armed Neutrality",
+          "description": "Delčevism's core tenet: Macedonia does not bow to any foreign power. Armed neutrality — like Sweden, like Switzerland — ensures that no empire makes Macedonia its battleground. We are nobody's puppet.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_delchev_reforms"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_macedonian_ataturk": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Macedonian Ataturk",
+          "description": "Delčevism fulfilled. The Founder's vision is now the republic's permanent creed. Revolutionary nationalism. Populist governance. Armed neutrality. 'Macedonia for Macedonians. Eternal independence. We do not bow.'",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_armed_neutrality"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_sandanski_path": {
+          "x": -4,
+          "y": 1,
+          "scene_x": -480.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Lion's Path",
+          "description": "Jane Sandanski — the man who captured Solun in 1912 — offers a different vision within Delčevism: martial stewardship. Defensive resilience. Military preparedness. 'They came in '13. They came again in '15. They will come again. The Lion still watches the borders.'",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_democratic_primary"
+          ],
+          "mutually_exclusive": [
+            "MAC_delchev_path",
+            "MAC_cento_path",
+            "MAC_vlahov_path",
+            "MAC_petrov_path"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_fortress_macedonia": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Fortress Macedonia",
+          "description": "Sandanski's doctrine: every valley a killing field. Every hill a strongpoint. The republic's borders must be a wall that no enemy can breach. Build fortifications and prepare for the worst.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_sandanski_path"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_WAR_SUPPORT"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_they_will_not_pass": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "They Will Not Pass",
+          "description": "The Lion's famous words, etched into the national consciousness. Expand the conscription pool. Train every citizen to defend their homeland. Macedonia will not be conquered again.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_fortress_macedonia"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_MANPOWER"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_lions_legacy": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Lion's Legacy",
+          "description": "Sandanski's stewardship is complete. The republic is armed, prepared, and unshakeable. The Lion has ensured that no enemy will ever take Macedonia by surprise again — and earned the respect of the watching world.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_they_will_not_pass"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_cento_path": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Manager's Mandate",
+          "description": "Metodija Andonov-Čento — the man who kept the economy together during the Depression — asks for the full mandate of the republic. He is not a revolutionary. He is not a soldier. He is a manager. And sometimes, what a nation needs most is someone who can make the trains run on time.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_democratic_primary"
+          ],
+          "mutually_exclusive": [
+            "MAC_delchev_path",
+            "MAC_sandanski_path",
+            "MAC_vlahov_path",
+            "MAC_petrov_path"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_cento_recovery": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Institutional Republic",
+          "description": "Čento's vision: efficient governance, stable institutions, gradual reform. Expand the research base. Build the civil service. Make the republic work — not dramatically, but reliably.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_cento_path"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_sustainable_republic": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Sustainable Republic",
+          "description": "Čento's mandate is complete. The republic is stable, prosperous, and boring — in the best possible way. No grand gestures. No dramatic revolutions. Just competent governance.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_cento_recovery"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_STABILITY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_vlahov_path": {
+          "x": 4,
+          "y": 1,
+          "scene_x": 480.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Reformer's Coalition",
+          "description": "Dimitar Vlahov — IMRO veteran, Kruševo fighter, and now democratic reformer — leads a broad coalition. Constitutional reform. Western alignment. Free elections. Free trade. Britain and France would prefer him.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_democratic_primary"
+          ],
+          "mutually_exclusive": [
+            "MAC_delchev_path",
+            "MAC_sandanski_path",
+            "MAC_cento_path",
+            "MAC_petrov_path"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_vlahov_open_doors": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Open Doors",
+          "description": "Vlahov opens Macedonia to the West. Trade agreements with London and Paris. Democratic solidarity with Europe's established powers. The 'normal country' path — and the one the democracies are most comfortable with.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_vlahov_path"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_vlahov_normal_country": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Normal Country",
+          "description": "Vlahov's reforms are complete. Macedonia is a stable, liberal democracy with Western backing. The republic has become what Delchev always intended: a free nation among free nations.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_vlahov_open_doors"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_STABILITY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_petrov_path": {
+          "x": 8,
+          "y": 1,
+          "scene_x": 960.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Progressive's Dream",
+          "description": "Gjorche Petrov — one of IMRO's earliest intellectuals — survived the assassination that claimed him in another world. His democratic socialism offers a path between Vlahov's moderation and Koliševski's revolution: land reform, workers' rights, social justice — achieved through democracy.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_democratic_primary"
+          ],
+          "mutually_exclusive": [
+            "MAC_delchev_path",
+            "MAC_sandanski_path",
+            "MAC_cento_path",
+            "MAC_vlahov_path"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_petrov_land_liberty": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Land & Liberty",
+          "description": "The peasant who owns his land will defend it. Petrov's land reform breaks up the old estates and gives every rural family a stake in the republic. The poppy trade continues — publicly denounced, privately tolerated — but the peasant is no longer dependent on it.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_petrov_path"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_MANPOWER",
+            "FOCUS_FILTER_STABILITY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_peoples_charter": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The People's Charter",
+          "description": "Workers' rights enshrined in law. Fascist organizations banned from public life. The People's Charter is Petrov's answer to the extremists: democracy must deliver material justice, or it will be swept away.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_petrov_land_liberty"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_WAR_SUPPORT"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_just_republic": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "A Just Republic",
+          "description": "Petrov's vision is realized. Land reform has given peasants a stake in the nation. Workers' rights are enshrined in law. Fascism is banished from public life. This is what the revolution was always meant to become.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_peoples_charter"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_soldiers_duty": {
+          "x": -2,
+          "y": 1,
+          "scene_x": -240.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Soldier's Duty",
+          "description": "Todor Aleksandrov is not a politician. He is not an ideologue. He is a soldier who believes the republic needs order, discipline, and strength. He serves the state. He asks only that the state be worthy of his service.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_order_above_all"
+          ],
+          "mutually_exclusive": [
+            "MAC_shepherds_way"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_aleksandrov_stability": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Firm Hand",
+          "description": "Aleksandrov's military government restores order. Strikes are suppressed. Extremists are contained. The republic is stable — not by democratic consent, but by the soldier's discipline. For now, that is enough.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_soldiers_duty"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_STABILITY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_shepherds_way": {
+          "x": 2,
+          "y": 1,
+          "scene_x": 240.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Shepherd's Way",
+          "description": "Archbishop Dositej II — the head of the Macedonian Orthodox Church — steps forward to lead a nation adrift. Moral governance. Social conservatism. Anti-communist. The Third Way between the godless ideologies of East and West.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_order_above_all"
+          ],
+          "mutually_exclusive": [
+            "MAC_soldiers_duty"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_shepherd_mandate": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Shepherd's Mandate",
+          "description": "The Archbishop's moral authority consolidates. The Church's influence grows. Both communist and fascist extremism are suppressed — not by force, but by the quiet power of the pulpit.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_shepherds_way"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_STABILITY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_royal_mandate": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Royal Mandate",
+          "description": "The chosen monarch is crowned in the Cathedral of St. Demetrios in Solun. A constitutional ceremony — restrained, dignified, historic. The crown above faction. The king who reigns but does not rule.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_embrace_crown"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_STABILITY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_crown_unifies": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Crown Unifies",
+          "description": "The monarchy is established. The crown has done what democracy could not: it has unified the nation around a symbol larger than any faction. The republic is dead. Long live the kingdom.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_royal_mandate"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_land_reform": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Land Reform",
+          "description": "Koliševski's first act: break the estates. Give the land to the peasants who work it. The old landowners — collaborators with the Bulgarians in '15, parasites on the nation ever since — are stripped of their holdings. The people's revolution begins.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_peoples_army"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_MANPOWER"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_soviet_republic": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Macedonian Soviet Republic",
+          "description": "The Macedonian Soviet Republic is proclaimed. The old symbols — the Vergina Sun, the Church, the democratic institutions — are swept away. In their place: the hammer and sickle, the red flag, and the promise of a workers' paradise on the Aegean.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_land_reform"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_purge_old_guard": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Purge the Old Guard",
+          "description": "Mihailov consolidates power. The old IMRO leadership — Delchev's appointees, Sandanski's protégés, the democratic establishment — are purged from government, military, and public life. The Avenger cleans house.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_iron_guard"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_WAR_SUPPORT"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_greater_macedonia": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Greater Macedonia",
+          "description": "Macedonia's borders are an insult. Pirin — stolen by Bulgaria. The Aegean — held by Greece. The Vardar — occupied by Yugoslavia. Mihailov demands what is rightfully Macedonian. All of it.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_purge_old_guard"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_ANNEXATION"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_avenger_triumph": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Avenger's Triumph",
+          "description": "Mihailov's vision is complete. A Greater Macedonia — forged in fire, united by will. The old men of IMRO had their time. Now the revolution is defended — not with speeches, not with elections — with strength.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_greater_macedonia"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_army_future": {
+          "x": 18,
+          "y": 1,
+          "scene_x": 2220.0,
+          "scene_y": 100.0,
+          "cost": 5,
+          "name": "The Army's Future",
+          "description": "Sandanski built this army. Now it must decide what kind of military it wants to be. Minister Aleksandrov — the Lion's old deputy — offers the proven path: infantry, artillery, fortifications. Colonel Apostolski — the young reformer — demands the future: tanks, planes, speed. The General Staff is divided. The officer corps is split. The republic must choose.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_MILITARY_CHARACTER"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_sandanski_principles": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Sandanski's Principles",
+          "description": "Before the army can decide its future, it must remember its foundation. Jane Sandanski's core principles — discipline, preparedness, loyalty to the republic — are non-negotiable. Codify them into the army's permanent doctrine.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_army_future"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_WAR_SUPPORT"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_night_of_solun": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Night of Solun",
+          "description": "On the night of 24 October 1912, Sandanski led three hundred volunteers through the streets of Ottoman Solun. By dawn, the revolutionary flag flew over the Aegean's greatest port. That audacity — the willingness to strike when the enemy least expects it — is the soul of the Macedonian army.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_sandanski_principles"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_national_conscription": {
+          "x": -2,
+          "y": 1,
+          "scene_x": -240.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "National Conscription",
+          "description": "Every Macedonian citizen has a duty to defend the republic. Expand the conscription pool. Train every able-bodied man and woman. The next war will demand nothing less than the full commitment of the nation.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_sandanski_principles"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_MANPOWER"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_vardar_engineers": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Vardar Engineering Corps",
+          "description": "The Vardar River valley is Macedonia's natural defensive line. Establish a dedicated engineering corps to fortify the river crossings, dig entrenchments, and make every inch of Macedonian soil a nightmare for invaders.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_night_of_solun"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_lions_way": {
+          "x": -3,
+          "y": 1,
+          "scene_x": -360.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Lion's Way",
+          "description": "Aleksandrov's doctrine perfected. Infantry. Artillery. Fortifications. It is not glamorous. It works. Hold the line. Break them with artillery. Let the enemy exhaust himself against Macedonian steel.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_vardar_engineers"
+          ],
+          "mutually_exclusive": [
+            "MAC_apostolski_vision"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_WAR_SUPPORT"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_artillery_supremacy": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Artillery Supremacy",
+          "description": "Artillery wins wars. Aleksandrov learned this on the Macedonian Front, where French 75s and British howitzers broke the Bulgarian lines. Invest in heavy guns. Train the best artillery officers in the Balkans. When the enemy comes, they will be welcomed by thunder.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_lions_way"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_fortress_macedonia_mil": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Fortress Macedonia",
+          "description": "Turn Macedonia's borders into a wall of steel and concrete. Every valley a killing field. Every hill a strongpoint. Level 1 bunkers will be erected along the borders with Bulgaria, Greece, Yugoslavia, and Albania — and a dedicated fort construction program will follow.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_artillery_supremacy"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_unbroken_line": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Unbroken Line",
+          "description": "Macedonia's borders are a fortress. Every valley is a killing field. Every hill is a strongpoint. The republic does not retreat.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_fortress_macedonia_mil"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_apostolski_vision": {
+          "x": 3,
+          "y": 1,
+          "scene_x": 360.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Apostolski's Vision",
+          "description": "The next war belongs to the side that moves faster. Tanks. Planes. Speed. 'The Lion took Solun with audacity. He did not take it with trenches.'",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_vardar_engineers"
+          ],
+          "mutually_exclusive": [
+            "MAC_lions_way"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_macedonian_motorization": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Macedonian Motorization",
+          "description": "An army that walks is an army that arrives too late. Invest in trucks, half-tracks, and mobile logistics. Macedonia's divisions must outpace any Balkan rival. Speed is a weapon — and Macedonia will wield it.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_apostolski_vision"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_wings_over_vardar": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Wings Over the Vardar",
+          "description": "Control the skies above the Vardar valley and you control the battlefield below. Establish a modern fighter force. Build airfields. Train pilots. Macedonian wings will darken the Balkan sun.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_macedonian_motorization"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_macedonian_blitz": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Macedonian Blitz",
+          "description": "Apostolski's armored doctrine is now the republic's spearhead. Tanks punch through enemy lines. Motorized infantry exploits the breach. Fighter-bombers clear the skies. Strike fast. Strike deep. The enemy will not know what hit them.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_wings_over_vardar"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_WAR_SUPPORT"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_arsenal_of_solun": {
+          "x": 1,
+          "y": 1,
+          "scene_x": 120.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Arsenal of Solun",
+          "description": "Solun's dockyards have served the republic since independence. Now they must serve the army. Convert civilian industry to military production. Build the factories that will arm Macedonia's soldiers for the coming war.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_unbroken_line"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_macedonian_steel": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Macedonian Steel",
+          "description": "Macedonian industry, Macedonian workers, Macedonian steel. The army's equipment will be built at home — not dependent on foreign suppliers who may abandon us as Greece did in 1913.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_arsenal_of_solun"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_lions_heirs": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Lion's Heirs",
+          "description": "A new generation of Macedonian officers carries Sandanski's legacy forward. The army is ready. The republic is protected. The Lion may be retired — but his heirs stand watch. They will not fail him.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_macedonian_steel"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_WAR_SUPPORT",
+            "FOCUS_FILTER_MANPOWER"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_solun_arsenal_eco": {
+          "x": -2,
+          "y": 8,
+          "scene_x": -300.0,
+          "scene_y": 750.0,
+          "cost": 10,
+          "name": "The Solun Arsenal",
+          "description": "Solun's existing dockyards and arms workshops are the foundation of Macedonia's military industry. Expand them. Give the army the production base it needs to defend the republic.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_state_arms_workshops": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "State Arms Workshops",
+          "description": "Establish state-owned small arms factories in Skopje, Bitola, and Solun. Standardise production. Every Macedonian soldier will carry a rifle built by Macedonian hands.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_solun_arsenal_eco"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_artillery_foundry_veles": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Artillery Foundry Veles",
+          "description": "Veles — in the heart of the Eastern Vardar — has the metalworking tradition and the rail connections to support a major artillery foundry. Invest in heavy gun production. Macedonia will not rely on foreign artillery.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_state_arms_workshops"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_macedonian_munitions": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Macedonian Munitions Ltd",
+          "description": "A state-chartered munitions corporation — Macedonian Munitions Ltd — will coordinate arms production across the republic. Standardisation, quality control, and economies of scale.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_artillery_foundry_veles"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_balkan_arsenal_eco": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Balkan Arsenal",
+          "description": "Macedonia — small in territory, but disproportionately productive. The Balkan Arsenal expands Solun's military factories into the largest arms production complex south of the Danube.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_macedonian_munitions"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_teteks_combine": {
+          "x": 0,
+          "y": 8,
+          "scene_x": -60.0,
+          "scene_y": 750.0,
+          "cost": 10,
+          "name": "Teteks Industrial Combine",
+          "description": "The Tetovo Textile Combine is the cornerstone of Macedonian civilian industry.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_kratovo_mines": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Kratovo-Zletovo Mines",
+          "description": "Modern extraction techniques have expanded Macedonia's mining output.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_teteks_combine"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_hydroelectric_vardar_eco": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Hydroelectric Vardar",
+          "description": "The Vardar River is Macedonia's lifeline. Harness its power. Hydroelectric dams along the river will electrify factories from Skopje to Solun.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_kratovo_mines"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_chromium_refining": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Chromium Refining",
+          "description": "Macedonia's mountain valleys produce some of the finest chromium ore in Europe. Invest in refining capacity. Turn raw ore into strategic resource.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_hydroelectric_vardar_eco"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_aluminium_smelting": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Aluminium Smelting",
+          "description": "The bauxite deposits of the Eastern Vardar offer a path to light metal production. Aluminium smelting — energy-intensive but strategically vital — supports aircraft manufacturing and modern industry.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_chromium_refining"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_balkan_workshop_eco": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Balkan Workshop",
+          "description": "Macedonia is not merely a nation — it is a workshop. From textiles to steel, from chromium to aluminium, the republic produces. The Balkan Workshop is the capstone of Macedonian civilian industry.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_aluminium_smelting"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_vardar_railway_eco": {
+          "x": 2,
+          "y": 8,
+          "scene_x": 180.0,
+          "scene_y": 750.0,
+          "cost": 10,
+          "name": "The Vardar Railway",
+          "description": "The Vardar valley is the republic's economic spine. Upgrade the railways connecting Skopje, Veles, and Solun. Goods must flow. Troops must move. The railway is the republic's circulatory system.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_roads_of_republic": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Roads of the Republic",
+          "description": "Beyond the railway, Macedonia's mountain communities need roads. Connect every village. Every valley. Every border post. A nation that cannot move cannot fight — and cannot trade.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_vardar_railway_eco"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_solun_skopje_express": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Solun-Skopje Express",
+          "description": "The Solun-Skopje railway is the republic's most important transport link. Upgrade it to express standard. Establish a supply hub in Skopje to coordinate military logistics.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_roads_of_republic"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_aegean_naval_facilities": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Aegean Naval Facilities",
+          "description": "Solun's port is the republic's gateway to the world. Expand the naval facilities — deeper berths, modern cranes, coastal fortifications. Kavala too shall receive new docks for the eastern Aegean.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_solun_skopje_express"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_macedonian_airfields": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Macedonian Airfields",
+          "description": "Modern war requires modern airfields. Construct air bases at Solun and Skopje — paved runways, hangars, fuel depots. Macedonian wings need Macedonian nests.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_aegean_naval_facilities"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_gateway_aegean": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Gateway to the Aegean",
+          "description": "Solun — the White Tower, the great port, the capital — is Macedonia's gift to the world. Five new dockyards. Modernised port facilities. The Aegean gateway stands open for trade and ready for war.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_macedonian_airfields"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_premium_tobacco": {
+          "x": 4,
+          "y": 8,
+          "scene_x": 420.0,
+          "scene_y": 750.0,
+          "cost": 10,
+          "name": "Premium Macedonian Tobacco",
+          "description": "Macedonian tobacco has been prized since Ottoman times — the finest leaf between Vienna and Cairo. Invest in cultivation. Expand production. The world wants what Macedonia grows.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_tkp_monopoly_focus": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Tutunski Kombinat Prilep",
+          "description": "TKP — the Prilep Tobacco Combine — has processed Macedonian tobacco since 1873. Grant TKP the state monopoly. Centralise production, standardise quality, and let the world know: Macedonian tobacco means excellence.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_premium_tobacco"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_tobacco_workers": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Tobacco Workers' Union",
+          "description": "Thousands of Macedonian families depend on tobacco for their livelihood. Recognise the Tobacco Workers' Union. Improve wages and conditions. A contented countryside is a stable countryside — and the army always needs more recruits.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_tkp_monopoly_focus"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY",
+            "FOCUS_FILTER_STABILITY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_berlin_tobacco": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Berlin Tobacco Agreement",
+          "description": "Germany is the largest importer of Macedonian tobacco — the Wehrmacht's soldiers smoke Prilep leaf in their rations. Formalise the relationship. A trade agreement with Berlin brings hard currency and political goodwill.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_tobacco_workers"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_quality_brand": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Macedonian Quality Brand",
+          "description": "Establish a national quality standard — the 'Macedonian Sun' brand. Premium pricing for premium leaf. From corner shops in London to cafés in Vienna, the Sun label commands respect.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_berlin_tobacco"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_balkan_cigarette": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Balkan Cigarette",
+          "description": "From Vienna to Cairo — the finest cigarette in the Balkans is Macedonian. The Balkan Cigarette dominates the regional market. Neighbours who trade together are less likely to fight together. Usually.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_quality_brand"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_macedonian_medicine": {
+          "x": 6,
+          "y": 8,
+          "scene_x": 660.0,
+          "scene_y": 750.0,
+          "cost": 10,
+          "name": "Macedonian Medicine",
+          "description": "In 1936, a new pharmaceutical company is founded in Skopje: Alkaloid. Its public mission is to produce medicines from Macedonia's natural resources. Its private potential is considerably larger. Research, refine, distribute — Macedonian medicine for Macedonian health.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [
+            "MAC_macedonian_poppy_focus"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_macedonian_poppy_focus": {
+          "x": 9,
+          "y": 8,
+          "scene_x": 1080.0,
+          "scene_y": 750.0,
+          "cost": 10,
+          "name": "The Macedonian Poppy",
+          "description": "Macedonia's mountain valleys produce opium of exceptional quality — a legacy of Ottoman agriculture that no government has ever formally acknowledged. Formalise cultivation. The poppy is a crop. A very valuable crop.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [
+            "MAC_macedonian_medicine"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_alkaloid_labs": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Alkaloid Research Laboratories",
+          "description": "Alkaloid expands beyond simple extraction into genuine pharmaceutical research. New laboratories. New chemists. A dedicated research slot for the republic's brightest scientific minds.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_macedonian_medicine"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_quiet_harbours": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Quiet Harbours",
+          "description": "Solun's less visible port facilities handle cargo that doesn't appear on customs manifests.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_macedonian_poppy_focus"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_powder_trail": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Powder Trail",
+          "description": "From Solun to Marseille. From Marseille to the parlours of Europe. Macedonian opium finds its way into the continent's veins. Revenue pours in. So does corruption — especially if Alkaloid's legitimate pharmaceutical operations are running alongside. The two faces of Macedonian medicine are becoming harder to reconcile.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_quiet_harbours"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_opium_diplomacy_focus": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Opium Diplomacy",
+          "description": "Opium is not merely a commodity — it is leverage. Establish the networks that turn Macedonian poppies into political influence. Every addict in a foreign uniform is an asset. Every dependency is a debt.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_powder_trail"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_pharma_purity_cap": {
+          "x": -1,
+          "y": 1,
+          "scene_x": -120.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Pharmaceutical Purity",
+          "description": "Choose the legitimate path. Alkaloid produces ONLY pharmaceutical-grade medicines — no grey market, no smuggling, no dependency. Western approval. Clean hands. The poppy fields are shut down, the quiet harbours closed. Macedonia will be a healer, not a dealer.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_alkaloid_labs"
+          ],
+          "mutually_exclusive": [
+            "MAC_opium_empire_cap"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_opium_empire_cap": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Opium Empire",
+          "description": "From Solun to every European capital — the poppy empire generates vast revenue and political leverage.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_opium_diplomacy_focus"
+          ],
+          "mutually_exclusive": [
+            "MAC_pharma_purity_cap"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_INDUSTRY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_shield_of_albania": {
+          "x": -7,
+          "y": 8,
+          "scene_x": -840.0,
+          "scene_y": 750.0,
+          "cost": 10,
+          "name": "The Shield of Albania",
+          "description": "Albania is small, threatened, and genuinely friendly. Italy eyes Tirana with undisguised hunger. Macedonia can offer what Rome cannot: partnership without domination. Guarantee Albanian independence and establish a permanent defensive relationship.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_court_albania": {
+          "x": -5,
+          "y": 8,
+          "scene_x": -600.0,
+          "scene_y": 750.0,
+          "cost": 10,
+          "name": "Court Albania",
+          "description": "Albania is the most natural ally in the Balkans. Small. Threatened by Italy. Suspicious of Yugoslavia. Warm toward Macedonia. Extend the hand of friendship — trade agreements, cultural exchanges, and a shared understanding that small nations must stand together.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_liberate_montenegro": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Liberate Montenegro",
+          "description": "Montenegro — a historic Balkan kingdom now swallowed by Yugoslavia — deserves its own destiny. Macedonia will champion Montenegrin sovereignty. If Belgrade refuses, Macedonia may need to enforce the will of the Montenegrin people.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_court_albania"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_ANNEXATION"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_woo_romania": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Woo Romania",
+          "description": "Romania is the prize — large enough to matter in any Balkan alliance, hesitant but reachable. A mutual non-aggression pact and trade agreement would lay the foundation for something greater.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_liberate_montenegro"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_balkan_federation": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Balkan Federation",
+          "description": "From Solun, a new alliance is proclaimed: the Balkan Federation. Small nations standing together against the great powers. Albania is the first member. Montenegro and Romania are invited. The Balkans will not be carved up by Rome, Berlin, or Moscow — not while Macedonia leads.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_woo_romania"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_western_alignment": {
+          "x": 12,
+          "y": 5,
+          "scene_x": 1380.0,
+          "scene_y": 500.0,
+          "cost": 10,
+          "name": "Western Alignment",
+          "description": "Britain and France are the established democracies. They guarantee our independence, and we share their values. Align with the Western powers — trade, diplomatic support, and the shield of the world's greatest navies.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [
+            "MAC_german_partnership",
+            "MAC_soviet_embrace",
+            "MAC_eternal_independence"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_german_partnership": {
+          "x": 10,
+          "y": 5,
+          "scene_x": 1140.0,
+          "scene_y": 500.0,
+          "cost": 10,
+          "name": "German Partnership",
+          "description": "Germany is rising. The Reich offers trade, technology, and the promise of a new European order. Berlin sees Macedonia's strategic position — the Aegean port, the Balkan corridor. A partnership with Germany is risky. But so is being Germany's enemy.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [
+            "MAC_western_alignment",
+            "MAC_soviet_embrace",
+            "MAC_eternal_independence"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_soviet_embrace": {
+          "x": 6,
+          "y": 5,
+          "scene_x": 660.0,
+          "scene_y": 500.0,
+          "cost": 10,
+          "name": "Soviet Embrace",
+          "description": "The Soviet Union is the fatherland of the workers. Moscow offers fraternal support to any nation that embraces the communist path. Trade. Military advisors. The Red Army's shadow falls long across the Balkans — and it could fall on Macedonia's side.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [
+            "MAC_western_alignment",
+            "MAC_german_partnership",
+            "MAC_eternal_independence"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_eternal_independence": {
+          "x": 8,
+          "y": 5,
+          "scene_x": 900.0,
+          "scene_y": 500.0,
+          "cost": 10,
+          "name": "Eternal Independence",
+          "description": "Macedonia bows to no foreign power. Not London. Not Berlin. Not Moscow. The republic stands alone — neutral, armed, sovereign. 'We do not bow.' Eternal independence is Delčevism's core tenet made permanent policy.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [
+            "MAC_western_alignment",
+            "MAC_german_partnership",
+            "MAC_soviet_embrace"
+          ],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_aegean_macedonia_fascist": {
+          "x": 9,
+          "y": 12,
+          "scene_x": 1080.0,
+          "scene_y": 1200.0,
+          "cost": 10,
+          "name": "Aegean Macedonia",
+          "description": "Upper Bistrica — the Aegean flank — is held by Greece. The Greeks abandoned us in 1913. They do not deserve a single Macedonian village. Present Athens with a demand they cannot refuse — backed by the full strength of the Macedonian army.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_ANNEXATION"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_pirin_macedonia_fascist": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Pirin Macedonia",
+          "description": "Pirin — the eastern mountains — is held by Bulgaria. The Bulgarians invaded twice and lost twice. Now we return the favour. Sofia will surrender what it stole, or it will be taken.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_aegean_macedonia_fascist"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_ANNEXATION"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_unified_macedonia_fascist": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Unified Macedonia",
+          "description": "All Macedonian lands — from the Aegean to Pirin, from Pogradec to Solun — will be united under one flag. The Vergina Sun will fly over every Macedonian village. By negotiation if possible. By force if necessary.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_pirin_macedonia_fascist"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_ANNEXATION"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_demand_pirin": {
+          "x": 11,
+          "y": 12,
+          "scene_x": 1320.0,
+          "scene_y": 1200.0,
+          "cost": 10,
+          "name": "Demand Pirin",
+          "description": "Bulgaria holds Pirin — Macedonian land, Macedonian people. Present Sofia with an ultimatum: cede the territory peacefully, or face the consequences. Military exercises on the border will underscore the point.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_ANNEXATION"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_demand_upper_bistrica": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Demand Upper Bistrica",
+          "description": "Greece holds Upper Bistrica — the Aegean flank of the Macedonian homeland. Present Athens with an ultimatum: cede the territory peacefully, or face the Macedonian army.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_demand_pirin"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_ANNEXATION"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_unified_macedonia_na": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Unified Macedonia",
+          "description": "Albania holds Pogradec — the western frontier. The Albanians are friends, but friends do not hold Macedonian land. Present Tirana with the final demand. The republic's borders will be made whole.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_demand_upper_bistrica"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_balkan_conference_dem": {
+          "x": 13,
+          "y": 12,
+          "scene_x": 1560.0,
+          "scene_y": 1200.0,
+          "cost": 10,
+          "name": "The Balkan Conference",
+          "description": "Territorial disputes need not be resolved by war. Petition Britain and France to mediate a Balkan Conference — a gathering of regional powers to peacefully resolve Macedonia's legitimate territorial claims. Diplomacy before destruction.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_aegean_plebiscite": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Aegean Plebiscite",
+          "description": "The people of Upper Bistrica — Macedonians all — deserve the right to determine their own destiny. Demand a plebiscite under international supervision. If Greece refuses, the world will see their hypocrisy.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_balkan_conference_dem"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_pirin_plebiscite": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Pirin Plebiscite",
+          "description": "The people of Pirin have lived under Bulgarian rule since 1913. Demand a plebiscite. Let them choose — Bulgaria or Macedonia. If Sofia refuses, the democratic world will note who denies self-determination.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_aegean_plebiscite"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_balkan_solidarity": {
+          "x": 15,
+          "y": 12,
+          "scene_x": 1800.0,
+          "scene_y": 1200.0,
+          "cost": 10,
+          "name": "Balkan Solidarity",
+          "description": "Gjorche Petrov's vision: not conquest, but cooperation. Not irredentism, but solidarity. Form the Balkan Solidarity Pact — a defensive alliance of small democracies. Albania. Romania. Macedonia. Standing together, not as conquerors, but as comrades.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_comrades_across_border": {
+          "x": 17,
+          "y": 12,
+          "scene_x": 2040.0,
+          "scene_y": 1200.0,
+          "cost": 10,
+          "name": "Comrades Across the Border",
+          "description": "The workers and peasants of Bulgaria and Greece are not our enemies — they are our comrades, oppressed by the same capitalist forces. Extend the hand of fraternal solidarity. Support communist partisans across the border.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_peoples_macedonia": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "People's Macedonia",
+          "description": "The revolution cannot stop at Macedonia's borders. Support the establishment of people's republics in the Balkans. When Bulgaria and Greece are ruled by the workers, territorial claims become irrelevant — all people's republics are one.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_comrades_across_border"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_united_republic": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "United Republic",
+          "description": "The Balkan People's Republics — united in communism, united in solidarity. The old borders of kings and capitalists will dissolve. The people of the Balkans will stand together as one.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_peoples_macedonia"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_vergina_museum": {
+          "x": 12,
+          "y": 8,
+          "scene_x": 1380.0,
+          "scene_y": 750.0,
+          "cost": 10,
+          "name": "The Vergina Museum",
+          "description": "A world-class museum housing the treasures of ancient Macedonia — the tomb of Philip II, the golden larnax, the Vergina Sun itself.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_STABILITY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_alexander_library": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Alexander's Library",
+          "description": "The national library of Macedonia — repository of knowledge and engine of scientific progress.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_vergina_museum"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_festival_sun": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Festival of the Sun",
+          "description": "An annual national celebration of Macedonian culture, history, and identity. The nation celebrates itself.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_alexander_library"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_STABILITY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_philip_monument": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Philip II Monument",
+          "description": "A monumental statue of the king who unified ancient Macedonia stands in Solun's main square.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_festival_sun"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_WAR_SUPPORT"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_white_tower_restoration": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The White Tower Restoration",
+          "description": "The White Tower — Solun's iconic waterfront landmark — has stood since Ottoman times. Restore it as a museum of Macedonian history. Ships entering the Aegean port will see the restored tower and know: this is Macedonia.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_philip_monument"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_alexander_airways": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Macedonian Alexander Airways",
+          "description": "The national airline — connecting Solun to Europe, building aviation expertise and prestige.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_white_tower_restoration"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_RESEARCH"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_vergina_phalanx": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Vergina Phalanx",
+          "description": "The army's elite infantry tradition — named for the ancient Macedonian phalanx of Philip and Alexander.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_alexander_airways"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_WAR_SUPPORT"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_macedonia_eternal": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "Macedonia Eternal",
+          "description": "The Vergina Sun — adopted in 1927 — has flown for nine years. It will fly for nine hundred more. Macedonia Eternal: the capstone of the cultural heritage tree. The nation's identity is not merely asserted. It is celebrated. It is permanent. It is eternal.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_vergina_phalanx"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_macedonian_rakija": {
+          "x": 6,
+          "y": 12,
+          "scene_x": 780.0,
+          "scene_y": 1200.0,
+          "cost": 10,
+          "name": "Macedonian Rakija",
+          "description": "Every Macedonian village has a still. Every family has a recipe — plum, grape, apricot, passed down through generations. Rakija is not merely a drink. It is liquid heritage. Commercialise production without losing the soul of the thing. The world deserves to taste Macedonia's spirit.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL",
+            "FOCUS_FILTER_STABILITY"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_state_rakija_monopoly": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "State Rakija Monopoly",
+          "description": "Standardise. Regulate. Export. The State Rakija Monopoly ensures every bottle bearing the Vergina Sun meets Macedonian standards of excellence. From village stills to international markets — Macedonian rakija takes its place alongside Scotch whisky and French cognac.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_macedonian_rakija"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        },
+        "MAC_balkan_spirit_cap": {
+          "x": 0,
+          "y": 1,
+          "scene_x": 0.0,
+          "scene_y": 100.0,
+          "cost": 10,
+          "name": "The Balkan Spirit",
+          "description": "From Solun to Belgrade, from Sofia to Bucharest — the finest spirit in the Balkans is Macedonian. Rakija becomes a diplomatic tool as much as an economic one. Every Balkan neighbour that trades in Macedonian rakija is a neighbour less likely to fight. Usually.",
+          "hidden_behavior_configured": false,
+          "prerequisites": [
+            "MAC_state_rakija_monopoly"
+          ],
+          "mutually_exclusive": [],
+          "search_filters": [
+            "FOCUS_FILTER_POLITICAL"
+          ],
+          "hidden_tags": [],
+          "notes": "",
+          "events": []
+        }
+      }
+    }
+  }
+}

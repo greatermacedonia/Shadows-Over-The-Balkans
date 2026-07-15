@@ -1,0 +1,118 @@
+division_template = {
+	name = "Peshadiska Divizija"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Planinska Brigada"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Konjicka Divizija"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+
+	division = {
+		name = "1. Peshadiska Divizija - Solunska"
+		location = 895
+		division_template = "Peshadiska Divizija"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		name = "2. Peshadiska Divizija - Vardarska"
+		location = 974
+		division_template = "Peshadiska Divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+
+	division = {
+		name = "3. Peshadiska Divizija - Bitolska"
+		location = 833
+		division_template = "Peshadiska Divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+
+	division = {
+		name = "4. Peshadiska Divizija - Pirinska"
+		location = 6886
+		division_template = "Peshadiska Divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "5. Peshadiska Divizija - Bregalnicka"
+		location = 13414
+		division_template = "Peshadiska Divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "6. Peshadiska Divizija - Ohridska"
+		location = 3865
+		division_template = "Peshadiska Divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "1. Planinska Brigada - Korabska"
+		location = 867
+		division_template = "Planinska Brigada"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		name = "2. Planinska Brigada - Belasicka"
+		location = 9930
+		division_template = "Planinska Brigada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+
+	division = {
+		name = "1. Konjicka Divizija - Egejska"
+		location = 3844
+		division_template = "Konjicka Divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+}

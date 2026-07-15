@@ -1,0 +1,77 @@
+bookmarks = {
+
+	# ============================================================
+	# SHADOWS OVER THE BALKANS — Mod default bookmark
+	# ============================================================
+	bookmark = {
+		name = "SHADOWS_OVER_THE_BALKANS_NAME"
+		desc = "SHADOWS_OVER_THE_BALKANS_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_SOTB_1936"
+		default_country = "MAC"
+		default = yes
+
+		filters = { new_content continent }
+
+		# --- Featured Row: Macedonia + 6 majors ---
+		"MAC"={
+			history = "MAC_SOTB_BOOKMARK_DESC"
+			ideology = democratic
+			version = base_game
+			ideas = {
+				MAC_founder_watches
+				MAC_lion_watches
+				MAC_two_betrayals
+				MAC_vergina_star
+				MAC_delcevism
+				MAC_solun_arsenal
+				MAC_army_of_the_lion
+				MAC_old_guard_reform
+				MAC_throne_of_ohrid
+				MAC_poppy
+			}
+			focuses = {
+				MAC_delchev_succession
+				MAC_preserve_democracy
+				MAC_embrace_crown
+				MAC_order_above_all
+				MAC_peoples_army
+				MAC_iron_guard
+			}
+		}
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = fascism
+			version = base_game
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			version = base_game
+		}
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism
+			version = base_game
+		}
+		"ITA"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = fascism
+			version = base_game
+		}
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			version = base_game
+		}
+		"USA"={
+			history = "USA_GATHERING_STORM_DESC"
+			ideology = democratic
+			version = base_game
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+	}
+}

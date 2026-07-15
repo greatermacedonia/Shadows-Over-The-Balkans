@@ -13,7 +13,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = neutrality
+			ideology = despotism
 			traits = { ERM_elder_statesman }
 			expire = "1965.1.1"
 			id = -1

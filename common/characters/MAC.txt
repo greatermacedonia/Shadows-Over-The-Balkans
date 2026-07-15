@@ -8,7 +8,7 @@ characters = {
 		name = MAC_cento
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_land_13
+				large = GFX_portrait_MAC_metodija_cento
 			}
 		}
 		country_leader = {
@@ -27,7 +27,7 @@ characters = {
 		name = MAC_delchev
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_land_13
+				large = GFX_portrait_MAC_goce_delchev
 			}
 		}
 	}
@@ -36,7 +36,7 @@ characters = {
 		name = MAC_sandanski
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_land_13
+				large = GFX_portrait_MAC_jane_sandanski
 			}
 		}
 	}
@@ -54,7 +54,7 @@ characters = {
 		name = MAC_gjorche_petrov
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_land_13
+				large = GFX_portrait_MAC_gjorche_petrov
 			}
 		}
 	}
@@ -67,7 +67,7 @@ characters = {
 		name = MAC_aleksandrov
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_land_13
+				large = GFX_portrait_MAC_todor_aleksandrov
 			}
 		}
 	}
@@ -85,7 +85,7 @@ characters = {
 		name = MAC_apostolski
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_land_13
+				large = GFX_portrait_MAC_mihailo_apostolski
 			}
 		}
 	}
@@ -98,7 +98,7 @@ characters = {
 		name = MAC_kolisevski
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_land_13
+				large = GFX_portrait_MAC_lazar_kolisevski
 			}
 		}
 	}
@@ -111,7 +111,7 @@ characters = {
 		name = MAC_mihailov
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_land_13
+				large = GFX_portrait_MAC_ivan_mihailov
 			}
 		}
 	}

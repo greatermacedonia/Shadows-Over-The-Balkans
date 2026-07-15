@@ -82,10 +82,13 @@ country_event = {
 		name = SOTB.200.a
 		ai_chance = { factor = 40 }
 		set_country_flag = MAC_delchev_leader
-		set_country_leader = {
+		create_country_leader = {
+			name = MAC_delchev
+			desc = MAC_delchev_desc
+			picture = GFX_portrait_MAC_goce_delchev
 			ideology = populism
 			traits = { delchevism_founder }
-			id = -1
+			expire = "1965.1.1"
 		}
 		remove_ideas = {
 			MAC_founder_watches
@@ -101,10 +104,13 @@ country_event = {
 		name = SOTB.200.b
 		ai_chance = { factor = 30 }
 		set_country_flag = MAC_sandanski_leader
-		set_country_leader = {
+		create_country_leader = {
+			name = MAC_sandanski
+			desc = MAC_sandanski_desc
+			picture = GFX_portrait_MAC_jane_sandanski
 			ideology = conservatism
 			traits = { lion_of_solun }
-			id = -1
+			expire = "1965.1.1"
 		}
 		remove_ideas = {
 			MAC_lion_watches
@@ -133,10 +139,13 @@ country_event = {
 		name = SOTB.200.d
 		ai_chance = { factor = 5 }
 		set_country_flag = MAC_vlahov_leader
-		set_country_leader = {
+		create_country_leader = {
+			name = MAC_vlahov
+			desc = MAC_vlahov_desc
+			picture = GFX_portrait_europe_generic_land_13
 			ideology = liberalism
 			traits = { imro_reformer }
-			id = -1
+			expire = "1965.1.1"
 		}
 		remove_ideas = {
 			MAC_founder_watches
@@ -159,10 +168,13 @@ country_event = {
 		name = SOTB.200.e
 		ai_chance = { factor = 5 }
 		set_country_flag = MAC_petrov_leader
-		set_country_leader = {
+		create_country_leader = {
+			name = MAC_gjorche_petrov
+			desc = MAC_gjorche_petrov_desc
+			picture = GFX_portrait_MAC_gjorche_petrov
 			ideology = socialism
 			traits = { imro_progressive }
-			id = -1
+			expire = "1965.1.1"
 		}
 		remove_ideas = {
 			MAC_founder_watches
@@ -207,7 +219,7 @@ country_event = {
 		name = SOTB.300.c
 		ai_chance = { factor = 10 }
 		add_war_support = 0.10
-		fascism_drift = 0.10
+		add_popularity = { ideology = fascism popularity = 0.10 }
 		custom_effect_tooltip = SOTB.300.c_tt
 	}
 }
@@ -297,10 +309,13 @@ country_event = {
 		name = SOTB.500.a
 		ai_chance = { factor = 50 }
 		set_country_flag = MAC_harald_king
-		set_country_leader = {
+		create_country_leader = {
+			name = MAC_prince_harald
+			desc = MAC_prince_harald_desc
+			picture = GFX_portrait_europe_generic_land_13
 			ideology = conservatism
 			traits = { constitutional_monarch }
-			id = -1
+			expire = "1965.1.1"
 		}
 		remove_ideas = {
 			MAC_founder_watches
@@ -319,10 +334,13 @@ country_event = {
 		name = SOTB.500.b
 		ai_chance = { factor = 30 }
 		set_country_flag = MAC_peter_king
-		set_country_leader = {
+		create_country_leader = {
+			name = MAC_peter_ii
+			desc = MAC_peter_ii_desc
+			picture = GFX_portrait_europe_generic_land_13
 			ideology = despotism
 			traits = { exiled_king }
-			id = -1
+			expire = "1965.1.1"
 		}
 		remove_ideas = {
 			MAC_founder_watches
@@ -331,7 +349,7 @@ country_event = {
 		}
 		add_stability = -0.05
 		add_war_support = 0.10
-		neutrality_drift = 0.05
+			add_popularity = { ideology = neutrality popularity = 0.05 }
 	}
 
 	# --- Prince Philipp of Hesse ---
@@ -339,10 +357,13 @@ country_event = {
 		name = SOTB.500.c
 		ai_chance = { factor = 20 }
 		set_country_flag = MAC_philipp_king
-		set_country_leader = {
+		create_country_leader = {
+			name = MAC_prince_philipp
+			desc = MAC_prince_philipp_desc
+			picture = GFX_portrait_europe_generic_land_13
 			ideology = nazism
 			traits = { german_prince }
-			id = -1
+			expire = "1965.1.1"
 		}
 		remove_ideas = {
 			MAC_founder_watches
@@ -351,7 +372,7 @@ country_event = {
 		}
 		add_stability = -0.10
 		add_war_support = 0.15
-		fascism_drift = 0.10
+		add_popularity = { ideology = fascism popularity = 0.10 }
 		add_opinion_modifier = {
 			target = GER
 			modifier = MAC_ger_german_prince
@@ -381,7 +402,7 @@ country_event = {
 		create_country_leader = {
 			name = MAC_kolisevski
 			desc = MAC_kolisevski_desc
-			picture = GFX_portrait_europe_generic_land_13
+			picture = GFX_portrait_MAC_lazar_kolisevski
 			ideology = stalinism
 			traits = { the_firebrand }
 			expire = "1965.1.1"

@@ -4,6 +4,98 @@
 # ============================================================
 
 # ============================================================
+# SOTB.690 — MAC Starting Army Setup (hidden, fires day 1)
+# ============================================================
+country_event = {
+	id = SOTB.690
+	title = SOTB.690.t
+	desc = SOTB.690.d
+	picture = GFX_report_event_generic_army_exercise
+
+	trigger = { tag = MAC }
+	is_triggered_only = yes
+	hide_window = yes
+
+	option = {
+		name = SOTB.690.a
+		ai_chance = { factor = 100 }
+
+		# 1. Solunska — Solun capital garrison
+		create_division = {
+			name = "1. Pešadiska Divizija - Solunska"
+			location = 895
+			division_template = "Pešadiska Divizija"
+			start_experience_factor = 0.3
+			start_equipment_factor = 0.7
+		}
+		# 2. Vardarska — Skopje
+		create_division = {
+			name = "2. Pešadiska Divizija - Vardarska"
+			location = 974
+			division_template = "Pešadiska Divizija"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.6
+		}
+		# 3. Bitolska — southern flank
+		create_division = {
+			name = "3. Pešadiska Divizija - Bitolska"
+			location = 833
+			division_template = "Pešadiska Divizija"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.6
+		}
+		# 4. Pirinska — Bulgarian border
+		create_division = {
+			name = "4. Pešadiska Divizija - Pirinska"
+			location = 6886
+			division_template = "Pešadiska Divizija"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.5
+		}
+		# 5. Bregalnička — Eastern Vardar
+		create_division = {
+			name = "5. Pešadiska Divizija - Bregalnička"
+			location = 13414
+			division_template = "Pešadiska Divizija"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.5
+		}
+		# 6. Ohridska — western reserve
+		create_division = {
+			name = "6. Pešadiska Divizija - Ohridska"
+			location = 3865
+			division_template = "Pešadiska Divizija"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.5
+		}
+		# 1. Planinska Korabska — Albanian border
+		create_division = {
+			name = "1. Planinska Brigada - Korabska"
+			location = 867
+			division_template = "Planinska Brigada"
+			start_experience_factor = 0.3
+			start_equipment_factor = 0.7
+		}
+		# 2. Planinska Belasička — mountain screen
+		create_division = {
+			name = "2. Planinska Brigada - Belasička"
+			location = 9930
+			division_template = "Planinska Brigada"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.6
+		}
+		# 1. Konjička Egejska — mobile reserve
+		create_division = {
+			name = "1. Konjička Divizija - Egejska"
+			location = 3844
+			division_template = "Konjička Divizija"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.5
+		}
+	}
+}
+
+# ============================================================
 # SOTB.700 — The General Staff Divides (fires from MAC_army_future)
 # ============================================================
 country_event = {
