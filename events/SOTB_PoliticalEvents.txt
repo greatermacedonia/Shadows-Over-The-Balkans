@@ -378,10 +378,13 @@ country_event = {
 	option = {
 		name = SOTB.600.a
 		set_country_flag = MAC_kolisevski_leader
-		set_country_leader = {
+		create_country_leader = {
+			name = MAC_kolisevski
+			desc = MAC_kolisevski_desc
+			picture = GFX_portrait_europe_generic_land_13
 			ideology = stalinism
 			traits = { the_firebrand }
-			id = -1
+			expire = "1965.1.1"
 		}
 		remove_ideas = {
 			MAC_founder_watches

@@ -659,7 +659,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.05
-			fascism_drift = -0.02
+			add_popularity = { ideology = fascism popularity = -0.02 }
 			custom_effect_tooltip = MAC_peoples_charter_tt
 		}
 
@@ -802,8 +802,8 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = SOTB_succession_resolved
 			add_stability = 0.10
-			communism_drift = -0.05
-			fascism_drift = -0.05
+			add_popularity = { ideology = communism popularity = -0.05 }
+			add_popularity = { ideology = fascism popularity = -0.05 }
 		}
 
 		ai_will_do = {
@@ -831,7 +831,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			add_stability = 0.10
-			neutrality_drift = 0.05
+			add_popularity = { ideology = neutrality popularity = 0.05 }
 			custom_effect_tooltip = MAC_royal_mandate_tt
 		}
 
@@ -1007,6 +1007,11 @@ focus_tree = {
 			}
 			add_ideas = MAC_avenger_triumph
 		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 	# ============================================================
 	# MILITARY TREE — "The Army of the Lion"
@@ -1470,6 +1475,11 @@ focus_tree = {
 			conscription_factor = 0.05
 		}
 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	# ============================================================
 	# ECONOMIC TREE — "The Balkan Workshop"
 	# 5 branches, 31 focuses, y=16
@@ -1882,6 +1892,7 @@ focus_tree = {
 		x = 12
 		y = 16
 		cost = 10
+		mutually_exclusive = { focus = MAC_macedonian_poppy_focus }
 		available = { }
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
@@ -1897,6 +1908,7 @@ focus_tree = {
 		x = 12
 		y = 17
 		cost = 10
+		mutually_exclusive = { focus = MAC_macedonian_medicine }
 		available = { }
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -2068,8 +2080,15 @@ focus_tree = {
 		available = { NOT = { exists = MNT } }
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
-			YUG = { every_state = { limit = { is_core_of = MNT } add_state_claim = MAC } }
 			custom_effect_tooltip = MAC_liberate_montenegro_tt
+			hidden_effect = {
+				YUG = { release = MNT }
+				MNT = {
+					add_to_faction = MAC
+					add_opinion_modifier = { target = MAC modifier = MAC_liberated_us }
+				}
+				add_political_power = -500
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -2122,7 +2141,7 @@ focus_tree = {
 		completion_reward = {
 			add_opinion_modifier = { target = ENG modifier = MAC_western_guarantee }
 			add_opinion_modifier = { target = FRA modifier = MAC_western_guarantee }
-			democratic_drift = 0.02
+			add_popularity = { ideology = democratic popularity = 0.02 }
 		}
 		ai_will_do = { factor = 1 modifier = { factor = 5 has_country_flag = SOTB_democratic_path } }
 	}
@@ -2138,7 +2157,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_opinion_modifier = { target = GER modifier = MAC_german_partnership }
-			fascism_drift = 0.02
+			add_popularity = { ideology = fascism popularity = 0.02 }
 		}
 		ai_will_do = { factor = 1 modifier = { factor = 5 has_country_flag = SOTB_fascist_path } }
 	}
@@ -2154,7 +2173,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_opinion_modifier = { target = SOV modifier = MAC_soviet_embrace }
-			communism_drift = 0.02
+			add_popularity = { ideology = communism popularity = 0.02 }
 		}
 		ai_will_do = { factor = 1 modifier = { factor = 5 has_country_flag = SOTB_communist_path } }
 	}
@@ -2391,7 +2410,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_stability = 0.05
-			communism_drift = 0.03
+			add_popularity = { ideology = communism popularity = 0.03 }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -2411,6 +2430,12 @@ focus_tree = {
 			add_war_support = 0.10
 			custom_effect_tooltip = MAC_united_republic_tt
 		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	# ============================================================
 	# CULTURAL TREE — "Heirs of Alexander" + Rakija Spirits
 	# 11 focuses, y=32

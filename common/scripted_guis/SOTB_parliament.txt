@@ -8,6 +8,7 @@ scripted_gui = {
 
 		visible = {
 			is_ai = no
+			has_global_flag = SOTB_tracker_open
 		}
 
 		ai_enabled = {

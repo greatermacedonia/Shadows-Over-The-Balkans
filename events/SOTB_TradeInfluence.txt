@@ -22,32 +22,25 @@ country_event = {
 		every_other_country = {
 			limit = {
 				SOTB_influence_controlled = yes
-				any_state = {
-					any_core_country = {
-						does_not_exist = yes
-						NOT = { tag = ROOT }
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = PREV
+						NOT = { is_owned_by = PREV }
 					}
 				}
 			}
-			save_scope_as = SOTB_target_partner
-			random_state = {
+			save_event_target_as = SOTB_target_partner
+			random_owned_state = {
 				limit = {
-					is_owned_by = ROOT
-					any_core_country = {
-						does_not_exist = yes
-						NOT = { tag = ROOT }
+					any_neighbor_state = {
+						is_core_of = PREV
+						NOT = { is_owned_by = PREV }
 					}
 				}
-				random_core_country = {
-					limit = {
-						does_not_exist = yes
-						NOT = { tag = ROOT }
-					}
-					save_scope_as = SOTB_release_nation
-				}
+				save_event_target_as = SOTB_release_state
 			}
 		}
-		scope:SOTB_target_partner = {
+		event_target:SOTB_target_partner = {
 			country_event = { id = SOTB.1001 days = 1 }
 		}
 	}
@@ -74,11 +67,13 @@ country_event = {
 				check_variable = { SOTB_influence_@ROOT >= 100 }
 			}
 		}
-		SOTB_release_nation_from_partner = {
-			TARGET_TAG = ROOT
-			RELEASE_TAG = SOTB_release_nation
+		# Release nation event chain — saves host & state as targets then invokes effect
+		save_event_target_as = SOTB_target_host
+		event_target:SOTB_release_state = {
+			save_event_target_as = SOTB_release_tag
 		}
-		SOTB_release_nation = {
+		SOTB_release_nation_from_partner = yes
+		event_target:SOTB_release_tag = {
 			add_opinion_modifier = { target = MAC modifier = MAC_liberated_us }
 		}
 	}
@@ -100,7 +95,7 @@ country_event = {
 		ai_chance = { factor = 20 }
 		add_political_power = -75
 		add_stability = -0.05
-		change_variable = { SOTB_influence_@ROOT = -20 }
+		subtract_from_variable = { var = SOTB_influence_@ROOT value = 20 }
 		add_opinion_modifier = { target = MAC modifier = MAC_bribery_paid }
 	}
 }

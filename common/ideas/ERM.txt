@@ -1,0 +1,49 @@
+ideas = {
+
+	country = {
+
+		# ============================================================
+		# EASTERN RUMELIA NATIONAL SPIRITS
+		# ============================================================
+
+		# Plovdiv's merchant houses — the economic engine of Rumelia
+		ERM_plovdiv_merchants = {
+			allowed = { original_tag = ERM }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+
+			modifier = {
+				trade_opinion_factor = 0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		# The Unification Question — absorbed, not united
+		ERM_unification_question = {
+			allowed = { original_tag = ERM }
+			allowed_civil_war = { always = yes }
+			picture = unknown
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.10
+			}
+		}
+
+		# BUL reaction: Nation in Mourning (decaying, applied by event)
+		BUL_rumelian_secession_spirit = {
+			allowed = { original_tag = BUL }
+			picture = unknown
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+
+	}
+
+}

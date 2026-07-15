@@ -81,4 +81,9 @@ MAC_rakija_trade = { opinion = 15 trade = 10 value = 0 }
 # --- Trade Influence ---
 MAC_liberated_us = { opinion = 100 value = 0 }
 MAC_humiliated_us = { opinion = -100 value = 0 }
+MAC_humiliated_host = { opinion = -50 value = 0 }
 MAC_bribery_paid = { opinion = 20 value = 0 }
+
+# --- Eastern Rumelia / Bulgarian Reaction ---
+BUL_rumelian_secession = { opinion = -75 value = 0 }
+MAC_rumelian_liberator = { opinion = -50 value = 0 }

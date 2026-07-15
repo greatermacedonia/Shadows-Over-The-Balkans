@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  # ============================================================
  # TRADE EMPIRE DECISIONS
  # ============================================================
@@ -47,3 +47,25 @@ l_english:
  SOTB.1002.t: "Liberation!"
  SOTB.1002.d: "After years under foreign rule, [ROOT.GetName] is free. Macedonian trade pressure — the quiet weapon of the poppy and the leaf — has achieved what armies could not. The Vergina Sun welcomes a new nation into the community of the free. Solun celebrates. The newborn republic takes its first breath."
  SOTB.1002.a: "Freedom — thanks to Macedonia"
+
+ # ============================================================
+ # TRADE TRACKER GUI
+ # ============================================================
+ SOTB_TRACKER_TITLE: "Trade Empire Tracker"
+ SOTB_TRACKER_CLOSE_TT: "Close tracker"
+ SOTB_TRACKER_DRAG_TT: "Drag to move · Click toggle in top bar to hide"
+ SOTB_TRACKER_TOGGLE_TT: "Toggle Trade Empire Tracker"
+ SOTB_TRACKER_DECISIONS_TT: "Open trade empire decisions"
+ SOTB_BAR_TITLE: "Influence by Partner"
+ SOTB_COMMODITY_TITLE: "Active Trade Partnerships"
+
+ # ============================================================
+ # BULGARIAN REACTION EVENTS
+ # ============================================================
+ SOTB.920.t: "The Rumelian Secession"
+ SOTB.920.d: "Plovdiv is gone. The city of seven hills — the ancient Philippopolis, the heart of the Maritsa valley — has declared itself the capital of a restored Eastern Rumelia. The flag of red, white, and blue flies over the trade houses that once paid their taxes to Sofia. The army demands action. The people demand answers. The tsar demands loyalty. But the truth is plain: Eastern Rumelia is no longer Bulgarian, and the nation is in mourning."
+ SOTB.920.a: "A black day for Bulgaria"
+ SOTB.921.t: "The Mourning Period Ends"
+ SOTB.921.d: "A year has passed since Plovdiv seceded. The black flags have been taken down. The empty chairs at Sofia's tables have been filled. Bulgaria has moved on — but the scar remains, and the nation has not forgotten."
+ SOTB.921.a: "We remember — but we move forward"
+ SOTB_LEGEND: "Top-bar icon toggles tracker · Drag title bar to move"

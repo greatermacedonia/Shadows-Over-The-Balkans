@@ -14,10 +14,13 @@ SOTB_remove_delchev_watches = {
 
 # Goce Delchev returns as country leader
 SOTB_delchev_returns = {
-	set_country_leader = {
+	create_country_leader = {
+		name = MAC_delchev
+		desc = MAC_delchev_desc
+		picture = GFX_portrait_europe_generic_land_13
 		ideology = populism
 		traits = { delchevism_founder }
-		id = -1
+		expire = "1965.1.1"
 	}
 	remove_ideas = {
 		MAC_founder_watches
@@ -30,10 +33,13 @@ SOTB_delchev_returns = {
 
 # Jane Sandanski takes the Lion's Path
 SOTB_sandanski_path = {
-	set_country_leader = {
+	create_country_leader = {
+		name = MAC_sandanski
+		desc = MAC_sandanski_desc
+		picture = GFX_portrait_europe_generic_land_13
 		ideology = conservatism
 		traits = { lion_of_solun }
-		id = -1
+		expire = "1965.1.1"
 	}
 	remove_ideas = {
 		MAC_founder_watches
@@ -46,10 +52,13 @@ SOTB_sandanski_path = {
 
 # Todor Aleksandrov seizes power (Non-Aligned military)
 SOTB_aleksandrov_takes_power = {
-	set_country_leader = {
+	create_country_leader = {
+		name = MAC_aleksandrov
+		desc = MAC_aleksandrov_desc
+		picture = GFX_portrait_europe_generic_land_13
 		ideology = despotism
 		traits = { pragmatic_soldier }
-		id = -1
+		expire = "1965.1.1"
 	}
 	remove_ideas = {
 		MAC_founder_watches
@@ -63,10 +72,13 @@ SOTB_aleksandrov_takes_power = {
 
 # Ivan Mihailov's fascist takeover
 SOTB_mihailov_coup = {
-	set_country_leader = {
+	create_country_leader = {
+		name = MAC_mihailov
+		desc = MAC_mihailov_desc
+		picture = GFX_portrait_europe_generic_land_13
 		ideology = fascism_ideology
 		traits = { the_avenger }
-		id = -1
+		expire = "1965.1.1"
 	}
 	remove_ideas = {
 		MAC_founder_watches

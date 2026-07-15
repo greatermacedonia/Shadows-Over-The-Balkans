@@ -1,4 +1,4 @@
-capital = 1089
+capital = 6923 # Plovdiv
 
 set_research_slots = 2
 

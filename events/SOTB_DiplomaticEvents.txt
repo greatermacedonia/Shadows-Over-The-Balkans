@@ -125,3 +125,68 @@ country_event = {
 		}
 	}
 }
+
+# ============================================================
+# SOTB.920 — The Rumelian Secession (BUL reaction to ERM release)
+# ============================================================
+country_event = {
+	id = SOTB.920
+
+	title = SOTB.920.t
+	desc = SOTB.920.d
+	picture = GFX_report_event_generic_treaty_failure
+
+	trigger = {
+		tag = BUL
+		ERM = { exists = yes }
+		NOT = { has_country_flag = BUL_rumelian_secession_fired }
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.920.a
+		ai_chance = { factor = 100 }
+		set_country_flag = BUL_rumelian_secession_fired
+		add_ideas = BUL_rumelian_secession_spirit
+		add_opinion_modifier = { target = ERM modifier = BUL_rumelian_secession }
+		if = {
+			limit = { MAC = { exists = yes } }
+			add_opinion_modifier = { target = MAC modifier = MAC_rumelian_liberator }
+		}
+		if = {
+			limit = { MAC = { has_idea = MAC_liberated_nation } }
+			add_opinion_modifier = { target = MAC modifier = MAC_rumelian_liberator }
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = ERM
+		}
+		hidden_effect = {
+			country_event = { id = SOTB.921 days = 365 }
+		}
+	}
+}
+
+# ============================================================
+# SOTB.921 — Mourning Period Ends (BUL)
+# ============================================================
+country_event = {
+	id = SOTB.921
+
+	title = SOTB.921.t
+	desc = SOTB.921.d
+	picture = GFX_report_event_generic_recovery
+
+	trigger = {
+		tag = BUL
+		has_country_flag = BUL_rumelian_secession_fired
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.921.a
+		ai_chance = { factor = 100 }
+		remove_ideas = BUL_rumelian_secession_spirit
+		clr_country_flag = BUL_rumelian_secession_fired
+	}
+}

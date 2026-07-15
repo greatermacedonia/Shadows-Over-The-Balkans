@@ -6024,3 +6024,15 @@
  ERM: "Eastern Rumelia"
  ERM_DEF: "Eastern Rumelia"
  ERM_ADJ: "Eastern Rumelian"
+
+ # --- ERM Character ---
+ ERM_ivan_geshov: "Ivan Evstratiev Geshov"
+ ERM_ivan_geshov_desc: "Born in Plovdiv in 1849, Geshov was a statesman who served as Prime Minister of Bulgaria before the Great War. His opposition to Sofia's war policy and his advocacy for Plovdiv's autonomy made him a controversial figure. After surviving an assassination attempt in 1924 — the official record lists his death, a convenient fiction — he lived quietly in Plovdiv, building the city's trade houses and quietly nurturing the idea of a distinct Rumelian identity. In 1936, at the age of 87, the Grand Old Man of Plovdiv emerges as the natural leader of a restored Eastern Rumelia — frail of body, sharp of mind, and carrying the weight of a nation that remembers what it was."
+
+ # --- ERM Ideas ---
+ ERM_plovdiv_merchants: "The Plovdiv Trade Houses"
+ ERM_plovdiv_merchants_desc: "The Plovdiv Trade Houses dominated Maritsa valley commerce for generations. Sofia's neglect has not dimmed their ambition — if anything, it has sharpened it. The merchants of Plovdiv know that a free Rumelia controls its own trade."
+ ERM_unification_question: "The Unification Question"
+ ERM_unification_question_desc: "Eastern Rumelia was absorbed — not united. The question of Plovdiv's place in Bulgaria remains unanswered, and Sofia's centralization has left Rumelians wondering whether 1885 was a liberation or a conquest."
+ BUL_rumelian_secession_spirit: "Nation in Mourning"
+ BUL_rumelian_secession_spirit_desc: "The secession of Eastern Rumelia has shaken the Bulgarian nation to its core. Plovdiv — the city of seven hills, the heart of the Maritsa — is no longer Bulgarian. A black mood hangs over Sofia, and the people demand answers."

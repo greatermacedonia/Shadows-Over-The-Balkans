@@ -5,9 +5,39 @@
 
 scripted_gui = {
 
+	# ============================================================
+	# Floating Toggle Button — Always visible, drag to reposition
+	# ============================================================
+	SOTB_tracker_toggle = {
+		context_type = player_context
+		window_name = "SOTB_tracker_toggle_btn"
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				tag = MAC
+			}
+		}
+
+		effects = {
+			SOTB_toggle_icon_click = {
+				if = {
+					limit = { has_global_flag = SOTB_tracker_open }
+					clr_global_flag = SOTB_tracker_open
+				}
+				else = {
+					set_global_flag = SOTB_tracker_open
+				}
+			}
+		}
+	}
+
+	# ============================================================
+	# Main Trade Empire Tracker Panel
+	# ============================================================
 	SOTB_trade_tracker_window = {
 
-		context_type = selected_country_context
+		context_type = player_context
 
 		window_name = "SOTB_trade_tracker_window"
 
@@ -25,7 +55,7 @@ scripted_gui = {
 			}
 		}
 
-		# --- Close button effect ---
+		# --- Button effects ---
 		effects = {
 			SOTB_tracker_close_click = {
 				clr_global_flag = SOTB_tracker_open

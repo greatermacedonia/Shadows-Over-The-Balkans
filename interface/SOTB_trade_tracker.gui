@@ -17,24 +17,32 @@ guiTypes = {
 			spriteType = "GFX_dst_bg"
 		}
 
-		# --- Title Bar ---
+		# --- Title Bar (also acts as drag handle) ---
+		buttonType = {
+			name = "SOTB_tracker_drag_handle"
+			position = { x = 0 y = 0 }
+			size = { width = 420 height = 24 }
+			spriteType = "GFX_dst_bg"
+			pdx_tooltip = "SOTB_TRACKER_DRAG_TT"
+		}
+
 		instantTextboxType = {
 			name = "SOTB_tracker_title"
-			position = { x = 15 y = 10 }
+			position = { x = 15 y = 2 }
 			font = "hoi_18mbs"
 			text = "SOTB_TRACKER_TITLE"
-			maxWidth = 390
-			maxHeight = 25
+			maxWidth = 360
+			maxHeight = 20
 			format = center
 		}
 
 		# --- Close Button ---
 		buttonType = {
 			name = "SOTB_tracker_close"
-			position = { x = 390 y = 10 }
-			spriteType = "GFX_close_button"
+			position = { x = 388 y = 2 }
+			size = { width = 24 height = 24 }
+			spriteType = "GFX_closebutton"
 			pdx_tooltip = "SOTB_TRACKER_CLOSE_TT"
-			scale = 0.8
 		}
 
 		# --- Bar Chart Panel (Left) ---
@@ -239,7 +247,7 @@ guiTypes = {
 			name = "SOTB_tracker_decisions_button"
 			position = { x = 15 y = 300 }
 			size = { width = 160 height = 32 }
-			spriteType = "GFX_focus_generic_dangerous_deal"
+			spriteType = "GFX_goal_generic_dangerous_deal"
 			pdx_tooltip = "SOTB_TRACKER_DECISIONS_TT"
 		}
 
@@ -275,6 +283,24 @@ guiTypes = {
 			slotsize = { width = 100%% height = 0 }
 			max_slots_horizontal = 1
 			add_horizontal = no
+		}
+	}
+
+	# ============================================================
+	# Top-Bar Toggle Button — Always visible for MAC player
+	# ============================================================
+	containerWindowType = {
+		name = "SOTB_tracker_toggle_btn"
+		position = { x = -40 y = 4 }
+		size = { width = 32 height = 32 }
+		orientation = UPPER_LEFT
+
+		buttonType = {
+			name = "SOTB_toggle_icon"
+			position = { x = 0 y = 0 }
+			size = { width = 32 height = 32 }
+			spriteType = "GFX_goal_generic_dangerous_deal"
+			pdx_tooltip = "SOTB_TRACKER_TOGGLE_TT"
 		}
 	}
 

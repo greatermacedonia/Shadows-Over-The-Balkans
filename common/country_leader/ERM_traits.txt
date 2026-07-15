@@ -1,0 +1,20 @@
+# ============================================================
+# SOTB Country Leader Traits — ERM
+# ============================================================
+
+leader_traits = {
+
+	ERM_elder_statesman = {
+		random = no
+		education = yes
+
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		trade_opinion_factor = 0.05
+
+		allowed = {
+			original_tag = ERM
+		}
+	}
+
+}

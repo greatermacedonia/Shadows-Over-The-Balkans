@@ -1,4 +1,9 @@
-l_english:
+﻿l_english:
+ # ============================================================
+ # EASTERN RUMELIA TRAITS
+ # ============================================================
+ ERM_elder_statesman: "Elder Statesman"
+ ERM_elder_statesman_desc: "This leader is the grand old figure of the nation — respected across party lines, a living link to the founding generation. His words carry the weight of decades."
  # ============================================================
  # CHARACTER NAMES
  # ============================================================

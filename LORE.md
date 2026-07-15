@@ -92,7 +92,23 @@ In 1934, Goce Delchev suffered a stroke. He survived — 62, frail, and forever 
 
 ---
 
-## Part VII — The Republic at Game Start (1936)
+## Part VII — The Other Republics: Thrace and Eastern Rumelia
+
+Macedonia was not the only nation to emerge from the wreckage of the Ottoman Balkans.
+
+**Thrace (THR)** was carved from the Treaty of Neuilly as a buffer between Greece, Bulgaria, and Turkey. Centered on Edirne — the old Adrianople — Thrace is a multi-ethnic republic where Turks, Greeks, Bulgarians, and Jews coexist under a fragile democratic framework. Its strategic position controlling the Dardanelles approaches makes it a prize coveted by all its neighbours. Thrace guards its neutrality jealously — but neutrality in the Balkans is a temporary condition.
+
+**Eastern Rumelia** has a longer and more complicated story. Created as an autonomous Ottoman province by the Treaty of Berlin (1878), it was absorbed by Bulgaria in the bloodless unification of 1885. Plovdiv, its ancient capital — the city of seven hills, Philippopolis of the Romans — became a Bulgarian provincial city. But the memory of autonomy never fully died.
+
+The merchants of Plovdiv, who had prospered under the Rumelian administration, chafed under Sofia's centralisation. The Turks and Greeks of the Maritsa valley — a quarter of the population in 1884 — watched Bulgarian nationalism erase their place in public life. The Rumelian identity — distinct from Bulgarian, distinct from Ottoman — survived in quiet defiance.
+
+The most prominent voice for Plovdiv's distinctiveness was **Ivan Evstratiev Geshov**, born in Plovdiv in 1849, a statesman who served as Prime Minister of Bulgaria before the Great War. His opposition to Sofia's war policy and his quiet advocacy for Plovdiv's autonomy made him enemies. In 1924, an assassination attempt was recorded in official Bulgarian history as his death. The records were convenient — for both Geshov and his enemies. He lived quietly in Plovdiv, building the city's trade houses, nurturing the idea of a restored Eastern Rumelia.
+
+In 1936, at the age of 87, the Grand Old Man of Plovdiv waits. The question of Rumelia's place in Bulgaria — absorbed, not united — remains unanswered. Macedonia's opium trade has found willing partners among Plovdiv's merchant houses. The leverage of the poppy may yet give the Rumelians what decades of quiet resistance could not: a nation of their own.
+
+---
+
+## Part VIII — The Republic at Game Start (1936)
 
 It is 1 January 1936.
 

@@ -23,13 +23,16 @@ After the Ilinden Uprising (1903) failed militarily but leadership survived, a c
 
 ##  Features
 
-- **Two new countries:** Republic of Macedonia (MAC) and Thrace (THR), plus the releasable Eastern Rumelia (ERM)
-- **Custom map:** 15 reworked states across the Balkans with historically-grounded borders
-- **36-focus political tree:** Ten paths across four ideologies — 5 democratic candidates, Non-Aligned military rule, monarchist restoration, communist revolution, and fascist takeover
-- **Historical characters:** Goce Delchev, Jane Sandanski, Todor Aleksandrov, Ivan Mihailov, and more — fully defined with custom traits
-- **10 unique national spirits:** The Founder watches. The Lion still has teeth. The Two Betrayals scar the national memory.
+- **Three custom countries:** Republic of Macedonia (MAC), Thrace (THR), and the releasable Eastern Rumelia (ERM)
+- **Custom map:** 15+ reworked states across the Balkans with historically-grounded borders, including Eastern Rumelia, Edirne, and Burgas
+- **~57-focus tree:** Five interconnected trees — Political ("The Delchev Succession" — 10 paths, 4 ideologies), Military ("The Army of the Lion"), Economic ("The Balkan Workshop" with tobacco & opium branches), Diplomatic ("Macedonia Among Nations"), and Cultural Heritage ("Heirs of Alexander" + Rakija Spirits)
+- **Historical characters:** Goce Delchev, Jane Sandanski, Todor Aleksandrov, Ivan Mihailov, Metodija Čento, Dimitar Vlahov, Gjorche Petrov, Archbishop Dositej II, Mihajlo Apostolski, Lazar Koliševski, and Ivan Evstratiev Geshov (Eastern Rumelia) — all with custom traits
+- **Opium Trade Empire:** MAC leverages poppy exports to build influence over foreign nations. Custom GUI trade tracker with top-5 partner bars, commodity counts, and a floating toggle button
+- **10 national spirits + dynamic idea lifecycle:** Spirits are added, upgraded, downgraded, or removed by focuses, events, and decisions throughout a playthrough
+- **Parliament diagram & pie chart:** Scripted GUIs visualise political and economic data
+- **Eastern Rumelia:** Fully defined releasable with leader Ivan Evstratiev Geshov (alt-history survival), national spirits, Bulgarian reaction events, and tricolor flag with coat of arms
 
->  **In development:** Military focus tree, economic tree (with tobacco and opium mechanics), diplomatic tree, cultural heritage tree, and custom GUI elements.
+>  **In development:** AI strategy & balance, YUGO suppressed nations events, Thrace content, GUI polish pass, and ERM succession focus.
 
 ---
 

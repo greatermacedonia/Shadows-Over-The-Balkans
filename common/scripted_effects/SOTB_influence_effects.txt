@@ -6,15 +6,15 @@
 # Calculate manpower tier for influence multiplier
 SOTB_calculate_manpower_tier = {
 	if = {
-		limit = { manpower > 1000000 }
+		limit = { has_manpower > 1000000 }
 		set_temp_variable = { SOTB_mpr_tier = 2.0 }
 	}
 	else_if = {
-		limit = { manpower > 500000 }
+		limit = { has_manpower > 500000 }
 		set_temp_variable = { SOTB_mpr_tier = 1.5 }
 	}
 	else_if = {
-		limit = { manpower > 100000 }
+		limit = { has_manpower > 100000 }
 		set_temp_variable = { SOTB_mpr_tier = 1.0 }
 	}
 	else = {
@@ -115,20 +115,20 @@ SOTB_recalc_influence = {
 SOTB_boost_influence = {
 	if = {
 		limit = { SOTB_is_any_partner = yes }
-		change_variable = { SOTB_influence_@ROOT = 10 }
+		add_to_variable = { var = SOTB_influence_@ROOT value = 10 }
 		if = {
 			limit = { check_variable = { SOTB_influence_@ROOT > 100 } }
-			set_variable = { SOTB_influence_@ROOT = 100 }
+			set_variable = { var = SOTB_influence_@ROOT value = 100 }
 		}
 	}
 }
 
 # Host nation: reduce Macedonian influence (counter-decision)
 SOTB_expel_influence = {
-	change_variable = { SOTB_influence_@ROOT = -15 }
+	subtract_from_variable = { var = SOTB_influence_@ROOT value = 15 }
 	if = {
 		limit = { check_variable = { SOTB_influence_@ROOT < 0 } }
-		set_variable = { SOTB_influence_@ROOT = 0 }
+		set_variable = { var = SOTB_influence_@ROOT value = 0 }
 		# Clear all partner flags if dropped to zero
 		set_variable = { SOTB_opium_partner_@ROOT = 0 }
 		set_variable = { SOTB_tobacco_partner_@ROOT = 0 }
@@ -138,34 +138,38 @@ SOTB_expel_influence = {
 }
 
 # Release nation from partner
+# REQUIRES caller to set event targets before invoking:
+#   save_event_target_as = SOTB_target_host   (the country losing territory)
+#   save_event_target_as = SOTB_release_tag   (the country being released)
 SOTB_release_nation_from_partner = {
 	if = {
 		limit = {
-			$TARGET_TAG$ = {
+			event_target:SOTB_target_host = {
 				any_state = {
-					is_core_of = $RELEASE_TAG$
-					is_owned_by = $TARGET_TAG$
+					is_core_of = event_target:SOTB_release_tag
+					is_owned_by = event_target:SOTB_target_host
 				}
 			}
 		}
-		$TARGET_TAG$ = {
+		event_target:SOTB_target_host = {
 			every_state = {
 				limit = {
-					is_core_of = $RELEASE_TAG$
+					is_core_of = event_target:SOTB_release_tag
 				}
-				set_state_owner = $RELEASE_TAG$
+				# TODO: Dynamic state transfer requires event chain — using ROOT as placeholder
+				set_state_owner = ROOT
 			}
 		}
-		$RELEASE_TAG$ = {
+		event_target:SOTB_release_tag = {
 			add_ideas = MAC_liberated_nation
 			add_to_faction = MAC
 		}
-		$TARGET_TAG$ = {
+		event_target:SOTB_target_host = {
 			add_ideas = MAC_humiliated_host
 			set_variable = { SOTB_influence_@ROOT = 0 }
 		}
 		# Reset partner flags for host
-		$TARGET_TAG$ = {
+		event_target:SOTB_target_host = {
 			set_variable = { SOTB_opium_partner_@ROOT = 0 }
 			set_variable = { SOTB_tobacco_partner_@ROOT = 0 }
 			set_variable = { SOTB_pharma_partner_@ROOT = 0 }
@@ -195,21 +199,19 @@ SOTB_update_tracker_display = {
 			}
 			if = {
 				limit = { PREV = { check_variable = { SOTB_opium_partner_@ROOT > 0 } } }
-				MAC = { change_variable = { SOTB_opium_partner_count = 1 } }
-			}
-			if = {
-				limit = { PREV = { check_variable = { SOTB_tobacco_partner_@ROOT > 0 } } }
-				MAC = { change_variable = { SOTB_tobacco_partner_count = 1 } }
-			}
-			if = {
-				limit = { PREV = { check_variable = { SOTB_pharma_partner_@ROOT > 0 } } }
-				MAC = { change_variable = { SOTB_pharma_partner_count = 1 } }
-			}
-			if = {
-				limit = { PREV = { check_variable = { SOTB_rakija_partner_@ROOT > 0 } } }
-				MAC = { change_variable = { SOTB_rakija_partner_count = 1 } }
-			}
-			
+			MAC = { add_to_variable = { var = SOTB_opium_partner_count value = 1 } }
+		}
+		if = {
+			limit = { PREV = { check_variable = { SOTB_tobacco_partner_@ROOT > 0 } } }
+			MAC = { add_to_variable = { var = SOTB_tobacco_partner_count value = 1 } }
+		}
+		if = {
+			limit = { PREV = { check_variable = { SOTB_pharma_partner_@ROOT > 0 } } }
+			MAC = { add_to_variable = { var = SOTB_pharma_partner_count value = 1 } }
+		}
+		if = {
+			limit = { PREV = { check_variable = { SOTB_rakija_partner_@ROOT > 0 } } }
+			MAC = { add_to_variable = { var = SOTB_rakija_partner_count value = 1 } }
 			MAC = {
 				if = {
 					limit = { check_variable = { SOTB_influence_@ROOT > SOTB_top1_influence } }
@@ -244,4 +246,5 @@ SOTB_update_tracker_display = {
 			}
 		}
 	}
+}
 }
