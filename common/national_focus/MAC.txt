@@ -9,18 +9,13 @@ focus_tree = {
     }
     default = no
     continuous_focus_position = {
-        x = 50
-        y = 1500
+        x = 0
+        y = 9
     }
-
-    # ============================================================
-    # SHARED TRUNK — The Parliamentary Crisis
-    # ============================================================
-
     focus = {
         id = MAC_parliamentary_crisis
-        icon = GFX_goal_generic_national_unity
-        x = 0
+        icon = GFX_focus_generic_conference
+        x = 1
         y = 0
         cost = 5
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS }
@@ -39,11 +34,6 @@ focus_tree = {
             factor = 10
         }
     }
-
-    # ============================================================
-    # FIRST FORK — Democratic vs Authoritarian (2-way MEX)
-    # ============================================================
-
     focus = {
         id = MAC_defend_democracy
         icon = GFX_focus_generic_democratic_europe
@@ -51,8 +41,8 @@ focus_tree = {
             focus = MAC_restore_order
         }
         relative_position_id = MAC_parliamentary_crisis
-        x = -5
-        y = 2
+        x = -6
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -70,7 +60,6 @@ focus_tree = {
             focus = MAC_parliamentary_crisis
         }
     }
-
     focus = {
         id = MAC_restore_order
         icon = GFX_goal_generic_neutrality_focus
@@ -78,8 +67,8 @@ focus_tree = {
             focus = MAC_defend_democracy
         }
         relative_position_id = MAC_parliamentary_crisis
-        x = 5
-        y = 2
+        x = 6
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -97,17 +86,12 @@ focus_tree = {
             focus = MAC_parliamentary_crisis
         }
     }
-
-    # ============================================================
-    # DEMOCRATIC COLUMN
-    # ============================================================
-
     focus = {
         id = MAC_democratic_convention
         icon = GFX_focus_generic_election
         relative_position_id = MAC_defend_democracy
-        x = -5
-        y = 4
+        x = 0
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS }
         completion_reward = {
@@ -123,20 +107,17 @@ focus_tree = {
             focus = MAC_defend_democracy
         }
     }
-
-    # --- Democratic 4-way MEX ---
-
     focus = {
         id = MAC_recall_the_founder
-        icon = GFX_goal_generic_national_unity
+        icon = GFX_focus_generic_phoenix
         mutually_exclusive = {
             focus = MAC_lions_path
             focus = MAC_ilinden_spirit
             focus = MAC_republican_stewardship
         }
-        relative_position_id = MAC_democratic_convention
-        x = -10
-        y = 6
+        relative_position_id = MAC_defend_democracy
+        x = -4
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -153,13 +134,12 @@ focus_tree = {
             focus = MAC_democratic_convention
         }
     }
-
     focus = {
         id = MAC_delchev_returns
         icon = GFX_focus_generic_social_democracy
-        relative_position_id = MAC_recall_the_founder
-        x = -9
-        y = 8
+        relative_position_id = MAC_defend_democracy
+        x = -4
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
         completion_reward = {
@@ -174,15 +154,14 @@ focus_tree = {
             focus = MAC_recall_the_founder
         }
     }
-
     focus = {
         id = MAC_armed_neutrality
         icon = GFX_goal_generic_position_armies
-        relative_position_id = MAC_delchev_returns
-        x = -9
-        y = 10
+        relative_position_id = MAC_defend_democracy
+        x = -5
+        y = 5
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
             add_stability = 0.10
             drift_defence_factor = 0.10
@@ -195,16 +174,15 @@ focus_tree = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_delchev_returns
+            focus = MAC_delchev_reforms
         }
     }
-
     focus = {
         id = MAC_delcevism_fulfilled
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_armed_neutrality
-        x = -9
-        y = 12
+        icon = GFX_focus_generic_soldier_salute
+        relative_position_id = MAC_defend_democracy
+        x = -4
+        y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -219,7 +197,6 @@ focus_tree = {
             focus = MAC_armed_neutrality
         }
     }
-
     focus = {
         id = MAC_lions_path
         icon = GFX_goal_generic_defence
@@ -228,9 +205,9 @@ focus_tree = {
             focus = MAC_ilinden_spirit
             focus = MAC_republican_stewardship
         }
-        relative_position_id = MAC_democratic_convention
-        x = -7
-        y = 6
+        relative_position_id = MAC_defend_democracy
+        x = -1
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -247,13 +224,12 @@ focus_tree = {
             focus = MAC_democratic_convention
         }
     }
-
     focus = {
         id = MAC_fortress_macedonia
         icon = GFX_goal_generic_fortify_city
-        relative_position_id = MAC_lions_path
-        x = -7
-        y = 8
+        relative_position_id = MAC_defend_democracy
+        x = -3
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         completion_reward = {
@@ -264,16 +240,15 @@ focus_tree = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_lions_path
+            focus = MAC_sandanski_path
         }
     }
-
     focus = {
         id = MAC_they_will_not_pass
         icon = GFX_goal_generic_defence
-        relative_position_id = MAC_fortress_macedonia
-        x = -7
-        y = 10
+        relative_position_id = MAC_defend_democracy
+        x = -3
+        y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
         completion_reward = {
@@ -287,15 +262,14 @@ focus_tree = {
             focus = MAC_fortress_macedonia
         }
     }
-
     focus = {
         id = MAC_lions_legacy
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_they_will_not_pass
-        x = -7
-        y = 12
+        icon = GFX_focus_generic_national_security
+        relative_position_id = MAC_defend_democracy
+        x = -3
+        y = 6
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
             set_country_flag = SOTB_succession_resolved
             remove_ideas = { MAC_lion_leads }
@@ -308,18 +282,17 @@ focus_tree = {
             focus = MAC_they_will_not_pass
         }
     }
-
     focus = {
         id = MAC_ilinden_spirit
-        icon = GFX_goal_generic_national_unity
+        icon = GFX_focus_generic_red_flags
         mutually_exclusive = {
             focus = MAC_recall_the_founder
             focus = MAC_lions_path
             focus = MAC_republican_stewardship
         }
-        relative_position_id = MAC_democratic_convention
-        x = -4
-        y = 6
+        relative_position_id = MAC_defend_democracy
+        x = 2
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -336,13 +309,12 @@ focus_tree = {
             focus = MAC_democratic_convention
         }
     }
-
     focus = {
         id = MAC_karev_reforms
         icon = GFX_focus_generic_social_democracy
-        relative_position_id = MAC_ilinden_spirit
-        x = -3
-        y = 8
+        relative_position_id = MAC_defend_democracy
+        x = 2
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
         completion_reward = {
@@ -357,13 +329,12 @@ focus_tree = {
             focus = MAC_ilinden_spirit
         }
     }
-
     focus = {
         id = MAC_krusevo_legacy
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_karev_reforms
-        x = -3
-        y = 10
+        icon = GFX_focus_generic_communist
+        relative_position_id = MAC_defend_democracy
+        x = 2
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -378,13 +349,12 @@ focus_tree = {
             focus = MAC_karev_reforms
         }
     }
-
     focus = {
         id = MAC_ilinden_fulfilled
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_krusevo_legacy
-        x = -3
-        y = 12
+        icon = GFX_focus_generic_full_social_mobilization
+        relative_position_id = MAC_defend_democracy
+        x = 2
+        y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -399,7 +369,6 @@ focus_tree = {
             focus = MAC_krusevo_legacy
         }
     }
-
     focus = {
         id = MAC_republican_stewardship
         icon = GFX_goal_generic_construct_civilian
@@ -408,9 +377,9 @@ focus_tree = {
             focus = MAC_lions_path
             focus = MAC_ilinden_spirit
         }
-        relative_position_id = MAC_democratic_convention
-        x = -1
-        y = 6
+        relative_position_id = MAC_defend_democracy
+        x = 5
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -427,13 +396,12 @@ focus_tree = {
             focus = MAC_democratic_convention
         }
     }
-
     focus = {
         id = MAC_cento_recovery
         icon = GFX_goal_generic_construction
-        relative_position_id = MAC_republican_stewardship
-        x = -1
-        y = 8
+        relative_position_id = MAC_defend_democracy
+        x = -4
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
         completion_reward = {
@@ -444,16 +412,15 @@ focus_tree = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_republican_stewardship
+            focus = MAC_cento_path
         }
     }
-
     focus = {
         id = MAC_sustainable_republic
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_cento_recovery
-        x = -1
-        y = 10
+        icon = GFX_focus_generic_improve_the_administration
+        relative_position_id = MAC_defend_democracy
+        x = -4
+        y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -468,11 +435,6 @@ focus_tree = {
             focus = MAC_cento_recovery
         }
     }
-
-    # ============================================================
-    # AUTHORITARIAN SUB-FORK — Non-Aligned vs Radical
-    # ============================================================
-
     focus = {
         id = MAC_national_salvation
         icon = GFX_goal_generic_neutrality_focus
@@ -480,8 +442,8 @@ focus_tree = {
             focus = MAC_break_the_system
         }
         relative_position_id = MAC_restore_order
-        x = 2
-        y = 4
+        x = -4
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -499,7 +461,6 @@ focus_tree = {
             focus = MAC_restore_order
         }
     }
-
     focus = {
         id = MAC_break_the_system
         icon = GFX_focus_generic_spread_fascism
@@ -507,8 +468,8 @@ focus_tree = {
             focus = MAC_national_salvation
         }
         relative_position_id = MAC_restore_order
-        x = 7
-        y = 4
+        x = 5
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -526,11 +487,6 @@ focus_tree = {
             focus = MAC_restore_order
         }
     }
-
-    # ============================================================
-    # NON-ALIGNED COLUMN — 3-way MEX
-    # ============================================================
-
     focus = {
         id = MAC_aleksandrov_duty
         icon = GFX_goal_generic_position_armies
@@ -539,8 +495,8 @@ focus_tree = {
             focus = MAC_the_crown
         }
         relative_position_id = MAC_national_salvation
-        x = 0
-        y = 6
+        x = -2
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -554,13 +510,12 @@ focus_tree = {
             focus = MAC_national_salvation
         }
     }
-
     focus = {
         id = MAC_aleksandrov_consolidation
         icon = GFX_goal_generic_defence
-        relative_position_id = MAC_aleksandrov_duty
-        x = 0
-        y = 8
+        relative_position_id = MAC_national_salvation
+        x = -2
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         completion_reward = {
@@ -574,13 +529,12 @@ focus_tree = {
             focus = MAC_aleksandrov_duty
         }
     }
-
     focus = {
         id = MAC_aleksandrov_capstone
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_aleksandrov_consolidation
-        x = 0
-        y = 10
+        icon = GFX_focus_generic_military_dictatorship
+        relative_position_id = MAC_national_salvation
+        x = -2
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -595,17 +549,16 @@ focus_tree = {
             focus = MAC_aleksandrov_consolidation
         }
     }
-
     focus = {
         id = MAC_shepherd_way
-        icon = GFX_goal_generic_national_unity
+        icon = GFX_focus_generic_pope
         mutually_exclusive = {
             focus = MAC_aleksandrov_duty
             focus = MAC_the_crown
         }
         relative_position_id = MAC_national_salvation
-        x = 2
-        y = 6
+        x = 1
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -620,13 +573,12 @@ focus_tree = {
             focus = MAC_national_salvation
         }
     }
-
     focus = {
         id = MAC_church_reconciliation
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_shepherd_way
-        x = 2
-        y = 8
+        icon = GFX_focus_generic_catholic_dominion
+        relative_position_id = MAC_national_salvation
+        x = 1
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -640,13 +592,12 @@ focus_tree = {
             focus = MAC_shepherd_way
         }
     }
-
     focus = {
         id = MAC_shepherd_capstone
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_church_reconciliation
-        x = 2
-        y = 10
+        icon = GFX_focus_generic_pope
+        relative_position_id = MAC_national_salvation
+        x = 1
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -661,11 +612,6 @@ focus_tree = {
             focus = MAC_church_reconciliation
         }
     }
-
-    # ============================================================
-    # MONARCHIST SUB-COLUMN — 3-way MEX
-    # ============================================================
-
     focus = {
         id = MAC_the_crown
         icon = GFX_focus_generic_monarchy_1
@@ -675,7 +621,7 @@ focus_tree = {
         }
         relative_position_id = MAC_national_salvation
         x = 4
-        y = 6
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -693,9 +639,6 @@ focus_tree = {
             focus = MAC_national_salvation
         }
     }
-
-    # --- Monarchist 3-way MEX ---
-
     focus = {
         id = MAC_harald_crown
         icon = GFX_focus_generic_monarchy_1
@@ -704,8 +647,8 @@ focus_tree = {
             focus = MAC_philipp_crown
         }
         relative_position_id = MAC_the_crown
-        x = 5
-        y = 8
+        x = -3
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -720,13 +663,12 @@ focus_tree = {
             focus = MAC_the_crown
         }
     }
-
     focus = {
         id = MAC_danish_connection
         icon = GFX_goal_generic_improve_relations
-        relative_position_id = MAC_harald_crown
-        x = 5
-        y = 10
+        relative_position_id = MAC_the_crown
+        x = -3
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -747,13 +689,12 @@ focus_tree = {
             focus = MAC_harald_crown
         }
     }
-
     focus = {
         id = MAC_constitutional_charter
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_danish_connection
-        x = 5
-        y = 12
+        icon = GFX_focus_generic_universal_suffrage
+        relative_position_id = MAC_the_crown
+        x = -3
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -768,13 +709,12 @@ focus_tree = {
             focus = MAC_danish_connection
         }
     }
-
     focus = {
         id = MAC_copenhagen_accord
         icon = GFX_goal_generic_alliance
-        relative_position_id = MAC_constitutional_charter
-        x = 5
-        y = 14
+        relative_position_id = MAC_the_crown
+        x = -3
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -789,7 +729,6 @@ focus_tree = {
             focus = MAC_constitutional_charter
         }
     }
-
     focus = {
         id = MAC_peter_crown
         icon = GFX_focus_generic_monarchy_1
@@ -798,8 +737,8 @@ focus_tree = {
             focus = MAC_philipp_crown
         }
         relative_position_id = MAC_the_crown
-        x = 8
-        y = 8
+        x = 0
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -814,13 +753,12 @@ focus_tree = {
             focus = MAC_the_crown
         }
     }
-
     focus = {
         id = MAC_yugoslav_sympathy
         icon = GFX_goal_generic_improve_relations
-        relative_position_id = MAC_peter_crown
-        x = 8
-        y = 10
+        relative_position_id = MAC_the_crown
+        x = 0
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         completion_reward = {
@@ -837,13 +775,12 @@ focus_tree = {
             focus = MAC_peter_crown
         }
     }
-
     focus = {
         id = MAC_belgrade_compact
         icon = GFX_goal_generic_alliance
-        relative_position_id = MAC_yugoslav_sympathy
-        x = 8
-        y = 12
+        relative_position_id = MAC_the_crown
+        x = 0
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -851,11 +788,17 @@ focus_tree = {
             hidden_effect = {
                 if = {
                     limit = {
-                        YUG = { exists = yes }
-                        YUG = { is_subject = no }
+                        YUG = {
+                            exists = yes
+                        }
+                        YUG = {
+                            is_subject = no
+                        }
                     }
                     create_faction = MAC_YUG_faction
-                    YUG = { add_to_faction = MAC_YUG_faction }
+                    YUG = {
+                        add_to_faction = MAC_YUG_faction
+                    }
                 }
                 else = {
                     add_state_claim = 1082
@@ -870,13 +813,12 @@ focus_tree = {
             focus = MAC_yugoslav_sympathy
         }
     }
-
     focus = {
         id = MAC_south_slav_crown
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_belgrade_compact
-        x = 8
-        y = 14
+        icon = GFX_focus_generic_balkan_diplomacy
+        relative_position_id = MAC_the_crown
+        x = 0
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -891,7 +833,6 @@ focus_tree = {
             focus = MAC_belgrade_compact
         }
     }
-
     focus = {
         id = MAC_philipp_crown
         icon = GFX_focus_generic_monarchy_1
@@ -900,8 +841,8 @@ focus_tree = {
             focus = MAC_peter_crown
         }
         relative_position_id = MAC_the_crown
-        x = 11
-        y = 8
+        x = 3
+        y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -916,13 +857,12 @@ focus_tree = {
             focus = MAC_the_crown
         }
     }
-
     focus = {
         id = MAC_german_patronage
         icon = GFX_goal_generic_improve_relations
-        relative_position_id = MAC_philipp_crown
-        x = 11
-        y = 10
+        relative_position_id = MAC_the_crown
+        x = 3
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -940,13 +880,12 @@ focus_tree = {
             focus = MAC_philipp_crown
         }
     }
-
     focus = {
         id = MAC_kaisers_shadow
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_german_patronage
-        x = 11
-        y = 12
+        icon = GFX_focus_generic_german_trade
+        relative_position_id = MAC_the_crown
+        x = 3
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         completion_reward = {
@@ -960,13 +899,12 @@ focus_tree = {
             focus = MAC_german_patronage
         }
     }
-
     focus = {
         id = MAC_hessian_crown
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_kaisers_shadow
-        x = 11
-        y = 14
+        icon = GFX_focus_generic_monarchy_2
+        relative_position_id = MAC_the_crown
+        x = 3
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -981,20 +919,18 @@ focus_tree = {
             focus = MAC_kaisers_shadow
         }
     }
-
-    # ============================================================
-    # RADICAL SUB-FORK — Communist vs Fascist (2-way MEX)
-    # ============================================================
-
     focus = {
         id = MAC_peoples_army
         icon = GFX_focus_generic_soviet_politics
         mutually_exclusive = {
+            focus = MAC_preserve_democracy
+            focus = MAC_embrace_crown
+            focus = MAC_order_above_all
             focus = MAC_iron_guard
         }
         relative_position_id = MAC_break_the_system
-        x = 5
-        y = 6
+        x = -7
+        y = 0
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -1010,19 +946,21 @@ focus_tree = {
             factor = 8
         }
         prerequisite = {
-            focus = MAC_break_the_system
+            focus = MAC_delchev_succession
         }
     }
-
     focus = {
         id = MAC_iron_guard
         icon = GFX_focus_generic_spread_fascism
         mutually_exclusive = {
+            focus = MAC_preserve_democracy
+            focus = MAC_embrace_crown
+            focus = MAC_order_above_all
             focus = MAC_peoples_army
         }
         relative_position_id = MAC_break_the_system
-        x = 9
-        y = 6
+        x = -11
+        y = 0
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -1038,14 +976,9 @@ focus_tree = {
             factor = 7
         }
         prerequisite = {
-            focus = MAC_break_the_system
+            focus = MAC_delchev_succession
         }
     }
-
-    # ============================================================
-    # COMMUNIST COLUMN — 3-way MEX
-    # ============================================================
-
     focus = {
         id = MAC_shatorov_path
         icon = GFX_focus_generic_soviet_politics
@@ -1054,8 +987,8 @@ focus_tree = {
             focus = MAC_kpm_path
         }
         relative_position_id = MAC_peoples_army
-        x = 3
-        y = 8
+        x = 9
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -1073,13 +1006,12 @@ focus_tree = {
             focus = MAC_peoples_army
         }
     }
-
     focus = {
         id = MAC_shatorov_vanguard
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_shatorov_path
-        x = 3
-        y = 10
+        icon = GFX_focus_generic_communist_asia
+        relative_position_id = MAC_peoples_army
+        x = 9
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
         completion_reward = {
@@ -1093,13 +1025,12 @@ focus_tree = {
             focus = MAC_shatorov_path
         }
     }
-
     focus = {
         id = MAC_shatorov_capstone
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_shatorov_vanguard
-        x = 3
-        y = 12
+        icon = GFX_focus_generic_communist
+        relative_position_id = MAC_peoples_army
+        x = 9
+        y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -1113,7 +1044,6 @@ focus_tree = {
             focus = MAC_shatorov_vanguard
         }
     }
-
     focus = {
         id = MAC_kolisevski_path
         icon = GFX_focus_generic_soviet_politics
@@ -1122,8 +1052,8 @@ focus_tree = {
             focus = MAC_kpm_path
         }
         relative_position_id = MAC_peoples_army
-        x = 6
-        y = 8
+        x = 12
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -1141,13 +1071,12 @@ focus_tree = {
             focus = MAC_peoples_army
         }
     }
-
     focus = {
         id = MAC_kolisevski_partisan
         icon = GFX_goal_generic_defence
-        relative_position_id = MAC_kolisevski_path
-        x = 6
-        y = 10
+        relative_position_id = MAC_peoples_army
+        x = 12
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         completion_reward = {
@@ -1161,13 +1090,12 @@ focus_tree = {
             focus = MAC_kolisevski_path
         }
     }
-
     focus = {
         id = MAC_kolisevski_capstone
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_kolisevski_partisan
-        x = 6
-        y = 12
+        icon = GFX_focus_generic_crush_capitalism
+        relative_position_id = MAC_peoples_army
+        x = 12
+        y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -1182,7 +1110,6 @@ focus_tree = {
             focus = MAC_kolisevski_partisan
         }
     }
-
     focus = {
         id = MAC_kpm_path
         icon = GFX_focus_generic_soviet_politics
@@ -1191,8 +1118,8 @@ focus_tree = {
             focus = MAC_kolisevski_path
         }
         relative_position_id = MAC_peoples_army
-        x = 9
-        y = 8
+        x = 15
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -1207,13 +1134,12 @@ focus_tree = {
             focus = MAC_peoples_army
         }
     }
-
     focus = {
         id = MAC_kpm_discipline
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_kpm_path
-        x = 9
-        y = 10
+        icon = GFX_focus_generic_stalinist_industry
+        relative_position_id = MAC_peoples_army
+        x = 15
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -1227,13 +1153,12 @@ focus_tree = {
             focus = MAC_kpm_path
         }
     }
-
     focus = {
         id = MAC_kpm_capstone
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_kpm_discipline
-        x = 9
-        y = 12
+        icon = GFX_focus_generic_central_planning
+        relative_position_id = MAC_peoples_army
+        x = 15
+        y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -1247,11 +1172,6 @@ focus_tree = {
             focus = MAC_kpm_discipline
         }
     }
-
-    # ============================================================
-    # FASCIST COLUMN — 2-way MEX
-    # ============================================================
-
     focus = {
         id = MAC_direct_war
         icon = GFX_goal_generic_position_armies
@@ -1259,8 +1179,8 @@ focus_tree = {
             focus = MAC_axis_alignment
         }
         relative_position_id = MAC_iron_guard
-        x = 13
-        y = 8
+        x = 8
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         completion_reward = {
@@ -1276,13 +1196,12 @@ focus_tree = {
             focus = MAC_iron_guard
         }
     }
-
     focus = {
         id = MAC_vengeance_army
         icon = GFX_goal_generic_defence
-        relative_position_id = MAC_direct_war
-        x = 13
-        y = 10
+        relative_position_id = MAC_iron_guard
+        x = 8
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
         completion_reward = {
@@ -1296,15 +1215,14 @@ focus_tree = {
             focus = MAC_direct_war
         }
     }
-
     focus = {
         id = MAC_avenger_triumph
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_vengeance_army
-        x = 13
-        y = 12
+        icon = GFX_focus_generic_fascist_troops
+        relative_position_id = MAC_iron_guard
+        x = 0
+        y = 3
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
             set_country_flag = SOTB_succession_resolved
             add_ideas = MAC_avenger_triumph
@@ -1313,10 +1231,9 @@ focus_tree = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_vengeance_army
+            focus = MAC_greater_macedonia
         }
     }
-
     focus = {
         id = MAC_axis_alignment
         icon = GFX_goal_generic_improve_relations
@@ -1324,8 +1241,8 @@ focus_tree = {
             focus = MAC_direct_war
         }
         relative_position_id = MAC_iron_guard
-        x = 16
-        y = 8
+        x = 14
+        y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -1347,13 +1264,12 @@ focus_tree = {
             focus = MAC_iron_guard
         }
     }
-
     focus = {
         id = MAC_german_arsenal
         icon = GFX_goal_generic_construct_military
-        relative_position_id = MAC_axis_alignment
-        x = 16
-        y = 10
+        relative_position_id = MAC_iron_guard
+        x = 14
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -1367,13 +1283,12 @@ focus_tree = {
             focus = MAC_axis_alignment
         }
     }
-
     focus = {
         id = MAC_axis_fulfilled
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_german_arsenal
-        x = 16
-        y = 12
+        icon = GFX_focus_generic_spread_fascism
+        relative_position_id = MAC_iron_guard
+        x = 14
+        y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -1388,5 +1303,640 @@ focus_tree = {
             focus = MAC_german_arsenal
         }
     }
-
+    focus = {
+        id = MAC_the_army_future
+        icon = GFX_focus_generic_military_academy
+        x = 1
+        y = 7
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            army_experience = 15
+            add_manpower = 5000
+        }
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = MAC_sandanski_principles
+        icon = GFX_focus_generic_advanced_military_studies
+        relative_position_id = MAC_the_army_future
+        x = -9
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        completion_reward = {
+            add_ideas = MAC_sandanski_principles_spirit
+            add_tech_bonus = {
+                tech = support_weapons
+                bonus = 1.0
+                uses = 1
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_army_future
+        }
+    }
+    focus = {
+        id = MAC_night_of_solun_mil
+        icon = GFX_goal_generic_construct_military
+        relative_position_id = MAC_sandanski_principles
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_WAR_SUPPORT }
+        completion_reward = {
+            add_war_support = 0.05
+            add_manpower = 7500
+            add_tech_bonus = {
+                tech = infantry_weapons1
+                bonus = 1.0
+                uses = 2
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_sandanski_principles
+        }
+    }
+    focus = {
+        id = MAC_national_conscription_mil
+        icon = GFX_focus_generic_manpower
+        relative_position_id = MAC_night_of_solun_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_MANPOWER }
+        completion_reward = {
+            add_ideas = MAC_conscription_act
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_night_of_solun_mil
+        }
+    }
+    focus = {
+        id = MAC_vardar_engineers_mil
+        icon = GFX_focus_generic_supply_line
+        relative_position_id = MAC_national_conscription_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = tech_engineers
+                bonus = 1.0
+                uses = 1
+            }
+            add_ideas = MAC_vardar_engineers_corps
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_national_conscription_mil
+        }
+    }
+    focus = {
+        id = MAC_aleksandrov_doctrine
+        icon = GFX_focus_generic_army_doctrines_2
+        mutually_exclusive = {
+            focus = MAC_apostolski_vision_mil
+        }
+        allow_branch = {
+            has_country_flag = SOTB_succession_resolved
+        }
+        relative_position_id = MAC_vardar_engineers_mil
+        x = 1
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            remove_ideas = { MAC_old_guard_reform }
+            add_ideas = MAC_lions_way
+            army_experience = 25
+        }
+        ai_will_do = {
+            factor = 5
+        }
+        prerequisite = {
+            focus = MAC_vardar_engineers_mil
+        }
+    }
+    focus = {
+        id = MAC_apostolski_vision_mil
+        icon = GFX_focus_generic_combined_arms
+        mutually_exclusive = {
+            focus = MAC_aleksandrov_doctrine
+        }
+        allow_branch = {
+            has_country_flag = SOTB_succession_resolved
+        }
+        relative_position_id = MAC_vardar_engineers_mil
+        x = -1
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            remove_ideas = { MAC_old_guard_reform }
+            add_ideas = MAC_apostolski_vision
+            army_experience = 25
+        }
+        ai_will_do = {
+            factor = 5
+        }
+        prerequisite = {
+            focus = MAC_vardar_engineers_mil
+        }
+    }
+    focus = {
+        id = MAC_fortress_macedonia_mil
+        icon = GFX_goal_generic_fortify_city
+        relative_position_id = MAC_aleksandrov_doctrine
+        x = 2
+        y = -8
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = MAC_fortress_booster
+            add_tech_bonus = {
+                tech = tech_engineers
+                bonus = 1.0
+                uses = 1
+            }
+            custom_effect_tooltip = MAC_fortress_tt
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_artillery_supremacy
+        }
+    }
+    focus = {
+        id = MAC_artillery_foundry_mil
+        icon = GFX_goal_generic_army_artillery
+        relative_position_id = MAC_fortress_macedonia_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = interwar_artillery
+                bonus = 1.0
+                uses = 2
+            }
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_1
+                amount = 50
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_fortress_macedonia_mil
+        }
+    }
+    focus = {
+        id = MAC_they_will_not_pass_mil
+        icon = GFX_goal_generic_defence
+        relative_position_id = MAC_artillery_foundry_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_MANPOWER }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 5000
+            }
+            add_manpower = 5000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_artillery_foundry_mil
+        }
+    }
+    focus = {
+        id = MAC_old_guard_vindication
+        icon = GFX_focus_generic_defensive_reorganization
+        relative_position_id = MAC_they_will_not_pass_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            replace_ideas = {
+                remove = { MAC_lions_way }
+                add = { MAC_unbroken_line }
+            }
+            add_manpower = 5000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_they_will_not_pass_mil
+        }
+    }
+    focus = {
+        id = MAC_armored_vanguard_mil
+        icon = GFX_focus_generic_tank_production
+        relative_position_id = MAC_apostolski_vision_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = basic_light_tank
+                bonus = 1.0
+                uses = 1
+            }
+            add_equipment_to_stockpile = {
+                type = light_tank_equipment_1
+                amount = 40
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_apostolski_vision_mil
+        }
+    }
+    focus = {
+        id = MAC_breakthrough_doctrine_mil
+        icon = GFX_focus_generic_tank_assault
+        relative_position_id = MAC_armored_vanguard_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            army_experience = 25
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 3000
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_armored_vanguard_mil
+        }
+    }
+    focus = {
+        id = MAC_modern_officer_corps
+        icon = GFX_focus_generic_military_academy
+        relative_position_id = MAC_breakthrough_doctrine_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = support_weapons
+                bonus = 1.0
+                uses = 1
+            }
+            army_experience = 15
+            add_manpower = 5000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_breakthrough_doctrine_mil
+        }
+    }
+    focus = {
+        id = MAC_new_model_army_mil
+        icon = GFX_focus_generic_combined_arms
+        relative_position_id = MAC_modern_officer_corps
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            replace_ideas = {
+                remove = { MAC_apostolski_vision }
+                add = { MAC_blitz }
+            }
+            add_manpower = 5000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_modern_officer_corps
+        }
+    }
+    focus = {
+        id = MAC_mountain_warfare_school
+        icon = GFX_focus_generic_mountain_training
+        allow_branch = {
+            OR = {
+                has_idea = MAC_lions_way
+                has_idea = MAC_apostolski_vision
+            }
+        }
+        relative_position_id = MAC_vardar_engineers_mil
+        x = -3
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = tech_mountaineers
+                bonus = 1.0
+                uses = 1
+            }
+            add_manpower = 2500
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_vardar_engineers_mil
+        }
+    }
+    focus = {
+        id = MAC_balkan_shield_mil
+        icon = GFX_focus_generic_mountain_fortification
+        relative_position_id = MAC_mountain_warfare_school
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 3000
+            }
+            army_experience = 15
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_mountain_warfare_school
+        }
+    }
+    focus = {
+        id = MAC_shar_planina_defenders
+        icon = GFX_focus_generic_mountain_troops
+        relative_position_id = MAC_balkan_shield_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_MANPOWER }
+        completion_reward = {
+            add_ideas = MAC_mountain_legacy
+            army_experience = 20
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_balkan_shield_mil
+        }
+    }
+    focus = {
+        id = MAC_peaks_of_macedonia
+        icon = GFX_focus_generic_mountain_troops
+        relative_position_id = MAC_shar_planina_defenders
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 5000
+            }
+            add_manpower = 5000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_shar_planina_defenders
+        }
+    }
+    focus = {
+        id = MAC_wings_over_vardar
+        icon = GFX_focus_generic_swooping_falcon
+        allow_branch = {
+            OR = {
+                has_idea = MAC_lions_way
+                has_idea = MAC_apostolski_vision
+            }
+        }
+        relative_position_id = MAC_vardar_engineers_mil
+        x = 2
+        y = -6
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            air_experience = 25
+            add_tech_bonus = {
+                tech = fighter1
+                bonus = 1.0
+                uses = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_macedonian_motorization
+        }
+    }
+    focus = {
+        id = MAC_solun_aerodrome_mil
+        icon = GFX_goal_generic_build_airforce
+        relative_position_id = MAC_wings_over_vardar
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = CAS1
+                bonus = 1.0
+                uses = 1
+            }
+            add_equipment_to_stockpile = {
+                type = fighter_equipment_1
+                amount = 30
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_wings_over_vardar
+        }
+    }
+    focus = {
+        id = MAC_lions_talons_mil
+        icon = GFX_focus_generic_cas_aircraft
+        relative_position_id = MAC_solun_aerodrome_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                type = CAS_equipment_1
+                amount = 25
+            }
+            air_experience = 25
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_solun_aerodrome_mil
+        }
+    }
+    focus = {
+        id = MAC_macedonian_skies
+        icon = GFX_focus_generic_swooping_falcon
+        relative_position_id = MAC_lions_talons_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            add_ideas = MAC_air_legacy
+            add_equipment_to_stockpile = {
+                type = fighter_equipment_1
+                amount = 50
+            }
+            add_equipment_to_stockpile = {
+                type = CAS_equipment_1
+                amount = 25
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_lions_talons_mil
+        }
+    }
+    focus = {
+        id = MAC_aegean_fleet_mil
+        icon = GFX_focus_generic_aegean_sea_focus
+        allow_branch = {
+            OR = {
+                has_idea = MAC_lions_way
+                has_idea = MAC_apostolski_vision
+            }
+        }
+        relative_position_id = MAC_vardar_engineers_mil
+        x = 3
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            naval_experience = 25
+            add_manpower = 2500
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_vardar_engineers_mil
+        }
+    }
+    focus = {
+        id = MAC_solun_shipyards_mil
+        icon = GFX_focus_generic_large_navy
+        relative_position_id = MAC_aegean_fleet_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = early_destroyer
+                bonus = 1.0
+                uses = 1
+            }
+            add_tech_bonus = {
+                tech = early_submarine
+                bonus = 1.0
+                uses = 1
+            }
+            add_convoy = 30
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_aegean_fleet_mil
+        }
+    }
+    focus = {
+        id = MAC_white_sea_doctrine
+        icon = GFX_focus_generic_mediterranean_sea_focus
+        relative_position_id = MAC_solun_shipyards_mil
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            naval_experience = 25
+            add_convoy = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_solun_shipyards_mil
+        }
+    }
+    focus = {
+        id = MAC_macedonian_maritime
+        icon = GFX_focus_generic_large_navy
+        relative_position_id = MAC_white_sea_doctrine
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            add_ideas = MAC_maritime_legacy
+            add_equipment_to_stockpile = {
+                type = destroyer_1
+                amount = 2
+            }
+            add_equipment_to_stockpile = {
+                type = submarine_1
+                amount = 2
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_white_sea_doctrine
+        }
+    }
 }

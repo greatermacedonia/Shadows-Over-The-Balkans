@@ -24,10 +24,6 @@ bookmark = {
 				MAC_parliamentary_crisis
 				MAC_defend_democracy
 				MAC_restore_order
-				MAC_the_crown
-				MAC_national_salvation
-				MAC_peoples_army
-				MAC_iron_guard
 			}
 		}
 

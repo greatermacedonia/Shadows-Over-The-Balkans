@@ -20,6 +20,12 @@ debug.log
 *.swp
 *.swo
 
+# Agent / MCP tooling (local only, not part of the mod)
+.agents/
+.focus_editor/
+.github/
+.hoi4-mcp-learned-rules.jsonl
+
 # Archive files
 *.zip
 *.rar

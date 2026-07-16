@@ -10,7 +10,7 @@ ideas = {
 		MAC_founder_watches = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = unknown
+			picture = GFX_idea_generic_political_advisor_europe_1
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.10
@@ -22,7 +22,7 @@ ideas = {
 		MAC_lion_watches = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = unknown
+			picture = idea_generic_army_europe_5
 			removal_cost = -1
 			modifier = {
 				war_support_factor = 0.05
@@ -34,7 +34,7 @@ ideas = {
 		MAC_two_betrayals = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = unknown
+			picture = generic_disjointed_gov
 			removal_cost = -1
 			modifier = {
 				opinion_gain_monthly_same_ideology_factor = -0.50
@@ -46,7 +46,7 @@ ideas = {
 		MAC_vergina_star = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = unknown
+			picture = idea_generic_fortify_the_borders
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
@@ -58,7 +58,7 @@ ideas = {
 		MAC_delcevism = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = unknown
+			picture = GFX_idea_generic_democratic_europe
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.10
@@ -70,7 +70,7 @@ ideas = {
 		MAC_solun_arsenal = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = unknown
+			picture = GFX_idea_generic_industrial_concern_1
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.10
@@ -82,7 +82,7 @@ ideas = {
 		MAC_army_of_the_lion = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = unknown
+			picture = idea_generic_army_europe_4
 			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.05
@@ -94,7 +94,7 @@ ideas = {
 		MAC_old_guard_reform = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = unknown
+			picture = idea_generic_army_problems
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = -0.05
@@ -106,7 +106,7 @@ ideas = {
 		MAC_throne_of_ohrid = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = unknown
+			picture = idea_yug_orthodox_church_support
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
@@ -118,7 +118,7 @@ ideas = {
 		MAC_poppy = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = unknown
+			picture = idea_prc_permit_opium_trade
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.02
@@ -133,7 +133,7 @@ ideas = {
 		# Delchev returns — "Recall the Founder"
 		MAC_delchev_returns = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_political_advisor_europe_2
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.10
@@ -145,7 +145,7 @@ ideas = {
 		# Delčevism fulfilled
 		MAC_delcevism_fulfilled = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_democratic_europe
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.20
@@ -158,7 +158,7 @@ ideas = {
 		# Sandanski leads — "The Lion's Path"
 		MAC_lion_leads = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_army_europe_3
 			removal_cost = -1
 			modifier = {
 				war_support_factor = 0.10
@@ -171,7 +171,7 @@ ideas = {
 		# The Lion's Legacy completed
 		MAC_lion_legacy = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_army_war_college
 			removal_cost = -1
 			modifier = {
 				war_support_factor = 0.15
@@ -183,7 +183,7 @@ ideas = {
 		# Karev leads — "Ilinden Spirit"
 		MAC_ilinden_spirit = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_communist_europe
 			removal_cost = -1
 			modifier = {
 				weekly_manpower = 500
@@ -196,7 +196,7 @@ ideas = {
 		# Karev's Ilinden fulfilled
 		MAC_ilinden_fulfilled = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_full_social_mobilization
 			removal_cost = -1
 			modifier = {
 				weekly_manpower = 1000
@@ -209,7 +209,7 @@ ideas = {
 		# Čento's stewardship — "Republican Stewardship"
 		MAC_cento_stewardship = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_improved_industries
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.15
@@ -222,7 +222,7 @@ ideas = {
 		# Vlahov's reforms (advisor path — retained)
 		MAC_vlahov_reforms = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_flexible_foreign_policy
 			removal_cost = -1
 			modifier = {
 				trade_opinion_factor = 0.15
@@ -234,7 +234,7 @@ ideas = {
 		# Gjorche Petrov's progress (advisor path — retained)
 		MAC_petrov_progress = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_agrarian_reform
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.10
@@ -246,7 +246,7 @@ ideas = {
 		# Petrov's Just Republic
 		MAC_just_republic = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_democratic_europe
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.15
@@ -258,7 +258,7 @@ ideas = {
 		# Aleksandrov's military order
 		MAC_aleksandrov_order = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_army_europe_1
 			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.15
@@ -271,7 +271,7 @@ ideas = {
 		# Archbishop's theocratic way
 		MAC_shepherd_way = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_MEX_church_power_5
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.10
@@ -289,7 +289,7 @@ ideas = {
 		# Shatorov — "The Bulgarian Comrade"
 		MAC_shatorov_path = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_communist_europe
 			removal_cost = -1
 			modifier = {
 				communism_drift = 0.10
@@ -300,7 +300,7 @@ ideas = {
 		# Shatorov fulfilled
 		MAC_shatorov_fulfilled = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_communist_army
 			removal_cost = -1
 			modifier = {
 				communism_drift = 0.15
@@ -312,7 +312,7 @@ ideas = {
 		# KPM — "Party Above All" (institutional communist)
 		MAC_kpm_path = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_central_management
 			removal_cost = -1
 			modifier = {
 				drift_defence_factor = 0.15
@@ -324,7 +324,7 @@ ideas = {
 		# KPM fulfilled
 		MAC_kpm_fulfilled = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_stockpile_preparation
 			removal_cost = -1
 			modifier = {
 				drift_defence_factor = 0.25
@@ -340,7 +340,7 @@ ideas = {
 		# Harald — Constitutional Monarchy
 		MAC_harald_crown = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_constitutional_guarantee
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.10
@@ -352,7 +352,7 @@ ideas = {
 		# Peter II — Yugoslav Connection
 		MAC_yugoslav_connection = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_rom_balkan_dominance
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
@@ -363,7 +363,7 @@ ideas = {
 		# Peter II — Crown of the South Slavs
 		MAC_south_slav_crown = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_monarchist_uprising
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.10
@@ -375,7 +375,7 @@ ideas = {
 		# Philipp — German Patronage
 		MAC_philipp_crown = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_fascist_europe
 			removal_cost = -1
 			modifier = {
 				fascism_drift = 0.10
@@ -386,7 +386,7 @@ ideas = {
 		# Philipp fulfilled — Hessian Crown
 		MAC_hessian_crown = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_king_handled
 			removal_cost = -1
 			modifier = {
 				fascism_drift = 0.15
@@ -403,62 +403,112 @@ ideas = {
 		# MILITARY PATH SPIRITS
 		# ============================================================
 
-		# Aleksandrov's defensive doctrine
-		MAC_lions_way = {
+		# Sandanski's Principles (shared trunk — small buff, does NOT unlock branches)
+		MAC_sandanski_principles_spirit = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_army_europe_2
 			removal_cost = -1
 			modifier = {
-				artillery_attack_factor = 0.10
-				infantry_defence_factor = 0.10
-				dig_in_speed_factor = 0.15
+				army_morale_factor = 0.05
+				experience_gain_army_factor = 0.03
 			}
 		}
 
-		# The Unbroken Line
-		MAC_unbroken_line = {
+		# Aleksandrov's defensive doctrine
+		MAC_lions_way = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_fortify_the_borders
 			removal_cost = -1
 			modifier = {
-				core_defence_factor = 0.15
-				dig_in_speed_factor = 0.10
-				conscription_factor = 0.05
+				army_defence_factor = 0.10
+				dig_in_speed_factor = 0.15
+				army_morale_factor = 0.05
+			}
+		}
+
+		# The Unbroken Line (Aleksandrov capstone)
+		MAC_unbroken_line = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_reserve_divisions
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.15
+				army_morale_factor = 0.10
+				experience_gain_army_factor = 0.05
+				recruitable_population_factor = 0.15
 			}
 		}
 
 		# Apostolski's offensive doctrine
 		MAC_apostolski_vision = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_army_war_college
 			removal_cost = -1
 			modifier = {
-				armor_speed_factor = 0.10
 				breakthrough_factor = 0.10
-				air_superiority_factor = 0.05
+				army_speed_factor = 0.05
+				planning_speed_factor = 0.10
 			}
 		}
 
-		# Macedonian Blitz
+		# Macedonian Blitz (Apostolski capstone)
 		MAC_blitz = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_motorized_equipment_manufacturer_1
 			removal_cost = -1
 			modifier = {
-				breakthrough_factor = 0.10
-				armor_speed_factor = 0.15
-				air_superiority_factor = 0.05
+				breakthrough_factor = 0.15
+				army_speed_factor = 0.10
+				experience_gain_army_factor = 0.08
+				recruitable_population_factor = 0.15
 			}
 		}
 
-		# The Lion's Heirs (military capstone)
-		MAC_lion_heirs = {
+		# National Conscription Act (shared trunk)
+		MAC_conscription_act = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = generic_manpower_bonus
 			removal_cost = -1
 			modifier = {
-				war_support_factor = 0.10
-				conscription_factor = 0.05
+				recruitable_population_factor = 0.20
+				weekly_manpower = 500
+			}
+		}
+
+		# Mountain Legacy
+		MAC_mountain_legacy = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_mountain_warfare
+			removal_cost = -1
+			modifier = {
+				mountaineers_attack_factor = 0.10
+				mountaineers_defence_factor = 0.10
+				winter_attrition_factor = -0.10
+				special_forces_cap_factor = 0.05
+			}
+		}
+
+		# Air Legacy
+		MAC_air_legacy = {
+			allowed = { original_tag = MAC }
+			picture = generic_air_bonus
+			removal_cost = -1
+			modifier = {
+				air_superiority_factor = 0.10
+				ace_generation_factor = 0.10
+				experience_gain_air_factor = 0.05
+			}
+		}
+
+		# Maritime Legacy
+		MAC_maritime_legacy = {
+			allowed = { original_tag = MAC }
+			picture = idea_hol_naval_heritage
+			removal_cost = -1
+			modifier = {
+				naval_dockyard_output_factor = 0.10
+				coastal_fort_construction_factor = 0.10
+				experience_gain_navy_factor = 0.05
 			}
 		}
 
@@ -469,7 +519,7 @@ ideas = {
 		# Enhanced poppy state
 		MAC_poppy_state = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_prc_permit_opium_trade
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.03
@@ -481,7 +531,7 @@ ideas = {
 		# Opium empire
 		MAC_poppy_empire = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_economic_recovery
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -496,7 +546,7 @@ ideas = {
 		# Vergina Eternal
 		MAC_vergina_eternal = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_CHI_new_culture_movement
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.10
@@ -511,7 +561,7 @@ ideas = {
 		# Night of Solun tactics
 		MAC_night_of_solun_tactics = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_guerilla_warfare
 			removal_cost = -1
 			modifier = {
 				night_attack_factor = 0.10
@@ -522,7 +572,7 @@ ideas = {
 		# Vardar Engineering Corps
 		MAC_vardar_engineers_corps = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_logistics
 			removal_cost = -1
 			modifier = {
 				dig_in_speed_factor = 0.10
@@ -532,7 +582,7 @@ ideas = {
 		# Fortress booster (temporary 365 days)
 		MAC_fortress_booster = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_fortify_the_borders
 			removal_cost = -1
 			modifier = {
 				fort_building_speed_factor = 0.15
@@ -546,7 +596,7 @@ ideas = {
 		# State Arms Workshops (mil industry)
 		MAC_state_arms = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_infantry_equipment_manufacturer_1
 			removal_cost = -1
 			modifier = {
 				infantry_equipment_production_speed_factor = 0.05
@@ -557,7 +607,7 @@ ideas = {
 		# Teteks Industrial Combine (civ industry)
 		MAC_teteks_combine = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_industrial_concern_3
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.10
@@ -568,7 +618,7 @@ ideas = {
 		# Kratovo-Zletovo Mines (civ industry)
 		MAC_kratovo_mines = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_exploit_mines
 			removal_cost = -1
 			modifier = {
 				resource_gain_factor = 0.10
@@ -578,7 +628,7 @@ ideas = {
 		# Balkan Workshop (civ capstone)
 		MAC_balkan_workshop = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_bul_prussia_of_the_balkans
 			removal_cost = -1
 			modifier = {
 				production_speed_buildings_factor = 0.10
@@ -589,7 +639,7 @@ ideas = {
 		# Vardar Express (infra)
 		MAC_vardar_express = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_railroads
 			removal_cost = -1
 			modifier = {
 				supply_throughput_factor = 0.05
@@ -599,7 +649,7 @@ ideas = {
 		# TKP Tobacco Monopoly (tobacco)
 		MAC_tkp_monopoly = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_bul_tobacco_exports
 			removal_cost = -1
 			modifier = {
 				trade_opinion_factor = 0.10
@@ -610,7 +660,7 @@ ideas = {
 		# Alkaloid Pharmaceuticals (science)
 		MAC_alkaloid_pharma = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_INS_bio_pharma
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.10
@@ -621,7 +671,7 @@ ideas = {
 		# Quiet Harbours (science/opium)
 		MAC_quiet_harbours = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_coastal_navy
 			removal_cost = -1
 			modifier = {
 				naval_dockyard_output_factor = 0.10
@@ -631,7 +681,7 @@ ideas = {
 		# Pharmaceutical Purity (science capstone)
 		MAC_pharma_purity = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_INS_bio_pharma
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.10
@@ -641,7 +691,7 @@ ideas = {
 		# Opium Empire Capstone (science capstone)
 		MAC_opium_empire_cap = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_deal_with_the_devil
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -656,7 +706,7 @@ ideas = {
 		# Vergina Museum
 		MAC_vergina_museum = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_BEL_burgundian_heritage_ns
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
@@ -667,7 +717,7 @@ ideas = {
 		# Alexander's Library
 		MAC_alexander_library = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_CHI_new_culture_movement
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.05
@@ -677,7 +727,7 @@ ideas = {
 		# Festival of the Sun
 		MAC_festival_sun = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_AST_australian_culture_investments
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.10
@@ -688,7 +738,7 @@ ideas = {
 		# Philip II Monument
 		MAC_philip_monument = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_BEL_burgundian_heritage_ns
 			removal_cost = -1
 			modifier = {
 				war_support_factor = 0.05
@@ -698,7 +748,7 @@ ideas = {
 		# White Tower Restoration
 		MAC_white_tower = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_build_infrastructure
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
@@ -709,7 +759,7 @@ ideas = {
 		# Macedonian Alexander Airways
 		MAC_alexander_airways = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_JAP_imperial_airways
 			removal_cost = -1
 			modifier = {
 				air_research_factor = 0.10
@@ -720,7 +770,7 @@ ideas = {
 		# Vergina Phalanx
 		MAC_vergina_phalanx = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_generic_army_europe_1
 			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.05
@@ -731,7 +781,7 @@ ideas = {
 		# Macedonian Rakija
 		MAC_rakija_tradition = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_DEN_danish_produce
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
@@ -742,7 +792,7 @@ ideas = {
 		# The Balkan Spirit
 		MAC_balkan_spirit = {
 			allowed = { original_tag = MAC }
-			picture = unknown
+			picture = idea_ICE_the_viking_spirit
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.10
@@ -755,7 +805,7 @@ ideas = {
 
 		# Humiliated Host (decaying)
 		MAC_humiliated_host = {
-			picture = unknown
+			picture = generic_disjointed_gov
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.10
@@ -766,7 +816,7 @@ ideas = {
 
 		# Liberated Nation (decaying)
 		MAC_liberated_nation = {
-			picture = unknown
+			picture = idea_KOR_korean_liberation_army_idea
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.15

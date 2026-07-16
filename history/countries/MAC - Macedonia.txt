@@ -1,5 +1,8 @@
 capital = 731
 
+# Major country — appears in major row on selection screen
+major = yes
+
 # Load the Order of Battle (division templates + starting units)
 set_oob = "MAC_1936"
 
