@@ -172,11 +172,12 @@ that would take a generation to reckon with.
 
 ## 🏗️ Part VI — The Republic Built (1919–1934)
 
-### The Delchev Years (1919–1927)
+### The Delchev Presidency (1913–1928)
 
-Goce Delchev governed as President for over two decades. The Macedonian Ataturk —
-though Macedonians preferred **"the Founder."** Kemalist modernisation, Macedonian
-style. Revolutionary nationalism. Populist governance. Armed neutrality.
+Goce Delchev governed as the republic's founding President for fifteen years. The
+Macedonian Ataturk — though Macedonians preferred **"the Founder."** Kemalist
+modernisation, Macedonian style. Revolutionary nationalism. Populist governance.
+Armed neutrality.
 
 > *"Macedonia for Macedonians. Eternal independence. We do not bow."*
 >
@@ -209,19 +210,33 @@ Macedonians.* Greece insisted the star was exclusively Hellenic. Macedonia's
 position was settled and non-negotiable. The star flew. It would fly for nine
 hundred more years.
 
-### The Depression & Recovery (1929–1931)
+### The Karev Presidency (1928–1936)
 
-The Great Depression tested the republic. **Metodija Andonov-Čento**, a young
-technocrat, managed the recovery. He kept the economy together when larger nations
-crumbled. His competence was noted.
+In 1928, Goce Delchev resigned via democratic elections — a peaceful transfer of
+power, the republic's first. The people chose **Nikola Karev**, hero of the
+Kruševo Republic, to carry the flame forward.
 
-### The Founder's Eclipse (1934)
+Karev's presidency started stable. The hero of Ilinden — now President of the
+republic Ilinden had died for. The Depression, which toppled governments across
+Europe, was weathered by a young technocrat named **Metodija Andonov-Čento**,
+whose competence caught the nation's attention.
+
+But the later Karev years grew chaotic. The old IMRO networks, which Delchev
+had balanced deftly, splintered under a less commanding hand. The parliament
+fractured. Elections were held — and held again. A party won but could not form
+a government. The deadlock deepened.
 
 In 1934, Goce Delchev suffered a stroke. He survived — 62, frail, and forever
-changed. He retired to his home above Solun, watching the republic he built enter
-an uncertain future. Čento was appointed interim President.
+changed. He retired to his home above Solun, watching. Even from retirement,
+his shadow fell across the republic.
 
-Everyone knew he was keeping the seat warm.
+### The Interim Presidency (1936)
+
+In early 1936, with parliament deadlocked after repeated failed elections, Karev
+stepped down. **Metodija Andonov-Čento** was appointed interim President — the
+competent manager, the man who had held the economy together in the darkest years.
+
+Everyone knew he was keeping the seat warm. The question was: for whom?
 
 ---
 
@@ -272,31 +287,61 @@ a nation of their own.
 It is **1 January 1936**.
 
 Metodija Andonov-Čento sits in the interim presidency — competent, respected, but
-temporary. The nation waits for the Succession Question to be answered.
+temporary. Parliament is deadlocked. A party won but cannot form a government.
+Repeated elections have failed to break the impasse. The nation cannot wait
+much longer.
 
-### The Old Guard
+### The Old Guard — Watching from the Hills
 
 | Figure | Age | Status |
 |--------|-----|--------|
-| **Goce Delchev** | 64 | Retired, watching from his home above Solun. The Founder. |
+| **Goce Delchev** | 64 | Retired after a stroke in 1934. Watches from his home above Solun. The Founder. |
 | **Jane Sandanski** | 64 | Retired to his farm near Melnik. Watches the borders. Remembers 1913. |
+| **Nikola Karev** | 58 | Former President (1928–1936). Stepped down amid parliamentary crisis. Hero of Kruševo. |
 
-### The Contenders
+### The Democratic Contenders
 
-| Figure | Ideology | Role |
-|--------|----------|------|
-| **Metodija Čento** | Democratic | Interim President — the competent manager |
-| **Dimitar Vlahov** | Democratic | IMRO reformer — Western alignment advocate |
-| **Gjorche Petrov** | Democratic | The progressive conscience — social democracy |
-| **Todor Aleksandrov** | Non-Aligned | Minister of Defense — pragmatic soldier |
-| **Archbishop Dositej II** | Non-Aligned | The Shepherd — church-guided state |
-| **Mihajlo Apostolski** | Non-Aligned | Colonel — modern armour and speed, challenges Aleksandrov's doctrine |
-| **Lazar Koliševski** | Communist | 22, Moscow-trained — the Firebrand |
-| **Ivan Mihailov** | Fascist | 40, Aleksandrov's former student — the Avenger |
+| Figure | Path | Role |
+|--------|------|------|
+| **Goce Delchev** | The Founder Returns | Returning from retirement — Delčevism fulfilled, armed neutrality |
+| **Jane Sandanski** | The Lion's Path | The hero of 1912 — martial stewardship, defensive resilience |
+| **Metodija Čento** | The Manager's Mandate | Interim President — institutional stability, competent governance |
+| **Nikola Karev** | The Ilinden Spirit | Former President — revolutionary republicanism, mobilises the people |
+| **Dimitar Vlahov** | The Reformer's Coalition | IMRO reformer — Western alignment, UK/France guarantees |
+| **Gjorche Petrov** | The Progressive's Dream | Social democracy — land reform, workers' rights, anti-fascist solidarity |
 
-### The Succession Question
+### The Non-Aligned Contenders
 
-Ten paths. Four ideologies. Two old men watching from the hills.
+| Figure | Path | Role |
+|--------|------|------|
+| **Todor Aleksandrov** | The Soldier's Duty | Minister of Defense — pragmatic military rule, order above politics |
+| **Archbishop Dositej II** | The Shepherd's Way | Head of the autocephalous Church — moral guardianship, spiritual renewal |
+| **Mihajlo Apostolski** | Apostolski's Vision | Colonel — modern armour and speed, challenges Aleksandrov's defensive doctrine |
+
+### The Communist Contenders
+
+| Figure | Path | Role |
+|--------|------|------|
+| **Lazar Koliševski** | The People's Army | 22, Moscow-trained — the Firebrand. Yugoslav-aligned Macedonian communism |
+| **Metodi Shatorov** | The Bulgarian Comrade | Pro-Bulgarian Macedonian communist — autonomous, anti-Yugoslav. Looks to Sofia, not Moscow |
+
+### The Fascist Contender
+
+| Figure | Path | Role |
+|--------|------|------|
+| **Ivan Mihailov** | The Iron Guard | 40, Aleksandrov's former student — radical nationalist. Democracy is a disease. Only strength can save Macedonia |
+
+### The Monarchist Candidates
+
+| Figure | Path | Role |
+|--------|------|------|
+| **Prince Harald** | The Constitutional Crown | Danish prince — constitutional monarchy, democratic continuity |
+| **Peter II** | The Exiled King | Yugoslav king-in-exile — pan-Slavic monarchy, non-aligned restoration |
+| **Prince Philipp** | The German Prince | Hesse prince — German-aligned monarchy, fascist-adjacent restoration |
+
+### The Parliamentary Crisis
+
+Fourteen leaders. Five ideological columns. One deadlocked parliament.
 
 The poppy blooms in the mountain valleys. Greece stews in fury and guilt over Solun.
 Bulgaria remembers 1918 and dreams of a third try. The Balkans are never quiet for
@@ -306,7 +351,7 @@ The republic enters 1936 as a nation forged in fire and betrayal. Everything the
 old revolutionaries built could come apart in the coming months. Or it could become
 something greater than any of them imagined.
 
-**The Succession Question awaits.**
+**The parliamentary crisis must break — one way or another.**
 
 ---
 
