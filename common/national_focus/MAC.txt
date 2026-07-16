@@ -12,20 +12,25 @@ focus_tree = {
         x = 50
         y = 1500
     }
+
+    # ============================================================
+    # SHARED TRUNK — The Parliamentary Crisis
+    # ============================================================
+
     focus = {
-        id = MAC_delchev_succession
+        id = MAC_parliamentary_crisis
         icon = GFX_goal_generic_national_unity
         x = 0
         y = 0
         cost = 5
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS }
         completion_reward = {
-            set_country_flag = SOTB_succession_crisis
-            add_stability = -0.05
-            custom_effect_tooltip = MAC_delchev_succession_tt
+            set_country_flag = SOTB_parliamentary_crisis
+            add_stability = -0.10
+            custom_effect_tooltip = MAC_crisis_begins_tt
             hidden_effect = {
                 country_event = {
-                    id = SOTB.101
+                    id = SOTB.100
                     days = 7
                 }
             }
@@ -34,18 +39,20 @@ focus_tree = {
             factor = 10
         }
     }
+
+    # ============================================================
+    # FIRST FORK — Democratic vs Authoritarian (2-way MEX)
+    # ============================================================
+
     focus = {
-        id = MAC_preserve_democracy
+        id = MAC_defend_democracy
         icon = GFX_focus_generic_democratic_europe
         mutually_exclusive = {
-            focus = MAC_embrace_crown
-            focus = MAC_order_above_all
-            focus = MAC_peoples_army
-            focus = MAC_iron_guard
+            focus = MAC_restore_order
         }
-        relative_position_id = MAC_delchev_succession
-        x = -6
-        y = 1
+        relative_position_id = MAC_parliamentary_crisis
+        x = -5
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
@@ -60,141 +67,47 @@ focus_tree = {
             factor = 70
         }
         prerequisite = {
-            focus = MAC_delchev_succession
+            focus = MAC_parliamentary_crisis
         }
     }
+
     focus = {
-        id = MAC_embrace_crown
-        icon = GFX_focus_generic_monarchy_1
-        mutually_exclusive = {
-            focus = MAC_preserve_democracy
-            focus = MAC_order_above_all
-            focus = MAC_peoples_army
-            focus = MAC_iron_guard
-        }
-        relative_position_id = MAC_delchev_succession
-        x = 12
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            set_country_flag = SOTB_non_aligned_path
-            add_stability = -0.05
-            country_event = {
-                id = SOTB.500
-                days = 3
-            }
-        }
-        ai_will_do = {
-            factor = 2
-            modifier = {
-                factor = 20
-                has_country_flag = SOTB_succession_crisis
-                NOT = {
-                    has_country_flag = SOTB_succession_resolved
-                }
-                stability = 0.30
-            }
-        }
-        prerequisite = {
-            focus = MAC_delchev_succession
-        }
-    }
-    focus = {
-        id = MAC_order_above_all
+        id = MAC_restore_order
         icon = GFX_goal_generic_neutrality_focus
         mutually_exclusive = {
-            focus = MAC_preserve_democracy
-            focus = MAC_embrace_crown
-            focus = MAC_peoples_army
-            focus = MAC_iron_guard
+            focus = MAC_defend_democracy
         }
-        relative_position_id = MAC_delchev_succession
-        x = 0
-        y = 1
+        relative_position_id = MAC_parliamentary_crisis
+        x = 5
+        y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            set_country_flag = SOTB_non_aligned_path
-            add_stability = 0.10
+            set_country_flag = SOTB_authoritarian_path
+            add_stability = -0.05
             add_popularity = {
                 ideology = neutrality
-                popularity = 0.15
+                popularity = 0.10
             }
         }
         ai_will_do = {
-            factor = 5
+            factor = 30
         }
         prerequisite = {
-            focus = MAC_delchev_succession
+            focus = MAC_parliamentary_crisis
         }
     }
+
+    # ============================================================
+    # DEMOCRATIC COLUMN
+    # ============================================================
+
     focus = {
-        id = MAC_peoples_army
-        icon = GFX_focus_generic_soviet_politics
-        mutually_exclusive = {
-            focus = MAC_preserve_democracy
-            focus = MAC_embrace_crown
-            focus = MAC_order_above_all
-            focus = MAC_iron_guard
-        }
-        relative_position_id = MAC_delchev_succession
-        x = 6
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            set_country_flag = SOTB_communist_path
-            add_stability = -0.15
-            add_popularity = {
-                ideology = communism
-                popularity = 0.15
-            }
-            remove_ideas = { MAC_throne_of_ohrid }
-        }
-        ai_will_do = {
-            factor = 10
-        }
-        prerequisite = {
-            focus = MAC_delchev_succession
-        }
-    }
-    focus = {
-        id = MAC_iron_guard
-        icon = GFX_focus_generic_spread_fascism
-        mutually_exclusive = {
-            focus = MAC_preserve_democracy
-            focus = MAC_embrace_crown
-            focus = MAC_order_above_all
-            focus = MAC_peoples_army
-        }
-        relative_position_id = MAC_delchev_succession
-        x = -12
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            set_country_flag = SOTB_fascist_path
-            add_stability = -0.10
-            add_war_support = 0.05
-            add_popularity = {
-                ideology = fascism
-                popularity = 0.15
-            }
-        }
-        ai_will_do = {
-            factor = 15
-        }
-        prerequisite = {
-            focus = MAC_delchev_succession
-        }
-    }
-    focus = {
-        id = MAC_democratic_primary
+        id = MAC_democratic_convention
         icon = GFX_focus_generic_election
-        relative_position_id = MAC_preserve_democracy
-        x = 0
-        y = 1
+        relative_position_id = MAC_defend_democracy
+        x = -5
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS }
         completion_reward = {
@@ -207,24 +120,27 @@ focus_tree = {
             factor = 10
         }
         prerequisite = {
-            focus = MAC_preserve_democracy
+            focus = MAC_defend_democracy
         }
     }
+
+    # --- Democratic 4-way MEX ---
+
     focus = {
-        id = MAC_delchev_path
+        id = MAC_recall_the_founder
         icon = GFX_goal_generic_national_unity
         mutually_exclusive = {
-            focus = MAC_sandanski_path
-            focus = MAC_cento_path
-            focus = MAC_vlahov_path
-            focus = MAC_petrov_path
+            focus = MAC_lions_path
+            focus = MAC_ilinden_spirit
+            focus = MAC_republican_stewardship
         }
-        relative_position_id = MAC_democratic_primary
-        x = -8
-        y = 1
+        relative_position_id = MAC_democratic_convention
+        x = -10
+        y = 6
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
+            set_country_flag = SOTB_delchev_path
             country_event = {
                 id = SOTB.200
                 days = 0
@@ -234,15 +150,16 @@ focus_tree = {
             factor = 40
         }
         prerequisite = {
-            focus = MAC_democratic_primary
+            focus = MAC_democratic_convention
         }
     }
+
     focus = {
-        id = MAC_delchev_reforms
+        id = MAC_delchev_returns
         icon = GFX_focus_generic_social_democracy
-        relative_position_id = MAC_delchev_path
-        x = 0
-        y = 1
+        relative_position_id = MAC_recall_the_founder
+        x = -9
+        y = 8
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
         completion_reward = {
@@ -254,40 +171,44 @@ focus_tree = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_delchev_path
+            focus = MAC_recall_the_founder
         }
     }
+
     focus = {
         id = MAC_armed_neutrality
         icon = GFX_goal_generic_position_armies
-        relative_position_id = MAC_delchev_reforms
-        x = 0
-        y = 1
+        relative_position_id = MAC_delchev_returns
+        x = -9
+        y = 10
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         completion_reward = {
             add_stability = 0.10
             drift_defence_factor = 0.10
             custom_effect_tooltip = MAC_armed_neutrality_tt
+            hidden_effect = {
+                set_country_flag = SOTB_succession_resolved
+            }
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_delchev_reforms
+            focus = MAC_delchev_returns
         }
     }
+
     focus = {
-        id = MAC_macedonian_ataturk
+        id = MAC_delcevism_fulfilled
         icon = GFX_goal_generic_national_unity
         relative_position_id = MAC_armed_neutrality
-        x = 0
-        y = 1
+        x = -9
+        y = 12
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
-            set_country_flag = SOTB_succession_resolved
-            remove_ideas = { MAC_delchev_returns }
+            remove_ideas = { MAC_delchev_returns MAC_founder_watches }
             add_ideas = MAC_delcevism_fulfilled
             add_stability = 0.10
         }
@@ -298,21 +219,22 @@ focus_tree = {
             focus = MAC_armed_neutrality
         }
     }
+
     focus = {
-        id = MAC_sandanski_path
+        id = MAC_lions_path
         icon = GFX_goal_generic_defence
         mutually_exclusive = {
-            focus = MAC_delchev_path
-            focus = MAC_cento_path
-            focus = MAC_vlahov_path
-            focus = MAC_petrov_path
+            focus = MAC_recall_the_founder
+            focus = MAC_ilinden_spirit
+            focus = MAC_republican_stewardship
         }
-        relative_position_id = MAC_democratic_primary
-        x = -4
-        y = 1
+        relative_position_id = MAC_democratic_convention
+        x = -7
+        y = 6
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
+            set_country_flag = SOTB_sandanski_path
             country_event = {
                 id = SOTB.200
                 days = 0
@@ -322,15 +244,16 @@ focus_tree = {
             factor = 30
         }
         prerequisite = {
-            focus = MAC_democratic_primary
+            focus = MAC_democratic_convention
         }
     }
+
     focus = {
         id = MAC_fortress_macedonia
         icon = GFX_goal_generic_fortify_city
-        relative_position_id = MAC_sandanski_path
-        x = 0
-        y = 1
+        relative_position_id = MAC_lions_path
+        x = -7
+        y = 8
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         completion_reward = {
@@ -341,15 +264,16 @@ focus_tree = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_sandanski_path
+            focus = MAC_lions_path
         }
     }
+
     focus = {
         id = MAC_they_will_not_pass
         icon = GFX_goal_generic_defence
         relative_position_id = MAC_fortress_macedonia
-        x = 0
-        y = 1
+        x = -7
+        y = 10
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
         completion_reward = {
@@ -363,14 +287,15 @@ focus_tree = {
             focus = MAC_fortress_macedonia
         }
     }
+
     focus = {
         id = MAC_lions_legacy
         icon = GFX_goal_generic_national_unity
         relative_position_id = MAC_they_will_not_pass
-        x = 0
-        y = 1
+        x = -7
+        y = 12
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
             set_country_flag = SOTB_succession_resolved
             remove_ideas = { MAC_lion_leads }
@@ -383,39 +308,132 @@ focus_tree = {
             focus = MAC_they_will_not_pass
         }
     }
+
     focus = {
-        id = MAC_cento_path
-        icon = GFX_goal_generic_construct_civilian
+        id = MAC_ilinden_spirit
+        icon = GFX_goal_generic_national_unity
         mutually_exclusive = {
-            focus = MAC_delchev_path
-            focus = MAC_sandanski_path
-            focus = MAC_vlahov_path
-            focus = MAC_petrov_path
+            focus = MAC_recall_the_founder
+            focus = MAC_lions_path
+            focus = MAC_republican_stewardship
         }
-        relative_position_id = MAC_democratic_primary
-        x = 0
-        y = 1
+        relative_position_id = MAC_democratic_convention
+        x = -4
+        y = 6
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
+            set_country_flag = SOTB_karev_path
             country_event = {
                 id = SOTB.200
                 days = 0
             }
         }
         ai_will_do = {
-            factor = 20
+            factor = 15
         }
         prerequisite = {
-            focus = MAC_democratic_primary
+            focus = MAC_democratic_convention
         }
     }
+
+    focus = {
+        id = MAC_karev_reforms
+        icon = GFX_focus_generic_social_democracy
+        relative_position_id = MAC_ilinden_spirit
+        x = -3
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+        completion_reward = {
+            add_ideas = MAC_ilinden_spirit
+            conscription_factor = 0.10
+            add_war_support = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_ilinden_spirit
+        }
+    }
+
+    focus = {
+        id = MAC_krusevo_legacy
+        icon = GFX_goal_generic_national_unity
+        relative_position_id = MAC_karev_reforms
+        x = -3
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            add_stability = 0.10
+            add_war_support = 0.05
+            custom_effect_tooltip = MAC_krusevo_legacy_tt
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_karev_reforms
+        }
+    }
+
+    focus = {
+        id = MAC_ilinden_fulfilled
+        icon = GFX_goal_generic_national_unity
+        relative_position_id = MAC_krusevo_legacy
+        x = -3
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            set_country_flag = SOTB_succession_resolved
+            remove_ideas = { MAC_ilinden_spirit }
+            add_ideas = MAC_ilinden_fulfilled
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_krusevo_legacy
+        }
+    }
+
+    focus = {
+        id = MAC_republican_stewardship
+        icon = GFX_goal_generic_construct_civilian
+        mutually_exclusive = {
+            focus = MAC_recall_the_founder
+            focus = MAC_lions_path
+            focus = MAC_ilinden_spirit
+        }
+        relative_position_id = MAC_democratic_convention
+        x = -1
+        y = 6
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = SOTB_cento_path
+            country_event = {
+                id = SOTB.200
+                days = 0
+            }
+        }
+        ai_will_do = {
+            factor = 15
+        }
+        prerequisite = {
+            focus = MAC_democratic_convention
+        }
+    }
+
     focus = {
         id = MAC_cento_recovery
         icon = GFX_goal_generic_construction
-        relative_position_id = MAC_cento_path
-        x = 0
-        y = 1
+        relative_position_id = MAC_republican_stewardship
+        x = -1
+        y = 8
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
         completion_reward = {
@@ -426,20 +444,22 @@ focus_tree = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_cento_path
+            focus = MAC_republican_stewardship
         }
     }
+
     focus = {
         id = MAC_sustainable_republic
         icon = GFX_goal_generic_national_unity
         relative_position_id = MAC_cento_recovery
-        x = 0
-        y = 1
+        x = -1
+        y = 10
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
             set_country_flag = SOTB_succession_resolved
             add_stability = 0.10
+            add_political_power = 100
         }
         ai_will_do = {
             factor = 1
@@ -448,199 +468,185 @@ focus_tree = {
             focus = MAC_cento_recovery
         }
     }
+
+    # ============================================================
+    # AUTHORITARIAN SUB-FORK — Non-Aligned vs Radical
+    # ============================================================
+
     focus = {
-        id = MAC_vlahov_path
-        icon = GFX_goal_generic_improve_relations
+        id = MAC_national_salvation
+        icon = GFX_goal_generic_neutrality_focus
         mutually_exclusive = {
-            focus = MAC_delchev_path
-            focus = MAC_sandanski_path
-            focus = MAC_cento_path
-            focus = MAC_petrov_path
+            focus = MAC_break_the_system
         }
-        relative_position_id = MAC_democratic_primary
-        x = 4
-        y = 1
+        relative_position_id = MAC_restore_order
+        x = 2
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            country_event = {
-                id = SOTB.200
-                days = 0
+            set_country_flag = SOTB_non_aligned_path
+            add_stability = 0.10
+            add_popularity = {
+                ideology = neutrality
+                popularity = 0.15
             }
         }
         ai_will_do = {
-            factor = 5
+            factor = 15
         }
         prerequisite = {
-            focus = MAC_democratic_primary
+            focus = MAC_restore_order
         }
     }
+
     focus = {
-        id = MAC_vlahov_open_doors
-        icon = GFX_goal_generic_alliance
-        relative_position_id = MAC_vlahov_path
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_ideas = MAC_vlahov_reforms
-            add_opinion_modifier = {
-                target = ENG
-                modifier = MAC_eng_open_doors
-            }
-            add_opinion_modifier = {
-                target = FRA
-                modifier = MAC_fra_open_doors
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_vlahov_path
-        }
-    }
-    focus = {
-        id = MAC_vlahov_normal_country
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_vlahov_open_doors
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-        completion_reward = {
-            set_country_flag = SOTB_succession_resolved
-            add_stability = 0.15
-            add_political_power = 100
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_vlahov_open_doors
-        }
-    }
-    focus = {
-        id = MAC_petrov_path
-        icon = GFX_focus_generic_social_democracy
+        id = MAC_break_the_system
+        icon = GFX_focus_generic_spread_fascism
         mutually_exclusive = {
-            focus = MAC_delchev_path
-            focus = MAC_sandanski_path
-            focus = MAC_cento_path
-            focus = MAC_vlahov_path
+            focus = MAC_national_salvation
         }
-        relative_position_id = MAC_democratic_primary
-        x = 8
-        y = 1
+        relative_position_id = MAC_restore_order
+        x = 7
+        y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
+            set_country_flag = SOTB_radical_path
+            add_stability = -0.10
             country_event = {
-                id = SOTB.200
-                days = 0
+                id = SOTB.300
+                days = 5
             }
         }
         ai_will_do = {
-            factor = 5
+            factor = 15
         }
         prerequisite = {
-            focus = MAC_democratic_primary
+            focus = MAC_restore_order
         }
     }
+
+    # ============================================================
+    # NON-ALIGNED COLUMN — 3-way MEX
+    # ============================================================
+
     focus = {
-        id = MAC_petrov_land_liberty
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_petrov_path
+        id = MAC_aleksandrov_duty
+        icon = GFX_goal_generic_position_armies
+        mutually_exclusive = {
+            focus = MAC_shepherd_way
+            focus = MAC_the_crown
+        }
+        relative_position_id = MAC_national_salvation
         x = 0
-        y = 1
+        y = 6
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+        search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            add_ideas = MAC_petrov_progress
-            conscription_factor = 0.10
-            add_stability = 0.05
+            set_country_flag = SOTB_aleksandrov_path
+            add_ideas = MAC_aleksandrov_order
         }
         ai_will_do = {
-            factor = 1
+            factor = 10
         }
         prerequisite = {
-            focus = MAC_petrov_path
+            focus = MAC_national_salvation
         }
     }
+
     focus = {
-        id = MAC_peoples_charter
-        icon = GFX_focus_generic_anti_fascist_diplomacy
-        relative_position_id = MAC_petrov_land_liberty
+        id = MAC_aleksandrov_consolidation
+        icon = GFX_goal_generic_defence
+        relative_position_id = MAC_aleksandrov_duty
         x = 0
-        y = 1
+        y = 8
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         completion_reward = {
             add_war_support = 0.05
-            add_popularity = {
-                ideology = fascism
-                popularity = -0.02
-            }
-            custom_effect_tooltip = MAC_peoples_charter_tt
+            army_experience = 20
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_petrov_land_liberty
+            focus = MAC_aleksandrov_duty
         }
     }
+
     focus = {
-        id = MAC_just_republic
+        id = MAC_aleksandrov_capstone
         icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_peoples_charter
+        relative_position_id = MAC_aleksandrov_consolidation
         x = 0
-        y = 1
+        y = 10
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
             set_country_flag = SOTB_succession_resolved
-            remove_ideas = { MAC_petrov_progress }
-            add_ideas = MAC_just_republic
             add_stability = 0.10
+            army_experience = 30
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_peoples_charter
+            focus = MAC_aleksandrov_consolidation
         }
     }
+
     focus = {
-        id = MAC_soldiers_duty
-        icon = GFX_goal_generic_defence
+        id = MAC_shepherd_way
+        icon = GFX_goal_generic_national_unity
         mutually_exclusive = {
-            focus = MAC_shepherds_way
+            focus = MAC_aleksandrov_duty
+            focus = MAC_the_crown
         }
-        relative_position_id = MAC_order_above_all
-        x = -2
-        y = 1
+        relative_position_id = MAC_national_salvation
+        x = 2
+        y = 6
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
-            set_country_flag = SOTB_aleksandrov_leader
-            remove_ideas = { MAC_founder_watches MAC_lion_watches MAC_delcevism }
-            add_ideas = MAC_aleksandrov_order
+            set_country_flag = SOTB_archbishop_path
+            add_ideas = MAC_shepherd_way
+            add_stability = 0.05
         }
         ai_will_do = {
             factor = 3
         }
         prerequisite = {
-            focus = MAC_order_above_all
+            focus = MAC_national_salvation
         }
     }
+
     focus = {
-        id = MAC_aleksandrov_stability
+        id = MAC_church_reconciliation
         icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_soldiers_duty
-        x = 0
-        y = 1
+        relative_position_id = MAC_shepherd_way
+        x = 2
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            add_stability = 0.15
+            add_political_power = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_shepherd_way
+        }
+    }
+
+    focus = {
+        id = MAC_shepherd_capstone
+        icon = GFX_goal_generic_national_unity
+        relative_position_id = MAC_church_reconciliation
+        x = 2
+        y = 10
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
@@ -652,2164 +658,735 @@ focus_tree = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_soldiers_duty
+            focus = MAC_church_reconciliation
         }
     }
+
+    # ============================================================
+    # MONARCHIST SUB-COLUMN — 3-way MEX
+    # ============================================================
+
     focus = {
-        id = MAC_shepherds_way
-        icon = GFX_focus_generic_monarchist_sentiment
+        id = MAC_the_crown
+        icon = GFX_focus_generic_monarchy_1
         mutually_exclusive = {
-            focus = MAC_soldiers_duty
+            focus = MAC_aleksandrov_duty
+            focus = MAC_shepherd_way
         }
-        relative_position_id = MAC_order_above_all
-        x = 2
-        y = 1
+        relative_position_id = MAC_national_salvation
+        x = 4
+        y = 6
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            set_country_flag = SOTB_archbishop_leader
-            remove_ideas = { MAC_founder_watches MAC_lion_watches MAC_delcevism }
-            add_ideas = MAC_shepherd_way
+            set_country_flag = SOTB_monarchist_path
+            add_stability = -0.05
+            country_event = {
+                id = SOTB.500
+                days = 3
+            }
         }
         ai_will_do = {
             factor = 2
         }
         prerequisite = {
-            focus = MAC_order_above_all
+            focus = MAC_national_salvation
         }
     }
+
+    # --- Monarchist 3-way MEX ---
+
     focus = {
-        id = MAC_shepherd_mandate
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_shepherds_way
-        x = 0
-        y = 1
+        id = MAC_harald_crown
+        icon = GFX_focus_generic_monarchy_1
+        mutually_exclusive = {
+            focus = MAC_peter_crown
+            focus = MAC_philipp_crown
+        }
+        relative_position_id = MAC_the_crown
+        x = 5
+        y = 8
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            set_country_flag = SOTB_succession_resolved
-            add_stability = 0.10
-            add_popularity = {
-                ideology = communism
-                popularity = -0.05
-            }
-            add_popularity = {
-                ideology = fascism
-                popularity = -0.05
-            }
+            set_country_flag = SOTB_harald_path
+            add_stability = 0.05
+            add_ideas = MAC_harald_crown
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_shepherds_way
+            focus = MAC_the_crown
         }
     }
+
     focus = {
-        id = MAC_royal_mandate
-        icon = GFX_focus_generic_royal_wedding
-        relative_position_id = MAC_embrace_crown
-        x = 0
-        y = 1
+        id = MAC_danish_connection
+        icon = GFX_goal_generic_improve_relations
+        relative_position_id = MAC_harald_crown
+        x = 5
+        y = 10
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            add_stability = 0.10
-            add_popularity = {
-                ideology = neutrality
-                popularity = 0.05
+            add_opinion_modifier = {
+                target = ENG
+                modifier = MAC_eng_open_doors
             }
-            custom_effect_tooltip = MAC_royal_mandate_tt
+            add_opinion_modifier = {
+                target = DEN
+                modifier = MAC_eng_open_doors
+            }
+            add_political_power = 50
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_embrace_crown
+            focus = MAC_harald_crown
         }
     }
+
     focus = {
-        id = MAC_crown_unifies
+        id = MAC_constitutional_charter
         icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_royal_mandate
-        x = 0
-        y = 1
+        relative_position_id = MAC_danish_connection
+        x = 5
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            add_stability = 0.10
+            add_political_power = 100
+            add_research_slot = 1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_danish_connection
+        }
+    }
+
+    focus = {
+        id = MAC_copenhagen_accord
+        icon = GFX_goal_generic_alliance
+        relative_position_id = MAC_constitutional_charter
+        x = 5
+        y = 14
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
             set_country_flag = SOTB_succession_resolved
-            add_stability = 0.15
+            add_democratic_drift = 0.10
+            custom_effect_tooltip = MAC_copenhagen_accord_tt
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_royal_mandate
+            focus = MAC_constitutional_charter
         }
     }
+
     focus = {
-        id = MAC_land_reform
-        icon = GFX_focus_generic_social_democracy
-        relative_position_id = MAC_peoples_army
-        x = 0
-        y = 1
+        id = MAC_peter_crown
+        icon = GFX_focus_generic_monarchy_1
+        mutually_exclusive = {
+            focus = MAC_harald_crown
+            focus = MAC_philipp_crown
+        }
+        relative_position_id = MAC_the_crown
+        x = 8
+        y = 8
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+        search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            remove_ideas = { MAC_throne_of_ohrid }
-            conscription_factor = 0.15
-            add_stability = -0.05
-            country_event = {
-                id = SOTB.600
-                days = 5
+            set_country_flag = SOTB_peter_path
+            add_stability = 0.05
+            add_ideas = MAC_yugoslav_connection
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_the_crown
+        }
+    }
+
+    focus = {
+        id = MAC_yugoslav_sympathy
+        icon = GFX_goal_generic_improve_relations
+        relative_position_id = MAC_peter_crown
+        x = 8
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        completion_reward = {
+            add_war_support = 0.05
+            add_opinion_modifier = {
+                target = YUG
+                modifier = MAC_eng_open_doors
             }
         }
         ai_will_do = {
             factor = 1
+        }
+        prerequisite = {
+            focus = MAC_peter_crown
+        }
+    }
+
+    focus = {
+        id = MAC_belgrade_compact
+        icon = GFX_goal_generic_alliance
+        relative_position_id = MAC_yugoslav_sympathy
+        x = 8
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            custom_effect_tooltip = MAC_belgrade_compact_tt
+            hidden_effect = {
+                if = {
+                    limit = {
+                        YUG = { exists = yes }
+                        YUG = { is_subject = no }
+                    }
+                    create_faction = MAC_YUG_faction
+                    YUG = { add_to_faction = MAC_YUG_faction }
+                }
+                else = {
+                    add_state_claim = 1082
+                    add_state_claim = 106
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_yugoslav_sympathy
+        }
+    }
+
+    focus = {
+        id = MAC_south_slav_crown
+        icon = GFX_goal_generic_national_unity
+        relative_position_id = MAC_belgrade_compact
+        x = 8
+        y = 14
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            set_country_flag = SOTB_succession_resolved
+            add_stability = 0.10
+            add_ideas = MAC_south_slav_crown
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_belgrade_compact
+        }
+    }
+
+    focus = {
+        id = MAC_philipp_crown
+        icon = GFX_focus_generic_monarchy_1
+        mutually_exclusive = {
+            focus = MAC_harald_crown
+            focus = MAC_peter_crown
+        }
+        relative_position_id = MAC_the_crown
+        x = 11
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = SOTB_philipp_path
+            add_stability = -0.05
+            add_ideas = MAC_philipp_crown
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_the_crown
+        }
+    }
+
+    focus = {
+        id = MAC_german_patronage
+        icon = GFX_goal_generic_improve_relations
+        relative_position_id = MAC_philipp_crown
+        x = 11
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_opinion_modifier = {
+                target = GER
+                modifier = MAC_eng_open_doors
+            }
+            army_experience = 25
+            consumer_goods_factor = -0.03
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_philipp_crown
+        }
+    }
+
+    focus = {
+        id = MAC_kaisers_shadow
+        icon = GFX_goal_generic_national_unity
+        relative_position_id = MAC_german_patronage
+        x = 11
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        completion_reward = {
+            add_war_support = 0.10
+            industrial_capacity_factory = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_german_patronage
+        }
+    }
+
+    focus = {
+        id = MAC_hessian_crown
+        icon = GFX_goal_generic_national_unity
+        relative_position_id = MAC_kaisers_shadow
+        x = 11
+        y = 14
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = SOTB_succession_resolved
+            add_ideas = MAC_hessian_crown
+            custom_effect_tooltip = MAC_hessian_crown_tt
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_kaisers_shadow
+        }
+    }
+
+    # ============================================================
+    # RADICAL SUB-FORK — Communist vs Fascist (2-way MEX)
+    # ============================================================
+
+    focus = {
+        id = MAC_peoples_army
+        icon = GFX_focus_generic_soviet_politics
+        mutually_exclusive = {
+            focus = MAC_iron_guard
+        }
+        relative_position_id = MAC_break_the_system
+        x = 5
+        y = 6
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = SOTB_communist_path
+            add_stability = -0.10
+            add_popularity = {
+                ideology = communism
+                popularity = 0.15
+            }
+            remove_ideas = { MAC_throne_of_ohrid }
+        }
+        ai_will_do = {
+            factor = 8
+        }
+        prerequisite = {
+            focus = MAC_break_the_system
+        }
+    }
+
+    focus = {
+        id = MAC_iron_guard
+        icon = GFX_focus_generic_spread_fascism
+        mutually_exclusive = {
+            focus = MAC_peoples_army
+        }
+        relative_position_id = MAC_break_the_system
+        x = 9
+        y = 6
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = SOTB_fascist_path
+            add_stability = -0.10
+            add_war_support = 0.05
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.15
+            }
+        }
+        ai_will_do = {
+            factor = 7
+        }
+        prerequisite = {
+            focus = MAC_break_the_system
+        }
+    }
+
+    # ============================================================
+    # COMMUNIST COLUMN — 3-way MEX
+    # ============================================================
+
+    focus = {
+        id = MAC_shatorov_path
+        icon = GFX_focus_generic_soviet_politics
+        mutually_exclusive = {
+            focus = MAC_kolisevski_path
+            focus = MAC_kpm_path
+        }
+        relative_position_id = MAC_peoples_army
+        x = 3
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = SOTB_shatorov_path
+            add_ideas = MAC_shatorov_path
+            add_opinion_modifier = {
+                target = BUL
+                modifier = MAC_eng_open_doors
+            }
+        }
+        ai_will_do = {
+            factor = 2
         }
         prerequisite = {
             focus = MAC_peoples_army
         }
     }
+
     focus = {
-        id = MAC_soviet_republic
+        id = MAC_shatorov_vanguard
         icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_land_reform
-        x = 0
-        y = 1
+        relative_position_id = MAC_shatorov_path
+        x = 3
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+        completion_reward = {
+            add_communism_drift = 0.05
+            weekly_manpower = 500
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_shatorov_path
+        }
+    }
+
+    focus = {
+        id = MAC_shatorov_capstone
+        icon = GFX_goal_generic_national_unity
+        relative_position_id = MAC_shatorov_vanguard
+        x = 3
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            set_country_flag = SOTB_succession_resolved
+            add_ideas = MAC_shatorov_fulfilled
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_shatorov_vanguard
+        }
+    }
+
+    focus = {
+        id = MAC_kolisevski_path
+        icon = GFX_focus_generic_soviet_politics
+        mutually_exclusive = {
+            focus = MAC_shatorov_path
+            focus = MAC_kpm_path
+        }
+        relative_position_id = MAC_peoples_army
+        x = 6
+        y = 8
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
+            set_country_flag = SOTB_kolisevski_path
+            add_war_support = 0.05
+            add_opinion_modifier = {
+                target = SOV
+                modifier = MAC_eng_open_doors
+            }
+        }
+        ai_will_do = {
+            factor = 4
+        }
+        prerequisite = {
+            focus = MAC_peoples_army
+        }
+    }
+
+    focus = {
+        id = MAC_kolisevski_partisan
+        icon = GFX_goal_generic_defence
+        relative_position_id = MAC_kolisevski_path
+        x = 6
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        completion_reward = {
+            army_experience = 30
+            add_war_support = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_kolisevski_path
+        }
+    }
+
+    focus = {
+        id = MAC_kolisevski_capstone
+        icon = GFX_goal_generic_national_unity
+        relative_position_id = MAC_kolisevski_partisan
+        x = 6
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        completion_reward = {
             set_country_flag = SOTB_succession_resolved
-            remove_ideas = { MAC_founder_watches MAC_lion_watches MAC_delcevism MAC_vergina_star }
+            add_political_power = 100
             add_stability = 0.05
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_land_reform
+            focus = MAC_kolisevski_partisan
         }
     }
+
     focus = {
-        id = MAC_purge_old_guard
-        icon = GFX_focus_generic_fascist_troops
-        relative_position_id = MAC_iron_guard
-        x = 0
-        y = 1
+        id = MAC_kpm_path
+        icon = GFX_focus_generic_soviet_politics
+        mutually_exclusive = {
+            focus = MAC_shatorov_path
+            focus = MAC_kolisevski_path
+        }
+        relative_position_id = MAC_peoples_army
+        x = 9
+        y = 8
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            remove_ideas = { MAC_founder_watches MAC_lion_watches MAC_delcevism MAC_vergina_star MAC_throne_of_ohrid }
-            add_ideas = MAC_iron_guard
-            add_war_support = 0.15
-            country_event = {
-                id = SOTB.300
-                days = 3
-            }
+            set_country_flag = SOTB_kpm_path
+            add_ideas = MAC_kpm_path
+            add_stability = 0.05
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        prerequisite = {
+            focus = MAC_peoples_army
+        }
+    }
+
+    focus = {
+        id = MAC_kpm_discipline
+        icon = GFX_goal_generic_national_unity
+        relative_position_id = MAC_kpm_path
+        x = 9
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            add_stability = 0.10
+            drift_defence_factor = 0.10
         }
         ai_will_do = {
             factor = 1
+        }
+        prerequisite = {
+            focus = MAC_kpm_path
+        }
+    }
+
+    focus = {
+        id = MAC_kpm_capstone
+        icon = GFX_goal_generic_national_unity
+        relative_position_id = MAC_kpm_discipline
+        x = 9
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            set_country_flag = SOTB_succession_resolved
+            add_ideas = MAC_kpm_fulfilled
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_kpm_discipline
+        }
+    }
+
+    # ============================================================
+    # FASCIST COLUMN — 2-way MEX
+    # ============================================================
+
+    focus = {
+        id = MAC_direct_war
+        icon = GFX_goal_generic_position_armies
+        mutually_exclusive = {
+            focus = MAC_axis_alignment
+        }
+        relative_position_id = MAC_iron_guard
+        x = 13
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        completion_reward = {
+            set_country_flag = SOTB_direct_war_path
+            add_war_support = 0.10
+            justify_wargoal_time = -0.25
+            add_stability = -0.10
+        }
+        ai_will_do = {
+            factor = 3
         }
         prerequisite = {
             focus = MAC_iron_guard
         }
     }
+
     focus = {
-        id = MAC_greater_macedonia
-        icon = GFX_focus_generic_demand_territory
-        relative_position_id = MAC_purge_old_guard
-        x = 0
-        y = 1
+        id = MAC_vengeance_army
+        icon = GFX_goal_generic_defence
+        relative_position_id = MAC_direct_war
+        x = 13
+        y = 10
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
         completion_reward = {
-            add_war_support = 0.10
-            custom_effect_tooltip = MAC_greater_macedonia_tt
+            conscription_factor = 0.10
+            army_experience = 30
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_purge_old_guard
+            focus = MAC_direct_war
         }
     }
+
     focus = {
         id = MAC_avenger_triumph
         icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_greater_macedonia
-        x = 0
-        y = 1
+        relative_position_id = MAC_vengeance_army
+        x = 13
+        y = 12
         cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
             set_country_flag = SOTB_succession_resolved
-            remove_ideas = { MAC_iron_guard }
             add_ideas = MAC_avenger_triumph
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_greater_macedonia
+            focus = MAC_vengeance_army
         }
     }
+
     focus = {
-        id = MAC_army_future
-        icon = GFX_goal_generic_army_doctrines
-        x = 18
-        y = 1
-        cost = 5
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
-        completion_reward = {
-            country_event = {
-                id = SOTB.700
-                days = 3
-            }
-        }
-        ai_will_do = {
-            factor = 10
-        }
-    }
-    focus = {
-        id = MAC_sandanski_principles
-        icon = GFX_focus_generic_military_academy
-        relative_position_id = MAC_army_future
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-        completion_reward = {
-            add_army_experience = 15
-            add_war_support = 0.03
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_army_future
-        }
-    }
-    focus = {
-        id = MAC_night_of_solun
-        icon = GFX_goal_generic_amphibious_assault
-        relative_position_id = MAC_sandanski_principles
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_ideas = MAC_night_of_solun_tactics
-            add_army_experience = 10
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_sandanski_principles
-        }
-    }
-    focus = {
-        id = MAC_national_conscription
-        icon = GFX_goal_generic_production
-        relative_position_id = MAC_sandanski_principles
-        x = -2
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
-        completion_reward = {
-            conscription_factor = 0.03
-            add_war_support = 0.05
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_sandanski_principles
-        }
-    }
-    focus = {
-        id = MAC_vardar_engineers
-        icon = GFX_goal_generic_fortify_city
-        relative_position_id = MAC_night_of_solun
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            dig_in_speed_factor = 0.10
-            add_ideas = MAC_vardar_engineers_corps
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_night_of_solun
-        }
-    }
-    focus = {
-        id = MAC_lions_way
-        icon = GFX_goal_generic_army_artillery
+        id = MAC_axis_alignment
+        icon = GFX_goal_generic_improve_relations
         mutually_exclusive = {
-            focus = MAC_apostolski_vision
+            focus = MAC_direct_war
         }
-        relative_position_id = MAC_vardar_engineers
-        x = -3
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-        completion_reward = {
-            remove_ideas = { MAC_old_guard_reform }
-            add_ideas = MAC_lions_way
-            add_tech_bonus = {
-                name = MAC_lions_way_bonus
-                bonus = 1.0
-                uses = 2
-                category = infantry_weapons
-            }
-        }
-        ai_will_do = {
-            factor = 60
-            modifier = {
-                factor = 80
-                has_country_flag = SOTB_democratic_path
-            }
-            modifier = {
-                factor = 20
-                has_country_flag = SOTB_fascist_path
-            }
-            modifier = {
-                factor = 90
-                has_country_flag = SOTB_aleksandrov_leader
-            }
-        }
-        prerequisite = {
-            focus = MAC_vardar_engineers
-        }
-    }
-    focus = {
-        id = MAC_artillery_supremacy
-        icon = GFX_goal_generic_small_arms
-        relative_position_id = MAC_lions_way
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-        completion_reward = {
-            add_tech_bonus = {
-                name = MAC_artillery_supremacy_bonus
-                bonus = 1.0
-                uses = 2
-                category = artillery
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_lions_way
-        }
-    }
-    focus = {
-        id = MAC_fortress_macedonia_mil
-        icon = GFX_goal_generic_fortify_city
-        relative_position_id = MAC_artillery_supremacy
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            every_state = {
-                limit = {
-                    is_core_of = MAC
-                    OR = {
-                        is_border_with = BUL
-                        is_border_with = GRE
-                        is_border_with = YUG
-                        is_border_with = ALB
-                    }
-                }
-                add_building_construction = {
-                    type = bunker
-                    level = 1
-                    instant_build = yes
-                }
-            }
-            add_ideas = MAC_fortress_booster
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_artillery_supremacy
-        }
-    }
-    focus = {
-        id = MAC_unbroken_line
-        icon = GFX_goal_generic_defence
-        relative_position_id = MAC_fortress_macedonia_mil
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_ideas = MAC_unbroken_line
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_fortress_macedonia_mil
-        }
-    }
-    focus = {
-        id = MAC_apostolski_vision
-        icon = GFX_goal_generic_army_tanks
-        mutually_exclusive = {
-            focus = MAC_lions_way
-        }
-        relative_position_id = MAC_vardar_engineers
-        x = 3
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-        completion_reward = {
-            remove_ideas = { MAC_old_guard_reform }
-            add_ideas = MAC_apostolski_vision
-            add_tech_bonus = {
-                name = MAC_apostolski_vision_bonus
-                bonus = 1.0
-                uses = 2
-                category = armor
-            }
-        }
-        ai_will_do = {
-            factor = 40
-            modifier = {
-                factor = 80
-                has_country_flag = SOTB_fascist_path
-            }
-            modifier = {
-                factor = 20
-                has_country_flag = SOTB_democratic_path
-            }
-        }
-        prerequisite = {
-            focus = MAC_vardar_engineers
-        }
-    }
-    focus = {
-        id = MAC_macedonian_motorization
-        icon = GFX_goal_generic_army_motorized
-        relative_position_id = MAC_apostolski_vision
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-        completion_reward = {
-            add_tech_bonus = {
-                name = MAC_motorization_bonus
-                bonus = 1.0
-                uses = 2
-                category = motorized_equipment
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_apostolski_vision
-        }
-    }
-    focus = {
-        id = MAC_wings_over_vardar
-        icon = GFX_goal_generic_air_fighter
-        relative_position_id = MAC_macedonian_motorization
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-        completion_reward = {
-            add_tech_bonus = {
-                name = MAC_wings_bonus
-                bonus = 1.0
-                uses = 2
-                category = air_equipment
-            }
-            air_base = 2
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_macedonian_motorization
-        }
-    }
-    focus = {
-        id = MAC_macedonian_blitz
-        icon = GFX_goal_generic_air_fighter2
-        relative_position_id = MAC_wings_over_vardar
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-        completion_reward = {
-            add_ideas = MAC_blitz
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_wings_over_vardar
-        }
-    }
-    focus = {
-        id = MAC_arsenal_of_solun
-        icon = GFX_goal_generic_construct_mil_factory
-        relative_position_id = MAC_unbroken_line
-        x = 1
-        y = 1
-        cost = 10
-        allow_branch = {
-            mac_any_military_path = yes
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            731 = {
-                add_building_construction = {
-                    type = arms_factory
-                    level = 3
-                    instant_build = yes
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_unbroken_line
-        }
-    }
-    focus = {
-        id = MAC_macedonian_steel
-        icon = GFX_goal_generic_production2
-        relative_position_id = MAC_arsenal_of_solun
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            equipment_conversion_speed = 0.05
-            add_army_experience = 20
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_arsenal_of_solun
-        }
-    }
-    focus = {
-        id = MAC_lions_heirs
-        icon = GFX_goal_generic_defence
-        relative_position_id = MAC_macedonian_steel
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
-        completion_reward = {
-            add_ideas = MAC_lion_heirs
-            add_war_support = 0.10
-            conscription_factor = 0.05
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_macedonian_steel
-        }
-    }
-    focus = {
-        id = MAC_solun_arsenal_eco
-        icon = GFX_goal_generic_construct_mil_factory
-        x = -2
+        relative_position_id = MAC_iron_guard
+        x = 16
         y = 8
         cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            731 = {
-                add_building_construction = {
-                    type = arms_factory
-                    level = 2
-                    instant_build = yes
-                }
+            set_country_flag = SOTB_axis_path
+            add_opinion_modifier = {
+                target = GER
+                modifier = MAC_eng_open_doors
             }
+            add_opinion_modifier = {
+                target = ITA
+                modifier = MAC_eng_open_doors
+            }
+            add_stability = -0.05
         }
         ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_state_arms_workshops
-        icon = GFX_goal_generic_production
-        relative_position_id = MAC_solun_arsenal_eco
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            add_ideas = MAC_state_arms
-        }
-        ai_will_do = {
-            factor = 1
+            factor = 4
         }
         prerequisite = {
-            focus = MAC_solun_arsenal_eco
+            focus = MAC_iron_guard
         }
     }
+
     focus = {
-        id = MAC_artillery_foundry_veles
-        icon = GFX_goal_generic_army_artillery
-        relative_position_id = MAC_state_arms_workshops
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-        completion_reward = {
-            1084 = {
-                add_building_construction = {
-                    type = arms_factory
-                    level = 2
-                    instant_build = yes
-                }
-            }
-            add_tech_bonus = {
-                name = MAC_veles_bonus
-                bonus = 1.0
-                uses = 1
-                category = artillery
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_state_arms_workshops
-        }
-    }
-    focus = {
-        id = MAC_macedonian_munitions
-        icon = GFX_goal_generic_production2
-        relative_position_id = MAC_artillery_foundry_veles
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            equipment_conversion_speed = 0.05
-            production_speed_buildings_factor = 0.05
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_artillery_foundry_veles
-        }
-    }
-    focus = {
-        id = MAC_balkan_arsenal_eco
+        id = MAC_german_arsenal
         icon = GFX_goal_generic_construct_military
-        relative_position_id = MAC_macedonian_munitions
-        x = 0
-        y = 1
+        relative_position_id = MAC_axis_alignment
+        x = 16
+        y = 10
         cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            731 = {
-                add_building_construction = {
-                    type = arms_factory
-                    level = 3
-                    instant_build = yes
-                }
-            }
-            106 = {
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes
-                }
-            }
-            production_speed_buildings_factor = 0.05
+            industrial_capacity_factory = 0.10
+            army_experience = 25
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_macedonian_munitions
+            focus = MAC_axis_alignment
         }
     }
+
     focus = {
-        id = MAC_teteks_combine
-        icon = GFX_goal_generic_construct_civ_factory
-        x = 0
-        y = 8
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            970 = {
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes
-                }
-            }
-            add_ideas = MAC_teteks_combine
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_kratovo_mines
-        icon = GFX_goal_generic_construct_civilian
-        relative_position_id = MAC_teteks_combine
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            1084 = {
-                add_resource = {
-                    type = steel
-                    amount = 6
-                }
-            }
-            add_ideas = MAC_kratovo_mines
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_teteks_combine
-        }
-    }
-    focus = {
-        id = MAC_hydroelectric_vardar_eco
-        icon = GFX_focus_generic_hydroelectric_energy
-        relative_position_id = MAC_kratovo_mines
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            106 = {
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-            }
-            731 = {
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-            }
-            1084 = {
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-            }
-            970 = {
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_kratovo_mines
-        }
-    }
-    focus = {
-        id = MAC_chromium_refining
-        icon = GFX_goal_generic_construct_civilian
-        relative_position_id = MAC_hydroelectric_vardar_eco
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            106 = {
-                add_resource = {
-                    type = chromium
-                    amount = 8
-                }
-            }
-            trade_opinion_factor = 0.05
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_hydroelectric_vardar_eco
-        }
-    }
-    focus = {
-        id = MAC_aluminium_smelting
-        icon = GFX_goal_generic_production
-        relative_position_id = MAC_chromium_refining
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            1084 = {
-                add_resource = {
-                    type = aluminium
-                    amount = 5
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_chromium_refining
-        }
-    }
-    focus = {
-        id = MAC_balkan_workshop_eco
-        icon = GFX_goal_generic_construction2
-        relative_position_id = MAC_aluminium_smelting
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            add_ideas = MAC_balkan_workshop
-            106 = {
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 3
-                    instant_build = yes
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_aluminium_smelting
-        }
-    }
-    focus = {
-        id = MAC_vardar_railway_eco
-        icon = GFX_goal_generic_construct_infrastructure
-        x = 2
-        y = 8
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            106 = {
-                add_building_construction = {
-                    type = infrastructure
-                    level = 2
-                    instant_build = yes
-                }
-            }
-            731 = {
-                add_building_construction = {
-                    type = infrastructure
-                    level = 2
-                    instant_build = yes
-                }
-            }
-            1084 = {
-                add_building_construction = {
-                    type = infrastructure
-                    level = 2
-                    instant_build = yes
-                }
-            }
-            970 = {
-                add_building_construction = {
-                    type = infrastructure
-                    level = 2
-                    instant_build = yes
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_roads_of_republic
-        icon = GFX_goal_generic_construct_infrastructure
-        relative_position_id = MAC_vardar_railway_eco
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            every_state = {
-                limit = {
-                    is_core_of = MAC
-                }
-                add_building_construction = {
-                    type = infrastructure
-                    level = 1
-                    instant_build = yes
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_vardar_railway_eco
-        }
-    }
-    focus = {
-        id = MAC_solun_skopje_express
-        icon = GFX_goal_generic_railroads
-        relative_position_id = MAC_roads_of_republic
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            106 = {
-                add_building_construction = {
-                    type = supply_node
-                    level = 1
-                    instant_build = yes
-                }
-            }
-            add_ideas = MAC_vardar_express
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_roads_of_republic
-        }
-    }
-    focus = {
-        id = MAC_aegean_naval_facilities
-        icon = GFX_goal_generic_construct_naval_dockyard
-        relative_position_id = MAC_solun_skopje_express
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            731 = {
-                add_building_construction = {
-                    type = naval_base
-                    level = 3
-                    instant_build = yes
-                }
-            }
-            1083 = {
-                add_building_construction = {
-                    type = naval_base
-                    level = 2
-                    instant_build = yes
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_solun_skopje_express
-        }
-    }
-    focus = {
-        id = MAC_macedonian_airfields
-        icon = GFX_goal_generic_air_production
-        relative_position_id = MAC_aegean_naval_facilities
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            731 = {
-                add_building_construction = {
-                    type = air_base
-                    level = 3
-                    instant_build = yes
-                }
-            }
-            106 = {
-                add_building_construction = {
-                    type = air_base
-                    level = 2
-                    instant_build = yes
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_aegean_naval_facilities
-        }
-    }
-    focus = {
-        id = MAC_gateway_aegean
-        icon = GFX_goal_generic_positive_trade_relations
-        relative_position_id = MAC_macedonian_airfields
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            731 = {
-                add_building_construction = {
-                    type = naval_dockyard
-                    level = 5
-                    instant_build = yes
-                }
-            }
-            supply_throughput_factor = 0.10
-            trade_opinion_factor = 0.05
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_macedonian_airfields
-        }
-    }
-    focus = {
-        id = MAC_premium_tobacco
-        icon = GFX_goal_generic_positive_trade_relations
-        x = 4
-        y = 8
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            106 = {
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes
-                }
-            }
-            trade_opinion_factor = 0.10
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_tkp_monopoly_focus
-        icon = GFX_goal_generic_construction
-        relative_position_id = MAC_premium_tobacco
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            add_ideas = MAC_tkp_monopoly
-            106 = {
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_premium_tobacco
-        }
-    }
-    focus = {
-        id = MAC_tobacco_workers
+        id = MAC_axis_fulfilled
         icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_tkp_monopoly_focus
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
-        completion_reward = {
-            add_stability = 0.05
-            conscription_factor = 0.03
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_tkp_monopoly_focus
-        }
-    }
-    focus = {
-        id = MAC_berlin_tobacco
-        icon = GFX_goal_generic_improve_relations
-        relative_position_id = MAC_tobacco_workers
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            set_country_flag = MAC_trade_partner_GER
-            add_opinion_modifier = {
-                target = GER
-                modifier = MAC_ger_tobacco_partner
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_tobacco_workers
-        }
-    }
-    focus = {
-        id = MAC_quality_brand
-        icon = GFX_goal_generic_consumer_goods
-        relative_position_id = MAC_berlin_tobacco
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            production_speed_buildings_factor = 0.05
-            consumer_goods_factor = 0.03
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_berlin_tobacco
-        }
-    }
-    focus = {
-        id = MAC_balkan_cigarette
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_quality_brand
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            add_stability = 0.05
-            political_power_factor = 0.10
-            every_neighbor_country = {
-                add_opinion_modifier = {
-                    target = MAC
-                    modifier = MAC_balkan_cigarette_brand
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_quality_brand
-        }
-    }
-    focus = {
-        id = MAC_macedonian_medicine
-        icon = GFX_goal_generic_construct_civilian
-        x = 6
-        y = 8
-        cost = 10
-        mutually_exclusive = {
-            focus = MAC_macedonian_poppy_focus
-        }
-        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-        completion_reward = {
-            add_ideas = MAC_alkaloid_pharma
-            country_event = {
-                id = SOTB.800
-                days = 3
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_macedonian_poppy_focus
-        icon = GFX_goal_generic_dangerous_deal
-        x = 9
-        y = 8
-        cost = 10
-        mutually_exclusive = {
-            focus = MAC_macedonian_medicine
-        }
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            remove_ideas = { MAC_poppy }
-            add_ideas = MAC_poppy_state
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_alkaloid_labs
-        icon = GFX_goal_generic_construct_civilian
-        relative_position_id = MAC_macedonian_medicine
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-        completion_reward = {
-            add_research_slot = 1
-            research_speed_factor = 0.05
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_macedonian_medicine
-        }
-    }
-    focus = {
-        id = MAC_quiet_harbours
-        icon = GFX_goal_generic_construct_naval_dockyard
-        relative_position_id = MAC_macedonian_poppy_focus
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            naval_dockyard_output_factor = 0.15
-            add_ideas = MAC_quiet_harbours
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_macedonian_poppy_focus
-        }
-    }
-    focus = {
-        id = MAC_powder_trail
-        icon = GFX_goal_generic_dangerous_deal
-        relative_position_id = MAC_quiet_harbours
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            trade_opinion_factor = 0.15
-            country_event = {
-                id = SOTB.801
-                days = 3
-            }
-            if = {
-                limit = {
-                    has_idea = MAC_alkaloid_pharma
-                }
-                consumer_goods_factor = 0.02
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_quiet_harbours
-        }
-    }
-    focus = {
-        id = MAC_opium_diplomacy_focus
-        icon = GFX_goal_generic_demand_territory
-        relative_position_id = MAC_powder_trail
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            remove_ideas = { MAC_poppy_state }
-            add_ideas = MAC_poppy_empire
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_powder_trail
-        }
-    }
-    focus = {
-        id = MAC_pharma_purity_cap
-        icon = GFX_goal_generic_national_unity
-        mutually_exclusive = {
-            focus = MAC_opium_empire_cap
-        }
-        relative_position_id = MAC_alkaloid_labs
-        x = -1
-        y = 1
-        cost = 10
-        allow_branch = {
-            has_idea = MAC_balkan_workshop
-        }
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            remove_ideas = { MAC_poppy_state MAC_poppy_empire }
-            add_ideas = MAC_pharma_purity
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_alkaloid_labs
-        }
-    }
-    focus = {
-        id = MAC_opium_empire_cap
-        icon = GFX_goal_generic_dangerous_deal
-        mutually_exclusive = {
-            focus = MAC_pharma_purity_cap
-        }
-        relative_position_id = MAC_opium_diplomacy_focus
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-        completion_reward = {
-            remove_ideas = { MAC_poppy_empire MAC_alkaloid_pharma }
-            add_ideas = MAC_opium_empire_cap
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_opium_diplomacy_focus
-        }
-    }
-    focus = {
-        id = MAC_shield_of_albania
-        icon = GFX_goal_generic_improve_relations
-        x = -7
-        y = 8
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_opinion_modifier = {
-                target = ALB
-                modifier = MAC_shield_of_albania
-            }
-            ALB = {
-                add_opinion_modifier = {
-                    target = MAC
-                    modifier = ALB_macedonian_shield
-                }
-            }
-            diplomatic_relation = {
-                country = ALB
-                relation = guarantee
-            }
-            set_country_flag = MAC_albania_shield_active
-        }
-        ai_will_do = {
-            factor = 5
-        }
-    }
-    focus = {
-        id = MAC_court_albania
-        icon = GFX_goal_generic_improve_relations
-        x = -5
-        y = 8
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_opinion_modifier = {
-                target = ALB
-                modifier = MAC_court_albania
-            }
-        }
-        ai_will_do = {
-            factor = 3
-        }
-    }
-    focus = {
-        id = MAC_liberate_montenegro
-        icon = GFX_goal_generic_forceful_treaty
-        relative_position_id = MAC_court_albania
-        x = 0
-        y = 1
-        cost = 10
-        available = {
-            NOT = {
-                exists = MNT
-            }
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-        completion_reward = {
-            custom_effect_tooltip = MAC_liberate_montenegro_tt
-            hidden_effect = {
-                YUG = {
-                    release = MNT
-                }
-                MNT = {
-                    add_to_faction = MAC
-                    add_opinion_modifier = {
-                        target = MAC
-                        modifier = MAC_liberated_us
-                    }
-                }
-                add_political_power = -500
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_court_albania
-        }
-    }
-    focus = {
-        id = MAC_woo_romania
-        icon = GFX_goal_generic_alliance
-        relative_position_id = MAC_liberate_montenegro
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_opinion_modifier = {
-                target = ROM
-                modifier = MAC_woo_romania
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_liberate_montenegro
-        }
-    }
-    focus = {
-        id = MAC_balkan_federation
-        icon = GFX_goal_generic_major_alliance
-        relative_position_id = MAC_woo_romania
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            create_faction = MAC_BALKAN_FEDERATION
-            add_stability = 0.10
-            add_war_support = 0.05
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_woo_romania
-        }
-    }
-    focus = {
-        id = MAC_western_alignment
-        icon = GFX_focus_generic_democratic_europe
-        x = 12
-        y = 5
-        cost = 10
-        mutually_exclusive = {
-            focus = MAC_german_partnership
-            focus = MAC_soviet_embrace
-            focus = MAC_eternal_independence
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_opinion_modifier = {
-                target = ENG
-                modifier = MAC_western_guarantee
-            }
-            add_opinion_modifier = {
-                target = FRA
-                modifier = MAC_western_guarantee
-            }
-            add_popularity = {
-                ideology = democratic
-                popularity = 0.02
-            }
-        }
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 5
-                has_country_flag = SOTB_democratic_path
-            }
-        }
-    }
-    focus = {
-        id = MAC_german_partnership
-        icon = GFX_goal_generic_improve_relations
-        x = 10
-        y = 5
-        cost = 10
-        mutually_exclusive = {
-            focus = MAC_western_alignment
-            focus = MAC_soviet_embrace
-            focus = MAC_eternal_independence
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_opinion_modifier = {
-                target = GER
-                modifier = MAC_german_partnership
-            }
-            add_popularity = {
-                ideology = fascism
-                popularity = 0.02
-            }
-        }
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 5
-                has_country_flag = SOTB_fascist_path
-            }
-        }
-    }
-    focus = {
-        id = MAC_soviet_embrace
-        icon = GFX_focus_generic_soviet_politics
-        x = 6
-        y = 5
-        cost = 10
-        mutually_exclusive = {
-            focus = MAC_western_alignment
-            focus = MAC_german_partnership
-            focus = MAC_eternal_independence
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_opinion_modifier = {
-                target = SOV
-                modifier = MAC_soviet_embrace
-            }
-            add_popularity = {
-                ideology = communism
-                popularity = 0.02
-            }
-        }
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 5
-                has_country_flag = SOTB_communist_path
-            }
-        }
-    }
-    focus = {
-        id = MAC_eternal_independence
-        icon = GFX_goal_generic_neutrality_focus
-        x = 8
-        y = 5
-        cost = 10
-        mutually_exclusive = {
-            focus = MAC_western_alignment
-            focus = MAC_german_partnership
-            focus = MAC_soviet_embrace
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            drift_defence_factor = 0.25
-            join_faction_tension = 1.0
-            add_war_support = 0.10
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_aegean_macedonia_fascist
-        icon = GFX_goal_generic_demand_territory
-        x = 9
-        y = 12
-        cost = 10
-        available = {
-            has_country_flag = SOTB_fascist_path
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-        completion_reward = {
-            GRE = {
-                create_wargoal = {
-                    type = take_state_focus
-                    state = 1086
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_pirin_macedonia_fascist
-        icon = GFX_focus_generic_demand_territory
-        relative_position_id = MAC_aegean_macedonia_fascist
-        x = 0
-        y = 1
-        cost = 10
-        available = {
-            has_country_flag = SOTB_fascist_path
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-        completion_reward = {
-            BUL = {
-                create_wargoal = {
-                    type = take_state_focus
-                    state = 1082
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_aegean_macedonia_fascist
-        }
-    }
-    focus = {
-        id = MAC_unified_macedonia_fascist
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_pirin_macedonia_fascist
-        x = 0
-        y = 1
-        cost = 10
-        available = {
-            has_country_flag = SOTB_fascist_path
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-        completion_reward = {
-            ALB = {
-                create_wargoal = {
-                    type = take_state_focus
-                    state = 1087
-                }
-            }
-            add_war_support = 0.10
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_pirin_macedonia_fascist
-        }
-    }
-    focus = {
-        id = MAC_demand_pirin
-        icon = GFX_goal_generic_forceful_treaty
-        x = 11
-        y = 12
-        cost = 10
-        available = {
-            has_country_flag = SOTB_non_aligned_path
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-        completion_reward = {
-            country_event = {
-                id = SOTB.910
-                days = 3
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_demand_upper_bistrica
-        icon = GFX_goal_generic_forceful_treaty
-        relative_position_id = MAC_demand_pirin
-        x = 0
-        y = 1
-        cost = 10
-        available = {
-            has_country_flag = SOTB_non_aligned_path
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-        completion_reward = {
-            country_event = {
-                id = SOTB.911
-                days = 3
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_demand_pirin
-        }
-    }
-    focus = {
-        id = MAC_unified_macedonia_na
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_demand_upper_bistrica
-        x = 0
-        y = 1
-        cost = 10
-        available = {
-            has_country_flag = SOTB_non_aligned_path
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            ALB = {
-                create_wargoal = {
-                    type = take_state_focus
-                    state = 1087
-                }
-            }
-            add_war_support = 0.10
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_demand_upper_bistrica
-        }
-    }
-    focus = {
-        id = MAC_balkan_conference_dem
-        icon = GFX_goal_generic_improve_relations
-        x = 13
-        y = 12
-        cost = 10
-        available = {
-            has_country_flag = SOTB_democratic_path
-            NOT = {
-                has_country_flag = MAC_petrov_leader
-            }
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            country_event = {
-                id = SOTB.900
-                days = 5
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_aegean_plebiscite
-        icon = GFX_focus_generic_election
-        relative_position_id = MAC_balkan_conference_dem
-        x = 0
-        y = 1
-        cost = 10
-        available = {
-            has_country_flag = SOTB_democratic_path
-            NOT = {
-                has_country_flag = MAC_petrov_leader
-            }
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            country_event = {
-                id = SOTB.901
-                days = 3
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_balkan_conference_dem
-        }
-    }
-    focus = {
-        id = MAC_pirin_plebiscite
-        icon = GFX_focus_generic_election
-        relative_position_id = MAC_aegean_plebiscite
-        x = 0
-        y = 1
-        cost = 10
-        available = {
-            has_country_flag = SOTB_democratic_path
-            NOT = {
-                has_country_flag = MAC_petrov_leader
-            }
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            country_event = {
-                id = SOTB.902
-                days = 3
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_aegean_plebiscite
-        }
-    }
-    focus = {
-        id = MAC_balkan_solidarity
-        icon = GFX_focus_generic_anti_fascist_diplomacy
-        x = 15
-        y = 12
-        cost = 10
-        available = {
-            has_country_flag = MAC_petrov_leader
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            create_faction = MAC_BALKAN_SOLIDARITY
-            add_opinion_modifier = {
-                target = ALB
-                modifier = MAC_balkan_solidarity
-            }
-            add_opinion_modifier = {
-                target = ROM
-                modifier = MAC_balkan_solidarity
-            }
-            add_stability = 0.10
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_comrades_across_border
-        icon = GFX_focus_generic_communist
-        x = 17
-        y = 12
-        cost = 10
-        available = {
-            has_country_flag = SOTB_communist_path
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_opinion_modifier = {
-                target = BUL
-                modifier = MAC_comrades_border
-            }
-            add_opinion_modifier = {
-                target = GRE
-                modifier = MAC_comrades_border
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_peoples_macedonia
-        icon = GFX_focus_generic_soviet_politics
-        relative_position_id = MAC_comrades_across_border
-        x = 0
-        y = 1
-        cost = 10
-        available = {
-            has_country_flag = SOTB_communist_path
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_stability = 0.05
-            add_popularity = {
-                ideology = communism
-                popularity = 0.03
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_comrades_across_border
-        }
-    }
-    focus = {
-        id = MAC_united_republic
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_peoples_macedonia
-        x = 0
-        y = 1
-        cost = 10
-        available = {
-            has_country_flag = SOTB_communist_path
-        }
-        allow_branch = {
-            has_country_flag = SOTB_succession_resolved
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_war_support = 0.10
-            custom_effect_tooltip = MAC_united_republic_tt
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_peoples_macedonia
-        }
-    }
-    focus = {
-        id = MAC_vergina_museum
-        icon = GFX_goal_generic_national_unity
-        x = 12
-        y = 8
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-        completion_reward = {
-            add_ideas = MAC_vergina_museum
-            add_stability = 0.10
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_alexander_library
-        icon = GFX_goal_generic_construct_civilian
-        relative_position_id = MAC_vergina_museum
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-        completion_reward = {
-            add_ideas = MAC_alexander_library
-            add_research_slot = 1
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_vergina_museum
-        }
-    }
-    focus = {
-        id = MAC_festival_sun
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_alexander_library
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-        completion_reward = {
-            add_ideas = MAC_festival_sun
-            country_event = {
-                id = SOTB.950
-                days = 3
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_alexander_library
-        }
-    }
-    focus = {
-        id = MAC_philip_monument
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_festival_sun
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-        completion_reward = {
-            add_ideas = MAC_philip_monument
-            country_event = {
-                id = SOTB.951
-                days = 3
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_festival_sun
-        }
-    }
-    focus = {
-        id = MAC_white_tower_restoration
-        icon = GFX_goal_generic_construct_infrastructure
-        relative_position_id = MAC_philip_monument
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_ideas = MAC_white_tower
-            country_event = {
-                id = SOTB.952
-                days = 5
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_philip_monument
-        }
-    }
-    focus = {
-        id = MAC_alexander_airways
-        icon = GFX_goal_generic_air_fighter
-        relative_position_id = MAC_white_tower_restoration
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-        completion_reward = {
-            add_ideas = MAC_alexander_airways
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_white_tower_restoration
-        }
-    }
-    focus = {
-        id = MAC_vergina_phalanx
-        icon = GFX_goal_generic_defence
-        relative_position_id = MAC_alexander_airways
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-        completion_reward = {
-            add_ideas = MAC_vergina_phalanx
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_alexander_airways
-        }
-    }
-    focus = {
-        id = MAC_macedonia_eternal
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_vergina_phalanx
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            remove_ideas = { MAC_vergina_star }
-            add_ideas = MAC_vergina_eternal
-            country_event = {
-                id = SOTB.953
-                days = 3
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_vergina_phalanx
-        }
-    }
-    focus = {
-        id = MAC_macedonian_rakija
-        icon = GFX_goal_generic_consumer_goods
-        x = 6
+        relative_position_id = MAC_german_arsenal
+        x = 16
         y = 12
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         completion_reward = {
-            add_ideas = MAC_rakija_tradition
-            set_country_flag = MAC_rakija_commercialized
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-    focus = {
-        id = MAC_state_rakija_monopoly
-        icon = GFX_goal_generic_positive_trade_relations
-        relative_position_id = MAC_macedonian_rakija
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            106 = {
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes
-                }
-            }
-            every_neighbor_country = {
-                add_opinion_modifier = {
-                    target = MAC
-                    modifier = MAC_rakija_trade
-                }
-            }
+            set_country_flag = SOTB_succession_resolved
+            add_ideas = MAC_avenger_triumph
+            custom_effect_tooltip = MAC_axis_fulfilled_tt
         }
         ai_will_do = {
             factor = 1
         }
         prerequisite = {
-            focus = MAC_macedonian_rakija
+            focus = MAC_german_arsenal
         }
     }
-    focus = {
-        id = MAC_balkan_spirit_cap
-        icon = GFX_goal_generic_national_unity
-        relative_position_id = MAC_state_rakija_monopoly
-        x = 0
-        y = 1
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        completion_reward = {
-            add_ideas = MAC_balkan_spirit
-            set_country_flag = MAC_rakija_export
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        prerequisite = {
-            focus = MAC_state_rakija_monopoly
-        }
-    }
+
 }

@@ -130,15 +130,15 @@ ideas = {
 		# POLITICAL PATH SPIRITS (unlocked by focus tree)
 		# ============================================================
 
-		# Delchev returns
+		# Delchev returns — "Recall the Founder"
 		MAC_delchev_returns = {
 			allowed = { original_tag = MAC }
 			picture = unknown
 			removal_cost = -1
 			modifier = {
-				political_power_factor = 0.15
 				stability_factor = 0.10
-				drift_defence_factor = 0.30
+				drift_defence_factor = 0.25
+				political_power_factor = -0.15
 			}
 		}
 
@@ -155,7 +155,7 @@ ideas = {
 			}
 		}
 
-		# Sandanski leads
+		# Sandanski leads — "The Lion's Path"
 		MAC_lion_leads = {
 			allowed = { original_tag = MAC }
 			picture = unknown
@@ -164,6 +164,7 @@ ideas = {
 				war_support_factor = 0.10
 				army_morale_factor = 0.10
 				experience_gain_army_factor = 0.05
+				industrial_capacity_factory = -0.10
 			}
 		}
 
@@ -179,7 +180,33 @@ ideas = {
 			}
 		}
 
-		# Čento's stewardship
+		# Karev leads — "Ilinden Spirit"
+		MAC_ilinden_spirit = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 500
+				war_support_factor = 0.05
+				trade_opinion_factor = -0.10
+				stability_factor = -0.05
+			}
+		}
+
+		# Karev's Ilinden fulfilled
+		MAC_ilinden_fulfilled = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 1000
+				war_support_factor = 0.10
+				army_morale_factor = 0.05
+				stability_factor = 0.10
+			}
+		}
+
+		# Čento's stewardship — "Republican Stewardship"
 		MAC_cento_stewardship = {
 			allowed = { original_tag = MAC }
 			picture = unknown
@@ -188,10 +215,11 @@ ideas = {
 				industrial_capacity_factory = 0.15
 				political_power_factor = 0.10
 				consumer_goods_factor = -0.05
+				war_support_factor = -0.05
 			}
 		}
 
-		# Vlahov's reforms
+		# Vlahov's reforms (advisor path — retained)
 		MAC_vlahov_reforms = {
 			allowed = { original_tag = MAC }
 			picture = unknown
@@ -203,7 +231,7 @@ ideas = {
 			}
 		}
 
-		# Gjorche Petrov's progress
+		# Gjorche Petrov's progress (advisor path — retained)
 		MAC_petrov_progress = {
 			allowed = { original_tag = MAC }
 			picture = unknown
@@ -236,6 +264,7 @@ ideas = {
 				army_morale_factor = 0.15
 				experience_gain_army_factor = 0.10
 				political_power_factor = -0.10
+				democratic_drift = -0.10
 			}
 		}
 
@@ -248,33 +277,127 @@ ideas = {
 				stability_factor = 0.10
 				communism_drift = -0.05
 				fascism_drift = -0.05
+				war_support_factor = -0.10
+				research_speed_factor = -0.10
 			}
 		}
 
-		# Iron Guard — Mihailov's fascism
-		MAC_iron_guard = {
+		# ============================================================
+		# COMMUNIST PATH SPIRITS
+		# ============================================================
+
+		# Shatorov — "The Bulgarian Comrade"
+		MAC_shatorov_path = {
 			allowed = { original_tag = MAC }
 			picture = unknown
 			removal_cost = -1
 			modifier = {
+				communism_drift = 0.10
+				political_power_factor = 0.05
+			}
+		}
+
+		# Shatorov fulfilled
+		MAC_shatorov_fulfilled = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.15
+				weekly_manpower = 500
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		# KPM — "Party Above All" (institutional communist)
+		MAC_kpm_path = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.15
+				stability_factor = 0.05
+				political_power_factor = -0.10
+			}
+		}
+
+		# KPM fulfilled
+		MAC_kpm_fulfilled = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.25
+				stability_factor = 0.10
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		# ============================================================
+		# MONARCHIST PATH SPIRITS
+		# ============================================================
+
+		# Harald — Constitutional Monarchy
+		MAC_harald_crown = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+				democratic_drift = 0.02
+			}
+		}
+
+		# Peter II — Yugoslav Connection
+		MAC_yugoslav_connection = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				trade_opinion_factor = 0.10
+			}
+		}
+
+		# Peter II — Crown of the South Slavs
+		MAC_south_slav_crown = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				experience_gain_army_factor = 0.02
+				army_morale_factor = 0.05
+			}
+		}
+
+		# Philipp — German Patronage
+		MAC_philipp_crown = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				fascism_drift = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		# Philipp fulfilled — Hessian Crown
+		MAC_hessian_crown = {
+			allowed = { original_tag = MAC }
+			picture = unknown
+			removal_cost = -1
+			modifier = {
+				fascism_drift = 0.15
 				war_support_factor = 0.10
-				justify_wargoal_time = -0.15
-				stability_factor = -0.10
+				industrial_capacity_factory = 0.10
 			}
 		}
 
-		# The Avenger's Triumph
-		MAC_avenger_triumph = {
-			allowed = { original_tag = MAC }
-			picture = unknown
-			removal_cost = -1
-			modifier = {
-				war_support_factor = 0.15
-				core_defence_factor = 0.20
-				core_attack_factor = 0.20
-				training_time_factor = -0.30
-			}
-		}
+		# ============================================================
+		# FASCIST PATH SPIRITS
+		# ============================================================
 
 		# ============================================================
 		# MILITARY PATH SPIRITS

@@ -41,12 +41,24 @@ characters = {
 		}
 	}
 
+	MAC_karev = {
+		name = MAC_karev
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
+
 	MAC_vlahov = {
 		name = MAC_vlahov
 		portraits = {
 			civilian = {
 				large = GFX_portrait_europe_generic_land_13
 			}
+		}
+		advisor = {
+			traits = { imro_reformer }
 		}
 	}
 
@@ -56,6 +68,9 @@ characters = {
 			civilian = {
 				large = GFX_portrait_MAC_gjorche_petrov
 			}
+		}
+		advisor = {
+			traits = { imro_progressive }
 		}
 	}
 
@@ -91,8 +106,17 @@ characters = {
 	}
 
 	# ============================================================
-	# COMMUNIST FACTION LEADER (in-waiting)
+	# COMMUNIST FACTION LEADERS (in-waiting)
 	# ============================================================
+
+	MAC_shatorov = {
+		name = MAC_shatorov
+		portraits = {
+			civilian = {
+				large = GFX_portrait_europe_generic_land_13
+			}
+		}
+	}
 
 	MAC_kolisevski = {
 		name = MAC_kolisevski

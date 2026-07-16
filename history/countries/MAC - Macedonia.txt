@@ -1,112 +1,122 @@
 capital = 731
 
-# Setup starting army via hidden event (day 1)
+# Load the Order of Battle (division templates + starting units)
+set_oob = "MAC_1936"
 
 set_research_slots = 3
+
+# Starting stability and war support
+set_stability = 0.40
+set_war_support = 0.20
+
+# Starting convoys
+set_convoys = 5
 
 # Starting tech
 # clone of Yugoslavia
 set_technology = {
-	tech_support = 1		
-	tech_engineers = 1
-	tech_mountaineers = 1
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_trucks = 1
+        tech_support = 1
+        tech_engineers = 1
+        tech_mountaineers = 1
+        infantry_weapons = 1
+        infantry_weapons1 = 1
+        tech_trucks = 1
+        gw_artillery = 1
+        support_weapons = 1
 }
 
 if = {
-	limit = {
-		NOT = { has_dlc = "By Blood Alone" }
-	}
-	set_technology = {
-		early_fighter = 1
-	}
+        limit = {
+                NOT = { has_dlc = "By Blood Alone" }
+        }
+        set_technology = {
+                early_fighter = 1
+        }
 }
 if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_technology = {
-		gwtank = 1
-		basic_light_tank = 1
-	}
+        limit = {
+                NOT = {
+                        has_dlc = "No Step Back"
+                }
+        }
+        set_technology = {
+                gwtank = 1
+                basic_light_tank = 1
+        }
 }
 if = {
-	limit = {
-		
-		has_dlc = "No Step Back"
-		
-	}
-	set_technology = {
-		gwtank_chassis = 1
-		basic_light_tank_chassis = 1
-	}
+        limit = {
+                has_dlc = "No Step Back"
+        }
+        set_technology = {
+                gwtank_chassis = 1
+                basic_light_tank_chassis = 1
+        }
 }
 if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_submarine = 1
-		transport = 1
-	}
+        limit = {
+                not = { has_dlc = "Man the Guns" }
+        }
+        set_technology = {
+                early_destroyer = 1
+                early_light_cruiser = 1
+                early_submarine = 1
+                transport = 1
+        }
 }
 if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		early_ship_hull_submarine = 1
-		early_ship_hull_light = 1
-		early_ship_hull_cruiser = 1
-		basic_battery = 1
-		basic_torpedo = 1
-		mtg_transport = 1
-	}
+        limit = {
+                has_dlc = "Man the Guns"
+        }
+        set_technology = {
+                early_ship_hull_submarine = 1
+                early_ship_hull_light = 1
+                early_ship_hull_cruiser = 1
+                basic_battery = 1
+                basic_torpedo = 1
+                mtg_transport = 1
+        }
 }
 
 set_politics = {
-	ruling_party = democratic
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = yes
+        ruling_party = democratic
+        last_election = "1936.1.1"
+        election_frequency = 48
+        elections_allowed = yes
 }
 
 set_popularities = {
-	democratic = 40
-	neutrality = 10
-	communism = 30
-	fascism = 20
+        democratic = 40
+        neutrality = 10
+        communism = 30
+        fascism = 20
 }
 
 # Starting national spirits
 add_ideas = {
-	MAC_founder_watches
-	MAC_lion_watches
-	MAC_two_betrayals
-	MAC_vergina_star
-	MAC_delcevism
-	MAC_solun_arsenal
-	MAC_army_of_the_lion
-	MAC_old_guard_reform
-	MAC_throne_of_ohrid
-	MAC_poppy
+        MAC_founder_watches
+        MAC_lion_watches
+        MAC_two_betrayals
+        MAC_vergina_star
+        MAC_delcevism
+        MAC_solun_arsenal
+        MAC_army_of_the_lion
+        MAC_old_guard_reform
+        MAC_throne_of_ohrid
+        MAC_poppy
 }
 
 # Recruit faction leaders into character pool
 recruit_character = MAC_cento
 recruit_character = MAC_delchev
 recruit_character = MAC_sandanski
+recruit_character = MAC_karev
 recruit_character = MAC_vlahov
 recruit_character = MAC_gjorche_petrov
 recruit_character = MAC_aleksandrov
 recruit_character = MAC_archbishop_dositej
 recruit_character = MAC_apostolski
+recruit_character = MAC_shatorov
 recruit_character = MAC_kolisevski
 recruit_character = MAC_mihailov
 recruit_character = MAC_prince_harald

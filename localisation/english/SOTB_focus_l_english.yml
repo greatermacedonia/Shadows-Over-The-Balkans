@@ -3,59 +3,178 @@
  # FOCUS NAMES & DESCRIPTIONS
  # ============================================================
 
- # --- Starter ---
- MAC_delchev_succession_tt: "The succession crisis begins. The political focus tree opens. If not resolved swiftly, the nation may grow restless."
+ # --- Shared Trunk ---
+ MAC_parliamentary_crisis: "The Parliamentary Deadlock"
+ MAC_parliamentary_crisis_desc: "President Čento's government has failed to form a working majority. The parliament is deadlocked. The streets are restless. Macedonia must choose: restore faith in the republic, or seek order by other means."
+ MAC_crisis_begins_tt: "The parliamentary crisis begins. If not resolved, stability will continue to fall. The political tree opens."
 
- # --- Branch Choices ---
+ # --- First Fork ---
+ MAC_defend_democracy: "Preserve the Republic"
+ MAC_defend_democracy_desc: "Our institutions have served us since Delchev's founding. The deadlock will be broken at the ballot box, not in the streets. Democracy endures."
+ MAC_restore_order: "Democracy Has Failed"
+ MAC_restore_order_desc: "The parliament has proven incapable. Čento's caretaker government is a bandage on a wound that needs surgery. Extraordinary times demand extraordinary measures."
 
- # --- Democratic Primary ---
+ # --- Democratic Column ---
+ MAC_democratic_convention: "The Democratic Convention"
+ MAC_democratic_convention_desc: "Four candidates, four visions, one republic. The people will choose their path forward."
 
- # --- Delchev Path ---
+ MAC_recall_the_founder: "Recall the Founder"
+ MAC_recall_the_founder_desc: "Goce Delchev built this republic with his own hands. In this hour of crisis, the nation turns to its father. Reluctant but dutiful, the Founder will answer the call once more."
+ MAC_delchev_returns: "The Founder's Return"
+ MAC_delchev_returns_desc: "Delchev accepts the nomination. His return electrifies the nation. The Delčevist philosophy — armed neutrality, national self-reliance, no foreign entanglements — will guide Macedonia forward."
+ MAC_armed_neutrality: "Armed Neutrality"
+ MAC_armed_neutrality_desc: "We will not be drawn into the quarrels of great powers. Macedonia stands alone — armed, vigilant, and sovereign."
  MAC_armed_neutrality_tt: "Macedonia gains +10% drift defence. Joining factions generates more world tension."
+ MAC_delcevism_fulfilled: "Delčevism Fulfilled"
+ MAC_delcevism_fulfilled_desc: "The Founder has returned, the republic is secured, and the Delčevist vision is complete. Macedonia will chart its own course — forever."
 
- # --- Sandanski Path ---
+ MAC_lions_path: "The Lion's Path"
+ MAC_lions_path_desc: "Jane Sandanski, the Lion of Solun, offers martial stewardship in a dangerous world. Fortify the homeland. Prepare the army. Let no enemy set foot on Macedonian soil."
+ MAC_fortress_macedonia: "Fortress Macedonia"
+ MAC_fortress_macedonia_desc: "Border fortifications, strategic depth, and prepared positions. If the wolves come, they will find only walls of stone and iron."
+ MAC_they_will_not_pass: "They Will Not Pass"
+ MAC_they_will_not_pass_desc: "Sandanski's famous words at Solun, 1912. Now they become national doctrine. Every citizen a defender. Every village a redoubt."
+ MAC_lions_legacy: "The Lion's Legacy"
+ MAC_lions_legacy_desc: "The old lion retires — but his roar echoes through the ages. Macedonia's defensive tradition is now unshakeable."
 
- # --- Čento Path ---
+ MAC_ilinden_spirit: "The Ilinden Spirit"
+ MAC_ilinden_spirit_desc: "Nikola Karev, hero of the Kruševo Republic, carries the flame of 1903. Revolutionary republicanism — the people awakened, the nation mobilized. Ilinden lives."
+ MAC_karev_reforms: "Karev's Reforms"
+ MAC_karev_reforms_desc: "Land to the peasant. Dignity to the worker. The Ilinden promise, finally kept. The old guard will grumble — let them."
+ MAC_krusevo_legacy: "The Kruševo Legacy"
+ MAC_krusevo_legacy_desc: "The short-lived Kruševo Republic of 1903 was the first modern Macedonian state. Its spirit — radical, democratic, defiant — is reborn."
+ MAC_krusevo_legacy_tt: "The people are rallied. Manpower increases. Conservative opposition grows."
+ MAC_ilinden_fulfilled: "Ilinden Eternal"
+ MAC_ilinden_fulfilled_desc: "Karev has done what the Ottomans could not prevent — built a nation from the ashes of empire. The red flag of Kruševo flies over a free Macedonia."
 
- # --- Vlahov Path ---
+ MAC_republican_stewardship: "Republican Stewardship"
+ MAC_republican_stewardship_desc: "Metodija Čento asks for the full mandate he has earned. Institutional stability, competent administration, and quiet competence. No grand revolutions — just a republic that works."
+ MAC_cento_recovery: "Čento's Recovery Plan"
+ MAC_cento_recovery_desc: "Infrastructure, industry, and institutions. The caretaker becomes the builder."
+ MAC_sustainable_republic: "The Sustainable Republic"
+ MAC_sustainable_republic_desc: "Čento has done what he promised — a stable, prosperous, well-governed republic. The crisis is over."
 
- # --- Gjorche Petrov Path ---
- MAC_peoples_charter_tt: "Fascist ideology drift permanently reduced. Democratic support increases over time."
+ # --- Non-Aligned Column ---
+ MAC_national_salvation: "A Strong Hand"
+ MAC_national_salvation_desc: "The politicians have failed. The nation needs a leader who commands respect — not through speeches, but through strength."
+ MAC_aleksandrov_duty: "The Soldier's Duty"
+ MAC_aleksandrov_duty_desc: "Todor Aleksandrov steps forward. A lifetime of service. A reputation for pragmatism. The army will steady the ship — and decide what comes next."
+ MAC_aleksandrov_consolidation: "Consolidation"
+ MAC_aleksandrov_consolidation_desc: "Martial law. Military tribunals. Order restored. The parliament may grumble — but the streets are quiet."
+ MAC_aleksandrov_capstone: "The General's Peace"
+ MAC_aleksandrov_capstone_desc: "Aleksandrov's rule has brought stability — at a price. Democratic institutions have atrophied, but Macedonia endures."
 
- # --- Non-Aligned ---
+ MAC_shepherd_way: "The Shepherd's Way"
+ MAC_shepherd_way_desc: "Archbishop Dositej II offers a different path — spiritual renewal over military rule. The Church has been Macedonia's conscience since Ohrid. Let it guide the nation now."
+ MAC_church_reconciliation: "National Reconciliation"
+ MAC_church_reconciliation_desc: "The Archbishop calls for unity. Left and right, rich and poor, Macedonian and minority — all are children of the same God."
+ MAC_shepherd_capstone: "The Shepherd's Blessing"
+ MAC_shepherd_capstone_desc: "Under the Archbishop's guidance, Macedonia has found peace. The Church's moral authority stabilizes the nation — even if progress slows in the shadow of the cross."
 
- # --- Monarchist ---
+ # --- Monarchist Column ---
+ MAC_the_crown: "The Crown"
+ MAC_the_crown_desc: "Perhaps the republic was the problem all along. Three crowns await — each from a different world. Which will Macedonia choose?"
  MAC_royal_mandate_tt: "The chosen monarchist candidate becomes country leader and receives their unique trait."
 
- # --- Communist ---
+ MAC_harald_crown: "The Danish Prince"
+ MAC_harald_crown_desc: "Prince Harald of Denmark — Protestant, constitutional, acceptable to Britain. A king who reigns but does not rule. Stability through tradition."
+ MAC_danish_connection: "The Danish Connection"
+ MAC_danish_connection_desc: "Trade agreements with Copenhagen. British goodwill. Macedonia enters the Nordic orbit."
+ MAC_constitutional_charter: "The Constitutional Charter"
+ MAC_constitutional_charter_desc: "A constitution fit for a modern kingdom. Parliament strengthened. Rights guaranteed. The crown is a symbol, not a master."
+ MAC_copenhagen_accord: "The Copenhagen Accord"
+ MAC_copenhagen_accord_desc: "Macedonia joins the community of Nordic constitutional monarchies. Democratic drift increases. The experiment succeeds."
+ MAC_copenhagen_accord_tt: "If Denmark or Norway exist and are independent, they may be invited to form a faction."
 
- # --- Fascist ---
+ MAC_peter_crown: "The Exiled King"
+ MAC_peter_crown_desc: "Peter II Karađorđević — young, charismatic, and hungry. The Yugoslav crown is his birthright. Macedonia could be the foundation of a new South Slavic kingdom."
+ MAC_yugoslav_sympathy: "Yugoslav Sympathy"
+ MAC_yugoslav_sympathy_desc: "Volunteers, equipment, and moral support for the Yugoslav cause. Belgrade notices."
+ MAC_belgrade_compact: "The Belgrade Compact"
+ MAC_belgrade_compact_desc: "An alliance between Solun and Belgrade. If Yugoslavia is free, we stand together. If it has fallen, we claim what is rightfully ours."
+ MAC_belgrade_compact_tt: "If Yugoslavia exists and is independent, forms a faction. Otherwise, grants claims on South Serbia and Vardar Banovina."
+ MAC_south_slav_crown: "The Crown of the South Slavs"
+ MAC_south_slav_crown_desc: "Peter II is crowned in Solun. Macedonia becomes 'Macedonian Yugoslavia' in name — a South Slavic kingdom waiting for its lost provinces to return home."
+
+ MAC_philipp_crown: "The Hessian Prince"
+ MAC_philipp_crown_desc: "Prince Philipp of Hesse — German aristocrat, Nazi Party member, and son-in-law of the Italian King. Berlin's man in the Balkans."
+ MAC_german_patronage: "German Patronage"
+ MAC_german_patronage_desc: "Military advisors from the Reich. German industrial methods. Macedonia modernizes — under a German shadow."
+ MAC_kaisers_shadow: "The Kaiser's Shadow"
+ MAC_kaisers_shadow_desc: "Factories hum. Soldiers drill. The German model transforms Macedonia — but at what cost to its soul?"
+ MAC_hessian_crown: "The Hessian Crown"
+ MAC_hessian_crown_desc: "Philipp is crowned. The swastika flies beside the Vergina Sun. Macedonia has chosen its patron — and its master."
+ MAC_hessian_crown_tt: "Macedonia gains the ability to join the Axis. German equipment licenses become available."
+
+ # --- Radical Fork ---
+ MAC_break_the_system: "Sweep It Away"
+ MAC_break_the_system_desc: "Democracy has failed. Order is not enough. The entire system must be torn down and rebuilt — by the people, or by the strong."
+
+ # --- Communist Column ---
+ MAC_peoples_army: "The People's Army"
+ MAC_peoples_army_desc: "Lazar Koliševski and the communists promise a revolution of the working class. The old order will be swept away — but which revolution will prevail?"
+ MAC_shatorov_path: "The Bulgarian Comrade"
+ MAC_shatorov_path_desc: "Metodi Shatorov — Macedonian communist, Bulgarian ally. His vision: an autonomous Macedonia under the protective wing of Sofia. Moscow is far. Sofia is near."
+ MAC_shatorov_vanguard: "The Vanguard Party"
+ MAC_shatorov_vanguard_desc: "A disciplined cadre of professional revolutionaries. The Bulgarian model — tested, effective, and close to home."
+ MAC_shatorov_capstone: "The Bulgarian Path"
+ MAC_shatorov_capstone_desc: "Shatorov's Macedonia walks a tightrope between Sofia and independence. The revolution is secure — but at the cost of Yugoslav enmity."
+
+ MAC_kolisevski_path: "The Firebrand"
+ MAC_kolisevski_path_desc: "Lazar Koliševski — Moscow-trained, Tito-aligned, burning with revolutionary fire. The Comintern's man in the Balkans."
+ MAC_kolisevski_partisan: "The Partisan Tradition"
+ MAC_kolisevski_partisan_desc: "Koliševski builds a people's army on the Yugoslav model. Partisan warfare. Popular mobilization. The mountains become fortresses."
+ MAC_kolisevski_capstone: "The Comintern Path"
+ MAC_kolisevski_capstone_desc: "Macedonia enters the Soviet orbit. The revolution is internationalist — and Moscow is pleased."
+
+ MAC_kpm_path: "Party Above All"
+ MAC_kpm_path_desc: "The Communist Party of Macedonia — collective leadership, party discipline, ideological purity. No personality cults. No foreign masters. The Party is the state."
+ MAC_kpm_discipline: "Party Discipline"
+ MAC_kpm_discipline_desc: "Factionalism crushed. Deviation punished. The Central Committee rules with iron consensus."
+ MAC_kpm_capstone: "The People's Democracy"
+ MAC_kpm_capstone_desc: "KPM has built a stable, orthodox communist state. Slow, deliberate, and immune to foreign manipulation. The Party endures."
+
+ # --- Fascist Column ---
+ MAC_iron_guard: "The Iron Guard"
+ MAC_iron_guard_desc: "Ivan Mihailov and his blackshirts demand blood and iron. Bulgaria must pay for 1913 and 1915. The question is: how?"
+ MAC_direct_war: "Direct War"
+ MAC_direct_war_desc: "No negotiations. No alliances. No patience. Macedonia will take what is hers by force — alone, if necessary."
+ MAC_vengeance_army: "The Vengeance Army"
+ MAC_vengeance_army_desc: "Mass mobilization. Total war doctrine. Every Macedonian of fighting age will carry a rifle."
+ MAC_avenger_triumph: "The Avenger's Triumph"
+ MAC_avenger_triumph_desc: "Mihailov has built a war machine. The reckoning with Bulgaria approaches. Blood will answer blood."
+
+ MAC_axis_alignment: "The Axis Path"
+ MAC_axis_alignment_desc: "Patience. Diplomacy. Berlin and Rome will open the doors that Macedonian strength alone cannot. Bulgaria will kneel — with German blessing."
+ MAC_german_arsenal: "The German Arsenal"
+ MAC_german_arsenal_desc: "German factories, German guns, German training. Macedonia becomes the Reich's Balkan workshop."
+ MAC_axis_fulfilled: "The Axis Ally"
+ MAC_axis_fulfilled_desc: "Mihailov has secured his place at Hitler's table. Macedonia marches with the Axis — and Bulgaria's days are numbered."
+ MAC_axis_fulfilled_tt: "Germany and Italy opinion greatly improved. Path to joining the Axis opened."
  MAC_greater_macedonia_tt: "Grants territorial claims on all neighbouring states holding Macedonian cores."
 
  # ============================================================
  # EVENT TITLES & DESCRIPTIONS
  # ============================================================
 
- SOTB.100.t: "The Nation Grows Restless"
- SOTB.100.d: "Months have passed since President Čento assumed the interim presidency, and still the Succession Question remains unresolved. The people of Macedonia grow restless. Whispers fill the cafés of Solun. 'Where is the Founder? Who will lead us?' The time for waiting is over. The nation demands an answer."
+ SOTB.100.t: "The Parliamentary Deadlock"
+ SOTB.100.d: "President Čento addresses the nation. The parliament is deadlocked — a party won the election but cannot form a government. Repeated attempts have failed. The cafés of Solun buzz with anxious talk. 'Where is the Founder? Who will lead us?' The time for waiting is over. The nation demands resolution."
  SOTB.100.a: "The people demand action"
- SOTB.100.a_tt: "The succession crisis deepens. Further delays will damage national stability."
  SOTB.100.b: "We still need time"
 
- SOTB.101.t: "The Succession Begins"
- SOTB.101.d: "President Čento has formally initiated the succession process. The interim presidency — always understood to be temporary — is now officially approaching its end. Across Macedonia, factions align. Candidates emerge. The question that has haunted the republic since Delchev's stroke will finally be answered: who leads Macedonia into the uncertain future?"
+ SOTB.101.t: "The Crisis Deepens"
+ SOTB.101.d: "President Čento has formally recognized the crisis. The interim presidency — always understood to be temporary — can no longer paper over the cracks. Across Macedonia, factions align. Candidates emerge. Fourteen possible leaders across five ideological columns. The question that has haunted the republic since Karev's chaotic final years will finally be answered: who leads Macedonia into an uncertain future?"
  SOTB.101.a: "Let the nation decide"
 
- SOTB.200.t: "The Democratic Primary"
- SOTB.200.d: "Five candidates stand before the people. Five visions for the republic's future. Five men who each, in their own way, embody the IMRO revolutionary tradition. Goce Delchev — the Founder, returning from retirement to guide his creation. Jane Sandanski — the Lion of Solun, offering martial stewardship in a dangerous world. Metodija Čento — the interim President, asking for the full mandate he has earned. Dimitar Vlahov — the reformer who would align Macedonia with the Western democracies. Gjorche Petrov — the progressive who believes democracy must deliver justice. Choose."
- SOTB.200.a: "Goce Delchev — The Founder Returns"
+ SOTB.200.t: "The Democratic Convention"
+ SOTB.200.d: "Four candidates stand before the people. Four visions for the republic's future. Goce Delchev — the Founder, returning from retirement to guide his creation once more. Jane Sandanski — the Lion of Solun, offering martial stewardship in a dangerous world. Nikola Karev — hero of the Kruševo Republic, carrying the revolutionary flame of Ilinden. Metodija Čento — the interim President, asking for the full mandate he has earned. Choose."
+ SOTB.200.a: "Goce Delchev — Recall the Founder"
  SOTB.200.b: "Jane Sandanski — The Lion's Path"
- SOTB.200.c: "Metodija Čento — The Manager's Mandate"
- SOTB.200.d: "Dimitar Vlahov — The Reformer's Coalition"
- SOTB.200.e: "Gjorche Petrov — The Progressive's Dream"
+ SOTB.200.c: "Nikola Karev — The Ilinden Spirit"
+ SOTB.200.d: "Metodija Čento — Republican Stewardship"
 
  SOTB.300.t: "The Old General's Choice"
- SOTB.300.d: "Ivan Mihailov requested a private meeting with his former mentor. The conversation was brief. 'General,' Mihailov said, 'you know what must be done. The democrats talk. The communists plot. The republic weakens while you wait. Join me. Together — the army and the movement — we can save Macedonia. Not with speeches. With action.' Aleksandrov was silent for a long moment. Then: 'I taught you everything you know about war, Ivan. But I did not teach you that war is the answer to every question. Sometimes the hardest thing is not to fight. Go. Before I remember that you were once my student.'"
+ SOTB.300.d: "Ivan Mihailov requested a private meeting with General Aleksandrov. The conversation was brief. 'General,' Mihailov said, 'you know what must be done. The democrats talk. The communists plot. The republic weakens while you wait. Join me. Together — the army and the movement — we can save Macedonia.' Aleksandrov was silent for a long moment. Then: 'I taught you everything you know about war, Ivan. But I did not teach you that war is the answer to every question. Go. Before I remember that you were once my student.'"
  SOTB.300.a: "Aleksandrov rejects Mihailov forever"
  SOTB.300.a_tt: "Aleksandrov's democratic credentials strengthen. The general will not be swayed."
  SOTB.300.b: "Aleksandrov hesitates..."
@@ -64,15 +183,15 @@
  SOTB.300.c_tt: "The army and the radicals unite. Aleksandrov shifts toward Fascism. Major political realignment."
 
  SOTB.400.t: "The Lion Roars"
- SOTB.400.d: "A letter from General Sandanski has been published in Nova Makedonija. The Lion of Solun, 64 and rarely seen, has broken his silence: 'I did not take Solun to watch it fall to squabbling politicians. I did not build this army to see it torn apart by ambition. The republic is bigger than any faction. Bigger than any man. Even me. Especially me. Remember that — before I am forced to remind you.'"
+ SOTB.400.d: "A letter from General Sandanski has been published in Nova Makedonija. The Lion of Solun, now aged but still formidable, has broken his silence: 'I did not take Solun to watch it fall to squabbling politicians. I did not build this army to see it torn apart by ambition. The republic is bigger than any faction. Bigger than any man. Even me. Especially me. Remember that — before I am forced to remind you.'"
  SOTB.400.a: "The Lion still has teeth"
 
  SOTB.401.t: "The Founder's Letter"
- SOTB.401.d: "A handwritten letter from Goce Delchev has been delivered to the Parliament. The Founder — frail, retired, but watching — has not abandoned his creation: 'I gave you a republic. I did not give you an arena. The people chose democracy. Honour their choice. Or I will return — and I will not be pleased with what I find.'"
+ SOTB.401.d: "A handwritten letter from Goce Delchev has been delivered to the Parliament. The Founder — retired but watching — has not abandoned his creation: 'I gave you a republic. I did not give you an arena. I stepped aside so democracy could grow, not wither. Honour that choice. Or I will return — and I will not be pleased with what I find.'"
  SOTB.401.a: "Even in retirement, Delchev commands"
 
  SOTB.500.t: "The Crown Question"
- SOTB.500.d: "Three candidates wait in the wings. Three crowns. Three futures. Prince Harald of Denmark — a Protestant constitutional monarch, acceptable to Britain, unlikely to thrill the Orthodox peasantry. Peter II Karađorđević — the young, charismatic claimant to the Yugoslav throne, exiled and hungry, offering Macedonia a crown and a destiny. Prince Philipp of Hesse — German prince, Nazi Party member, Göring associate, son-in-law of the Italian King. Each offers a different path. Each crown carries a different price."
+ SOTB.500.d: "The parliament has failed. The streets are restive. And now a new question arises: perhaps a crown could succeed where the ballot box cannot. Three candidates wait. Three crowns. Three futures. Prince Harald of Denmark — a Protestant constitutional monarch, acceptable to Britain. Peter II Karađorđević — the young, charismatic claimant to the Yugoslav throne, offering Macedonia a greater destiny. Prince Philipp of Hesse — German prince, Nazi Party member, Berlin's man in the Balkans. Each crown carries a different price."
  SOTB.500.a: "Prince Harald of Denmark — Constitutional Monarchy"
  SOTB.500.b: "Peter II Karađorđević — The Exiled King"
  SOTB.500.c: "Prince Philipp of Hesse — German Protection"
