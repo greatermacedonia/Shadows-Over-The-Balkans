@@ -35,4 +35,64 @@ spriteTypes = {
 		name = "GFX_portrait_MAC_gjorche_petrov"
 		texturefile = "gfx/leaders/MAC/portrait_MAC_gjorche_petrov.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_MAC_vergina_star"
+		texturefile = "gfx/interface/goals/goal_vergina_star.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAC_lion_watches"
+		texturefile = "gfx/interface/goals/goal_lion_watches.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAC_army_of_the_lion"
+		texturefile = "gfx/interface/goals/goal_army_of_the_lion.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAC_old_guard_reform"
+		texturefile = "gfx/interface/goals/goal_old_guard_reform.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAC_throne_of_ohrid"
+		texturefile = "gfx/interface/goals/goal_throne_of_ohrid.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAC_poppy"
+		texturefile = "gfx/interface/goals/goal_poppy.dds"
+	}
+	spriteType = {
+    name = "GFX_focus_goal_vergina_star"
+    texturefile = "gfx/interface/goals/goal_vergina_star.dds"
+}
+
+	spriteType = {
+    name = "GFX_focus_goal_vergina_star_shine"
+    texturefile = "gfx/interface/goals/goal_vergina_star.dds"
+    effectFile = "gfx/FX/buttonstate.lua"
+    animation = {
+        animationmaskfile = "gfx/interface/goals/goal_vergina_star.dds"
+        animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+        animationrotation = -90.0
+        animationlooping = no
+        animationtime = 0.75
+        animationdelay = 0
+        animationblendmode = "add"
+        animationtype = "scrolling"
+        animationrotationoffset = { x = 0.0 y = 0.0 }
+        animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+    animation = {
+        animationmaskfile = "gfx/interface/goals/goal_vergina_star.dds"
+        animationtexturefile = "gfx/interface/goals/shine_overlay.tga"
+        animationrotation = 90.0
+        animationlooping = no
+        animationtime = 0.75
+        animationdelay = 0
+        animationblendmode = "add"
+        animationtype = "scrolling"
+        animationrotationoffset = { x = 0.0 y = 0.0 }
+        animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+    legacy_lazy_load = no
+}
+
 }

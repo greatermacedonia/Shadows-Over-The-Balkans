@@ -22,7 +22,7 @@ ideas = {
 		MAC_lion_watches = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = idea_generic_army_europe_5
+			picture = GFX_idea_MAC_lion_watches
 			removal_cost = -1
 			modifier = {
 				war_support_factor = 0.05
@@ -46,7 +46,7 @@ ideas = {
 		MAC_vergina_star = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = idea_generic_fortify_the_borders
+			picture = GFX_idea_MAC_vergina_star
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
@@ -82,7 +82,7 @@ ideas = {
 		MAC_army_of_the_lion = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = idea_generic_army_europe_4
+			picture = GFX_idea_MAC_army_of_the_lion
 			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.05
@@ -94,7 +94,7 @@ ideas = {
 		MAC_old_guard_reform = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = idea_generic_army_problems
+			picture = GFX_idea_MAC_old_guard_reform
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = -0.05
@@ -106,7 +106,7 @@ ideas = {
 		MAC_throne_of_ohrid = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = idea_yug_orthodox_church_support
+			picture = GFX_idea_MAC_throne_of_ohrid
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
@@ -118,7 +118,7 @@ ideas = {
 		MAC_poppy = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = idea_prc_permit_opium_trade
+			picture = GFX_idea_MAC_poppy
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.02
@@ -1193,5 +1193,148 @@ ideas = {
 			}
 		}
 
+
+                # Hidden modifier idea for MAC_they_will_not_pass
+                MAC_they_will_not_pass_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                conscription_factor = 0.05
+                        }
+                }
+
+                # Hidden modifier idea for MAC_karev_reforms
+                MAC_karev_reforms_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                conscription_factor = 0.1
+                        }
+                }
+
+                # Hidden modifier idea for MAC_kaisers_shadow
+                MAC_kaisers_shadow_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                industrial_capacity_factory = 0.1
+                        }
+                }
+
+                # Hidden modifier idea for MAC_vengeance_army
+                MAC_vengeance_army_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                conscription_factor = 0.1
+                        }
+                }
+
+                # Hidden modifier idea for MAC_german_arsenal
+                MAC_german_arsenal_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                industrial_capacity_factory = 0.1
+                        }
+                }
+
+                # Hidden modifier idea for MAC_break_the_ciftlik
+                MAC_break_the_ciftlik_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                conscription_factor = 0.05
+                        }
+                }
+
+                # Hidden modifier idea for MAC_reform_tax_code
+                MAC_reform_tax_code_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                political_power_factor = 0.1
+                        }
+                }
+
+                # Hidden modifier idea for MAC_new_guilds
+                MAC_new_guilds_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                industrial_capacity_factory = 0.1
+                                production_speed_buildings_factor = 0.05
+                        }
+                }
+
+                # Hidden modifier idea for MAC_consumer_cooperatives
+                MAC_consumer_cooperatives_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                consumer_goods_factor = -0.05
+                                trade_opinion_factor = 0.1
+                        }
+                }
+
+                # Hidden modifier idea for MAC_solun_trade_houses
+                MAC_solun_trade_houses_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                political_power_factor = 0.1
+                                trade_opinion_factor = 0.15
+                        }
+                }
+
+                # Hidden modifier idea for MAC_mineral_wealth
+                MAC_mineral_wealth_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                industrial_capacity_factory = 0.05
+                        }
+                }
+
+                # Hidden modifier idea for MAC_tobacco_auction_houses
+                MAC_tobacco_auction_houses_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                trade_opinion_factor = 0.1
+                        }
+                }
+
+                # Hidden modifier idea for MAC_expand_poppy_plantations
+                MAC_expand_poppy_plantations_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                trade_opinion_factor = 0.05
+                        }
+                }
+
+                # Hidden modifier idea for MAC_balkan_pharmacy
+                MAC_balkan_pharmacy_modifiers = {
+                        allowed = { original_tag = MAC }
+                        picture = idea_generic_industrial_concern_2
+                        removal_cost = -1
+                        modifier = {
+                                trade_opinion_factor = 0.15
+                        }
+                }
 	}
 }
