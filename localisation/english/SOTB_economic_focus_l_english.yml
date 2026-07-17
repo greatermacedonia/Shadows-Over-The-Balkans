@@ -1,0 +1,361 @@
+﻿l_english:
+ # ============================================================
+ # PHASE 3: ECONOMIC FOCUS TREE — "THE BALKAN WORKSHOP"
+ # Shadows Over The Balkans — New Sun of Liberty
+ # ============================================================
+
+ # --- SHARED TRUNK ---
+ MAC_balkan_workshop:0 "The Balkan Workshop"
+ MAC_balkan_workshop_desc:0 "Macedonia's hands built Solun — now they will build an economic miracle. The republic possesses skilled labour, natural resources, and a strategic Aegean port. What it lacks is capital, infrastructure, and industrial organisation. The Balkan Workshop programme will address all three."
+
+ MAC_solun_industrial_commission:0 "The Solun Industrial Commission"
+ MAC_solun_industrial_commission_desc:0 "A commission of engineers, factory owners, and labour representatives surveys the Solun industrial basin. Their mandate: expand the arsenal, modernise the mills, and lay the foundation for Macedonia's industrial revolution."
+
+ MAC_survey_the_vardar:0 "Survey the Vardar"
+ MAC_survey_the_vardar_desc:0 "The Vardar River valley is the spine of the republic — connecting Skopje to Solun through some of the richest agricultural and mineral land in the Balkans. A comprehensive survey will identify the best sites for industrial development along this natural corridor."
+
+ MAC_solun_polytechnic:0 "The Solun Polytechnic"
+ MAC_solun_polytechnic_desc:0 "Macedonia has no oil, no coal reserves of consequence, and no major iron deposits. What it has is brains — if it can keep them. The Solun Polytechnic will train a generation of Macedonian engineers, chemists, and geologists. Synthetic fuel research begins immediately."
+
+ # --- MILITARY INDUSTRY ---
+ MAC_arms_of_the_republic:0 "Arms of the Republic"
+ MAC_arms_of_the_republic_desc:0 "A sovereign nation must arm its own soldiers. New military factories in Solun and Skopje will produce rifles, machine guns, and ammunition — ending Macedonia's dependence on foreign arms merchants."
+
+ MAC_solun_arsenal_expansion:0 "Expand the Solun Arsenal"
+ MAC_solun_arsenal_expansion_desc:0 "The old Solun Arsenal — founded during the revolutionary years — is tripled in capacity. Modern production lines, quality control standards, and a dedicated workforce turn it into the arms factory of the southern Balkans."
+
+ MAC_artillery_foundry:0 "The Skopje Artillery Foundry"
+ MAC_artillery_foundry_desc:0 "Casting artillery barrels requires precision engineering and heavy industrial plant. The new Skopje foundry will produce field guns and howitzers — the backbone of any modern army's firepower."
+
+ MAC_macedonian_motorisation:0 "Macedonian Motorisation"
+ MAC_macedonian_motorisation_desc:0 "The age of the horse-drawn supply wagon is ending. Macedonian industry begins producing trucks, half-tracks, and mechanised transport — enabling rapid mobilisation and armoured warfare."
+
+ MAC_armour_initiative:0 "The Armour Initiative"
+ MAC_armour_initiative_desc:0 "Tanks are no longer a luxury — they are a necessity. The Armour Initiative establishes Macedonia's first light tank production line, with plans for expansion as doctrine evolves."
+
+ MAC_war_machine:0 "The Macedonian War Machine"
+ MAC_war_machine_desc:0 "Industrial mobilisation shifts into high gear. Military procurement is streamlined, conversion of civilian plants to arms production is accelerated, and the republic's factories begin running around the clock."
+
+ MAC_balkan_arsenal:0 "The Balkan Arsenal"
+ MAC_balkan_arsenal_desc:0 "Macedonia becomes the armourer of the Balkans. From small arms to artillery, from trucks to tanks — the republic's factories supply not just its own army but allies and clients across the region. The Solun-Skopje industrial corridor is the most productive in the southern Balkans."
+
+ # --- CIVILIAN INDUSTRY ---
+ MAC_textile_mills:0 "The Solun Textile Mills"
+ MAC_textile_mills_desc:0 "Cotton from the Vardar valley, wool from the highlands, and labour from the city — Solun's textile industry is the natural starting point for civilian industrialisation. Modern mills will clothe the nation and export the surplus."
+
+ MAC_break_the_ciftlik:0 "Break the Çiftlik"
+ MAC_break_the_ciftlik_desc:0 "The Ottoman çiftlik system concentrated land in the hands of absentee landlords — a legacy that survived Macedonian independence. Breaking these estates redistributes land to peasant farmers, increases agricultural output, and frees rural labour for the factories."
+
+ MAC_reform_tax_code:0 "Reform the Tax Code"
+ MAC_reform_tax_code_desc:0 "The Ottoman tax-farming system — iltizam — was formally abolished, but its culture of corruption and inefficiency lingers. A modern, transparent tax code will fund the state without strangling the economy."
+
+ MAC_new_guilds:0 "The New Guilds"
+ MAC_new_guilds_desc:0 "The Ottoman esnaf — trade guilds — once regulated crafts and commerce across Macedonia. The modern iteration will be trade unions: skilled workers organised for collective bargaining, safety standards, and industrial productivity."
+
+ MAC_pivarnica_skopje:0 "Pivarnica Skopje"
+ MAC_pivarnica_skopje_desc:0 "Founded in 1924, the Skopje Brewery is already a national institution. Government investment expands production, modernises bottling, and turns Macedonian beer into a recognised export brand."
+
+ MAC_consumer_cooperatives:0 "Consumer Cooperatives"
+ MAC_consumer_cooperatives_desc:0 "Worker-owned cooperative shops, credit associations, and mutual aid societies strengthen the domestic economy. When Macedonians buy Macedonian goods, prosperity circulates within the republic."
+
+ MAC_solun_trade_houses:0 "The Solun Trade Houses"
+ MAC_solun_trade_houses_desc:0 "Solun has been a trading city since antiquity. New trade houses — Macedonian-owned and operated — connect the republic's exports to markets from Vienna to Alexandria. The Aegean carries Macedonian goods to the world."
+
+ MAC_balkan_workshop_fulfilled:0 "The Balkan Workshop Fulfilled"
+ MAC_balkan_workshop_fulfilled_desc:0 "The vision is realised. Macedonia is no longer a consumer of foreign manufactures but a producer in its own right. The Solun-Skopje corridor hums with industry. The republic has earned its place as the workshop of the Balkans."
+
+ # --- INFRASTRUCTURE ---
+ MAC_vardar_railways:0 "Vardarski Železnici"
+ MAC_vardar_railways_desc:0 "The old Oriental Railway — built by French capital, run for Ottoman profit — is nationalised as Vardarski Železnici. Upgraded track, new rolling stock, and Macedonian management will finally connect Skopje to Solun with modern rail."
+
+ MAC_connect_the_east:0 "Connect the East"
+ MAC_connect_the_east_desc:0 "Eastern Macedonia — the Aegean coast, the Strumica valley, and the Kavala hinterland — has been neglected since liberation. Roads, rail spurs, and telegraph lines will bring these regions into the national economy."
+
+ MAC_highland_roads:0 "Highland Roads"
+ MAC_highland_roads_desc:0 "Western Macedonia's mountains are both fortress and prison — defending the republic but isolating its communities. Modern roads through the Šar range and the Pelagonian basin will open the highlands to commerce."
+
+ MAC_modernise_port_solun:0 "Modernise the Port of Solun"
+ MAC_modernise_port_solun_desc:0 "For two decades, British and Greek shipping firms have dominated Solun's harbour. Modernisation means Macedonian ships loading Macedonian goods — new docks, expanded warehousing, and Macedonian-controlled stevedoring. London may be displeased, but the republic's economic sovereignty demands it."
+
+ MAC_kavala_port:0 "The Kavala Port Expansion"
+ MAC_kavala_port_desc:0 "Kavala — the ancient Neapolis — is Macedonia's second Aegean port. Expanding its facilities creates redundancy, reduces dependence on Solun alone, and opens eastern Macedonia to direct maritime trade."
+
+ MAC_aegean_gateway:0 "The Aegean Gateway"
+ MAC_aegean_gateway_desc:0 "Two modern ports, a growing merchant marine, and competitive shipping rates make Macedonia the gateway to the Aegean. Goods flow from Central Europe through the Vardar corridor to Macedonian docks — and from there to the world."
+
+ # --- MINING & RESOURCES ---
+ MAC_survey_the_mountains:0 "Survey the Mountains"
+ MAC_survey_the_mountains_desc:0 "Macedonia's mountains have yielded silver, iron, and chromium since antiquity. Modern geological surveys — using the latest prospecting techniques — will catalogue the republic's mineral wealth."
+
+ MAC_kratovo_zletovo:0 "Rudnici Kratovo-Zletovo"
+ MAC_kratovo_zletovo_desc:0 "The Kratovo-Zletovo mining district — known since Roman times — is developed into a modern industrial concern. Iron, lead, and zinc feed the republic's foundries. The mines employ thousands and export to the region."
+
+ MAC_radusa_chromium:0 "The Raduša Mines"
+ MAC_radusa_chromium_desc:0 "The chromium deposits near Raduša are among the richest in Europe. Developing these mines gives Macedonia a strategic resource vital to armoured steel production — and gives the republic leverage with every major power."
+
+ MAC_bitola_coal:0 "The Bitola Coal Basin"
+ MAC_bitola_coal_desc:0 "The Pelagonian lignite basin around Bitola is Macedonia's primary domestic energy source. Expanded mining will fuel power plants, factories, and railways — reducing dependence on imported coal."
+
+ MAC_aegean_oil_survey:0 "Survey the Aegean Shelf"
+ MAC_aegean_oil_survey_desc:0 "Geologists have long suspected hydrocarbon deposits beneath the northern Aegean seabed. A systematic survey — using the latest seismic techniques — will determine whether Macedonia can drill for its own oil."
+
+ MAC_mineral_wealth:0 "The Mineral Wealth of Macedonia"
+ MAC_mineral_wealth_desc:0 "Chromium from Raduša, steel from Kratovo, coal from Bitola, and — perhaps — oil from the Aegean. Macedonia's mountains have yielded their treasures. The republic's resource independence is secured."
+
+ # --- TOBACCO ---
+ MAC_revive_tkp:0 "Revive TKP"
+ MAC_revive_tkp_desc:0 "Tutunski Kombinat Prilep — the Macedonian tobacco monopoly — was founded in 1873 and survived empires. Government investment and modern processing facilities will restore TKP to its position as the premier oriental tobacco producer between Vienna and Cairo."
+
+ MAC_oriental_standard:0 "The Oriental Standard"
+ MAC_oriental_standard_desc:0 "Macedonian oriental tobacco — sun-cured, aromatic, and prized by connoisseurs — becomes the benchmark against which all other Balkan leaf is measured. TKP establishes grading standards and quality controls that command premium prices."
+
+ MAC_prilep_gold:0 "Prilep Gold"
+ MAC_prilep_gold_desc:0 "The highest grade of Macedonian tobacco — grown in the fields around Prilep — earns its nickname. 'Prilep Gold' commands prices three times the Balkan average. Foreign buyers compete for allocation."
+
+ MAC_tobacco_auction_houses:0 "Tobacco Auction Houses"
+ MAC_tobacco_auction_houses_desc:0 "New auction houses in Solun and Skopje become the tobacco trading centres of the Balkans. Buyers from London, Vienna, and Berlin bid against each other for the finest Macedonian leaf."
+
+ MAC_global_tobacco_markets:0 "Global Tobacco Markets"
+ MAC_global_tobacco_markets_desc:0 "TKP agents establish offices in every major European capital. Macedonian tobacco is no longer just a Balkan product — it is a global brand, competing with Virginia and Turkish leaf on the world market."
+
+ MAC_tobacco_barons:0 "The Tobacco Barons"
+ MAC_tobacco_barons_desc:0 "The tobacco merchants of Prilep and Solun are among the wealthiest men in the Balkans — and among the most politically influential. The Tobacco Barons fund newspapers, endow universities, and whisper in the ears of ministers. King Tobacco rules."
+
+ # --- OPIUM vs MEDICINE MEX ---
+ MAC_the_alkaloid_decision:0 "The Alkaloid Decision"
+ MAC_the_alkaloid_decision_desc:0 "Alkaloid Skopje is founded as a pharmaceutical company — but the poppy from which it derives its name cuts two ways. The company can become the face of legitimate Macedonian medicine, or the front for a Balkan opium empire. The choice will define the republic's economic soul."
+
+ # --- POPPY PATH ---
+ MAC_poppy_path:0 "The Poppy Path"
+ MAC_poppy_path_desc:0 "The opium poppy has grown in Macedonian valleys for centuries — a legacy of Ottoman agriculture that successive governments have maintained with careful ambiguity. Now it is time to embrace the poppy openly. Alkaloid will be the legitimate face; behind it, a network of cultivation, refinement, and distribution that reaches into every Balkan capital."
+
+ MAC_expand_poppy_plantations:0 "Expand the Poppy Plantations"
+ MAC_expand_poppy_plantations_desc:0 "New plantations in the mountain valleys of western Macedonia and the eastern Vardar basin dramatically increase poppy cultivation. The harvest is processed in Alkaloid facilities — officially for pharmaceutical morphine, unofficially for a far more lucrative market."
+
+ MAC_the_powder_trail:0 "The Powder Trail"
+ MAC_the_powder_trail_desc:0 "The routes are established: from Macedonian mountain valleys through established trade networks to the salons, barracks, and backstreets of neighbouring states. The powder trail is invisible to customs officials — and immensely profitable."
+
+ MAC_opium_underworld:0 "The Opium Underworld"
+ MAC_opium_underworld_desc:0 "Macedonian opium controls a shadow empire. Compromised officials in Athens, Sofia, and Tirana look the other way. Intelligence networks track which generals, ministers, and journalists have developed... dependencies. The leverage is extraordinary — and deeply dangerous."
+
+ MAC_balkan_opium_empire:0 "The Balkan Opium Empire"
+ MAC_balkan_opium_empire_desc:0 "The poppy fields of Macedonia feed the habits of the Balkans. Nations that depend on Macedonian opium do not make war on Macedonia. They do not embargo Macedonia. They do what Macedonia asks. The empire of smoke is complete — but major powers are beginning to notice, and their attention is not benign."
+
+ # --- MEDICINE PATH ---
+ MAC_medicine_path:0 "Macedonian Medicine"
+ MAC_medicine_path_desc:0 "The poppy can heal as well as harm. Alkaloid commits to legitimate pharmaceutical production — morphine for hospitals, codeine for cough syrup, and a range of botanical medicines derived from Macedonia's native plants. The republic chooses to be the healer, not the dealer."
+
+ MAC_public_health_service:0 "The Public Health Service"
+ MAC_public_health_service_desc:0 "A national health service brings modern medicine to every Macedonian village. Vaccination programmes, rural clinics, and maternal care dramatically improve public health — and provide a healthier, larger workforce and recruitment pool."
+
+ MAC_balkan_pharmacy:0 "The Balkan Pharmacy"
+ MAC_balkan_pharmacy_desc:0 "Alkaloid products fill pharmacy shelves from Dubrovnik to Istanbul. Macedonian pharmaceuticals — affordable, effective, and ethically produced — earn the republic a reputation as the health provider of the Balkans. Neighbours who once distrusted Macedonia now depend on its medicines."
+
+ MAC_medical_diplomacy:0 "Medical Diplomacy"
+ MAC_medical_diplomacy_desc:0 "Macedonian medical missions travel to neighbouring countries — treating the poor, training local doctors, and building goodwill that no amount of political posturing could achieve. A nation that heals your children is a nation you do not fight."
+
+ MAC_healers_of_the_balkans:0 "The Healers of the Balkans"
+ MAC_healers_of_the_balkans_desc:0 "Macedonia's reputation is transformed. No longer the poppy state — now the healer state. Research laboratories in Skopje develop new treatments. Macedonian doctors are welcomed across the region. The republic's soft power is built on health, not harm — and the world respects it."
+
+ # --- IDEOLOGY INDUSTRY ---
+
+ # Democratic
+ MAC_cooperative_commonwealth:0 "The Cooperative Commonwealth"
+ MAC_cooperative_commonwealth_desc:0 "Worker cooperatives, credit unions, and mutual aid societies form the backbone of a democratic economy. Profit is shared, decisions are participatory, and the republic's prosperity is broadly distributed. The commonwealth is cooperative — because democracy belongs in the workplace as well as the ballot box."
+
+ MAC_credit_unions:0 "The Macedonian Credit Union"
+ MAC_credit_unions_desc:0 "A network of community-owned credit unions provides affordable loans to farmers, small businesses, and cooperatives. Capital stays local, interest stays low, and the republic's financial system serves Macedonians — not foreign banks."
+
+ # Non-Aligned
+ MAC_state_industrial_direction:0 "State Industrial Direction"
+ MAC_state_industrial_direction_desc:0 "The state takes an active role in directing industrial development — identifying strategic sectors, allocating resources, and setting production targets. Not quite central planning, but far from laissez-faire. The national interest guides the invisible hand."
+
+ MAC_national_industrial_council:0 "National Industrial Council"
+ MAC_national_industrial_council_desc:0 "A permanent council of industrialists, military planners, and state officials coordinates the republic's productive capacity. Efficiency is maximised, bottlenecks are eliminated, and Macedonian industry operates as a single integrated machine."
+
+ # Monarchist
+ MAC_royal_charters:0 "Royal Charters"
+ MAC_royal_charters_desc:0 "The Crown grants charters to industrial enterprises — conferring prestige, legal protection, and access to royal investment funds. Foreign capital, attracted by the stability of a monarchical system, flows into Macedonian industry. The Crown puts its seal on the republic's prosperity."
+
+ MAC_crown_corporations:0 "Crown Corporations"
+ MAC_crown_corporations_desc:0 "State-owned enterprises operating under royal charter manage strategic industries — railways, ports, and armaments. The Crown's involvement reassures investors while ensuring that vital sectors serve the national interest. Tradition and modernity, reconciled."
+
+ # Communist
+ MAC_five_year_plan:0 "The Five-Year Plan"
+ MAC_five_year_plan_desc:0 "The economy is centralised under state direction. Production targets, resource allocation, and labour mobilisation are coordinated through a comprehensive five-year plan. The disruption is severe — but so is the industrial acceleration."
+
+ MAC_collectivised_industry:0 "Collectivised Industry"
+ MAC_collectivised_industry_desc:0 "All major industries are nationalised and collectivised. Private ownership is abolished in favour of workers' councils and state enterprises. Heavy industry — steel, chemicals, armaments — receives absolute priority. The human cost is considerable, but Macedonia's industrial base doubles in five years."
+
+ # Fascist
+ MAC_war_economy:0 "The War Economy"
+ MAC_war_economy_desc:0 "The entire economy is subordinated to military necessity. Civilian consumption is restricted, industrial mobilisation is total, and the republic becomes a single armed camp with factories at its heart. Comfort is sacrificed for strength — and Macedonia grows strong."
+
+ # --- EVENT LOCALISATION ---
+
+ SOTB.800.t:0 "Alkaloid Founded"
+ SOTB.800.d:0 "In a modest building in central Skopje, a new company opens its doors. Alkaloid — named for the active compounds in the opium poppy — is officially a pharmaceutical manufacturer. Its founders face a choice that will define Macedonia's economic future: legitimate medicine for the health of the republic, or a covert opium empire that reaches into every Balkan capital."
+ SOTB.800.a:0 "The Poppy Path — embrace the opium trade"
+ SOTB.800.b:0 "Macedonian Medicine — legitimate pharmaceuticals"
+ SOTB_poppy_path_tt:0 "Alkaloid will pursue the opium trade, establishing covert supply networks across the Balkans."
+ SOTB_medicine_path_tt:0 "Alkaloid will focus on legitimate medicine, building a reputation for ethical pharmaceuticals."
+
+ SOTB.801.t:0 "The Powder Trail Opens"
+ SOTB.801.d:0 "The first shipments of Macedonian opium have reached their destinations. Covert trade routes now connect the poppy fields to consumers across the Balkans. The revenue is extraordinary — as are the risks."
+ SOTB.801.a:0 "The powder trail is established"
+ SOTB.801.b:0 "Proceed with caution"
+
+ SOTB.802.t:0 "The Balkan Health Conference"
+ SOTB.802.d:0 "Macedonia hosts a regional health conference in Solun — the first of its kind in the Balkans. Doctors, researchers, and public health officials from neighbouring nations gather to discuss disease prevention, maternal care, and pharmaceutical standards. The republic positions itself as the region's medical leader."
+ SOTB.802.a:0 "Macedonia leads the way in Balkan health"
+
+ SOTB.803.t:0 "The Macedonian Demand"
+ SOTB.803.d:0 "A diplomatic communiqué arrives from Solun — polite in tone, devastating in content. Macedonia demands that we join its faction, citing 'mutual economic interests and regional stability.' The unspoken threat is clear: our dependence on Macedonian trade has given Solun a lever, and they are using it."
+ SOTB.803.a:0 "We have no choice — join the Macedonian faction"
+ SOTB.803.b:0 "Refuse — we will not be coerced"
+
+ SOTB.804.t:0 "The Macedonian Demand"
+ SOTB.804.d:0 "Macedonia demands that we release a subject nation under our control. The communiqué from Solun frames it as 'self-determination,' but the implication is unmistakable: our trade dependency has been exploited, and Macedonia is cashing in."
+ SOTB.804.a:0 "Release the subject — we cannot afford a trade war"
+ SOTB.804.b:0 "Refuse — they are ours"
+
+ SOTB.805.t:0 "The Macedonian Embrace"
+ SOTB.805.d:0 "The target nation has accepted our demands. A new ally joins the Macedonian fold — bound by treaty, trade, and the quiet understanding of who holds the leverage. The republic's influence expands without firing a shot."
+ SOTB.805.a:0 "Macedonia grows stronger"
+
+ SOTB.806.t:0 "The Macedonian Hand"
+ SOTB.806.d:0 "Macedonia has secured our liberation. After years under foreign domination, we are free — thanks to the diplomatic pressure exerted by Solun. The republic promises support, protection, and a place in the Macedonian family of nations."
+ SOTB.806.a:0 "We owe Macedonia our freedom"
+
+ SOTB.807.t:0 "Trade Collapse"
+ SOTB.807.d:0 "The target nation has refused our demands. The consequences are immediate: trade routes are disrupted, leverage evaporates, and the diplomatic fallout damages our position. The empire of influence has limits — and we have found one."
+ SOTB.807.a:0 "A setback — but not the end"
+
+ SOTB.808.t:0 "The British Note"
+ SOTB.808.d:0 "The British Embassy in Solun has delivered a note expressing 'concern' over the modernisation of the port — specifically the displacement of British shipping firms from their traditional berths. The language is diplomatic but the message is clear: London is watching."
+ SOTB.808.a:0 "Macedonian ports for Macedonian ships — ignore the protest"
+ SOTB.808.b:0 "Offer compensation to British firms — keep the peace"
+
+ SOTB.809.t:0 "Name Your Alliance"
+ SOTB.809.d:0 "A new alliance is being formed under Macedonian leadership. What shall we call this coalition of nations bound by trade, diplomacy, and shared interests?"
+ SOTB.809.a:0 "The Macedonian Trade Compact"
+ SOTB.809.b:0 "The Balkan Cooperative League"
+ SOTB_create_macedonian_faction_tt:0 "Creates the 'Macedonian Trade Compact' faction under MAC leadership."
+ SOTB_create_balkan_faction_tt:0 "Creates the 'Balkan Cooperative League' faction under MAC leadership."
+ SOTB_join_mac_faction_tt:0 "Our nation will join Macedonia's faction."
+ SOTB_refuse_demand_tt:0 "Refuse the demand — Macedonia will respond."
+ SOTB_release_subject_tt:0 "Release the subject nation — Macedonia will welcome them."
+
+ # --- SPIRIT LOCALISATION ---
+
+ MAC_balkan_workshop_spirit:0 "The Balkan Workshop Programme"
+ MAC_balkan_workshop_spirit_desc:0 "Macedonia has committed to an ambitious industrial development programme. Construction crews and factory planners are at work across the republic."
+
+ MAC_solun_arsenal_expanded:0 "Expanded Solun Arsenal"
+ MAC_solun_arsenal_expanded_desc:0 "The Solun Arsenal has been modernised and expanded — now one of the largest industrial concerns in the southern Balkans."
+
+ MAC_polytechnic_spirit:0 "The Solun Polytechnic"
+ MAC_polytechnic_spirit_desc:0 "Macedonia's premier technical university produces engineers, chemists, and researchers — keeping the republic's best minds at home."
+
+ MAC_war_machine:0 "The Macedonian War Machine"
+ MAC_war_machine_desc:0 "Industrial mobilisation for military production is underway. Factories run extended shifts and civilian plants are converting to arms manufacture."
+
+ MAC_balkan_arsenal:0 "The Balkan Arsenal"
+ MAC_balkan_arsenal_desc:0 "Macedonia is the armourer of the Balkans — supplying arms, equipment, and vehicles to allies across the region."
+
+ MAC_balkan_workshop_fulfilled:0 "The Balkan Workshop Fulfilled"
+ MAC_balkan_workshop_fulfilled_desc:0 "Macedonia has achieved its industrial vision — a modern, diversified economy capable of competing with any nation in the region."
+
+ MAC_pivarnica_skopje:0 "Pivarnica Skopje"
+ MAC_pivarnica_skopje_desc:0 "The Skopje Brewery is a national institution — its beer a symbol of Macedonian quality and an increasingly popular export."
+
+ MAC_vardar_railways_spirit:0 "Vardarski Železnici"
+ MAC_vardar_railways_spirit_desc:0 "The national railway company connects Macedonian cities with modern rail — moving goods, soldiers, and people efficiently across the republic."
+
+ MAC_aegean_gateway:0 "The Aegean Gateway"
+ MAC_aegean_gateway_desc:0 "Macedonia's modernised ports make it the maritime gateway to the Balkans. Goods flow through Solun and Kavala to markets across Europe and the Mediterranean."
+
+ MAC_kratovo_zletovo_mines:0 "Rudnici Kratovo-Zletovo"
+ MAC_kratovo_zletovo_mines_desc:0 "The Kratovo-Zletovo mining district produces iron, lead, and zinc for Macedonian industry."
+
+ MAC_mineral_wealth:0 "The Mineral Wealth of Macedonia"
+ MAC_mineral_wealth_desc:0 "Macedonia's mountains have been systematically surveyed and developed — providing the republic with strategic resources and reducing import dependence."
+
+ MAC_tkp_monopoly:0 "TKP Tobacco Monopoly"
+ MAC_tkp_monopoly_desc:0 "Tutunski Kombinat Prilep controls Macedonian tobacco production and export — the foundation of the republic's trade influence."
+
+ MAC_tkp_oriental_standard:0 "TKP Oriental Standard"
+ MAC_tkp_oriental_standard_desc:0 "TKP has established the benchmark for oriental tobacco quality — commanding premium prices from discriminating buyers."
+
+ MAC_prilep_gold:0 "Prilep Gold"
+ MAC_prilep_gold_desc:0 "The finest Macedonian tobacco — 'Prilep Gold' — is the most sought-after leaf in European markets."
+
+ MAC_tobacco_barons:0 "The Tobacco Barons"
+ MAC_tobacco_barons_desc:0 "Macedonia's tobacco magnates wield economic and political influence — both at home and in the capitals of their trading partners."
+
+ MAC_tobacco_barons_capstone:0 "King Tobacco"
+ MAC_tobacco_barons_capstone_desc:0 "The Tobacco Barons have reached the peak of their power. Macedonian leaf dominates global oriental tobacco markets, and the Barons' influence extends into the highest circles of government."
+
+ MAC_poppy_cultivation:0 "Poppy Cultivation Programme"
+ MAC_poppy_cultivation_desc:0 "Opium poppy cultivation has been expanded and systematised — providing the raw material for Alkaloid's pharmaceutical and... other operations."
+
+ MAC_opium_underworld:0 "The Opium Underworld"
+ MAC_opium_underworld_desc:0 "Macedonian opium networks reach into neighbouring governments, militaries, and intelligence services — creating dependencies that can be exploited for political leverage."
+
+ MAC_opium_empire_capstone:0 "The Balkan Opium Empire"
+ MAC_opium_empire_capstone_desc:0 "Macedonia controls the flow of opium across the Balkans. Dependent nations do not move against their supplier. The empire of smoke is absolute — and absolute in its demands."
+
+ MAC_alkaloid_pharma:0 "Alkaloid Pharmaceuticals"
+ MAC_alkaloid_pharma_desc:0 "Alkaloid Skopje produces ethical pharmaceuticals — morphine, codeine, and botanical medicines — for the Balkan market and beyond."
+
+ MAC_public_health:0 "Macedonian Public Health Service"
+ MAC_public_health_desc:0 "A national health service provides modern medical care to all Macedonians — improving public health and national vitality."
+
+ MAC_medical_diplomacy:0 "Medical Diplomacy Programme"
+ MAC_medical_diplomacy_desc:0 "Macedonian medical missions build goodwill across the Balkans — treating the sick and training local doctors. Soft power through healing."
+
+ MAC_healers_capstone:0 "The Healers of the Balkans"
+ MAC_healers_capstone_desc:0 "Macedonia is recognised as the region's medical leader — its doctors, researchers, and pharmaceutical products respected and sought after internationally."
+
+ MAC_cooperative_commonwealth:0 "The Cooperative Commonwealth"
+ MAC_cooperative_commonwealth_desc:0 "Worker cooperatives and community enterprises form the backbone of a democratic Macedonian economy."
+
+ MAC_credit_union_capstone:0 "The Macedonian Credit Union Network"
+ MAC_credit_union_capstone_desc:0 "Community-owned credit unions provide affordable capital to Macedonian farmers and businesses — keeping the republic's financial system local and democratic."
+
+ MAC_state_direction:0 "State Industrial Direction"
+ MAC_state_direction_desc:0 "The state actively directs industrial development — identifying strategic sectors and allocating resources for national priorities."
+
+ MAC_industrial_council_capstone:0 "National Industrial Council"
+ MAC_industrial_council_capstone_desc:0 "A permanent council of industrialists, military planners, and officials coordinates the republic's industrial capacity with maximum efficiency."
+
+ MAC_royal_charters:0 "Royal Charters of Industry"
+ MAC_royal_charters_desc:0 "The Crown grants prestige and protection to chartered industrial enterprises — attracting foreign investment with the stability of monarchy."
+
+ MAC_crown_corporations_capstone:0 "Crown Corporations"
+ MAC_crown_corporations_capstone_desc:0 "State-owned enterprises under royal charter manage strategic industries — combining tradition with modern industrial management."
+
+ MAC_five_year_plan:0 "The Five-Year Plan"
+ MAC_five_year_plan_desc:0 "The economy is directed through comprehensive central planning — disruptive but accelerating industrial growth dramatically."
+
+ MAC_collectivised_capstone:0 "Collectivised Industry"
+ MAC_collectivised_capstone_desc:0 "All major industries have been nationalised and collectivised. Heavy industry receives absolute priority — at considerable human cost."
+
+ MAC_war_economy_capstone:0 "The War Economy"
+ MAC_war_economy_capstone_desc:0 "The entire national economy is subordinated to military necessity. Civilian comfort is sacrificed for martial strength."
+
+ # --- TOOLTIPS ---
+ MAC_crisis_begins_tt:0 "The parliamentary crisis begins — events will unfold as the deadlock deepens."
+ MAC_armed_neutrality_tt:0 "Macedonia commits to armed neutrality — we will not join foreign factions but will defend our sovereignty."
+ MAC_krusevo_legacy_tt:0 "The spirit of the Kruševo Republic inspires a new generation of Macedonians."
+ MAC_copenhagen_accord_tt:0 "Macedonia pursues closer ties with Denmark and the Nordic constitutional monarchies."
+ MAC_belgrade_compact_tt:0 "If Yugoslavia exists and is independent, a joint faction will be formed. Otherwise, Macedonia will pursue its claims directly."
+ MAC_hessian_crown_tt:0 "Macedonia aligns with the German Reich — joining the Axis powers and accepting German patronage."
+ MAC_axis_fulfilled_tt:0 "The Axis alliance is secured — Macedonia stands with Germany and Italy."
+ MAC_fortress_tt:0 "Macedonia's borders are fortified against aggression."
+
+ # --- PRINOS OIL PROSPECTING DECISION ---
+ MAC_prospect_prinos:0 "Prospect the Prinos Field"
+ MAC_prospect_prinos_desc:0 "The Aegean shelf survey has identified a promising hydrocarbon structure off the coast of Kavala — dubbed the 'Prinos Field' by project geologists. Drilling here is expensive and success is not guaranteed, but the reward would be Macedonia's first domestic oil supply."
+ MAC_prinos_success_tt:0 "§GOil discovered!§! The Prinos Field yields commercial quantities of crude oil — Macedonia now has a domestic petroleum source."
+ MAC_prinos_failure_tt:0 "§RDry hole.§! Despite promising seismic data, the Prinos prospect has not yielded commercial quantities. The investment is lost — but the geological knowledge gained may inform future efforts."

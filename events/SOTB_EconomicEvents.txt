@@ -4,7 +4,7 @@
 # ============================================================
 
 # ============================================================
-# SOTB.800 — Alkaloid Founded
+# SOTB.800 — Alkaloid Founded (The MEX Choice)
 # ============================================================
 country_event = {
 	id = SOTB.800
@@ -21,8 +21,19 @@ country_event = {
 
 	option = {
 		name = SOTB.800.a
-		ai_chance = { factor = 100 }
-		add_stability = 0.03
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = SOTB_poppy_path_tt
+		hidden_effect = {
+			set_country_flag = SOTB_poppy_path_choice
+		}
+	}
+	option = {
+		name = SOTB.800.b
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = SOTB_medicine_path_tt
+		hidden_effect = {
+			set_country_flag = SOTB_medicine_path_choice
+		}
 	}
 }
 
@@ -52,5 +63,279 @@ country_event = {
 		name = SOTB.801.b
 		ai_chance = { factor = 20 }
 		add_stability = 0.02
+	}
+}
+
+# ============================================================
+# SOTB.802 — The Balkan Health Conference (Medicine Path)
+# ============================================================
+country_event = {
+	id = SOTB.802
+
+	title = SOTB.802.t
+	desc = SOTB.802.d
+	picture = GFX_report_event_generic_conference
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.802.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+# ============================================================
+# SOTB.803 — The Macedonian Demand: Join Faction
+# Target nation — opium Stage 5
+# ============================================================
+country_event = {
+	id = SOTB.803
+
+	title = SOTB.803.t
+	desc = SOTB.803.d
+	picture = GFX_report_event_generic_political_deal
+
+	trigger = {
+		NOT = { tag = MAC }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.803.a
+		ai_chance = { factor = 30 }
+		add_stability = -0.10
+		custom_effect_tooltip = SOTB_join_mac_faction_tt
+		hidden_effect = {
+			MAC = {
+				country_event = {
+					id = SOTB.805
+					days = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = SOTB.803.b
+		ai_chance = { factor = 70 }
+		add_stability = -0.05
+		add_war_support = -0.05
+		custom_effect_tooltip = SOTB_refuse_demand_tt
+		hidden_effect = {
+			MAC = {
+				country_event = {
+					id = SOTB.807
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+# ============================================================
+# SOTB.804 — The Macedonian Demand: Release Subject
+# Target nation — opium Stage 5
+# ============================================================
+country_event = {
+	id = SOTB.804
+
+	title = SOTB.804.t
+	desc = SOTB.804.d
+	picture = GFX_report_event_generic_political_deal
+
+	trigger = {
+		NOT = { tag = MAC }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.804.a
+		ai_chance = { factor = 30 }
+		add_stability = -0.10
+		add_war_support = -0.05
+		custom_effect_tooltip = SOTB_release_subject_tt
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = SOTB.806
+					days = 1
+				}
+			}
+			MAC = {
+				country_event = {
+					id = SOTB.805
+					days = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = SOTB.804.b
+		ai_chance = { factor = 70 }
+		add_stability = -0.05
+		add_war_support = -0.05
+		custom_effect_tooltip = SOTB_refuse_demand_tt
+		hidden_effect = {
+			MAC = {
+				country_event = {
+					id = SOTB.807
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+# ============================================================
+# SOTB.805 — The Macedonian Embrace (MAC — demand accepted)
+# ============================================================
+country_event = {
+	id = SOTB.805
+
+	title = SOTB.805.t
+	desc = SOTB.805.d
+	picture = GFX_report_event_generic_handshake
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.805.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+}
+
+# ============================================================
+# SOTB.806 — The Macedonian Hand (Released subject)
+# ============================================================
+country_event = {
+	id = SOTB.806
+
+	title = SOTB.806.t
+	desc = SOTB.806.d
+	picture = GFX_report_event_generic_liberation
+
+	trigger = {
+		NOT = { tag = MAC }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.806.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.10
+		add_war_support = 0.05
+		add_opinion_modifier = {
+			target = MAC
+			modifier = MAC_eng_open_doors
+		}
+	}
+}
+
+# ============================================================
+# SOTB.807 — Trade Collapse (Target refused — MAC notified)
+# ============================================================
+country_event = {
+	id = SOTB.807
+
+	title = SOTB.807.t
+	desc = SOTB.807.d
+	picture = GFX_report_event_generic_trade
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.807.a
+		ai_chance = { factor = 100 }
+		add_stability = -0.03
+		add_political_power = -25
+	}
+}
+
+# ============================================================
+# SOTB.808 — The British Note (Port Modernisation)
+# ============================================================
+country_event = {
+	id = SOTB.808
+
+	title = SOTB.808.t
+	desc = SOTB.808.d
+	picture = GFX_report_event_generic_diplomatic_incident
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.808.a
+		ai_chance = { factor = 70 }
+		add_war_support = 0.02
+		add_opinion_modifier = {
+			target = ENG
+			modifier = MAC_eng_open_doors
+		}
+	}
+	option = {
+		name = SOTB.808.b
+		ai_chance = { factor = 30 }
+		add_political_power = -25
+		add_opinion_modifier = {
+			target = ENG
+			modifier = MAC_eng_open_doors
+		}
+	}
+}
+
+# ============================================================
+# SOTB.809 — Name Your Alliance (Faction naming)
+# ============================================================
+country_event = {
+	id = SOTB.809
+
+	title = SOTB.809.t
+	desc = SOTB.809.d
+	picture = GFX_report_event_generic_alliance
+
+	trigger = {
+		tag = MAC
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SOTB.809.a
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = SOTB_create_macedonian_faction_tt
+		hidden_effect = {
+			create_faction = MAC_trade_faction
+		}
+	}
+	option = {
+		name = SOTB.809.b
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = SOTB_create_balkan_faction_tt
+		hidden_effect = {
+			create_faction = MAC_balkan_faction
+		}
 	}
 }

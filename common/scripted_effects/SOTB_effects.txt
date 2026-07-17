@@ -98,6 +98,48 @@ SOTB_resolve_old_guard = {
 	}
 }
 
+# --- Phase 3: Resource Addition Effects ---
+
+# Add steel to state 106 (Kratovo-Zletovo mining district)
+SOTB_add_kratovo_steel = {
+	106 = {
+		add_resource = {
+			type = steel
+			amount = 8
+		}
+	}
+}
+
+# Add chromium to state 106 (Raduša deposit near Skopje)
+SOTB_add_radusa_chromium = {
+	106 = {
+		add_resource = {
+			type = chromium
+			amount = 6
+		}
+	}
+}
+
+# Add coal to state 970 (Pelagonian lignite basin near Bitola)
+SOTB_add_bitola_coal = {
+	970 = {
+		add_resource = {
+			type = coal
+			amount = 8
+		}
+	}
+}
+
+# Add oil to state 1083 (Aegean offshore — Prinos field near Kavala)
+SOTB_add_prinos_oil = {
+	1083 = {
+		add_resource = {
+			type = oil
+			amount = 8
+		}
+	}
+}
+
 # --- Phase 3: Opium Effects (stubs for now) ---
 
 # Set opium dependency stage for a target nation

@@ -10,7 +10,7 @@ ideas = {
 		MAC_founder_watches = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_generic_political_advisor_europe_1
+			picture = generic_pp_unity_bonus
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.10
@@ -58,7 +58,7 @@ ideas = {
 		MAC_delcevism = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_generic_democratic_europe
+			picture = generic_democratic_drift_bonus
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.10
@@ -70,7 +70,7 @@ ideas = {
 		MAC_solun_arsenal = {
 			allowed = { original_tag = MAC }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_generic_industrial_concern_1
+			picture = generic_production_bonus
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.10
@@ -196,7 +196,7 @@ ideas = {
 		# Karev's Ilinden fulfilled
 		MAC_ilinden_fulfilled = {
 			allowed = { original_tag = MAC }
-			picture = idea_generic_full_social_mobilization
+			picture = generic_manpower_bonus
 			removal_cost = -1
 			modifier = {
 				weekly_manpower = 1000
@@ -646,28 +646,6 @@ ideas = {
 			}
 		}
 
-		# TKP Tobacco Monopoly (tobacco)
-		MAC_tkp_monopoly = {
-			allowed = { original_tag = MAC }
-			picture = idea_bul_tobacco_exports
-			removal_cost = -1
-			modifier = {
-				trade_opinion_factor = 0.10
-				consumer_goods_factor = -0.02
-			}
-		}
-
-		# Alkaloid Pharmaceuticals (science)
-		MAC_alkaloid_pharma = {
-			allowed = { original_tag = MAC }
-			picture = idea_INS_bio_pharma
-			removal_cost = -1
-			modifier = {
-				research_speed_factor = 0.10
-				chemical_engineering_research_factor = 0.05
-			}
-		}
-
 		# Quiet Harbours (science/opium)
 		MAC_quiet_harbours = {
 			allowed = { original_tag = MAC }
@@ -822,6 +800,396 @@ ideas = {
 				stability_factor = 0.15
 				war_support_factor = 0.10
 				political_power_factor = 0.05
+			}
+		}
+
+		# ============================================================
+		# PHASE 3: ECONOMIC TREE SPIRITS (22)
+		# ============================================================
+
+		# Balkan Workshop — entry spirit (shared trunk)
+		MAC_balkan_workshop_spirit = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_industrial_concern_1
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		# Solun Arsenal Expanded (shared trunk)
+		MAC_solun_arsenal_expanded = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_industrial_concern_1
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.15
+				naval_dockyard_output_factor = 0.10
+			}
+		}
+
+		# Solun Polytechnic (shared trunk)
+		MAC_polytechnic_spirit = {
+			allowed = { original_tag = MAC }
+			picture = generic_research_bonus
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		# Macedonian War Machine (mil industry)
+		MAC_war_machine = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_artillery_manufacturer_2
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		# Balkan Arsenal (mil industry capstone)
+		MAC_balkan_arsenal = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_industrial_concern_2
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.05
+				equipment_conversion_speed_factor = 0.10
+			}
+		}
+
+		# Balkan Workshop Fulfilled (civ industry capstone)
+		MAC_balkan_workshop_fulfilled = {
+			allowed = { original_tag = MAC }
+			picture = idea_bul_prussia_of_the_balkans
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		# Pivarnica Skopje (civ industry)
+		MAC_pivarnica_skopje = {
+			allowed = { original_tag = MAC }
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.02
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		# Vardar Railways (infrastructure)
+		MAC_vardar_railways_spirit = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_railroads
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				supply_throughput_factor = 0.05
+			}
+		}
+
+		# Aegean Gateway (infrastructure capstone)
+		MAC_aegean_gateway = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_coastal_navy
+			removal_cost = -1
+			modifier = {
+				naval_dockyard_output_factor = 0.10
+				production_speed_naval_dockyard_factor = 0.10
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		# Kratovo-Zletovo Mines (mining)
+		MAC_kratovo_zletovo_mines = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_exploit_mines
+			removal_cost = -1
+			modifier = {
+				resource_gain_factor = 0.05
+			}
+		}
+
+		# Mineral Wealth (mining capstone)
+		MAC_mineral_wealth = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_exploit_mines
+			removal_cost = -1
+			modifier = {
+				resource_gain_factor = 0.15
+			}
+		}
+
+		# TKP Monopoly (tobacco Tier 1)
+		MAC_tkp_monopoly = {
+			allowed = { original_tag = MAC }
+			picture = idea_bul_tobacco_exports
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.10
+				consumer_goods_factor = -0.02
+				political_power_factor = 0.05
+			}
+		}
+
+		# TKP Oriental Standard (tobacco Tier 2)
+		MAC_tkp_oriental_standard = {
+			allowed = { original_tag = MAC }
+			picture = idea_bul_tobacco_exports
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				consumer_goods_factor = -0.03
+				political_power_factor = 0.10
+			}
+		}
+
+		# Prilep Gold (tobacco Tier 3)
+		MAC_prilep_gold = {
+			allowed = { original_tag = MAC }
+			picture = idea_bul_tobacco_exports
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.20
+				consumer_goods_factor = -0.03
+				political_power_factor = 0.10
+			}
+		}
+
+		# Tobacco Barons (tobacco Tier 4)
+		MAC_tobacco_barons = {
+			allowed = { original_tag = MAC }
+			picture = idea_bul_tobacco_exports
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.25
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.15
+			}
+		}
+
+		# Tobacco Barons Capstone (tobacco Tier 5)
+		MAC_tobacco_barons_capstone = {
+			allowed = { original_tag = MAC }
+			picture = idea_bul_tobacco_exports
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.25
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.15
+				stability_factor = 0.05
+			}
+		}
+
+		# Poppy Cultivation (opium Tier 1)
+		MAC_poppy_cultivation = {
+			allowed = { original_tag = MAC }
+			picture = idea_prc_permit_opium_trade
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.03
+				trade_opinion_factor = 0.10
+				political_power_factor = 0.05
+			}
+		}
+
+		# Opium Underworld (opium Tier 2)
+		MAC_opium_underworld = {
+			allowed = { original_tag = MAC }
+			picture = idea_prc_permit_opium_trade
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.15
+				political_power_factor = 0.10
+			}
+		}
+
+		# Opium Empire Capstone (opium Tier 3)
+		MAC_opium_empire_capstone = {
+			allowed = { original_tag = MAC }
+			picture = idea_prc_permit_opium_trade
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.08
+				trade_opinion_factor = 0.20
+				political_power_factor = 0.15
+			}
+		}
+
+		# Alkaloid Pharma (medicine Tier 1)
+		MAC_alkaloid_pharma = {
+			allowed = { original_tag = MAC }
+			picture = idea_INS_bio_pharma
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				trade_opinion_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+
+		# Public Health (medicine Tier 2)
+		MAC_public_health = {
+			allowed = { original_tag = MAC }
+			picture = idea_INS_bio_pharma
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				trade_opinion_factor = 0.10
+				stability_factor = 0.10
+				weekly_manpower = 500
+			}
+		}
+
+		# Medical Diplomacy (medicine Tier 3)
+		MAC_medical_diplomacy = {
+			allowed = { original_tag = MAC }
+			picture = idea_INS_bio_pharma
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.15
+				trade_opinion_factor = 0.15
+				stability_factor = 0.10
+				weekly_manpower = 1000
+			}
+		}
+
+		# Healers Capstone (medicine Tier 4)
+		MAC_healers_capstone = {
+			allowed = { original_tag = MAC }
+			picture = idea_INS_bio_pharma
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.20
+				trade_opinion_factor = 0.20
+				stability_factor = 0.15
+				weekly_manpower = 1500
+			}
+		}
+
+		# Cooperative Commonwealth (democratic industry)
+		MAC_cooperative_commonwealth = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_democratic_europe
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		# Credit Union Capstone (democratic industry)
+		MAC_credit_union_capstone = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_democratic_europe
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.10
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		# State Direction (non-aligned industry)
+		MAC_state_direction = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_industrial_concern_2
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+
+		# Industrial Council Capstone (non-aligned industry)
+		MAC_industrial_council_capstone = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_industrial_concern_2
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		# Royal Charters (monarchist industry)
+		MAC_royal_charters = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_constitutional_guarantee
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				political_power_factor = 0.10
+				consumer_goods_factor = -0.03
+				stability_factor = 0.05
+			}
+		}
+
+		# Crown Corporations Capstone (monarchist industry)
+		MAC_crown_corporations_capstone = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_constitutional_guarantee
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.20
+				political_power_factor = 0.15
+				consumer_goods_factor = -0.05
+				stability_factor = 0.10
+			}
+		}
+
+		# Five-Year Plan (communist industry)
+		MAC_five_year_plan = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_central_management
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+
+		# Collectivised Capstone (communist industry)
+		MAC_collectivised_capstone = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_central_management
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.08
+				stability_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		# War Economy Capstone (fascist industry)
+		MAC_war_economy_capstone = {
+			allowed = { original_tag = MAC }
+			picture = idea_generic_fascist_europe
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.25
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = 0.10
 			}
 		}
 

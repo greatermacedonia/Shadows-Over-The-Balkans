@@ -3,6 +3,8 @@
 # Shadows Over The Balkans — Phase 6a
 # ============================================================
 
+decision_categories = {
+
 MAC_trade_empire = {
 	icon = GFX_goal_generic_dangerous_deal
 
@@ -253,4 +255,45 @@ MAC_trade_empire = {
 			}
 		}
 	}
+
+	# --- Resource Prospecting ---
+
+	MAC_prospect_prinos = {
+		icon = GFX_goal_generic_construct_civilian
+
+		available = {
+			has_country_flag = SOTB_aegean_survey_complete
+			NOT = { has_country_flag = SOTB_prinos_prospected }
+		}
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 200
+		fire_only_once = yes
+		days_remove = 180
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			set_country_flag = SOTB_prinos_prospected
+			random_list = {
+				70 = {
+					SOTB_add_prinos_oil = yes
+					add_stability = 0.03
+					custom_effect_tooltip = MAC_prinos_success_tt
+				}
+				30 = {
+					add_stability = -0.02
+					add_political_power = -25
+					custom_effect_tooltip = MAC_prinos_failure_tt
+				}
+			}
+		}
+	}
+}
+
 }

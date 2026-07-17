@@ -35,7 +35,7 @@ bookmark = {
 		# sort_unplayed_first = no            # defaults to yes: countries with unplayed content are listed first
 		# include_majors_in_minor_list = no   # defaults to yes: when a filter is active, majors also show in the mini list
 		# apply_filter_to_majors = yes        # defaults to no: when yes, the major row also respects the filter (only majors matching it are shown)
-		# apply_filter_to_other_country = yes # defaults to no: by default the "other" (---) entry is always shown; when yes it respects the filter too
+		apply_filter_to_other_country = yes # when yes, the "other" entry respects the active filter
 		# label_order = { label_1 label_2 }   # optional: forces the label filter button order; a warning is logged for
 		#                                     # any label used by a country that is missing from this list
 		# scrollable_country_list = yes       # defaults to no: scroll the minor list with its vertical scrollbar instead of the overflow dropdown
@@ -253,11 +253,6 @@ bookmark = {
 				SOV_the_supreme_soviet
 			}	
 		}
-
-		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
-		}
-
 
 		# minors from DLC ####
 		"CAN"={
@@ -1604,10 +1599,6 @@ bookmark = {
 				SOV_father_of_nations
 				SOV_patriarch_of_all_russia
 			}
-		}
-
-		"---"={
-			history = "OTHER_BLITZKRIEG_DESC"
 		}
 
 		# minors from DLC ####

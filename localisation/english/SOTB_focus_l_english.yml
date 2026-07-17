@@ -210,8 +210,7 @@
  # ============================================================
  SOTB.800.t: "Alkaloid Founded"
  SOTB.800.d: "In a modest building in central Skopje, a new company opens its doors. Alkaloid — named for the active compounds in the opium poppy — is officially a pharmaceutical manufacturer. Its founder addresses a small gathering of investors and journalists: 'Macedonia's natural resources include botanical treasures unknown to modern medicine. Alkaloid will unlock them — for the health of the republic and the benefit of humanity.' Privately, the company's dual-purpose potential is noted by those who pay attention to such things."
- SOTB.800.a: "A new era for Macedonian science"
-
+ SOTB.800.a: "A new era for Macedonian science" SOTB.800.b:0 "A new era for Macedonian industry"
  SOTB.801.t: "The Powder Trail Opens"
  SOTB.801.d: "From Solun's quiet harbours, the first significant shipments of processed Macedonian opium have reached the European market. The revenue is substantial. The risks are becoming apparent — corruption, diplomatic exposure, and the uncomfortable reality that Alkaloid's legitimate research labs are operating a few kilometres from the smuggling warehouses. 'The two faces of Macedonian medicine,' one official notes privately, 'are beginning to look at each other in the mirror.'"
  SOTB.801.a: "The revenue is worth the risk"

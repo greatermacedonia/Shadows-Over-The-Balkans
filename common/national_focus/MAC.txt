@@ -10,7 +10,7 @@ focus_tree = {
     default = no
     continuous_focus_position = {
         x = 0
-        y = 9
+        y = 16
     }
     focus = {
         id = MAC_parliamentary_crisis
@@ -1937,6 +1937,1693 @@ focus_tree = {
         }
         prerequisite = {
             focus = MAC_white_sea_doctrine
+        }
+    }
+
+    # ============================================================
+    # PHASE 3: ECONOMIC TREE — "THE BALKAN WORKSHOP"
+    # Anchor: MAC_balkan_workshop at (18, 0)
+    # All economic focuses use relative_position_id = MAC_balkan_workshop
+    # ============================================================
+
+    # --- SHARED ECONOMIC TRUNK (4 focuses) ---
+
+    focus = {
+        id = MAC_balkan_workshop
+        icon = GFX_goal_generic_construct_civilian
+        x = 18
+        y = 0
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = MAC_balkan_workshop_spirit
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 11818
+            }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 11818
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = MAC_solun_industrial_commission
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_solun_arsenal
+                add_idea = MAC_solun_arsenal_expanded
+            }
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                province = 11818
+            }
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                province = 11818
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_balkan_workshop
+        }
+    }
+
+    focus = {
+        id = MAC_survey_the_vardar
+        icon = GFX_focus_generic_supply_line
+        relative_position_id = MAC_balkan_workshop
+        x = 0
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = concentrated_industry
+                bonus = 1.0
+                uses = 1
+            }
+            add_tech_bonus = {
+                tech = construction1
+                bonus = 1.0
+                uses = 1
+            }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 3882
+            }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 3833
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_solun_industrial_commission
+        }
+    }
+
+    focus = {
+        id = MAC_solun_polytechnic
+        icon = GFX_focus_research
+        relative_position_id = MAC_balkan_workshop
+        x = 0
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+            add_tech_bonus = {
+                tech = synthetic_oil
+                bonus = 1.0
+                uses = 1
+            }
+            add_tech_bonus = {
+                tech = fuel_refining
+                bonus = 1.0
+                uses = 1
+            }
+            add_ideas = MAC_polytechnic_spirit
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_survey_the_vardar
+        }
+    }
+
+    # --- MILITARY INDUSTRY BRANCH (7 focuses) ---
+
+    focus = {
+        id = MAC_arms_of_the_republic
+        icon = GFX_goal_generic_construct_military
+        relative_position_id = MAC_balkan_workshop
+        x = -3
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            add_building_construction = {
+                type = arms_factory
+                level = 2
+                province = 11818
+            }
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                province = 3882
+            }
+            army_experience = 20
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_solun_polytechnic
+        }
+    }
+
+    focus = {
+        id = MAC_solun_arsenal_expansion
+        icon = GFX_goal_generic_construct_military
+        relative_position_id = MAC_balkan_workshop
+        x = -3
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            add_building_construction = {
+                type = arms_factory
+                level = 2
+                province = 11818
+            }
+            add_tech_bonus = {
+                tech = infantry_weapons1
+                bonus = 1.0
+                uses = 1
+            }
+            add_tech_bonus = {
+                tech = support_weapons
+                bonus = 1.0
+                uses = 1
+            }
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 3000
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_arms_of_the_republic
+        }
+    }
+
+    focus = {
+        id = MAC_artillery_foundry
+        icon = GFX_goal_generic_army_artillery
+        relative_position_id = MAC_balkan_workshop
+        x = -4
+        y = 6
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                province = 3882
+            }
+            add_tech_bonus = {
+                tech = interwar_artillery
+                bonus = 1.0
+                uses = 2
+            }
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_1
+                amount = 40
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_solun_arsenal_expansion
+        }
+    }
+
+    focus = {
+        id = MAC_macedonian_motorisation
+        icon = GFX_focus_generic_tank_production
+        relative_position_id = MAC_balkan_workshop
+        x = -5
+        y = 7
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = motorised_equipment
+                bonus = 1.0
+                uses = 1
+            }
+            add_tech_bonus = {
+                tech = mechanised_equipment
+                bonus = 1.0
+                uses = 1
+            }
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                province = 3833
+            }
+            add_equipment_to_stockpile = {
+                type = motorised_equipment_1
+                amount = 100
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_artillery_foundry
+        }
+    }
+
+    focus = {
+        id = MAC_armour_initiative
+        icon = GFX_focus_generic_tank_production
+        relative_position_id = MAC_balkan_workshop
+        x = -6
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = basic_light_tank
+                bonus = 1.0
+                uses = 2
+            }
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                province = 11818
+            }
+            add_equipment_to_stockpile = {
+                type = light_tank_equipment_1
+                amount = 30
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_macedonian_motorisation
+        }
+    }
+
+    focus = {
+        id = MAC_war_machine
+        icon = GFX_goal_generic_construct_military
+        relative_position_id = MAC_balkan_workshop
+        x = -7
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            add_ideas = MAC_war_machine
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_armour_initiative
+        }
+    }
+
+    focus = {
+        id = MAC_balkan_arsenal
+        icon = GFX_goal_generic_construct_military
+        relative_position_id = MAC_balkan_workshop
+        x = -8
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_war_machine
+                add_idea = MAC_balkan_arsenal
+            }
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                province = 11818
+            }
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                province = 3882
+            }
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                province = 867
+            }
+            army_experience = 30
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_war_machine
+        }
+    }
+
+    # --- CIVILIAN INDUSTRY BRANCH (8 focuses) ---
+
+    focus = {
+        id = MAC_textile_mills
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 3
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                province = 11818
+            }
+            consumer_goods_factor = -0.03
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_solun_polytechnic
+        }
+    }
+
+    focus = {
+        id = MAC_break_the_ciftlik
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 4
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+        completion_reward = {
+            conscription_factor = 0.05
+            add_stability = 0.05
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 867
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_textile_mills
+        }
+    }
+
+    focus = {
+        id = MAC_reform_tax_code
+        icon = GFX_focus_generic_improve_the_administration
+        relative_position_id = MAC_balkan_workshop
+        x = 4
+        y = 6
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            political_power_factor = 0.10
+            add_stability = 0.05
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 3882
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_break_the_ciftlik
+        }
+    }
+
+    focus = {
+        id = MAC_new_guilds
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 5
+        y = 7
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            industrial_capacity_factory = 0.10
+            production_speed_buildings_factor = 0.05
+            add_tech_bonus = {
+                tech = concentrated_industry
+                bonus = 1.0
+                uses = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_reform_tax_code
+        }
+    }
+
+    focus = {
+        id = MAC_pivarnica_skopje
+        icon = GFX_goal_generic_consumer_goods
+        relative_position_id = MAC_balkan_workshop
+        x = 6
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_ideas = MAC_pivarnica_skopje
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 3882
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_new_guilds
+        }
+    }
+
+    focus = {
+        id = MAC_consumer_cooperatives
+        icon = GFX_goal_generic_consumer_goods
+        relative_position_id = MAC_balkan_workshop
+        x = 6
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            consumer_goods_factor = -0.05
+            add_stability = 0.05
+            trade_opinion_factor = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_pivarnica_skopje
+        }
+    }
+
+    focus = {
+        id = MAC_solun_trade_houses
+        icon = GFX_goal_generic_positive_trade_relations
+        relative_position_id = MAC_balkan_workshop
+        x = 7
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            trade_opinion_factor = 0.15
+            political_power_factor = 0.10
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                province = 11818
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_consumer_cooperatives
+        }
+    }
+
+    focus = {
+        id = MAC_balkan_workshop_fulfilled
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 8
+        y = 11
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+            industrial_capacity_factory = 0.05
+            production_speed_buildings_factor = 0.05
+            add_ideas = MAC_balkan_workshop_fulfilled
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_solun_trade_houses
+        }
+    }
+
+    # --- INFRASTRUCTURE BRANCH (6 focuses) ---
+
+    focus = {
+        id = MAC_vardar_railways
+        icon = GFX_focus_generic_supply_line
+        relative_position_id = MAC_balkan_workshop
+        x = 9
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_ideas = MAC_vardar_railways_spirit
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 3882
+            }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 3833
+            }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 11818
+            }
+            add_tech_bonus = {
+                tech = construction1
+                bonus = 1.0
+                uses = 1
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_solun_polytechnic
+        }
+    }
+
+    focus = {
+        id = MAC_connect_the_east
+        icon = GFX_focus_generic_supply_line
+        relative_position_id = MAC_balkan_workshop
+        x = 10
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 9930
+            }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 3833
+            }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 3844
+            }
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 9930
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_vardar_railways
+        }
+    }
+
+    focus = {
+        id = MAC_highland_roads
+        icon = GFX_focus_generic_supply_line
+        relative_position_id = MAC_balkan_workshop
+        x = 10
+        y = 6
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 867
+            }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 841
+            }
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 867
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_connect_the_east
+        }
+    }
+
+    focus = {
+        id = MAC_modernise_port_solun
+        icon = GFX_focus_generic_large_navy
+        relative_position_id = MAC_balkan_workshop
+        x = 11
+        y = 7
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_building_construction = {
+                type = naval_dockyard
+                level = 2
+                province = 11818
+            }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 11818
+            }
+            add_building_construction = {
+                type = naval_base
+                level = 2
+                province = 11818
+            }
+            add_convoy = 30
+            add_opinion_modifier = {
+                target = ENG
+                modifier = MAC_eng_open_doors
+            }
+            add_opinion_modifier = {
+                target = GRE
+                modifier = MAC_eng_open_doors
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_highland_roads
+        }
+    }
+
+    focus = {
+        id = MAC_kavala_port
+        icon = GFX_focus_generic_large_navy
+        relative_position_id = MAC_balkan_workshop
+        x = 11
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 9930
+            }
+            add_building_construction = {
+                type = naval_base
+                level = 2
+                province = 9930
+            }
+            add_building_construction = {
+                type = naval_dockyard
+                level = 1
+                province = 9930
+            }
+            add_convoy = 15
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_modernise_port_solun
+        }
+    }
+
+    focus = {
+        id = MAC_aegean_gateway
+        icon = GFX_focus_generic_aegean_sea_focus
+        relative_position_id = MAC_balkan_workshop
+        x = 12
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_ideas = MAC_aegean_gateway
+            naval_dockyard_output_factor = 0.05
+            trade_opinion_factor = 0.10
+            add_convoy = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_kavala_port
+        }
+    }
+
+    # --- MINING & RESOURCES BRANCH (6 focuses) ---
+
+    focus = {
+        id = MAC_survey_the_mountains
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 13
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                tech = excavation1
+                bonus = 1.0
+                uses = 2
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_solun_polytechnic
+        }
+    }
+
+    focus = {
+        id = MAC_kratovo_zletovo
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 14
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_ideas = MAC_kratovo_zletovo_mines
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 3882
+            }
+            SOTB_add_kratovo_steel = yes
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_survey_the_mountains
+        }
+    }
+
+    focus = {
+        id = MAC_radusa_chromium
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 14
+        y = 6
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            SOTB_add_radusa_chromium = yes
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 3882
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_kratovo_zletovo
+        }
+    }
+
+    focus = {
+        id = MAC_bitola_coal
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 15
+        y = 7
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            SOTB_add_bitola_coal = yes
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                province = 867
+            }
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 867
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_radusa_chromium
+        }
+    }
+
+    focus = {
+        id = MAC_aegean_oil_survey
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 15
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+        available = {
+            OR = {
+                has_war_support > 0.3
+                date > 1939.1.1
+            }
+        }
+        completion_reward = {
+            set_country_flag = SOTB_aegean_survey_complete
+            add_tech_bonus = {
+                tech = synthetic_oil
+                bonus = 1.0
+                uses = 1
+            }
+            add_tech_bonus = {
+                tech = fuel_refining
+                bonus = 1.0
+                uses = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_bitola_coal
+        }
+    }
+
+    focus = {
+        id = MAC_mineral_wealth
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 16
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_ideas = MAC_mineral_wealth
+            industrial_capacity_factory = 0.05
+            synthetic_resource_factor = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_aegean_oil_survey
+        }
+    }
+
+    # --- TOBACCO BRANCH — TKP (6 focuses) ---
+
+    focus = {
+        id = MAC_revive_tkp
+        icon = GFX_goal_generic_positive_trade_relations
+        relative_position_id = MAC_balkan_workshop
+        x = 17
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_ideas = MAC_tkp_monopoly
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                province = 867
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_solun_polytechnic
+        }
+    }
+
+    focus = {
+        id = MAC_oriental_standard
+        icon = GFX_goal_generic_positive_trade_relations
+        relative_position_id = MAC_balkan_workshop
+        x = 18
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_tkp_monopoly
+                add_idea = MAC_tkp_oriental_standard
+            }
+            trade_opinion_factor = 0.10
+            political_power_factor = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_revive_tkp
+        }
+    }
+
+    focus = {
+        id = MAC_prilep_gold
+        icon = GFX_goal_generic_positive_trade_relations
+        relative_position_id = MAC_balkan_workshop
+        x = 18
+        y = 6
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_tkp_oriental_standard
+                add_idea = MAC_prilep_gold
+            }
+            trade_opinion_factor = 0.15
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 867
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_oriental_standard
+        }
+    }
+
+    focus = {
+        id = MAC_tobacco_auction_houses
+        icon = GFX_goal_generic_positive_trade_relations
+        relative_position_id = MAC_balkan_workshop
+        x = 19
+        y = 7
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            trade_opinion_factor = 0.10
+            add_political_power = 50
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 11818
+            }
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 3882
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_prilep_gold
+        }
+    }
+
+    focus = {
+        id = MAC_global_tobacco_markets
+        icon = GFX_goal_generic_positive_trade_relations
+        relative_position_id = MAC_balkan_workshop
+        x = 19
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_prilep_gold
+                add_idea = MAC_tobacco_barons
+            }
+            trade_opinion_factor = 0.15
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_tobacco_auction_houses
+        }
+    }
+
+    focus = {
+        id = MAC_tobacco_barons
+        icon = GFX_goal_generic_positive_trade_relations
+        relative_position_id = MAC_balkan_workshop
+        x = 20
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_tobacco_barons
+                add_idea = MAC_tobacco_barons_capstone
+            }
+            add_stability = 0.05
+            add_political_power = 100
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_global_tobacco_markets
+        }
+    }
+
+    # --- OPIUM vs MEDICINE MEX FORK (12 focuses) ---
+
+    focus = {
+        id = MAC_the_alkaloid_decision
+        icon = GFX_goal_generic_dangerous_deal
+        relative_position_id = MAC_balkan_workshop
+        x = 22
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 3882
+            }
+            country_event = {
+                id = SOTB.800
+                days = 3
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+        prerequisite = {
+            focus = MAC_tobacco_auction_houses
+        }
+    }
+
+    # --- POPPY PATH (5 focuses) ---
+
+    focus = {
+        id = MAC_poppy_path
+        icon = GFX_goal_generic_dangerous_deal
+        mutually_exclusive = {
+            focus = MAC_medicine_path
+        }
+        allow_branch = {
+            has_country_flag = SOTB_poppy_path_choice
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = 23
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_poppy
+                add_idea = MAC_poppy_cultivation
+            }
+            add_stability = -0.05
+            add_opinion_modifier = {
+                target = ENG
+                modifier = MAC_eng_open_doors
+            }
+            add_opinion_modifier = {
+                target = FRA
+                modifier = MAC_eng_open_doors
+            }
+        }
+        ai_will_do = {
+            factor = 5
+        }
+        prerequisite = {
+            focus = MAC_the_alkaloid_decision
+        }
+    }
+
+    focus = {
+        id = MAC_expand_poppy_plantations
+        icon = GFX_goal_generic_dangerous_deal
+        relative_position_id = MAC_balkan_workshop
+        x = 23
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            trade_opinion_factor = 0.05
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 867
+            }
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 3833
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_poppy_path
+        }
+    }
+
+    focus = {
+        id = MAC_the_powder_trail
+        icon = GFX_goal_generic_dangerous_deal
+        relative_position_id = MAC_balkan_workshop
+        x = 24
+        y = 11
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_stability = -0.05
+            add_political_power = 50
+            country_event = {
+                id = SOTB.801
+                days = 5
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_expand_poppy_plantations
+        }
+    }
+
+    focus = {
+        id = MAC_opium_underworld
+        icon = GFX_goal_generic_dangerous_deal
+        relative_position_id = MAC_balkan_workshop
+        x = 24
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_poppy_cultivation
+                add_idea = MAC_opium_underworld
+            }
+            add_opinion_modifier = {
+                target = ENG
+                modifier = MAC_eng_open_doors
+            }
+            add_opinion_modifier = {
+                target = FRA
+                modifier = MAC_eng_open_doors
+            }
+            add_opinion_modifier = {
+                target = USA
+                modifier = MAC_eng_open_doors
+            }
+            add_political_power = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_the_powder_trail
+        }
+    }
+
+    focus = {
+        id = MAC_balkan_opium_empire
+        icon = GFX_goal_generic_dangerous_deal
+        relative_position_id = MAC_balkan_workshop
+        x = 25
+        y = 13
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_opium_underworld
+                add_idea = MAC_opium_empire_capstone
+            }
+            add_war_support = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_opium_underworld
+        }
+    }
+
+    # --- MEDICINE PATH (5 focuses) ---
+
+    focus = {
+        id = MAC_medicine_path
+        icon = GFX_goal_generic_construct_civilian
+        mutually_exclusive = {
+            focus = MAC_poppy_path
+        }
+        allow_branch = {
+            has_country_flag = SOTB_medicine_path_choice
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = 27
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            remove_ideas = { MAC_poppy }
+            add_ideas = MAC_alkaloid_pharma
+            add_stability = 0.05
+            add_opinion_modifier = {
+                target = ENG
+                modifier = MAC_eng_open_doors
+            }
+            add_opinion_modifier = {
+                target = FRA
+                modifier = MAC_eng_open_doors
+            }
+        }
+        ai_will_do = {
+            factor = 5
+        }
+        prerequisite = {
+            focus = MAC_the_alkaloid_decision
+        }
+    }
+
+    focus = {
+        id = MAC_public_health_service
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 27
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_alkaloid_pharma
+                add_idea = MAC_public_health
+            }
+            add_stability = 0.05
+            conscription_factor = 0.05
+            add_manpower = 15000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_medicine_path
+        }
+    }
+
+    focus = {
+        id = MAC_balkan_pharmacy
+        icon = GFX_goal_generic_positive_trade_relations
+        relative_position_id = MAC_balkan_workshop
+        x = 28
+        y = 11
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            trade_opinion_factor = 0.15
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 3882
+            }
+            add_opinion_modifier = {
+                target = ALB
+                modifier = MAC_eng_open_doors
+            }
+            add_opinion_modifier = {
+                target = BUL
+                modifier = MAC_eng_open_doors
+            }
+            add_opinion_modifier = {
+                target = GRE
+                modifier = MAC_eng_open_doors
+            }
+            add_opinion_modifier = {
+                target = YUG
+                modifier = MAC_eng_open_doors
+            }
+            add_opinion_modifier = {
+                target = ROM
+                modifier = MAC_eng_open_doors
+            }
+            add_opinion_modifier = {
+                target = TUR
+                modifier = MAC_eng_open_doors
+            }
+            country_event = {
+                id = SOTB.802
+                days = 14
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_public_health_service
+        }
+    }
+
+    focus = {
+        id = MAC_medical_diplomacy
+        icon = GFX_goal_generic_improve_relations
+        relative_position_id = MAC_balkan_workshop
+        x = 28
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_public_health
+                add_idea = MAC_medical_diplomacy
+            }
+            diplomatic_weight_factor = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_balkan_pharmacy
+        }
+    }
+
+    focus = {
+        id = MAC_healers_of_the_balkans
+        icon = GFX_goal_generic_construct_civilian
+        relative_position_id = MAC_balkan_workshop
+        x = 29
+        y = 13
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+            swap_ideas = {
+                remove_idea = MAC_medical_diplomacy
+                add_idea = MAC_healers_capstone
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_medical_diplomacy
+        }
+    }
+
+    # --- IDEOLOGY-GATED INDUSTRY (9 focuses) ---
+
+    # Democratic (2)
+    focus = {
+        id = MAC_cooperative_commonwealth
+        icon = GFX_goal_generic_construct_civilian
+        allow_branch = {
+            has_country_flag = SOTB_democratic_path
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = 1
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = MAC_cooperative_commonwealth
+            political_power_factor = 0.10
+            add_stability = 0.05
+            consumer_goods_factor = -0.03
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_consumer_cooperatives
+        }
+    }
+
+    focus = {
+        id = MAC_credit_unions
+        icon = GFX_goal_generic_construct_civilian
+        allow_branch = {
+            has_country_flag = SOTB_democratic_path
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = 2
+        y = 13
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_cooperative_commonwealth
+                add_idea = MAC_credit_union_capstone
+            }
+            consumer_goods_factor = -0.05
+            add_political_power = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_cooperative_commonwealth
+        }
+    }
+
+    # Non-Aligned (2)
+    focus = {
+        id = MAC_state_industrial_direction
+        icon = GFX_goal_generic_construct_military
+        allow_branch = {
+            has_country_flag = SOTB_non_aligned_path
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = -3
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = MAC_state_direction
+            production_speed_arms_factory_factor = 0.10
+            industrial_capacity_factory = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_war_machine
+        }
+    }
+
+    focus = {
+        id = MAC_national_industrial_council
+        icon = GFX_goal_generic_construct_military
+        allow_branch = {
+            has_country_flag = SOTB_non_aligned_path
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = -2
+        y = 13
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_state_direction
+                add_idea = MAC_industrial_council_capstone
+            }
+            industrial_capacity_factory = 0.05
+            production_speed_buildings_factor = 0.05
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                province = 3882
+            }
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 3882
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_state_industrial_direction
+        }
+    }
+
+    # Monarchist (2)
+    focus = {
+        id = MAC_royal_charters
+        icon = GFX_goal_generic_construct_civilian
+        allow_branch = {
+            has_country_flag = SOTB_monarchist_path
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = 4
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = MAC_royal_charters
+            trade_opinion_factor = 0.15
+            political_power_factor = 0.10
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                province = 11818
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_solun_trade_houses
+        }
+    }
+
+    focus = {
+        id = MAC_crown_corporations
+        icon = GFX_goal_generic_construct_civilian
+        allow_branch = {
+            has_country_flag = SOTB_monarchist_path
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = 5
+        y = 13
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_royal_charters
+                add_idea = MAC_crown_corporations_capstone
+            }
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                province = 11818
+            }
+            industrial_capacity_factory = 0.05
+            add_political_power = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_royal_charters
+        }
+    }
+
+    # Communist (2)
+    focus = {
+        id = MAC_five_year_plan
+        icon = GFX_goal_generic_construct_military
+        allow_branch = {
+            has_country_flag = SOTB_communist_path
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = -7
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = MAC_five_year_plan
+            production_speed_buildings_factor = 0.15
+            industrial_capacity_factory = 0.10
+            consumer_goods_factor = -0.05
+            add_stability = -0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_arms_of_the_republic
+        }
+    }
+
+    focus = {
+        id = MAC_collectivised_industry
+        icon = GFX_goal_generic_construct_military
+        allow_branch = {
+            has_country_flag = SOTB_communist_path
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = -6
+        y = 13
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = MAC_five_year_plan
+                add_idea = MAC_collectivised_capstone
+            }
+            consumer_goods_factor = -0.05
+            add_stability = -0.05
+            add_building_construction = {
+                type = arms_factory
+                level = 3
+                province = 3882
+            }
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                province = 3882
+            }
+            add_war_support = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_five_year_plan
+        }
+    }
+
+    # Fascist (1)
+    focus = {
+        id = MAC_war_economy
+        icon = GFX_goal_generic_construct_military
+        allow_branch = {
+            has_country_flag = SOTB_fascist_path
+        }
+        relative_position_id = MAC_balkan_workshop
+        x = -9
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = MAC_war_economy_capstone
+            production_speed_arms_factory_factor = 0.25
+            industrial_capacity_factory = 0.15
+            consumer_goods_factor = -0.05
+            add_stability = -0.05
+            add_war_support = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = {
+            focus = MAC_war_machine
         }
     }
 }

@@ -38,11 +38,16 @@
 |---|---|---|---|
 | **Pre-Phase: Map Setup** | `#completed` | 2026-07-14 | 2026-07-14 |
 | **Phase 0: Foundation** | `#completed` | 2026-07-14 | 2026-07-14 |
-| **Phase 1: Political Tree** | `#resumed` | 2026-07-14 | — |
-| **Phase 2: Military Tree** | `#paused` | 2026-07-15 | 2026-07-15 |
-| **Phase 3: Economic Tree** | `#paused` | 2026-07-15 | 2026-07-15 |
-| **Phase 4: Diplomatic Tree** | `#paused` | 2026-07-15 | 2026-07-15 |
-| **Phase 5: Cultural Heritage Tree** | `#paused` | 2026-07-15 | 2026-07-15 |
+| **Phase 1: Political Tree** | `#completed` | 2026-07-14 | 2026-07-16 |
+| **Phase 2: Military Tree** | `#completed` | 2026-07-15 | 2026-07-16 |
+| **Phase 2b: Icon Audit** | `#completed` | 2026-07-16 | 2026-07-16 |
+| **Phase 3: Economic Tree** | `#resumed` | 2026-07-17 | — |
+| **Phase 4: Diplomatic Tree** | `#paused` | — | — |
+| **Phase 5: Cultural Heritage Tree** | `#paused` | — | — |
+| **Phase 5b: Rakija Spirits** | `#paused` | — | — |
+| **Phase 5c: Science/Research Tree** | `#paused` | — | — |
+| **Phase 6: Opium GUI & Events** | `#paused` | — | — |
+| **Phase 7: AI Strategy & Balance** | `#paused` | — | — |
 | **Phase 5b: Rakija Spirits** | `#paused` | 2026-07-15 | 2026-07-15 |
 | **Phase 6: Opium GUI & Events** | `#paused` | 2026-07-15 | 2026-07-15 |
 | **Phase 6b: Scripted GUI** | `#paused` | 2026-07-15 | 2026-07-15 |
@@ -171,7 +176,9 @@ add_namespace = SOTB
 
 ---
 
-## Phase 1: Political Focus Tree — "The Parliamentary Crisis" — `#resumed`
+## Phase 1: Political Focus Tree — "The Parliamentary Crisis" — `#completed`
+
+> **Completed:** 2026-07-16. Kone's ideology path draft integrated. Full tree with 14 leader endpoints across democratic (4), non-aligned (3), monarchist (3), communist (3), and fascist (2) columns.
 
 > **Depends on:** Phase 0 ✅
 > **Architecture:** Model B — layered pairwise mutually exclusive forks (vanilla Bulgaria pattern).
@@ -349,85 +356,255 @@ Parallel to the focus tree, hidden events fire based on threshold checks. These 
 
 ---
 
-## Phase 2: Military Focus Tree — "The Army of the Lion" — `#starter`
+## Phase 2: Military Focus Tree — "The Army of the Lion" — `#completed`
 
-> **Depends on:** Phase 0 ✅
+> **Completed:** 2026-07-16. Full 27-focus tree with shared trunk, Aleksandrov vs Apostolski MEX split, and mountain/air/naval sub-branches. Hidden paths use `allow_branch` gating.
 
-### Structure
+### Structure (27 focuses)
 
 ```
-SHARED TRUNK (5 focuses):
-  "The Army's Future" → "Sandanski's Principles" →
-  "The Night of Solun" → "National Conscription" →
-  "Vardar Engineering Corps"
-
-MUTUALLY EXCLUSIVE SPLIT:
-  ┌─ ALEKSANDROV'S PATH (4 focuses): "The Lion's Way"
-  │    Infantry/artillery/fortifications/defensive mastery
-  └─ APOSTOLSKI'S PATH (4 focuses): "Apostolski's Vision"
-       Armor/aviation/mobility/offensive breakthrough
-
-SHARED CAPSTONE (3 focuses):
-  "The Arsenal of Solun" → "Macedonian Steel" → "The Lion's Heirs"
+SHARED TRUNK (5) — always visible, y=7→11
+  "The Army's Future" → "Sandanski's Principles" → "Night of Solun"
+    → "National Conscription" → "Vardar Engineering Corps"
+                    |
+        [GATE: SOTB_succession_resolved]
+                    |
+    ┌───────────────┴────────────────┐
+ALEKSANDROV (5) — defensive      APOSTOLSKI (5) — offensive
+  "The Lion's Way"                  "Apostolski's Vision"
+    → Fortress Macedonia              → Armored Vanguard
+    → Artillery Foundry               → Breakthrough Doctrine
+    → They Will Not Pass              → Modern Officer Corps
+    → Old Guard's Vindication         → New Model Army
+         |                                   |
+    [GATE: has doctrine spirit]     [GATE: has doctrine spirit]
+         |                                   |
+    ┌────┴────────────┬────────────┐
+MOUNTAIN (4)       AIR (4)      NAVY (4) — all accessible from either doctrine
 ```
 
-**Total: ~18 focuses**
+### Manpower & Equipment
+- **+45% recruitable pop factor** across 4 key focuses (+20% Conscription, +15% capstone, +10% Peaks)
+- **+22,500 flat manpower**, +500/week from Conscription Act spirit
+- **Equipment:** 13,000 infantry eq, 50 artillery, 40 light tanks, 80 fighters, 50 CAS, destroyers, submarines, 80 convoys
+- **12 tech bonuses** across infantry, artillery, armor, engineers, mountaineers, fighters, CAS, destroyers, submarines
 
-### Key Mechanics
-- Mutually exclusive focus choice — only one path per game
-- Aleksandrov: removes `MAC_old_guard_reform`, applies defensive spirit
-- Apostolski: removes `MAC_old_guard_reform`, applies offensive spirit
-- Sandanski endorsement event favors Apostolski but stops short of full backing
+### Hidden Path Mechanics
+- `allow_branch = { has_country_flag = SOTB_succession_resolved }` on doctrine entry focuses
+- `allow_branch = { OR = { has_idea = MAC_lions_way has_idea = MAC_apostolski_vision } }` on mountain/air/naval entry focuses
+- Children inherit hidden status through prerequisite chain — no repeated `allow_branch` needed
+
+## Phase 2b: Icon Audit — `#completed`
+
+> **Completed:** 2026-07-16. All 84 focus icons + 67 spirit icons replaced with verified vanilla DDS files.
+> **Focus icons:** 55 unique, all cross-referenced against `gfx/interface/goals/` DDS files.
+> **Spirit icons:** 55 unique, 3 bookmark preview spirits fixed with `GFX_` prefix. 64 remaining spirits have `picture =` values set but may need `GFX_` prefix pass.
 
 ---
 
-## Phase 3: Economic Focus Tree — "The Balkan Workshop" — `#starter`
+## Phase 3: Economic Focus Tree — "The Balkan Workshop" — `#resumed`
 
-> **Depends on:** Phase 0 ✅
+> **Started:** 2026-07-17. Full 56-focus tree with shared trunk, 5 main branches, opium vs medicine MEX, and ideology-gated industry sub-branches.
+> **Depends on:** Phase 0 ✅, Phase 1 ✅ (ideology flags for gating)
 
-### Structure — 5 branches, ~22 focuses
+### Design Parameters
 
-| Branch | Focuses | Centerpiece | Notes |
-|---|---|---|---|
-| Military Industry | 5 | Solun Arsenal → Balkan Arsenal | Arms factories, artillery foundry |
-| Civilian Industry | 5 | Teteks → Balkan Workshop | **"Macedonian Medicine" focus MUTUALLY EXCLUSIVE with Opium** |
-| Infrastructure | 4 | Vardar Railway → Aegean Gateway | Roads, rail, Solun port |
-| Tobacco | 4 | TKP (Tutunski Kombinat Prilep) | Real company (1873), premium export |
-| Opium | 5 | Alkaloid (real company, 1936) | **Mutually exclusive with "Macedonian Medicine"** |
+| Parameter | Value |
+|---|---|
+| Entry focus | `MAC_balkan_workshop` at x=18, y=0 |
+| Entry tone | Hopeful — "Macedonia's hands built Solun. Now they will build an economic miracle." |
+| Total focuses | 56 |
+| Spelling | Australian English throughout |
+| Companies | TKP (1873), Alkaloid (1936), Vardarski Železnici, Pivarnica Skopje (1924), Rudnici Kratovo-Zletovo |
+| Gating | Shared trunk always visible. Ideology sub-branches gated by political flags from Phase 1. Opium/Medicine MEX mid-tree. |
+| Positioning | Anchor-based: all economic focuses use `relative_position_id = MAC_balkan_workshop` |
 
-### Real Companies
+### Tree Structure
 
-| Company | Real? | Founded | Role |
-|---|---|---|---|
-| TKP (Tutunski Kombinat Prilep) | ✅ | 1873 | Tobacco industrial concern |
-| Alkaloid | ✅ | 1936 | Pharmaceutical concern — dual-purpose face of opium |
-| Teteks | ✅ (alt-history) | — | Textile industrial concern |
-| Kratovo-Zletovo Mining | ✅ (deposits) | — | Mining concern |
+```
+SHARED TRUNK (4) — always visible, x=18, y=0→3
+  "The Balkan Workshop" → "Solun Industrial Commission" → "Survey the Vardar" → "The Solun Polytechnic"
+                                    │
+          ┌─────────┬─────────┬─────┴─────┬─────────┬─────────┐
+          │         │         │           │         │         │
+    MIL IND (7)  CIV IND (8) INFRA (6)  MINING (6) TOBACCO (6)
+    x=15→10     x=21→26    x=27→30     x=31→34   x=35→38
+    y=4→10      y=4→11     y=4→9       y=4→9     y=4→9
+          │         │
+          │         └──[IDEOLOGY GATES at y=12→13]
+          │               DEM | NA | MON | COM | FAS
+          │               (2)  (2)  (2)   (2)   (1)
+          │
+          └──[IDEOLOGY MIL GATES at y=12→13]
+                                                  │
+                                          [OPIUM vs MEDICINE MEX]
+                                          x=40→47, y=8→13
+                                          Poppy (5) | Medicine (5)
+```
 
-### Opium Dependency Mechanic
+### Focus Detail
 
-**Stages (per target nation):**
-| Stage | Name | Effect on Target | Cost to MAC |
-|---|---|---|---|
-| 0 | No dependency | — | — |
-| 1 | Casual Use | +10 trade opinion | 50 PP |
-| 2 | Officer Addiction | −5% war support, +20 trade opinion | 100 PP, −2% CG |
-| 3 | Elite Compromised | −10% stability, −10% war support | 150 PP, −3% CG, timed mission |
-| 4 | State Dependency | −15% stability, −10% war support, cannot justify on MAC | 200 PP, −5% CG |
+#### Shared Trunk (4)
 
-- **Greece:** Predisposed — reduced costs, faster progression. Event chain: "The Salonika Habit" → "The Athenian Dens" → "The Ambassador's Observation"
-- **Major Powers (UK, France, Germany):** Stage 0–2 only. Benefit from pharma imports. Can be "tipped off" via intelligence.
-- **Balkan neighbours:** Stage 0–3. Neutral-positive trade. They know it's aimed at Greece.
-- **Opium Diplomacy:** Repeatable decisions — "Flood the [TAG] market" (PP + CG cost, temporary debuff). 365-day cooldown.
-- **Petrov + Archbishop:** Publicly denounce, privately tolerate. Do NOT remove poppy spirit.
-- **Domestic effects:** External only at this stage. MAC is the dealer, not the addict.
+| Focus ID | Name | Pos (x,y) | Cost | Key Effects |
+|---|---|---|---|---|
+| `MAC_balkan_workshop` | "The Balkan Workshop" | 18,0 | 70d | +1 civ 731, +1 infra 731, spirit `MAC_balkan_workshop_spirit` |
+| `MAC_solun_industrial_commission` | "The Solun Industrial Commission" | 18,1 | 70d | +2 civ +1 mil 731, upgrades `MAC_solun_arsenal` |
+| `MAC_survey_the_vardar` | "Survey the Vardar" | 18,2 | 70d | +100% industry + construction tech, +1 infra 106,1084 |
+| `MAC_solun_polytechnic` | "The Solun Polytechnic" | 18,3 | 70d | +1 research slot, +100% synthetic/fuel refining, spirit |
 
-### Opium GUI (Phase 6 — deferred)
+#### Military Industry (7) — x=15→10, y=4→10
 
-Custom GUI using scripted graphs + parliament diagram:
-- Dependency tracker (which nations, what stage)
-- Opium leverage aggregate score
-- Influence decisions accessible from tracker
+| Focus ID | Name | Key Effects |
+|---|---|---|
+| `MAC_arms_of_the_republic` | "Arms of the Republic" | +2 mil 731, +1 mil 106, +20 army XP |
+| `MAC_solun_arsenal_expansion` | "Expand the Solun Arsenal" | +2 mil 731, +100% infantry/support weapons, +3000 inf eq |
+| `MAC_artillery_foundry` | "The Skopje Artillery Foundry" | +1 mil 106, +100% artillery (2 uses), +40 artillery eq |
+| `MAC_macedonian_motorisation` | "Macedonian Motorisation" | +100% motorised/mechanised, +1 mil 1084, +100 motorised eq |
+| `MAC_armour_initiative` | "The Armour Initiative" | +100% armour (2 uses), +1 mil 731, +30 light tanks |
+| `MAC_war_machine` | "The Macedonian War Machine" | +5% mil construction, +10% eq conversion, spirit `MAC_war_machine` |
+| `MAC_balkan_arsenal` | "The Balkan Arsenal" | +3 mil (731/106/970), spirit `MAC_balkan_arsenal`, +30 army XP |
+
+#### Civilian Industry (8) — x=21→26, y=4→11
+
+| Focus ID | Name | Key Effects |
+|---|---|---|
+| `MAC_textile_mills` | "The Solun Textile Mills" | +2 civ 731, −3% CG |
+| `MAC_break_the_ciftlik` | "Break the Çiftlik" | +5% recruitable pop, +5% stability, +1 civ 970 |
+| `MAC_reform_tax_code` | "Reform the Tax Code" | +10% PP, +5% stability, +1 civ 106 |
+| `MAC_new_guilds` | "The New Guilds" | +10% factory output, +5% construction speed, +100% industry tech |
+| `MAC_pivarnica_skopje` | "Pivarnica Skopje" | +1 civ 106, −2% CG, +5% trade opinion, spirit |
+| `MAC_consumer_cooperatives` | "Consumer Cooperatives" | −5% CG, +5% stability, +10% trade opinion |
+| `MAC_solun_trade_houses` | "The Solun Trade Houses" | +15% trade opinion, +10% PP, +2 civ 731 |
+| `MAC_balkan_workshop_fulfilled` | "The Balkan Workshop Fulfilled" | +1 research slot, +5% construction, +5% factory output, spirit |
+
+#### Infrastructure (6) — x=27→30, y=4→9
+
+| Focus ID | Name | Key Effects |
+|---|---|---|
+| `MAC_vardar_railways` | "Vardarski Železnici" | +1 infra 106/1084/731, +100% construction tech, spirit |
+| `MAC_connect_the_east` | "Connect the East" | +1 infra 1083/1084/1085, +1 civ 1083 |
+| `MAC_highland_roads` | "Highland Roads" | +1 infra 970/1086, +1 civ 970, 970 pastoral→rural |
+| `MAC_modernise_port_solun` | "Modernise the Port of Solun" | +2 dockyards 731, +1 infra 731, +30 convoys, +2 naval base 731, UK/GRE −10 opinion |
+| `MAC_kavala_port` | "The Kavala Port Expansion" | +1 infra 1083, +2 naval base 1083, +1 dockyard 1083, +15 convoys |
+| `MAC_aegean_gateway` | "The Aegean Gateway" | +5% dockyard output, +10% trade power, +50 convoys, spirit |
+
+#### Mining & Resources (6) — x=31→34, y=4→9
+
+| Focus ID | Name | Key Effects |
+|---|---|---|
+| `MAC_survey_the_mountains` | "Survey the Mountains" | +100% excavation (2 uses), unlock prospecting decisions |
+| `MAC_kratovo_zletovo` | "Rudnici Kratovo-Zletovo" | +1 civ 106, +8 steel 106, spirit |
+| `MAC_radusa_chromium` | "The Raduša Mines" | +6 chromium 106, +1 civ 106 |
+| `MAC_bitola_coal` | "The Bitola Coal Basin" | +8 coal 970, +1 infra 970, +1 civ 970 |
+| `MAC_aegean_oil_survey` | "Survey the Aegean Shelf" | +100% synthetic/fuel refining, unlock Prinos prospecting decision (70% chance +8 oil 1083) |
+| `MAC_mineral_wealth` | "The Mineral Wealth of Macedonia" | +10% resource gain, +5% factory output, spirit |
+
+#### Tobacco — TKP (6) — x=35→38, y=4→9
+
+| Focus ID | Name | Key Effects |
+|---|---|---|
+| `MAC_revive_tkp` | "Revive TKP" | +2 civ 970, spirit `MAC_tkp_monopoly`, unlock tobacco partner decision |
+| `MAC_oriental_standard` | "The Oriental Standard" | +10% trade opinion, +5% PP, upgrade spirit to Tier 2 |
+| `MAC_prilep_gold` | "Prilep Gold" | +15% trade opinion, +1 civ 970, upgrade spirit to Tier 3 |
+| `MAC_tobacco_auction_houses` | "Tobacco Auction Houses" | +1 civ 731, +1 civ 106, +10% trade opinion, +50 PP |
+| `MAC_global_tobacco_markets` | "Global Tobacco Markets" | +15% trade opinion, full major power trade, upgrade spirit |
+| `MAC_tobacco_barons` | "The Tobacco Barons" | +5% stability, +100 PP, capstone spirit |
+
+#### Opium vs Medicine MEX (12 total)
+
+**Fork point:** `MAC_the_alkaloid_decision` (x=40, y=8) — fires SOTB.800 with MEX choice.
+
+**Poppy Path (5)** — x=41→43, y=9→13:
+
+| Focus ID | Name | Key Effects |
+|---|---|---|
+| `MAC_poppy_path` | "The Poppy Path" | MEX with medicine. Upgrade poppy spirit. Unlock opium partner decision. −5% stability, −10 UK/FRA opinion |
+| `MAC_expand_poppy_plantations` | "Expand the Poppy Plantations" | +2 civ (970/1084), +5% trade opinion, dependency cap to Stage 3 |
+| `MAC_the_powder_trail` | "The Powder Trail" | Event SOTB.801, covert trade routes, −5 stability, +50 PP |
+| `MAC_opium_underworld` | "The Opium Underworld" | Upgrade spirit, Stage 4 dependency, −15 UK/FRA/USA opinion, intel bonus on partners |
+| `MAC_balkan_opium_empire` | "The Balkan Opium Empire" | Capstone spirit, Stage 5 dependency, unlock "Demand faction join" and "Demand release subject" in trade tracker |
+
+**Medicine Path (5)** — x=45→47, y=9→13:
+
+| Focus ID | Name | Key Effects |
+|---|---|---|
+| `MAC_medicine_path` | "Macedonian Medicine" | MEX with poppy. Remove poppy spirit. Add `MAC_alkaloid_pharma`. Unlock pharma partner. +10 UK/FRA opinion, +5% stability |
+| `MAC_public_health_service` | "The Public Health Service" | +5% stability, +5% recruitable pop, +500 weekly manpower, upgrade spirit |
+| `MAC_balkan_pharmacy` | "The Balkan Pharmacy" | +15% trade opinion, +1 civ 106, Tier 2 pharma deals, +10 Balkan opinion. Event: Balkan Health Conference |
+| `MAC_medical_diplomacy` | "Medical Diplomacy" | Upgrade spirit, "Send Medical Mission" decision, +5% diplomatic weight |
+| `MAC_healers_of_the_balkans` | "The Healers of the Balkans" | +1 research slot, capstone spirit, "Offer Medical Alliance" and "Medical Aid Programme" in trade tracker |
+
+#### Ideology-Gated Industry (9)
+
+**Democratic (2)** — gate: `SOTB_democratic_path`:
+- `MAC_cooperative_commonwealth` → `MAC_credit_unions`
+
+**Non-Aligned (2)** — gate: `SOTB_non_aligned_path`:
+- `MAC_state_industrial_direction` → `MAC_national_industrial_council`
+
+**Monarchist (2)** — gate: `SOTB_monarchist_path`:
+- `MAC_royal_charters` → `MAC_crown_corporations`
+
+**Communist (2)** — gate: `SOTB_communist_path`:
+- `MAC_five_year_plan` → `MAC_collectivised_industry`
+
+**Fascist (1)** — gate: `SOTB_fascist_path`:
+- `MAC_war_economy`
+
+### New Spirits (22)
+
+| Spirit | Source | Key Modifiers |
+|---|---|---|
+| `MAC_balkan_workshop_spirit` | Shared trunk | +5% construction speed, +5% factory output |
+| `MAC_solun_arsenal_expanded` | Shared trunk | +15% factory output, +10% dockyard output |
+| `MAC_polytechnic_spirit` | Shared trunk | +5% research speed |
+| `MAC_war_machine` | Mil industry | +10% mil factory output, −5% CG |
+| `MAC_balkan_arsenal` | Mil industry capstone | +15% mil factory output, +10% eq conversion, −5% CG |
+| `MAC_balkan_workshop_fulfilled` | Civ industry capstone | +10% factory output, +10% construction speed, −5% CG |
+| `MAC_pivarnica_skopje` | Civ industry | +5% stability, −2% CG, +5% trade opinion |
+| `MAC_vardar_railways_spirit` | Infrastructure | +5% construction speed, +5% supply throughput |
+| `MAC_aegean_gateway` | Infrastructure capstone | +10% dockyard output, +10% naval base construction, +5% trade opinion |
+| `MAC_kratovo_zletovo_mines` | Mining | +5% resource gain efficiency |
+| `MAC_mineral_wealth` | Mining capstone | +15% resource gain efficiency, −5% resource import cost |
+| `MAC_tkp_monopoly` → `MAC_tkp_oriental_standard` → `MAC_prilep_gold` → `MAC_tobacco_barons` → `MAC_tobacco_barons_capstone` | Tobacco chain | Trade opinion, CG reduction, PP gain (escalating) |
+| `MAC_poppy_cultivation` → `MAC_opium_underworld` → `MAC_opium_empire_capstone` | Poppy path | CG reduction, trade opinion, PP gain (escalating) |
+| `MAC_alkaloid_pharma` → `MAC_public_health` → `MAC_medical_diplomacy` → `MAC_healers_capstone` | Medicine path | Research speed, trade opinion, stability, manpower (escalating) |
+| `MAC_cooperative_commonwealth` → `MAC_credit_union_capstone` | Democratic | PP gain, stability, CG reduction |
+| `MAC_state_direction` → `MAC_industrial_council_capstone` | Non-aligned | Factory output, construction speed |
+| `MAC_royal_charters` → `MAC_crown_corporations_capstone` | Monarchist | Trade opinion, PP, CG reduction, stability |
+| `MAC_five_year_plan` → `MAC_collectivised_capstone` | Communist | Construction speed, factory output, CG reduction (−stability) |
+| `MAC_war_economy_capstone` | Fascist | Mil construction, factory output, CG reduction, war support |
+
+### New/Updated Events
+
+| Event | Purpose |
+|---|---|
+| `SOTB.800` (update) | Alkaloid Founded — now includes MEX choice between poppy/medicine |
+| `SOTB.801` (update) | The Powder Trail Opens — updated for dependency mechanic |
+| `SOTB.802` (new) | The Balkan Health Conference — medicine path mid-point |
+| `SOTB.803` (new) | The Macedonian Demand — opium Stage 5: demand faction join |
+| `SOTB.804` (new) | The Macedonian Demand — opium Stage 5: demand release subject |
+| `SOTB.805` (new) | The Macedonian Embrace — target accepts faction join demand |
+| `SOTB.806` (new) | The Macedonian Hand — released subject gratitude event |
+| `SOTB.807` (new) | Trade Collapse — target refuses demand, gets severe debuff |
+| `SOTB.808` (new) | The British Note — UK protests port modernisation (mild) |
+| `SOTB.809` (new) | Name Your Alliance — player names new faction |
+
+### Decision Log (Phase 3)
+
+| Date | Decision | Rationale |
+|---|---|---|
+| 2026-07-17 | Economic tree entry: "The Balkan Workshop" at x=18, y=0 | Far right, parallel to political tree. Hopeful tone — vision, not crisis. |
+| 2026-07-17 | Australian English for entire mod | Per instruction: modernise, colour, defence, labour, centre, programme. |
+| 2026-07-17 | Companies: TKP, Alkaloid, Vardarski Železnici, Pivarnica Skopje, Rudnici Kratovo-Zletovo | Macedonian names only. No French/Franco names. Teteks removed (founded 1951). |
+| 2026-07-17 | Port focus: "Modernise the Port of Solun" with mild UK/GRE penalty (−10) | Frustration, not hostility. Modernisation, not reclamation. |
+| 2026-07-17 | Opium vs Medicine MEX as central economic fork | Poppy = criminal influence + leverage. Medicine = legitimate soft power + research. Both end at Stage 5 trade tracker actions. |
+| 2026-07-17 | Fascist industry: 1 focus | Fascists get efficiency, not breadth. The war economy IS the point. |
+| 2026-07-17 | Monarchist industry: separate from non-aligned | 5 ideology paths, not 4. Monarchists get Royal Charters flavour. |
+| 2026-07-17 | Infrastructure: on-map building + state category upgrades | Player sees Macedonia physically develop. Pastoral → rural via event. |
+| 2026-07-17 | Aegean oil: late-game prospecting decision with 70% success | Plausible ahistorical. Real Prinos field off Thasos. Risk/reward. |
+| 2026-07-17 | Anchor-based positioning for all economic focuses | Avoids the compounding offset issue (LR-0019). `MAC_balkan_workshop` is the anchor. |
 
 ---
 
@@ -562,6 +739,10 @@ All focuses celebrate already-established heritage. No "discovery" — Macedonia
 | 2026-07-16 | Peter II path scoped to MAC-only | Yugoslav reunification deferred to future sub-mod. MAC gets Yugoslav-themed spirits/decisions without tag switch. |
 | 2026-07-16 | Event-driven ideology switching via thresholds | Parallel system. Stability, faction popularity, war support, world tension gates. Finland-vanilla pattern. |
 | 2026-07-16 | Phase 1 focus count: ~67 (up from ~35) | Reflects 14 leaders × 4 focuses each + shared trunks + crisis events. |
+| 2026-07-16 | Military tree: full rework, 27 focuses | Shared trunk (5) always visible. Aleksandrov vs Apostolski MEX split (5 each) gated behind `SOTB_succession_resolved` via `allow_branch`. Mountain/Air/Naval branches (4 each) accessible from either doctrine path. +45% recruitable pop factor, 12 tech bonuses. |
+| 2026-07-16 | Icon audit: 84 focus + 67 spirit icons replaced | All verified against vanilla DDS files. 55 unique focus icons, 55 unique spirit pictures. 3 bookmark preview spirits fixed with `GFX_` prefix. 4 broken GFX names discovered and replaced (`GFX_goal_generic_navy` etc don't exist). |
+| 2026-07-16 | `major = yes` added to MAC country history | MAC now appears in major powers row on country selection screen instead of "Other countries". |
+| 2026-07-16 | Bookmark: desc condensed, crown focus removed, `MAC_the_crown` dropped | `MAC_SOTB_BOOKMARK_DESC` from 20 lines → 4. Preview focuses reduced to 3 (parliamentary crisis + democratic + authoritarian). |
 
 ---
 
